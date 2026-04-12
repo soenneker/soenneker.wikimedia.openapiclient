@@ -36,25 +36,25 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Changes.Since.Item
         /// <summary>
         /// &quot;Returns metadata describing lists and entries which have changed. Might be truncatedand include a continuation token.Request must be authenticated with a MediaWiki session cookie.For safe synchronization, the date parameter should be taken from the `continue-from`field of a previous `GET /lists/` or `GET /lists/changes/since/{date}` request. This willensure that no changes are skipped, at the cost of sometimes receiving the same changemultitple times. Clients should handle changes in an idempotent way.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Get_data_lists_changes_since_date_200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataListsChangesSinceDate200"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Problem">When receiving a 4XX or 5XX status code</exception>
+        /// <exception cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Problem_1">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.Get_data_lists_changes_since_date_200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Changes.Since.Item.WithDateItemRequestBuilder.WithDateItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataListsChangesSinceDate200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Changes.Since.Item.WithDateItemRequestBuilder.WithDateItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.Get_data_lists_changes_since_date_200> GetAsync(Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Changes.Since.Item.WithDateItemRequestBuilder.WithDateItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataListsChangesSinceDate200> GetAsync(Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Changes.Since.Item.WithDateItemRequestBuilder.WithDateItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "XXX", global::Soenneker.Wikimedia.OpenApiClient.Models.Problem.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.Wikimedia.OpenApiClient.Models.Problem_1.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.Get_data_lists_changes_since_date_200>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.Get_data_lists_changes_since_date_200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataListsChangesSinceDate200>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataListsChangesSinceDate200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &quot;Returns metadata describing lists and entries which have changed. Might be truncatedand include a continuation token.Request must be authenticated with a MediaWiki session cookie.For safe synchronization, the date parameter should be taken from the `continue-from`field of a previous `GET /lists/` or `GET /lists/changes/since/{date}` request. This willensure that no changes are skipped, at the cost of sometimes receiving the same changemultitple times. Clients should handle changes in an idempotent way.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;

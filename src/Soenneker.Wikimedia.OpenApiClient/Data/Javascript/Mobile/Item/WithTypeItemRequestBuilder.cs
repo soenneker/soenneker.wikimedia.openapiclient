@@ -39,7 +39,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Javascript.Mobile.Item
         /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Data.Javascript.Mobile.Item.WithTypeGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Problem">When receiving a 4XX or 5XX status code</exception>
+        /// <exception cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Problem_1">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Wikimedia.OpenApiClient.Data.Javascript.Mobile.Item.WithTypeGetResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -52,7 +52,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Javascript.Mobile.Item
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "XXX", global::Soenneker.Wikimedia.OpenApiClient.Models.Problem.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.Wikimedia.OpenApiClient.Models.Problem_1.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Data.Javascript.Mobile.Item.WithTypeGetResponse>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Data.Javascript.Mobile.Item.WithTypeGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

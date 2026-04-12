@@ -36,50 +36,50 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries
         /// <summary>
         /// &quot;Returns pages contained by the given list. Might be truncated and includea continuation token.List must belong to current user and request must be authenticated witha MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.GetListEntries_200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.GetListEntries200"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Problem">When receiving a 4XX or 5XX status code</exception>
+        /// <exception cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Problem_1">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.GetListEntries_200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.EmptyPathSegmentRequestBuilder.EmptyPathSegmentRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.GetListEntries200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.EmptyPathSegmentRequestBuilder.EmptyPathSegmentRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.GetListEntries_200> GetAsync(Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.EmptyPathSegmentRequestBuilder.EmptyPathSegmentRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.GetListEntries200> GetAsync(Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.EmptyPathSegmentRequestBuilder.EmptyPathSegmentRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "XXX", global::Soenneker.Wikimedia.OpenApiClient.Models.Problem.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.Wikimedia.OpenApiClient.Models.Problem_1.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.GetListEntries_200>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.GetListEntries_200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.GetListEntries200>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.GetListEntries200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &quot;Creates a new list entry in the given list. On conflict, does nothing and returns thedata of an existing list.The list must belong to the current user and the request must beauthenticated with a MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)This endpoint is deprecated and might be removed without warning. Use the batch versioninstead.&quot;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Post_data_lists_id_entries_200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsIdEntries200"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Problem">When receiving a 4XX or 5XX status code</exception>
+        /// <exception cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Problem_1">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.Post_data_lists_id_entries_200?> PostAsync(global::Soenneker.Wikimedia.OpenApiClient.Models.List_entry_write body, Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.EmptyPathSegmentRequestBuilder.EmptyPathSegmentRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsIdEntries200?> PostAsync(global::Soenneker.Wikimedia.OpenApiClient.Models.ListEntryWrite body, Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.EmptyPathSegmentRequestBuilder.EmptyPathSegmentRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.Post_data_lists_id_entries_200> PostAsync(global::Soenneker.Wikimedia.OpenApiClient.Models.List_entry_write body, Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.EmptyPathSegmentRequestBuilder.EmptyPathSegmentRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsIdEntries200> PostAsync(global::Soenneker.Wikimedia.OpenApiClient.Models.ListEntryWrite body, Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.EmptyPathSegmentRequestBuilder.EmptyPathSegmentRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "XXX", global::Soenneker.Wikimedia.OpenApiClient.Models.Problem.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.Wikimedia.OpenApiClient.Models.Problem_1.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.Post_data_lists_id_entries_200>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.Post_data_lists_id_entries_200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsIdEntries200>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsIdEntries200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &quot;Returns pages contained by the given list. Might be truncated and includea continuation token.List must belong to current user and request must be authenticated witha MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
@@ -108,11 +108,11 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Wikimedia.OpenApiClient.Models.List_entry_write body, Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.EmptyPathSegmentRequestBuilder.EmptyPathSegmentRequestBuilderPostQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Wikimedia.OpenApiClient.Models.ListEntryWrite body, Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.EmptyPathSegmentRequestBuilder.EmptyPathSegmentRequestBuilderPostQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Wikimedia.OpenApiClient.Models.List_entry_write body, Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.EmptyPathSegmentRequestBuilder.EmptyPathSegmentRequestBuilderPostQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Wikimedia.OpenApiClient.Models.ListEntryWrite body, Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.EmptyPathSegmentRequestBuilder.EmptyPathSegmentRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

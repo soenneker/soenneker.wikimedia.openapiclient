@@ -36,25 +36,25 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Recommendation.Article.Creation
         /// <summary>
         /// &quot;Recommends articles similar to the seed article but are missingfrom the domain language Wikipedia.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
         /// </summary>
-        /// <returns>A List&lt;global::Soenneker.Wikimedia.OpenApiClient.Models.Morelike_result_item&gt;</returns>
+        /// <returns>A List&lt;global::Soenneker.Wikimedia.OpenApiClient.Models.MorelikeResultItem&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Problem">When receiving a 4XX or 5XX status code</exception>
+        /// <exception cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Problem_1">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<List<global::Soenneker.Wikimedia.OpenApiClient.Models.Morelike_result_item>?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Wikimedia.OpenApiClient.Models.MorelikeResultItem>?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<List<global::Soenneker.Wikimedia.OpenApiClient.Models.Morelike_result_item>> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Wikimedia.OpenApiClient.Models.MorelikeResultItem>> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "XXX", global::Soenneker.Wikimedia.OpenApiClient.Models.Problem.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.Wikimedia.OpenApiClient.Models.Problem_1.CreateFromDiscriminatorValue },
             };
-            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.Morelike_result_item>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.Morelike_result_item.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.MorelikeResultItem>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.MorelikeResultItem.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();
         }
         /// <summary>

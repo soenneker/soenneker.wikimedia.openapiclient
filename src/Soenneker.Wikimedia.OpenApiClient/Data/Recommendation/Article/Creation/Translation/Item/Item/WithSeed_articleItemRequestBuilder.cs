@@ -36,25 +36,25 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Recommendation.Article.Creation
         /// <summary>
         /// &quot;Recommends articles to be translated from the sourceto the domain language.See more at [Recommendation API documentation](https://meta.wikimedia.org/wiki/Recommendation_API)Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Recommendation_result"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.RecommendationResult"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Problem">When receiving a 4XX or 5XX status code</exception>
+        /// <exception cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Problem_1">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.Recommendation_result?> GetAsync(Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Recommendation.Article.Creation.Translation.Item.Item.WithSeed_articleItemRequestBuilder.WithSeed_articleItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.RecommendationResult?> GetAsync(Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Recommendation.Article.Creation.Translation.Item.Item.WithSeed_articleItemRequestBuilder.WithSeed_articleItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.Recommendation_result> GetAsync(Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Recommendation.Article.Creation.Translation.Item.Item.WithSeed_articleItemRequestBuilder.WithSeed_articleItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.RecommendationResult> GetAsync(Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Recommendation.Article.Creation.Translation.Item.Item.WithSeed_articleItemRequestBuilder.WithSeed_articleItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "XXX", global::Soenneker.Wikimedia.OpenApiClient.Models.Problem.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.Wikimedia.OpenApiClient.Models.Problem_1.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.Recommendation_result>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.Recommendation_result.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.RecommendationResult>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.RecommendationResult.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &quot;Recommends articles to be translated from the sourceto the domain language.See more at [Recommendation API documentation](https://meta.wikimedia.org/wiki/Recommendation_API)Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;

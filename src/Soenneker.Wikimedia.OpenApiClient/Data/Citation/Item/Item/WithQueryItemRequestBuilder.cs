@@ -36,25 +36,25 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Citation.Item.Item
         /// <summary>
         /// &quot;Generates citation data given a URL, DOI, PMID, or PMCID.Automated requests can be made at a rate of 1 request per second (rps).See more at [Citoid service documentation](https://www.mediawiki.org/wiki/Citoid)The citation data can be requested in one of the following formats:  - `mediawiki`: format designed for MediaWiki to be used with `templateData`.    Uses [Zotero field names](https://aurimasv.github.io/z2csl/typeMap.xml).  - `mediawiki-basefields`: `mediawiki` format with Zotero `basefield` field names.  - `zotero`: format used by [Zotero](https://www.zotero.org/).  - `bibtex`: format used in conjunction with LaTeX documents.    See [bibtex.org](http://www.bibtex.org/).  - `wikibase`: format designed for [Wikibase](https://www.mediawiki.org/wiki/Extension:Wikibase_Repository).Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Result"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Result_1"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Problem">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Problem_1">When receiving a 404 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.Result?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.Result_1?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.Result> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.Result_1> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "404", global::Soenneker.Wikimedia.OpenApiClient.Models.Problem.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Wikimedia.OpenApiClient.Models.Problem_1.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.Result>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.Result.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.Result_1>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.Result_1.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &quot;Generates citation data given a URL, DOI, PMID, or PMCID.Automated requests can be made at a rate of 1 request per second (rps).See more at [Citoid service documentation](https://www.mediawiki.org/wiki/Citoid)The citation data can be requested in one of the following formats:  - `mediawiki`: format designed for MediaWiki to be used with `templateData`.    Uses [Zotero field names](https://aurimasv.github.io/z2csl/typeMap.xml).  - `mediawiki-basefields`: `mediawiki` format with Zotero `basefield` field names.  - `zotero`: format used by [Zotero](https://www.zotero.org/).  - `bibtex`: format used in conjunction with LaTeX documents.    See [bibtex.org](http://www.bibtex.org/).  - `wikibase`: format designed for [Wikibase](https://www.mediawiki.org/wiki/Extension:Wikibase_Repository).Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;

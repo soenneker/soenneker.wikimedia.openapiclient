@@ -34,7 +34,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/listing"
+                  "$ref": "#/components/schemas/Listing_1"
                 }
               }
             }
@@ -44,7 +44,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -77,7 +77,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/revision"
+                  "$ref": "#/components/schemas/Revision_1"
                 }
               }
             }
@@ -87,7 +87,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -97,7 +97,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -139,7 +139,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/revision"
+                  "$ref": "#/components/schemas/Revision_1"
                 }
               }
             }
@@ -149,7 +149,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -159,7 +159,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -221,7 +221,7 @@
               },
               "application/json": {
                 "schema": {
-                  "type": "object"
+                  "type": "string"
                 }
               }
             }
@@ -231,7 +231,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -241,7 +241,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -312,7 +312,7 @@
               },
               "application/json": {
                 "schema": {
-                  "type": "object"
+                  "type": "string"
                 }
               }
             }
@@ -322,7 +322,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -332,7 +332,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -342,7 +342,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -352,7 +352,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -395,7 +395,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -405,7 +405,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -415,7 +415,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -425,7 +425,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -477,7 +477,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -487,7 +487,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -497,7 +497,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -507,7 +507,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -556,7 +556,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/summary"
+                  "$ref": "#/components/schemas/Summary_1"
                 }
               }
             }
@@ -566,7 +566,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -576,7 +576,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -617,7 +617,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/media_list"
+                  "$ref": "#/components/schemas/MediaList"
                 }
               }
             }
@@ -627,7 +627,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -637,7 +637,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -687,7 +687,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/media_list"
+                  "$ref": "#/components/schemas/MediaList"
                 }
               }
             }
@@ -697,7 +697,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -707,7 +707,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -758,7 +758,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -768,7 +768,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -828,7 +828,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -838,7 +838,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -882,7 +882,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -935,7 +935,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -986,7 +986,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -996,7 +996,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1056,7 +1056,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1066,7 +1066,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1096,7 +1096,7 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/post_transform_html_to_wikitext"
+                "$ref": "#/components/schemas/PostTransformHtmlToWikitext"
               }
             }
           }
@@ -1117,7 +1117,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1127,7 +1127,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1137,7 +1137,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1147,7 +1147,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1157,7 +1157,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1196,7 +1196,7 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/post_transform_html_to_wikitext_title"
+                "$ref": "#/components/schemas/PostTransformHtmlToWikitextTitle"
               }
             }
           }
@@ -1217,7 +1217,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1227,7 +1227,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1237,7 +1237,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1247,7 +1247,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1257,7 +1257,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1305,7 +1305,7 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/post_transform_html_to_wikitext_title_revision"
+                "$ref": "#/components/schemas/PostTransformHtmlToWikitextTitleRevision"
               }
             }
           }
@@ -1326,7 +1326,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1336,7 +1336,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1346,7 +1346,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1356,7 +1356,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1366,7 +1366,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1386,7 +1386,7 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/post_transform_wikitext_to_html"
+                "$ref": "#/components/schemas/PostTransformWikitextToHtml"
               }
             }
           }
@@ -1407,7 +1407,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1417,7 +1417,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1427,7 +1427,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1437,7 +1437,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1447,7 +1447,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1478,7 +1478,7 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/post_transform_wikitext_to_html_title"
+                "$ref": "#/components/schemas/PostTransformWikitextToHtmlTitle"
               }
             }
           }
@@ -1499,7 +1499,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1509,7 +1509,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1519,7 +1519,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1529,7 +1529,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1539,7 +1539,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1579,7 +1579,7 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/post_transform_wikitext_to_html_title_revision"
+                "$ref": "#/components/schemas/PostTransformWikitextToHtmlTitleRevision"
               }
             }
           }
@@ -1600,7 +1600,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1610,7 +1610,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1620,7 +1620,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1630,7 +1630,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1640,7 +1640,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1686,7 +1686,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1696,7 +1696,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1706,7 +1706,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1716,7 +1716,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1747,7 +1747,7 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/post_transform_wikitext_to_lint_title"
+                "$ref": "#/components/schemas/PostTransformWikitextToLintTitle"
               }
             }
           }
@@ -1768,7 +1768,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1778,7 +1778,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1788,7 +1788,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1798,7 +1798,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1838,7 +1838,7 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/post_transform_wikitext_to_lint_title_revision"
+                "$ref": "#/components/schemas/PostTransformWikitextToLintTitleRevision"
               }
             }
           }
@@ -1859,7 +1859,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1869,7 +1869,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1879,7 +1879,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1889,7 +1889,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1943,7 +1943,7 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/transformWikitextToMobileHtml"
+                "$ref": "#/components/schemas/TransformWikitextToMobileHtml"
               }
             }
           }
@@ -1964,7 +1964,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -1974,7 +1974,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -2032,12 +2032,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/result"
+                  "$ref": "#/components/schemas/Result_1"
                 }
               },
               "application/x-bibtex": {
                 "schema": {
-                  "$ref": "#/components/schemas/result"
+                  "$ref": "#/components/schemas/Result_1"
                 }
               }
             }
@@ -2047,7 +2047,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -2091,7 +2091,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -2135,7 +2135,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -2181,7 +2181,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/get_data_lists_200"
+                  "$ref": "#/components/schemas/GetDataLists200"
                 }
               }
             }
@@ -2191,7 +2191,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -2221,7 +2221,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/list_write"
+                "$ref": "#/components/schemas/ListWrite"
               }
             }
           }
@@ -2232,7 +2232,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/post_data_lists_200"
+                  "$ref": "#/components/schemas/PostDataLists200"
                 }
               }
             }
@@ -2242,7 +2242,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -2283,7 +2283,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/list_write"
+                "$ref": "#/components/schemas/ListWrite"
               }
             }
           }
@@ -2294,7 +2294,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/put_data_lists_id_200"
+                  "$ref": "#/components/schemas/PutDataListsId200"
                 }
               }
             }
@@ -2304,7 +2304,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -2345,7 +2345,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -2377,7 +2377,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/post_data_lists_batch"
+                "$ref": "#/components/schemas/PostDataListsBatch"
               }
             }
           }
@@ -2388,7 +2388,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/post_data_lists_batch_200"
+                  "$ref": "#/components/schemas/PostDataListsBatch200"
                 }
               }
             }
@@ -2398,7 +2398,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -2453,7 +2453,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/getListEntries_200"
+                  "$ref": "#/components/schemas/GetListEntries200"
                 }
               }
             }
@@ -2463,7 +2463,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -2502,7 +2502,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/list_entry_write"
+                "$ref": "#/components/schemas/ListEntryWrite"
               }
             }
           }
@@ -2513,7 +2513,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/post_data_lists_id_entries_200"
+                  "$ref": "#/components/schemas/PostDataListsIdEntries200"
                 }
               }
             }
@@ -2523,7 +2523,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -2575,7 +2575,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -2616,7 +2616,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/post_data_lists_id_entries_batch"
+                "$ref": "#/components/schemas/PostDataListsIdEntriesBatch"
               }
             }
           }
@@ -2627,7 +2627,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/post_data_lists_id_entries_batch_200"
+                  "$ref": "#/components/schemas/PostDataListsIdEntriesBatch200"
                 }
               }
             }
@@ -2637,7 +2637,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -2689,7 +2689,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/get_data_lists_pages_project_title_200"
+                  "$ref": "#/components/schemas/GetDataListsPagesProjectTitle200"
                 }
               }
             }
@@ -2699,7 +2699,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -2741,7 +2741,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/get_data_lists_changes_since_date_200"
+                  "$ref": "#/components/schemas/GetDataListsChangesSinceDate200"
                 }
               }
             }
@@ -2751,7 +2751,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -2793,7 +2793,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/recommendation_result"
+                  "$ref": "#/components/schemas/RecommendationResult"
                 }
               }
             }
@@ -2803,7 +2803,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -2854,7 +2854,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/recommendation_result"
+                  "$ref": "#/components/schemas/RecommendationResult"
                 }
               }
             }
@@ -2864,7 +2864,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -2897,7 +2897,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/morelike_result"
+                  "$ref": "#/components/schemas/MorelikeResult"
                 }
               }
             }
@@ -2907,7 +2907,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -2957,7 +2957,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -3005,7 +3005,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -3052,7 +3052,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/problem"
+                  "$ref": "#/components/schemas/Problem_1"
                 }
               }
             }
@@ -3063,19 +3063,19 @@
   },
   "components": {
     "schemas": {
-      "revisions": {
+      "Revisions_1": {
         "required": [
           "items"
         ],
         "type": "object",
         "properties": {
           "items": {
-            "$ref": "#/components/schemas/revisionIdentifier"
+            "$ref": "#/components/schemas/RevisionIdentifier_1"
           }
         },
         "description": "The result format for revision listing"
       },
-      "listing": {
+      "Listing_1": {
         "required": [
           "items"
         ],
@@ -3088,23 +3088,12 @@
             }
           },
           "_links": {
-            "type": "object",
-            "properties": {
-              "next": {
-                "type": "object",
-                "properties": {
-                  "href": {
-                    "type": "string",
-                    "description": "Relative link to next result page."
-                  }
-                }
-              }
-            }
+            "$ref": "#/components/schemas/Listing1Links"
           }
         },
         "description": "The result format for listings"
       },
-      "revision": {
+      "Revision_1": {
         "required": [
           "count",
           "items"
@@ -3116,12 +3105,12 @@
             "format": "int32"
           },
           "items": {
-            "$ref": "#/components/schemas/revisionInfo"
+            "$ref": "#/components/schemas/RevisionInfo_1"
           }
         },
         "description": "Result format for revision items"
       },
-      "revisionInfo": {
+      "RevisionInfo_1": {
         "type": "object",
         "properties": {
           "title": {
@@ -3173,7 +3162,7 @@
         },
         "description": "Complete information about the revision"
       },
-      "revisionIdentifier": {
+      "RevisionIdentifier_1": {
         "type": "object",
         "properties": {
           "revision": {
@@ -3186,7 +3175,7 @@
         },
         "description": "Unique revision identifier"
       },
-      "titles_set": {
+      "TitlesSet": {
         "required": [
           "canonical",
           "normalized",
@@ -3209,7 +3198,7 @@
         },
         "description": "a good example of the differences can be seen in https://en.wikipedia.org/api/rest_v1/page/summary/IOS_13"
       },
-      "media_list": {
+      "MediaList": {
         "required": [
           "items",
           "revision",
@@ -3228,13 +3217,13 @@
           "items": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/media_item"
+              "$ref": "#/components/schemas/MediaItem"
             },
             "description": "a list of media items"
           }
         }
       },
-      "media_item": {
+      "MediaItem": {
         "required": [
           "type",
           "section_id",
@@ -3264,35 +3253,14 @@
             "description": "whether the client should show the file in an image gallery presentation"
           },
           "caption": {
-            "type": "object",
-            "properties": {
-              "html": {
-                "type": "string",
-                "description": "on-wiki caption for the media item, including all HTML markup"
-              },
-              "text": {
-                "type": "string",
-                "description": "plain text of the on-wiki caption for the media item"
-              }
-            }
+            "$ref": "#/components/schemas/MediaItemCaption"
           },
           "original": {
-            "type": "object",
-            "properties": {
-              "source": {
-                "type": "string",
-                "description": "Mathoid image render URL"
-              },
-              "mime": {
-                "type": "string",
-                "description": "the Mathoid image mime type"
-              }
-            },
-            "description": "reference to a Mathoid-rendered math formula image"
+            "$ref": "#/components/schemas/MediaItemOriginal"
           }
         }
       },
-      "problem": {
+      "Problem_1": {
         "required": [
           "type"
         ],
@@ -3312,7 +3280,7 @@
           }
         }
       },
-      "originalimage": {
+      "Originalimage_1": {
         "required": [
           "height",
           "source",
@@ -3334,7 +3302,7 @@
           }
         }
       },
-      "thumbnail": {
+      "Thumbnail_1": {
         "required": [
           "height",
           "source",
@@ -3356,7 +3324,7 @@
           }
         }
       },
-      "summary": {
+      "Summary_1": {
         "required": [
           "dir",
           "extract",
@@ -3366,7 +3334,7 @@
         "type": "object",
         "properties": {
           "titles": {
-            "$ref": "#/components/schemas/titles_set"
+            "$ref": "#/components/schemas/TitlesSet"
           },
           "title": {
             "type": "string",
@@ -3391,10 +3359,10 @@
             "description": "First several sentences of an article in simple HTML format"
           },
           "thumbnail": {
-            "$ref": "#/components/schemas/thumbnail"
+            "$ref": "#/components/schemas/Thumbnail_1"
           },
           "originalimage": {
-            "$ref": "#/components/schemas/originalimage"
+            "$ref": "#/components/schemas/Originalimage_1"
           },
           "lang": {
             "type": "string",
@@ -3416,26 +3384,11 @@
             "example": "American poet"
           },
           "coordinates": {
-            "required": [
-              "lat",
-              "lon"
-            ],
-            "type": "object",
-            "properties": {
-              "lat": {
-                "type": "number",
-                "description": "The latitude"
-              },
-              "lon": {
-                "type": "number",
-                "description": "The longitude"
-              }
-            },
-            "description": "The coordinates of the item"
+            "$ref": "#/components/schemas/Summary1Coordinates"
           }
         }
       },
-      "cx_mt": {
+      "CxMt": {
         "type": "object",
         "properties": {
           "contents": {
@@ -3444,7 +3397,7 @@
           }
         }
       },
-      "cx_dict": {
+      "CxDict": {
         "type": "object",
         "properties": {
           "source": {
@@ -3474,7 +3427,7 @@
           }
         }
       },
-      "result": {
+      "Result_1": {
         "required": [
           "title",
           "url",
@@ -3493,7 +3446,7 @@
           }
         }
       },
-      "list_read": {
+      "ListRead": {
         "title": "list",
         "required": [
           "id",
@@ -3527,7 +3480,7 @@
           }
         }
       },
-      "list_write": {
+      "ListWrite": {
         "title": "list",
         "required": [
           "name"
@@ -3544,7 +3497,7 @@
           }
         }
       },
-      "list_entry_read": {
+      "ListEntryRead": {
         "title": "list_entry",
         "type": "object",
         "properties": {
@@ -3574,7 +3527,7 @@
           }
         }
       },
-      "list_entry_write": {
+      "ListEntryWrite": {
         "required": [
           "project",
           "title"
@@ -3593,7 +3546,7 @@
           }
         }
       },
-      "recommendation_result": {
+      "RecommendationResult": {
         "type": "object",
         "properties": {
           "count": {
@@ -3623,10 +3576,10 @@
           }
         }
       },
-      "morelike_result": {
+      "MorelikeResult": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/morelike_result_item"
+          "$ref": "#/components/schemas/MorelikeResultItem"
         },
         "description": "the prioritized list of Wikidata IDs recommended for creation as Wikipedia articles"
       },
@@ -3656,8 +3609,7 @@
           }
         }
       },
-      "morelike_result_item": {
-        "title": "morelike_result_item",
+      "MorelikeResultItem": {
         "type": "object",
         "properties": {
           "wikidata_id": {
@@ -3674,43 +3626,99 @@
           }
         }
       },
-      "get_page_html_title_200": {
+      "Listing1Links": {
+        "type": "object",
+        "properties": {
+          "next": {
+            "$ref": "#/components/schemas/Listing1LinksNext"
+          }
+        }
+      },
+      "MediaItemCaption": {
+        "type": "object",
+        "properties": {
+          "html": {
+            "type": "string",
+            "description": "on-wiki caption for the media item, including all HTML markup"
+          },
+          "text": {
+            "type": "string",
+            "description": "plain text of the on-wiki caption for the media item"
+          }
+        }
+      },
+      "MediaItemOriginal": {
+        "type": "object",
+        "properties": {
+          "source": {
+            "type": "string",
+            "description": "Mathoid image render URL"
+          },
+          "mime": {
+            "type": "string",
+            "description": "the Mathoid image mime type"
+          }
+        },
+        "description": "reference to a Mathoid-rendered math formula image"
+      },
+      "Summary1Coordinates": {
+        "required": [
+          "lat",
+          "lon"
+        ],
+        "type": "object",
+        "properties": {
+          "lat": {
+            "type": "number",
+            "description": "The latitude"
+          },
+          "lon": {
+            "type": "number",
+            "description": "The longitude"
+          }
+        },
+        "description": "The coordinates of the item"
+      },
+      "Listing1LinksNext": {
+        "type": "object",
+        "properties": {
+          "href": {
+            "type": "string",
+            "description": "Relative link to next result page."
+          }
+        }
+      },
+      "GetPageHtmlTitle200": {
         "type": "string"
       },
-      "get_page_html_title_200_Response_application_json": {
+      "GetFormatRevision200": {
+        "type": "string"
+      },
+      "GetPageLintTitle200": {
         "type": "object"
       },
-      "getFormatRevision_200": {
-        "type": "string"
-      },
-      "getFormatRevision_200_Response_application_json": {
+      "GetPageLintTitleRevision200": {
         "type": "object"
       },
-      "get_page_lint_title_200": {
-        "type": "object"
-      },
-      "get_page_lint_title_revision_200": {
-        "type": "object"
-      },
-      "getContent_mobile_html_200": {
+      "GetContentMobileHtml200": {
         "type": "string"
       },
-      "getContentWithRevision_mobile_html_200": {
+      "GetContentWithRevisionMobileHtml200": {
         "type": "string"
       },
-      "get_page_mobile_html_offline_resources_title_200": {
+      "GetPageMobileHtmlOfflineResourcesTitle200": {
         "type": "string"
       },
-      "get_page_mobile_html_offline_resources_title_revision_200": {
+      "GetPageMobileHtmlOfflineResourcesTitleRevision200": {
         "type": "string"
       },
-      "get_page_talk_title_200": {
+      "GetPageTalkTitle200": {
         "type": "string"
       },
-      "get_page_talk_title_revision_200": {
+      "GetPageTalkTitleRevision200": {
         "type": "string"
       },
-      "post_transform_html_to_wikitext": {
+      "PostTransformHtmlToWikitext": {
         "required": [
           "html"
         ],
@@ -3727,10 +3735,10 @@
           }
         }
       },
-      "post_transform_html_to_wikitext_200": {
+      "PostTransformHtmlToWikitext200": {
         "type": "string"
       },
-      "post_transform_html_to_wikitext_title": {
+      "PostTransformHtmlToWikitextTitle": {
         "required": [
           "html"
         ],
@@ -3747,10 +3755,10 @@
           }
         }
       },
-      "post_transform_html_to_wikitext_title_200": {
+      "PostTransformHtmlToWikitextTitle200": {
         "type": "string"
       },
-      "post_transform_html_to_wikitext_title_revision": {
+      "PostTransformHtmlToWikitextTitleRevision": {
         "required": [
           "html"
         ],
@@ -3767,10 +3775,10 @@
           }
         }
       },
-      "post_transform_html_to_wikitext_title_revision_200": {
+      "PostTransformHtmlToWikitextTitleRevision200": {
         "type": "string"
       },
-      "post_transform_wikitext_to_html": {
+      "PostTransformWikitextToHtml": {
         "required": [
           "wikitext"
         ],
@@ -3791,10 +3799,10 @@
           }
         }
       },
-      "post_transform_wikitext_to_html_200": {
+      "PostTransformWikitextToHtml200": {
         "type": "string"
       },
-      "post_transform_wikitext_to_html_title": {
+      "PostTransformWikitextToHtmlTitle": {
         "required": [
           "wikitext"
         ],
@@ -3815,10 +3823,10 @@
           }
         }
       },
-      "post_transform_wikitext_to_html_title_200": {
+      "PostTransformWikitextToHtmlTitle200": {
         "type": "string"
       },
-      "post_transform_wikitext_to_html_title_revision": {
+      "PostTransformWikitextToHtmlTitleRevision": {
         "required": [
           "wikitext"
         ],
@@ -3839,13 +3847,13 @@
           }
         }
       },
-      "post_transform_wikitext_to_html_title_revision_200": {
+      "PostTransformWikitextToHtmlTitleRevision200": {
         "type": "string"
       },
-      "post_transform_wikitext_to_lint_200": {
+      "PostTransformWikitextToLint200": {
         "type": "object"
       },
-      "post_transform_wikitext_to_lint_title": {
+      "PostTransformWikitextToLintTitle": {
         "required": [
           "wikitext"
         ],
@@ -3858,10 +3866,10 @@
           }
         }
       },
-      "post_transform_wikitext_to_lint_title_200": {
+      "PostTransformWikitextToLintTitle200": {
         "type": "object"
       },
-      "post_transform_wikitext_to_lint_title_revision": {
+      "PostTransformWikitextToLintTitleRevision": {
         "required": [
           "wikitext"
         ],
@@ -3874,10 +3882,10 @@
           }
         }
       },
-      "post_transform_wikitext_to_lint_title_revision_200": {
+      "PostTransformWikitextToLintTitleRevision200": {
         "type": "object"
       },
-      "transformWikitextToMobileHtml": {
+      "TransformWikitextToMobileHtml": {
         "required": [
           "wikitext"
         ],
@@ -3890,22 +3898,22 @@
           }
         }
       },
-      "transformWikitextToMobileHtml_200": {
+      "TransformWikitextToMobileHtml200": {
         "type": "string"
       },
-      "post_data_lists_setup_200": {
+      "PostDataListsSetup200": {
         "type": "object"
       },
-      "post_data_lists_teardown_200": {
+      "PostDataListsTeardown200": {
         "type": "object"
       },
-      "get_data_lists_200": {
+      "GetDataLists200": {
         "type": "object",
         "properties": {
           "lists": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/list_read"
+              "$ref": "#/components/schemas/ListRead"
             }
           },
           "next": {
@@ -3919,7 +3927,7 @@
           }
         }
       },
-      "post_data_lists_200": {
+      "PostDataLists200": {
         "required": [
           "id",
           "list"
@@ -3932,11 +3940,11 @@
             "example": 7
           },
           "list": {
-            "$ref": "#/components/schemas/list_read"
+            "$ref": "#/components/schemas/ListRead"
           }
         }
       },
-      "put_data_lists_id_200": {
+      "PutDataListsId200": {
         "required": [
           "id",
           "list"
@@ -3949,14 +3957,14 @@
             "example": 7
           },
           "list": {
-            "$ref": "#/components/schemas/list_read"
+            "$ref": "#/components/schemas/ListRead"
           }
         }
       },
-      "delete_data_lists_id_200": {
+      "DeleteDataListsId200": {
         "type": "object"
       },
-      "post_data_lists_batch": {
+      "PostDataListsBatch": {
         "title": "batch",
         "required": [
           "batch"
@@ -3967,12 +3975,12 @@
             "maxItems": 500,
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/list_write"
+              "$ref": "#/components/schemas/ListWrite"
             }
           }
         }
       },
-      "post_data_lists_batch_200": {
+      "PostDataListsBatch200": {
         "title": "list_create_batch",
         "required": [
           "batch",
@@ -4001,18 +4009,18 @@
           "lists": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/list_read"
+              "$ref": "#/components/schemas/ListRead"
             }
           }
         }
       },
-      "getListEntries_200": {
+      "GetListEntries200": {
         "type": "object",
         "properties": {
           "entries": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/list_entry_read"
+              "$ref": "#/components/schemas/ListEntryRead"
             }
           },
           "next": {
@@ -4021,7 +4029,7 @@
           }
         }
       },
-      "post_data_lists_id_entries_200": {
+      "PostDataListsIdEntries200": {
         "required": [
           "id",
           "entry"
@@ -4034,14 +4042,14 @@
             "example": 13
           },
           "entry": {
-            "$ref": "#/components/schemas/list_entry_read"
+            "$ref": "#/components/schemas/ListEntryRead"
           }
         }
       },
-      "delete_data_lists_id_entries_entry_id_200": {
+      "DeleteDataListsIdEntriesEntryId200": {
         "type": "object"
       },
-      "post_data_lists_id_entries_batch": {
+      "PostDataListsIdEntriesBatch": {
         "required": [
           "batch"
         ],
@@ -4052,12 +4060,12 @@
             "maxItems": 500,
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/list_entry_write"
+              "$ref": "#/components/schemas/ListEntryWrite"
             }
           }
         }
       },
-      "post_data_lists_id_entries_batch_200": {
+      "PostDataListsIdEntriesBatch200": {
         "required": [
           "entries",
           "batch"
@@ -4080,18 +4088,18 @@
           "entries": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/list_entry_read"
+              "$ref": "#/components/schemas/ListEntryRead"
             }
           }
         }
       },
-      "get_data_lists_pages_project_title_200": {
+      "GetDataListsPagesProjectTitle200": {
         "type": "object",
         "properties": {
           "lists": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/list_read"
+              "$ref": "#/components/schemas/ListRead"
             }
           },
           "next": {
@@ -4100,13 +4108,13 @@
           }
         }
       },
-      "get_data_lists_changes_since_date_200": {
+      "GetDataListsChangesSinceDate200": {
         "type": "object",
         "properties": {
           "lists": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/list_read"
+              "$ref": "#/components/schemas/ListRead"
             }
           },
           "next": {
@@ -4120,13 +4128,13 @@
           }
         }
       },
-      "get_data_css_mobile_type_200": {
+      "GetDataCssMobileType200": {
         "type": "object"
       },
-      "get_data_javascript_mobile_type_200": {
+      "GetDataJavascriptMobileType200": {
         "type": "object"
       },
-      "get_data_i18n_type_200": {
+      "GetDataI18nType200": {
         "type": "object"
       },
       "ExamplePayload": {

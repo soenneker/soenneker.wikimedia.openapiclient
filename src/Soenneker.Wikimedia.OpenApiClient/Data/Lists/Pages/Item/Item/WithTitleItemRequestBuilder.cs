@@ -36,25 +36,25 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Pages.Item.Item
         /// <summary>
         /// &quot;Request must be authenticated with a MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Get_data_lists_pages_project_title_200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataListsPagesProjectTitle200"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Problem">When receiving a 4XX or 5XX status code</exception>
+        /// <exception cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Problem_1">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.Get_data_lists_pages_project_title_200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Pages.Item.Item.WithTitleItemRequestBuilder.WithTitleItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataListsPagesProjectTitle200?> GetAsync(Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Pages.Item.Item.WithTitleItemRequestBuilder.WithTitleItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.Get_data_lists_pages_project_title_200> GetAsync(Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Pages.Item.Item.WithTitleItemRequestBuilder.WithTitleItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataListsPagesProjectTitle200> GetAsync(Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Pages.Item.Item.WithTitleItemRequestBuilder.WithTitleItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "XXX", global::Soenneker.Wikimedia.OpenApiClient.Models.Problem.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.Wikimedia.OpenApiClient.Models.Problem_1.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.Get_data_lists_pages_project_title_200>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.Get_data_lists_pages_project_title_200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataListsPagesProjectTitle200>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataListsPagesProjectTitle200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &quot;Request must be authenticated with a MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;

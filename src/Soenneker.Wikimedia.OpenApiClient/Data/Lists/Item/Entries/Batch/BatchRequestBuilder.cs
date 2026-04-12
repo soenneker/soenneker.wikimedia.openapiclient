@@ -36,27 +36,27 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.Batch
         /// <summary>
         /// &quot;See `POST /lists/{id}/entries/`.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Post_data_lists_id_entries_batch_200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsIdEntriesBatch200"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Problem">When receiving a 4XX or 5XX status code</exception>
+        /// <exception cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Problem_1">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.Post_data_lists_id_entries_batch_200?> PostAsync(global::Soenneker.Wikimedia.OpenApiClient.Models.Post_data_lists_id_entries_batch body, Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.Batch.BatchRequestBuilder.BatchRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsIdEntriesBatch200?> PostAsync(global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsIdEntriesBatch body, Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.Batch.BatchRequestBuilder.BatchRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.Post_data_lists_id_entries_batch_200> PostAsync(global::Soenneker.Wikimedia.OpenApiClient.Models.Post_data_lists_id_entries_batch body, Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.Batch.BatchRequestBuilder.BatchRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsIdEntriesBatch200> PostAsync(global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsIdEntriesBatch body, Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.Batch.BatchRequestBuilder.BatchRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "XXX", global::Soenneker.Wikimedia.OpenApiClient.Models.Problem.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.Wikimedia.OpenApiClient.Models.Problem_1.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.Post_data_lists_id_entries_batch_200>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.Post_data_lists_id_entries_batch_200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsIdEntriesBatch200>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsIdEntriesBatch200.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &quot;See `POST /lists/{id}/entries/`.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
@@ -66,11 +66,11 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.Batch
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Wikimedia.OpenApiClient.Models.Post_data_lists_id_entries_batch body, Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.Batch.BatchRequestBuilder.BatchRequestBuilderPostQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsIdEntriesBatch body, Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.Batch.BatchRequestBuilder.BatchRequestBuilderPostQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Wikimedia.OpenApiClient.Models.Post_data_lists_id_entries_batch body, Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.Batch.BatchRequestBuilder.BatchRequestBuilderPostQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsIdEntriesBatch body, Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.Batch.BatchRequestBuilder.BatchRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
