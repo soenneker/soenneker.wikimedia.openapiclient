@@ -5,41 +5,33 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System;
-namespace Soenneker.Wikimedia.OpenApiClient.Models
+namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.Batch
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class PutDataListsId200 : IAdditionalDataHolder, IParsable
+    public partial class BatchPostResponse_batch : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>List ID.Deprecated, will be removed. Use the full list object.</summary>
+        /// <summary>List entry ID</summary>
         public int? Id { get; set; }
-        /// <summary>The list property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Wikimedia.OpenApiClient.Models.ListRead? List { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Wikimedia.OpenApiClient.Models.ListRead List { get; set; }
-#endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.PutDataListsId200"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.Batch.BatchPostResponse_batch"/> and sets the default values.
         /// </summary>
-        public PutDataListsId200()
+        public BatchPostResponse_batch()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.PutDataListsId200"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.Batch.BatchPostResponse_batch"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Wikimedia.OpenApiClient.Models.PutDataListsId200 CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.Batch.BatchPostResponse_batch CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Wikimedia.OpenApiClient.Models.PutDataListsId200();
+            return new global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.Batch.BatchPostResponse_batch();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -50,7 +42,6 @@ namespace Soenneker.Wikimedia.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "id", n => { Id = n.GetIntValue(); } },
-                { "list", n => { List = n.GetObjectValue<global::Soenneker.Wikimedia.OpenApiClient.Models.ListRead>(global::Soenneker.Wikimedia.OpenApiClient.Models.ListRead.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -61,7 +52,6 @@ namespace Soenneker.Wikimedia.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.Wikimedia.OpenApiClient.Models.ListRead>("list", List);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

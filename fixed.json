@@ -1665,7 +1665,7 @@
             },
             "application/json": {
               "schema": {
-                "type": "string"
+                "$ref": "#/components/schemas/post_transform_wikitext_to_lintapplication_json_Body"
               }
             }
           }
@@ -2181,7 +2181,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetDataLists200"
+                  "type": "object",
+                  "properties": {
+                    "lists": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ListRead"
+                      }
+                    },
+                    "next": {
+                      "type": "string",
+                      "description": "Continuation token."
+                    },
+                    "continue-from": {
+                      "type": "string",
+                      "description": "Timestamp to sync from, to be used with the `GET /lists/changes/since/{date}`\nendpoint.\n",
+                      "format": "date-time"
+                    }
+                  }
                 }
               }
             }
@@ -2232,7 +2249,21 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostDataLists200"
+                  "required": [
+                    "id",
+                    "list"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "description": "List ID.\n\nDeprecated, will be removed. Use the full list object.\n",
+                      "example": 7
+                    },
+                    "list": {
+                      "$ref": "#/components/schemas/ListRead"
+                    }
+                  }
                 }
               }
             }
@@ -2294,7 +2325,21 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PutDataListsId200"
+                  "required": [
+                    "id",
+                    "list"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "description": "List ID.\n\nDeprecated, will be removed. Use the full list object.\n",
+                      "example": 7
+                    },
+                    "list": {
+                      "$ref": "#/components/schemas/ListRead"
+                    }
+                  }
                 }
               }
             }
@@ -2388,7 +2433,38 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostDataListsBatch200"
+                  "title": "list_create_batch",
+                  "required": [
+                    "batch",
+                    "lists"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "batch": {
+                      "type": "array",
+                      "items": {
+                        "title": "list_id",
+                        "required": [
+                          "id"
+                        ],
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer",
+                            "description": "List ID",
+                            "example": 7
+                          }
+                        }
+                      },
+                      "description": "Deprecated, will be removed. Use the full list objects instead."
+                    },
+                    "lists": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ListRead"
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -2453,7 +2529,19 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetListEntries200"
+                  "type": "object",
+                  "properties": {
+                    "entries": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ListEntryRead"
+                      }
+                    },
+                    "next": {
+                      "type": "string",
+                      "description": "Continuation token."
+                    }
+                  }
                 }
               }
             }
@@ -2513,7 +2601,21 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostDataListsIdEntries200"
+                  "required": [
+                    "id",
+                    "entry"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "description": "List entry ID\n\nDeprecated, will be removed. Use the full entry object instead.\n",
+                      "example": 13
+                    },
+                    "entry": {
+                      "$ref": "#/components/schemas/ListEntryRead"
+                    }
+                  }
                 }
               }
             }
@@ -2627,7 +2729,32 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostDataListsIdEntriesBatch200"
+                  "required": [
+                    "entries",
+                    "batch"
+                  ],
+                  "type": "object",
+                  "properties": {
+                    "batch": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer",
+                            "description": "List entry ID",
+                            "example": 13
+                          }
+                        }
+                      }
+                    },
+                    "entries": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ListEntryRead"
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -2689,7 +2816,19 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetDataListsPagesProjectTitle200"
+                  "type": "object",
+                  "properties": {
+                    "lists": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ListRead"
+                      }
+                    },
+                    "next": {
+                      "type": "string",
+                      "description": "Continuation token."
+                    }
+                  }
                 }
               }
             }
@@ -2741,7 +2880,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetDataListsChangesSinceDate200"
+                  "type": "object",
+                  "properties": {
+                    "lists": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ListRead"
+                      }
+                    },
+                    "next": {
+                      "type": "string",
+                      "description": "Continuation token."
+                    },
+                    "continue-from": {
+                      "type": "string",
+                      "description": "Timestamp to sync from, to be used with the `GET /lists/changes/since/{date}`\nendpoint.\n",
+                      "format": "date-time"
+                    }
+                  }
                 }
               }
             }
@@ -3596,7 +3752,7 @@
           }
         }
       },
-      "post_transform_wikitext_to_lintapplication_json": {
+      "post_transform_wikitext_to_lintapplication_json_Body": {
         "required": [
           "wikitext"
         ],
@@ -3907,60 +4063,6 @@
       "PostDataListsTeardown200": {
         "type": "object"
       },
-      "GetDataLists200": {
-        "type": "object",
-        "properties": {
-          "lists": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ListRead"
-            }
-          },
-          "next": {
-            "type": "string",
-            "description": "Continuation token."
-          },
-          "continue-from": {
-            "type": "string",
-            "description": "Timestamp to sync from, to be used with the `GET /lists/changes/since/{date}`\nendpoint.\n",
-            "format": "date-time"
-          }
-        }
-      },
-      "PostDataLists200": {
-        "required": [
-          "id",
-          "list"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "description": "List ID.\n\nDeprecated, will be removed. Use the full list object.\n",
-            "example": 7
-          },
-          "list": {
-            "$ref": "#/components/schemas/ListRead"
-          }
-        }
-      },
-      "PutDataListsId200": {
-        "required": [
-          "id",
-          "list"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "description": "List ID.\n\nDeprecated, will be removed. Use the full list object.\n",
-            "example": 7
-          },
-          "list": {
-            "$ref": "#/components/schemas/ListRead"
-          }
-        }
-      },
       "DeleteDataListsId200": {
         "type": "object"
       },
@@ -3980,72 +4082,6 @@
           }
         }
       },
-      "PostDataListsBatch200": {
-        "title": "list_create_batch",
-        "required": [
-          "batch",
-          "lists"
-        ],
-        "type": "object",
-        "properties": {
-          "batch": {
-            "type": "array",
-            "items": {
-              "title": "list_id",
-              "required": [
-                "id"
-              ],
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer",
-                  "description": "List ID",
-                  "example": 7
-                }
-              }
-            },
-            "description": "Deprecated, will be removed. Use the full list objects instead."
-          },
-          "lists": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ListRead"
-            }
-          }
-        }
-      },
-      "GetListEntries200": {
-        "type": "object",
-        "properties": {
-          "entries": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ListEntryRead"
-            }
-          },
-          "next": {
-            "type": "string",
-            "description": "Continuation token."
-          }
-        }
-      },
-      "PostDataListsIdEntries200": {
-        "required": [
-          "id",
-          "entry"
-        ],
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "description": "List entry ID\n\nDeprecated, will be removed. Use the full entry object instead.\n",
-            "example": 13
-          },
-          "entry": {
-            "$ref": "#/components/schemas/ListEntryRead"
-          }
-        }
-      },
       "DeleteDataListsIdEntriesEntryId200": {
         "type": "object"
       },
@@ -4062,69 +4098,6 @@
             "items": {
               "$ref": "#/components/schemas/ListEntryWrite"
             }
-          }
-        }
-      },
-      "PostDataListsIdEntriesBatch200": {
-        "required": [
-          "entries",
-          "batch"
-        ],
-        "type": "object",
-        "properties": {
-          "batch": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer",
-                  "description": "List entry ID",
-                  "example": 13
-                }
-              }
-            }
-          },
-          "entries": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ListEntryRead"
-            }
-          }
-        }
-      },
-      "GetDataListsPagesProjectTitle200": {
-        "type": "object",
-        "properties": {
-          "lists": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ListRead"
-            }
-          },
-          "next": {
-            "type": "string",
-            "description": "Continuation token."
-          }
-        }
-      },
-      "GetDataListsChangesSinceDate200": {
-        "type": "object",
-        "properties": {
-          "lists": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ListRead"
-            }
-          },
-          "next": {
-            "type": "string",
-            "description": "Continuation token."
-          },
-          "continue-from": {
-            "type": "string",
-            "description": "Timestamp to sync from, to be used with the `GET /lists/changes/since/{date}`\nendpoint.\n",
-            "format": "date-time"
           }
         }
       },
