@@ -34,7 +34,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Listing_1"
+                  "$ref": "#/components/schemas/Listing"
                 }
               }
             }
@@ -44,7 +44,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -77,7 +77,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Revision_1"
+                  "$ref": "#/components/schemas/Revision"
                 }
               }
             }
@@ -87,7 +87,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -97,7 +97,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -139,7 +139,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Revision_1"
+                  "$ref": "#/components/schemas/Revision"
                 }
               }
             }
@@ -149,7 +149,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -159,7 +159,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -231,7 +231,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -241,7 +241,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -322,7 +322,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -332,7 +332,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -342,7 +342,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -352,7 +352,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -395,7 +395,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -405,7 +405,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -415,7 +415,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -425,7 +425,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -477,7 +477,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -487,7 +487,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -497,7 +497,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -507,7 +507,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -556,7 +556,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Summary_1"
+                  "$ref": "#/components/schemas/Summary"
                 }
               }
             }
@@ -566,7 +566,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -576,7 +576,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -627,7 +627,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -637,7 +637,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -697,7 +697,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -707,7 +707,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -758,7 +758,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -768,7 +768,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -828,7 +828,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -838,7 +838,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -882,7 +882,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -935,7 +935,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -986,7 +986,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -996,7 +996,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1056,7 +1056,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1066,7 +1066,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1117,7 +1117,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1127,7 +1127,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1137,7 +1137,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1147,7 +1147,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1157,7 +1157,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1217,7 +1217,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1227,7 +1227,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1237,7 +1237,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1247,7 +1247,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1257,7 +1257,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1326,7 +1326,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1336,7 +1336,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1346,7 +1346,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1356,7 +1356,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1366,7 +1366,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1407,7 +1407,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1417,7 +1417,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1427,7 +1427,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1437,7 +1437,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1447,7 +1447,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1499,7 +1499,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1509,7 +1509,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1519,7 +1519,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1529,7 +1529,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1539,7 +1539,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1600,7 +1600,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1610,7 +1610,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1620,7 +1620,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1630,7 +1630,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1640,7 +1640,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1686,7 +1686,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1696,7 +1696,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1706,7 +1706,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1716,7 +1716,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1768,7 +1768,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1778,7 +1778,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1788,7 +1788,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1798,7 +1798,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1859,7 +1859,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1869,7 +1869,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1879,7 +1879,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1889,7 +1889,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1964,7 +1964,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -1974,7 +1974,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -2032,12 +2032,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Result_1"
+                  "$ref": "#/components/schemas/Result"
                 }
               },
               "application/x-bibtex": {
                 "schema": {
-                  "$ref": "#/components/schemas/Result_1"
+                  "$ref": "#/components/schemas/Result"
                 }
               }
             }
@@ -2047,7 +2047,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -2091,7 +2091,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -2135,7 +2135,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -2208,7 +2208,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -2273,7 +2273,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -2349,7 +2349,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -2390,7 +2390,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -2474,7 +2474,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -2551,7 +2551,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -2625,7 +2625,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -2677,7 +2677,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -2764,7 +2764,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -2838,7 +2838,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -2907,7 +2907,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -2959,7 +2959,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -3020,7 +3020,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -3063,7 +3063,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -3113,7 +3113,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -3161,7 +3161,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -3208,7 +3208,7 @@
             "content": {
               "application/problem+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Problem_1"
+                  "$ref": "#/components/schemas/Problem"
                 }
               }
             }
@@ -3219,19 +3219,19 @@
   },
   "components": {
     "schemas": {
-      "Revisions_1": {
+      "Revisions": {
         "required": [
           "items"
         ],
         "type": "object",
         "properties": {
           "items": {
-            "$ref": "#/components/schemas/RevisionIdentifier_1"
+            "$ref": "#/components/schemas/RevisionIdentifier"
           }
         },
         "description": "The result format for revision listing"
       },
-      "Listing_1": {
+      "Listing": {
         "required": [
           "items"
         ],
@@ -3244,12 +3244,12 @@
             }
           },
           "_links": {
-            "$ref": "#/components/schemas/Listing1Links"
+            "$ref": "#/components/schemas/ListingLinks"
           }
         },
         "description": "The result format for listings"
       },
-      "Revision_1": {
+      "Revision": {
         "required": [
           "count",
           "items"
@@ -3261,12 +3261,12 @@
             "format": "int32"
           },
           "items": {
-            "$ref": "#/components/schemas/RevisionInfo_1"
+            "$ref": "#/components/schemas/RevisionInfo"
           }
         },
         "description": "Result format for revision items"
       },
-      "RevisionInfo_1": {
+      "RevisionInfo": {
         "type": "object",
         "properties": {
           "title": {
@@ -3318,7 +3318,7 @@
         },
         "description": "Complete information about the revision"
       },
-      "RevisionIdentifier_1": {
+      "RevisionIdentifier": {
         "type": "object",
         "properties": {
           "revision": {
@@ -3416,7 +3416,7 @@
           }
         }
       },
-      "Problem_1": {
+      "Problem": {
         "required": [
           "type"
         ],
@@ -3436,7 +3436,7 @@
           }
         }
       },
-      "Originalimage_1": {
+      "Originalimage": {
         "required": [
           "height",
           "source",
@@ -3458,7 +3458,7 @@
           }
         }
       },
-      "Thumbnail_1": {
+      "Thumbnail": {
         "required": [
           "height",
           "source",
@@ -3480,7 +3480,7 @@
           }
         }
       },
-      "Summary_1": {
+      "Summary": {
         "required": [
           "dir",
           "extract",
@@ -3515,10 +3515,10 @@
             "description": "First several sentences of an article in simple HTML format"
           },
           "thumbnail": {
-            "$ref": "#/components/schemas/Thumbnail_1"
+            "$ref": "#/components/schemas/Thumbnail"
           },
           "originalimage": {
-            "$ref": "#/components/schemas/Originalimage_1"
+            "$ref": "#/components/schemas/Originalimage"
           },
           "lang": {
             "type": "string",
@@ -3540,7 +3540,7 @@
             "example": "American poet"
           },
           "coordinates": {
-            "$ref": "#/components/schemas/Summary1Coordinates"
+            "$ref": "#/components/schemas/SummaryCoordinates"
           }
         }
       },
@@ -3583,7 +3583,7 @@
           }
         }
       },
-      "Result_1": {
+      "Result": {
         "required": [
           "title",
           "url",
@@ -3782,11 +3782,11 @@
           }
         }
       },
-      "Listing1Links": {
+      "ListingLinks": {
         "type": "object",
         "properties": {
           "next": {
-            "$ref": "#/components/schemas/Listing1LinksNext"
+            "$ref": "#/components/schemas/ListingLinksNext"
           }
         }
       },
@@ -3817,7 +3817,7 @@
         },
         "description": "reference to a Mathoid-rendered math formula image"
       },
-      "Summary1Coordinates": {
+      "SummaryCoordinates": {
         "required": [
           "lat",
           "lon"
@@ -3835,7 +3835,7 @@
         },
         "description": "The coordinates of the item"
       },
-      "Listing1LinksNext": {
+      "ListingLinksNext": {
         "type": "object",
         "properties": {
           "href": {

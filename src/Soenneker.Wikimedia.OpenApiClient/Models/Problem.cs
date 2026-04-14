@@ -2,6 +2,7 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
+using Microsoft.Kiota.Abstractions;
 using System.Collections.Generic;
 using System.IO;
 using System;
@@ -9,19 +10,29 @@ namespace Soenneker.Wikimedia.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class Result_1 : IAdditionalDataHolder, IParsable
+    public partial class Problem : ApiException, IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The itemType property</summary>
+        /// <summary>The detail property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ItemType { get; set; }
+        public string? Detail { get; set; }
 #nullable restore
 #else
-        public string ItemType { get; set; }
+        public string Detail { get; set; }
 #endif
+        /// <summary>The instance property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Instance { get; set; }
+#nullable restore
+#else
+        public string Instance { get; set; }
+#endif
+        /// <summary>The primary error message.</summary>
+        public override string Message { get => base.Message; }
         /// <summary>The title property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -30,30 +41,30 @@ namespace Soenneker.Wikimedia.OpenApiClient.Models
 #else
         public string Title { get; set; }
 #endif
-        /// <summary>The url property</summary>
+        /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get; set; }
+        public string? Type { get; set; }
 #nullable restore
 #else
-        public string Url { get; set; }
+        public string Type { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Result_1"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Problem"/> and sets the default values.
         /// </summary>
-        public Result_1()
+        public Problem()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Result_1"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Problem"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Wikimedia.OpenApiClient.Models.Result_1 CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Wikimedia.OpenApiClient.Models.Problem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Wikimedia.OpenApiClient.Models.Result_1();
+            return new global::Soenneker.Wikimedia.OpenApiClient.Models.Problem();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -63,9 +74,10 @@ namespace Soenneker.Wikimedia.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "itemType", n => { ItemType = n.GetStringValue(); } },
+                { "detail", n => { Detail = n.GetStringValue(); } },
+                { "instance", n => { Instance = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
-                { "url", n => { Url = n.GetStringValue(); } },
+                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -75,9 +87,10 @@ namespace Soenneker.Wikimedia.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("itemType", ItemType);
+            writer.WriteStringValue("detail", Detail);
+            writer.WriteStringValue("instance", Instance);
             writer.WriteStringValue("title", Title);
-            writer.WriteStringValue("url", Url);
+            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

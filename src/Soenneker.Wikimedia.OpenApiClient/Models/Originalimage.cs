@@ -9,35 +9,39 @@ namespace Soenneker.Wikimedia.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class Listing1LinksNext : IAdditionalDataHolder, IParsable
+    public partial class Originalimage : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Relative link to next result page.</summary>
+        /// <summary>Original image height</summary>
+        public int? Height { get; set; }
+        /// <summary>Original image URI</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Href { get; set; }
+        public string? Source { get; set; }
 #nullable restore
 #else
-        public string Href { get; set; }
+        public string Source { get; set; }
 #endif
+        /// <summary>Original image width</summary>
+        public int? Width { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Listing1LinksNext"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Originalimage"/> and sets the default values.
         /// </summary>
-        public Listing1LinksNext()
+        public Originalimage()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Listing1LinksNext"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Originalimage"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Wikimedia.OpenApiClient.Models.Listing1LinksNext CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Wikimedia.OpenApiClient.Models.Originalimage CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Wikimedia.OpenApiClient.Models.Listing1LinksNext();
+            return new global::Soenneker.Wikimedia.OpenApiClient.Models.Originalimage();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -47,7 +51,9 @@ namespace Soenneker.Wikimedia.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "href", n => { Href = n.GetStringValue(); } },
+                { "height", n => { Height = n.GetIntValue(); } },
+                { "source", n => { Source = n.GetStringValue(); } },
+                { "width", n => { Width = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -57,7 +63,9 @@ namespace Soenneker.Wikimedia.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("href", Href);
+            writer.WriteIntValue("height", Height);
+            writer.WriteStringValue("source", Source);
+            writer.WriteIntValue("width", Width);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

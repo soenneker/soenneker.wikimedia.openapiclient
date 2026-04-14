@@ -45,7 +45,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item
         /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.ListsDeleteResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Problem_1">When receiving a 4XX or 5XX status code</exception>
+        /// <exception cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Problem">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.ListsDeleteResponse?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -58,7 +58,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "XXX", global::Soenneker.Wikimedia.OpenApiClient.Models.Problem_1.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.Wikimedia.OpenApiClient.Models.Problem.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.ListsDeleteResponse>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.ListsDeleteResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -69,7 +69,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Problem_1">When receiving a 4XX or 5XX status code</exception>
+        /// <exception cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Problem">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.ListsPutResponse?> PutAsync(global::Soenneker.Wikimedia.OpenApiClient.Models.ListWrite body, Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.ListsItemRequestBuilder.ListsItemRequestBuilderPutQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -83,7 +83,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "XXX", global::Soenneker.Wikimedia.OpenApiClient.Models.Problem_1.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.Wikimedia.OpenApiClient.Models.Problem.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.ListsPutResponse>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.ListsPutResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

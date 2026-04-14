@@ -39,7 +39,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Changes.Since.Item
         /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Changes.Since.Item.WithDateGetResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Problem_1">When receiving a 4XX or 5XX status code</exception>
+        /// <exception cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Problem">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Changes.Since.Item.WithDateGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Changes.Since.Item.WithDateItemRequestBuilder.WithDateItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -52,7 +52,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Changes.Since.Item
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "XXX", global::Soenneker.Wikimedia.OpenApiClient.Models.Problem_1.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.Wikimedia.OpenApiClient.Models.Problem.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Changes.Since.Item.WithDateGetResponse>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Changes.Since.Item.WithDateGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

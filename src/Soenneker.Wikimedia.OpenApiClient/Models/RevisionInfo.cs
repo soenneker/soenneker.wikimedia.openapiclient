@@ -11,7 +11,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Models
     /// Complete information about the revision
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RevisionInfo_1 : IAdditionalDataHolder, IParsable
+    public partial class RevisionInfo : IAdditionalDataHolder, IParsable
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -82,21 +82,21 @@ namespace Soenneker.Wikimedia.OpenApiClient.Models
         public string UserText { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.RevisionInfo_1"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.RevisionInfo"/> and sets the default values.
         /// </summary>
-        public RevisionInfo_1()
+        public RevisionInfo()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.RevisionInfo_1"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.RevisionInfo"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Wikimedia.OpenApiClient.Models.RevisionInfo_1 CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Wikimedia.OpenApiClient.Models.RevisionInfo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Wikimedia.OpenApiClient.Models.RevisionInfo_1();
+            return new global::Soenneker.Wikimedia.OpenApiClient.Models.RevisionInfo();
         }
         /// <summary>
         /// The deserialization information for the current model

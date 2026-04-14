@@ -1,8 +1,8 @@
 {
-  "descriptionHash": "6A7335216DE2348E5EDAF06DDBF21AA17C1669B15397FCFBCBD95D3DE6B581D60EAEA2F1B0251A998D1335AE02C4C9AD5D352090C778EC0B51B90726DDC27D36",
+  "descriptionHash": "4CFE714C6D538509F83773A9257C943EF93960C98900812074B7C2BE5DB25EC07609E0591B9F47357B96007DB5031400AD81D828AF90A534BE984212301565AF",
   "descriptionLocation": "../../fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.31.0",
+  "kiotaVersion": "1.31.1",
   "clientClassName": "WikimediaOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.Wikimedia.OpenApiClient",

@@ -39,7 +39,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Teardown
         /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Teardown.TeardownPostResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Problem_1">When receiving a 4XX or 5XX status code</exception>
+        /// <exception cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Problem">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Teardown.TeardownPostResponse?> PostAsync(Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Teardown.TeardownRequestBuilder.TeardownRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -52,7 +52,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Teardown
             var requestInfo = ToPostRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "XXX", global::Soenneker.Wikimedia.OpenApiClient.Models.Problem_1.CreateFromDiscriminatorValue },
+                { "XXX", global::Soenneker.Wikimedia.OpenApiClient.Models.Problem.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Teardown.TeardownPostResponse>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Teardown.TeardownPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
