@@ -1,16 +1,15 @@
-using Soenneker.Tests.FixturedUnit;
-using Xunit;
+using Soenneker.Tests.HostedUnit;
 
 namespace Soenneker.Wikimedia.OpenApiClient.Tests;
 
-[Collection("Collection")]
-public sealed class WikimediaOpenApiClientTests : FixturedUnitTest
+[ClassDataSource<Host>(Shared = SharedType.PerTestSession)]
+public sealed class WikimediaOpenApiClientTests : HostedUnitTest
 {
-    public WikimediaOpenApiClientTests(Fixture fixture, ITestOutputHelper output) : base(fixture, output)
+    public WikimediaOpenApiClientTests(Host host) : base(host)
     {
     }
 
-    [Fact]
+    [Test]
     public void Default()
     {
 
