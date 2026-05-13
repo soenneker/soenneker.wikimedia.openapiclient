@@ -3053,7 +3053,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/MorelikeResult"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MorelikeResultItem"
+                  },
+                  "description": "the prioritized list of Wikidata IDs recommended for creation as Wikipedia articles"
                 }
               }
             }
