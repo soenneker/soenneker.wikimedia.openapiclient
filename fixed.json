@@ -20,7 +20,7 @@
     }
   ],
   "paths": {
-    "/page/": {
+    "/page": {
       "get": {
         "tags": [
           "Page content"
@@ -2143,7 +2143,7 @@
         }
       }
     },
-    "/data/lists/": {
+    "/data/lists": {
       "get": {
         "tags": [
           "Reading lists"
@@ -2482,7 +2482,7 @@
         }
       }
     },
-    "/data/lists/{id}/entries/": {
+    "/data/lists/{id}/entries": {
       "get": {
         "tags": [
           "Reading lists"
