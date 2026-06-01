@@ -49,18 +49,18 @@ namespace Soenneker.Wikimedia.OpenApiClient.Page.Html.Item
         /// <summary>
         /// &quot;Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)&quot;
         /// </summary>
-        /// <returns>A <see cref="string"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.GetPageHtmlByTitle200ResponseResponseJson2"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Problem">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Problem">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<string?> GetAsync(Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Page.Html.Item.WithTitleItemRequestBuilder.WithTitleItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.GetPageHtmlByTitle200ResponseResponseJson2?> GetAsync(Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Page.Html.Item.WithTitleItemRequestBuilder.WithTitleItemRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<string> GetAsync(Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Page.Html.Item.WithTitleItemRequestBuilder.WithTitleItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.GetPageHtmlByTitle200ResponseResponseJson2> GetAsync(Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Page.Html.Item.WithTitleItemRequestBuilder.WithTitleItemRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -69,7 +69,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Page.Html.Item
                 { "404", global::Soenneker.Wikimedia.OpenApiClient.Models.Problem.CreateFromDiscriminatorValue },
                 { "XXX", global::Soenneker.Wikimedia.OpenApiClient.Models.Problem.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendPrimitiveAsync<string>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.GetPageHtmlByTitle200ResponseResponseJson2>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.GetPageHtmlByTitle200ResponseResponseJson2.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &quot;Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)&quot;

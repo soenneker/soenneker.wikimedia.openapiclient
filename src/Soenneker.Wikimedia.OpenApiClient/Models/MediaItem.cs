@@ -43,7 +43,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Models
         public string Title { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.Wikimedia.OpenApiClient.Models.MediaItem_type? Type { get; set; }
+        public global::Soenneker.Wikimedia.OpenApiClient.Models.MediaItemType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.MediaItem"/> and sets the default values.
         /// </summary>
@@ -74,7 +74,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Models
                 { "section_id", n => { SectionId = n.GetIntValue(); } },
                 { "showInGallery", n => { ShowInGallery = n.GetBoolValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Wikimedia.OpenApiClient.Models.MediaItem_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.Wikimedia.OpenApiClient.Models.MediaItemType>(); } },
             };
         }
         /// <summary>
@@ -89,7 +89,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Models
             writer.WriteIntValue("section_id", SectionId);
             writer.WriteBoolValue("showInGallery", ShowInGallery);
             writer.WriteStringValue("title", Title);
-            writer.WriteEnumValue<global::Soenneker.Wikimedia.OpenApiClient.Models.MediaItem_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.Wikimedia.OpenApiClient.Models.MediaItemType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

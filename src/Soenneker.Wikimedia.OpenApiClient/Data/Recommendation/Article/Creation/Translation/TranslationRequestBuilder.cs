@@ -17,14 +17,14 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Recommendation.Article.Creation
     {
         /// <summary>Gets an item from the Soenneker.Wikimedia.OpenApiClient.data.recommendation.article.creation.translation.item collection</summary>
         /// <param name="position">The source language code</param>
-        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Data.Recommendation.Article.Creation.Translation.Item.WithFrom_langItemRequestBuilder"/></returns>
-        public global::Soenneker.Wikimedia.OpenApiClient.Data.Recommendation.Article.Creation.Translation.Item.WithFrom_langItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Data.Recommendation.Article.Creation.Translation.Item.WithFromLangItemRequestBuilder"/></returns>
+        public global::Soenneker.Wikimedia.OpenApiClient.Data.Recommendation.Article.Creation.Translation.Item.WithFromLangItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("from_lang", position);
-                return new global::Soenneker.Wikimedia.OpenApiClient.Data.Recommendation.Article.Creation.Translation.Item.WithFrom_langItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("fromLang", position);
+                return new global::Soenneker.Wikimedia.OpenApiClient.Data.Recommendation.Article.Creation.Translation.Item.WithFromLangItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

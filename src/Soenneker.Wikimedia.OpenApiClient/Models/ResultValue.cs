@@ -9,37 +9,51 @@ namespace Soenneker.Wikimedia.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class RecommendationResult : IAdditionalDataHolder, IParsable
+    public partial class ResultValue : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>the number of recommendations returned</summary>
-        public int? Count { get; set; }
-        /// <summary>the list of articles recommended for translation</summary>
+        /// <summary>The itemType property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Wikimedia.OpenApiClient.Models.RecommendationResultItemsItem>? Items { get; set; }
+        public string? ItemType { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.Wikimedia.OpenApiClient.Models.RecommendationResultItemsItem> Items { get; set; }
+        public string ItemType { get; set; }
+#endif
+        /// <summary>The title property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Title { get; set; }
+#nullable restore
+#else
+        public string Title { get; set; }
+#endif
+        /// <summary>The url property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Url { get; set; }
+#nullable restore
+#else
+        public string Url { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.RecommendationResult"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.ResultValue"/> and sets the default values.
         /// </summary>
-        public RecommendationResult()
+        public ResultValue()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.RecommendationResult"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.ResultValue"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Wikimedia.OpenApiClient.Models.RecommendationResult CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Wikimedia.OpenApiClient.Models.ResultValue CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Wikimedia.OpenApiClient.Models.RecommendationResult();
+            return new global::Soenneker.Wikimedia.OpenApiClient.Models.ResultValue();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -49,8 +63,9 @@ namespace Soenneker.Wikimedia.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "count", n => { Count = n.GetIntValue(); } },
-                { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.Wikimedia.OpenApiClient.Models.RecommendationResultItemsItem>(global::Soenneker.Wikimedia.OpenApiClient.Models.RecommendationResultItemsItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "itemType", n => { ItemType = n.GetStringValue(); } },
+                { "title", n => { Title = n.GetStringValue(); } },
+                { "url", n => { Url = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -60,8 +75,9 @@ namespace Soenneker.Wikimedia.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("count", Count);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.Wikimedia.OpenApiClient.Models.RecommendationResultItemsItem>("items", Items);
+            writer.WriteStringValue("itemType", ItemType);
+            writer.WriteStringValue("title", Title);
+            writer.WriteStringValue("url", Url);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

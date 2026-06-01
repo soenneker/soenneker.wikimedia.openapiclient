@@ -36,17 +36,17 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Javascript.Mobile.Item
         /// <summary>
         /// &quot;Gets the JavaScript bundle so that clients can haveconvenient access to that for consuming the page HTML.Amongst other things,* it allows to detect the platform and through that enable platform specific CSS rules,* has code to lazy load images on the page,* code for collapsing and expanding tables.Valid types are pagelib or pcs. Passing pcs will return the JavaScript for thePage Content Service. Passing pagelib will return a deprecated legacy versionof the wikimedia-page-library JavaScript to support existing app clients.Stability: [unstable](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Unstable)Please follow [wikitech-l](https://lists.wikimedia.org/mailman/listinfo/wikitech-l) or [mediawiki-api-announce](https://lists.wikimedia.org/mailman/listinfo/mediawiki-api-announce) for announcements of breaking changes.&quot;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Data.Javascript.Mobile.Item.WithTypeGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataJavascriptMobileByType200ResponseResponseJson"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Problem">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Data.Javascript.Mobile.Item.WithTypeGetResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataJavascriptMobileByType200ResponseResponseJson?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Data.Javascript.Mobile.Item.WithTypeGetResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataJavascriptMobileByType200ResponseResponseJson> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -54,7 +54,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Javascript.Mobile.Item
             {
                 { "XXX", global::Soenneker.Wikimedia.OpenApiClient.Models.Problem.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Data.Javascript.Mobile.Item.WithTypeGetResponse>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Data.Javascript.Mobile.Item.WithTypeGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataJavascriptMobileByType200ResponseResponseJson>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataJavascriptMobileByType200ResponseResponseJson.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &quot;Gets the JavaScript bundle so that clients can haveconvenient access to that for consuming the page HTML.Amongst other things,* it allows to detect the platform and through that enable platform specific CSS rules,* has code to lazy load images on the page,* code for collapsing and expanding tables.Valid types are pagelib or pcs. Passing pcs will return the JavaScript for thePage Content Service. Passing pagelib will return a deprecated legacy versionof the wikimedia-page-library JavaScript to support existing app clients.Stability: [unstable](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Unstable)Please follow [wikitech-l](https://lists.wikimedia.org/mailman/listinfo/wikitech-l) or [mediawiki-api-announce](https://lists.wikimedia.org/mailman/listinfo/mediawiki-api-announce) for announcements of breaking changes.&quot;

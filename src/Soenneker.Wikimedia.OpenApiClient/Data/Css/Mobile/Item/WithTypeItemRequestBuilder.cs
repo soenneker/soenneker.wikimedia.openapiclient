@@ -36,17 +36,17 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Css.Mobile.Item
         /// <summary>
         /// &quot;Gets common CSS mobile apps need to properly display pages using Page Content Service.In most cases all of the types are needed (preferably in this order):* base (Common mobile CSS from ResourceLoader)* site (Site-specific, mobile CSS from ResourceLoader, as defined in MediaWiki\:Mobile.css)* pcs (CSS for the Page Content Service)The `base` and `pcs` responses are the same regardless of what domain is used.For these we suggest meta.wikimedia.org.You can still pass pagelib for type, but this is a legacy version of the CSS forexisting app clients.Stability: [unstable](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Unstable)Please follow [wikitech-l](https://lists.wikimedia.org/mailman/listinfo/wikitech-l) or [mediawiki-api-announce](https://lists.wikimedia.org/mailman/listinfo/mediawiki-api-announce) for announcements of breaking changes.&quot;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Data.Css.Mobile.Item.WithTypeGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataCssMobileByType200ResponseResponseJson"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Problem">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Data.Css.Mobile.Item.WithTypeGetResponse?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataCssMobileByType200ResponseResponseJson?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Data.Css.Mobile.Item.WithTypeGetResponse> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataCssMobileByType200ResponseResponseJson> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -54,7 +54,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Css.Mobile.Item
             {
                 { "XXX", global::Soenneker.Wikimedia.OpenApiClient.Models.Problem.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Data.Css.Mobile.Item.WithTypeGetResponse>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Data.Css.Mobile.Item.WithTypeGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataCssMobileByType200ResponseResponseJson>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataCssMobileByType200ResponseResponseJson.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &quot;Gets common CSS mobile apps need to properly display pages using Page Content Service.In most cases all of the types are needed (preferably in this order):* base (Common mobile CSS from ResourceLoader)* site (Site-specific, mobile CSS from ResourceLoader, as defined in MediaWiki\:Mobile.css)* pcs (CSS for the Page Content Service)The `base` and `pcs` responses are the same regardless of what domain is used.For these we suggest meta.wikimedia.org.You can still pass pagelib for type, but this is a legacy version of the CSS forexisting app clients.Stability: [unstable](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Unstable)Please follow [wikitech-l](https://lists.wikimedia.org/mailman/listinfo/wikitech-l) or [mediawiki-api-announce](https://lists.wikimedia.org/mailman/listinfo/mediawiki-api-announce) for announcements of breaking changes.&quot;

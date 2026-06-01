@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "Wikimedia REST API",
-    "description": "This API provides cacheable and straightforward access to Wikimedia content and data, in machine-readable formats.\n### Global Rules\n- Limit your clients to no more than 200 requests/s to this API.\n  Each API endpoint's documentation may detail more specific usage limits.\n- Set a unique `User-Agent` or `Api-User-Agent` header that\n  allows us to contact you quickly. Email addresses or URLs\n  of contact pages work well.\n\nBy using this API, you agree to Wikimedia's [Terms of Use](https://wikimediafoundation.org/wiki/Terms_of_Use) and [Privacy Policy](https://wikimediafoundation.org/wiki/Privacy_policy). Unless otherwise specified in the endpoint documentation below, content accessed via this API is licensed under the [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) and [GFDL](https://www.gnu.org/copyleft/fdl.html) licenses, and you irrevocably agree to release modifications or additions made through this API under these licenses. Check the [Wikimedia REST API documentation](https://www.mediawiki.org/wiki/Wikimedia_REST_API) for background and details.\n### Endpoint documentation\nPlease consult each endpoint's documentation for details on:\n- Licensing information for the specific type of content\n  and data served via the endpoint.\n- Stability markers to inform you about development status and\n  change policy, according to\n  [our API version policy](https://www.mediawiki.org/wiki/API_versioning).\n- Endpoint specific usage limits.\n",
+    "description": "This API provides cacheable and straightforward access to Wikimedia content and data, in machine-readable formats.\n### Global Rules\n- Limit your clients to no more than 200 requests/s to this API.\n  Each API endpoint\u0027s documentation may detail more specific usage limits.\n- Set a unique \u0060User-Agent\u0060 or \u0060Api-User-Agent\u0060 header that\n  allows us to contact you quickly. Email addresses or URLs\n  of contact pages work well.\n\nBy using this API, you agree to Wikimedia\u0027s [Terms of Use](https://wikimediafoundation.org/wiki/Terms_of_Use) and [Privacy Policy](https://wikimediafoundation.org/wiki/Privacy_policy). Unless otherwise specified in the endpoint documentation below, content accessed via this API is licensed under the [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) and [GFDL](https://www.gnu.org/copyleft/fdl.html) licenses, and you irrevocably agree to release modifications or additions made through this API under these licenses. Check the [Wikimedia REST API documentation](https://www.mediawiki.org/wiki/Wikimedia_REST_API) for background and details.\n### Endpoint documentation\nPlease consult each endpoint\u0027s documentation for details on:\n- Licensing information for the specific type of content\n  and data served via the endpoint.\n- Stability markers to inform you about development status and\n  change policy, according to\n  [our API version policy](https://www.mediawiki.org/wiki/API_versioning).\n- Endpoint specific usage limits.\n",
     "termsOfService": "https://wikimediafoundation.org/wiki/Terms_of_Use",
     "contact": {
       "name": "the Wikimedia Services team",
@@ -26,8 +26,8 @@
           "Page content"
         ],
         "summary": "List page-related API entry points.",
-        "description": "\"Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)\n\"",
-        "operationId": "get_page",
+        "description": "\u0022Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)\n\u0022",
+        "operationId": "GetPage",
         "responses": {
           "200": {
             "description": "A list of page-related API end points.",
@@ -42,7 +42,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -58,13 +58,13 @@
           "Page content"
         ],
         "summary": "Get revision metadata for a title.",
-        "description": "\"Returns the revision metadata for the given title. If a revision ID is provided,\nmetadata for that revision is returned, otherwise the latest revision ID is assumed.\n\nStability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable).\n\"",
-        "operationId": "get_page_title_title",
+        "description": "\u0022Returns the revision metadata for the given title. If a revision ID is provided,\nmetadata for that revision is returned, otherwise the latest revision ID is assumed.\n\nStability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable).\n\u0022",
+        "operationId": "GetPageTitleByTitle",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\"Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`.\"",
+            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
             "required": true,
             "schema": {
               "type": "string"
@@ -85,7 +85,7 @@
           "404": {
             "description": "Unknown page title or no revisions found.",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -95,7 +95,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -111,13 +111,13 @@
           "Page content"
         ],
         "summary": "Get revision metadata for a title.",
-        "description": "\"Returns the revision metadata for the given title. If a revision ID is provided,\nmetadata for that revision is returned, otherwise the latest revision ID is assumed.\n\nStability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable).\n\"",
-        "operationId": "get_page_title_title_revision",
+        "description": "\u0022Returns the revision metadata for the given title. If a revision ID is provided,\nmetadata for that revision is returned, otherwise the latest revision ID is assumed.\n\nStability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable).\n\u0022",
+        "operationId": "GetPageTitleByTitleByRevision",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\"Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`.\"",
+            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
             "required": true,
             "schema": {
               "type": "string"
@@ -147,7 +147,7 @@
           "404": {
             "description": "Unknown page title or no revisions found.",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -157,7 +157,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -173,13 +173,13 @@
           "Page content"
         ],
         "summary": "Get latest HTML for a title.",
-        "description": "\"Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)\n\"",
-        "operationId": "get_page_html_title",
+        "description": "\u0022Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)\n\u0022",
+        "operationId": "GetPageHtmlByTitle",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\"Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`.\"",
+            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
             "required": true,
             "schema": {
               "type": "string"
@@ -188,7 +188,7 @@
           {
             "name": "redirect",
             "in": "query",
-            "description": "Requests for [redirect pages](https://www.mediawiki.org/wiki/Help:Redirects) return HTTP 302 with a redirect target in `Location` header and content in the body.\nTo get a 200 response instead, supply `false` to the `redirect` parameter.\n",
+            "description": "Requests for [redirect pages](https://www.mediawiki.org/wiki/Help:Redirects) return HTTP 302 with a redirect target in \u0060Location\u0060 header and content in the body.\nTo get a 200 response instead, supply \u0060false\u0060 to the \u0060redirect\u0060 parameter.\n",
             "schema": {
               "type": "boolean"
             }
@@ -204,7 +204,7 @@
           {
             "name": "Accept-Language",
             "in": "header",
-            "description": "\"The desired language variant code for wikis where LanguageConverter is enabled. Example: `sr-el` for Latin transcription of the Serbian language.\n\"",
+            "description": "\u0022The desired language variant code for wikis where LanguageConverter is enabled. Example: \u0060sr-el\u0060 for Latin transcription of the Serbian language.\n\u0022",
             "schema": {
               "type": "string"
             }
@@ -216,12 +216,12 @@
             "content": {
               "text/html": {
                 "schema": {
-                  "type": "string"
+                  "$ref": "#/components/schemas/GetPageHtmlByTitle200ResponseResponseHtml"
                 }
               },
               "application/json": {
                 "schema": {
-                  "type": "string"
+                  "$ref": "#/components/schemas/GetPageHtmlByTitle200ResponseResponseJson2"
                 }
               }
             }
@@ -229,7 +229,7 @@
           "404": {
             "description": "Unknown page title",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -239,7 +239,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -254,14 +254,14 @@
         "tags": [
           "Page content"
         ],
-        "summary": "Get HTML for a specific title/revision & optionally timeuuid.",
-        "description": "\"Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)\n\"",
-        "operationId": "getFormatRevision",
+        "summary": "Get HTML for a specific title/revision \u0026 optionally timeuuid.",
+        "description": "\u0022Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)\n\u0022",
+        "operationId": "GetFormatRevision",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\"Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`.\"",
+            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
             "required": true,
             "schema": {
               "type": "string"
@@ -279,7 +279,7 @@
           {
             "name": "redirect",
             "in": "query",
-            "description": "Requests for [redirect pages](https://www.mediawiki.org/wiki/Help:Redirects) return HTTP 302 with a redirect target in `Location` header and content in the body.\nTo get a 200 response instead, supply `false` to the `redirect` parameter.\n",
+            "description": "Requests for [redirect pages](https://www.mediawiki.org/wiki/Help:Redirects) return HTTP 302 with a redirect target in \u0060Location\u0060 header and content in the body.\nTo get a 200 response instead, supply \u0060false\u0060 to the \u0060redirect\u0060 parameter.\n",
             "schema": {
               "type": "boolean"
             }
@@ -295,7 +295,7 @@
           {
             "name": "Accept-Language",
             "in": "header",
-            "description": "\"The desired language variant code for wikis where LanguageConverter is enabled. Example: `sr-el` for Latin transcription of the Serbian language.\n\"",
+            "description": "\u0022The desired language variant code for wikis where LanguageConverter is enabled. Example: \u0060sr-el\u0060 for Latin transcription of the Serbian language.\n\u0022",
             "schema": {
               "type": "string"
             }
@@ -307,12 +307,12 @@
             "content": {
               "text/html": {
                 "schema": {
-                  "type": "string"
+                  "$ref": "#/components/schemas/GetFormatRevision200ResponseResponseHtml"
                 }
               },
               "application/json": {
                 "schema": {
-                  "type": "string"
+                  "$ref": "#/components/schemas/GetFormatRevision200ResponseResponseJson2"
                 }
               }
             }
@@ -320,7 +320,7 @@
           "400": {
             "description": "Invalid revision or tid",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -330,7 +330,7 @@
           "403": {
             "description": "Access to the specific revision is restricted",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -340,7 +340,7 @@
           "404": {
             "description": "Unknown page, revision or tid",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -350,7 +350,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -366,13 +366,13 @@
           "Page content"
         ],
         "summary": "Get the linter errors for a specific title/revision.",
-        "description": "\"Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n\"",
-        "operationId": "get_page_lint_title",
+        "description": "\u0022Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n\u0022",
+        "operationId": "GetPageLintByTitle",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\"Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`.\"",
+            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
             "required": true,
             "schema": {
               "type": "string"
@@ -385,7 +385,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object"
+                  "$ref": "#/components/schemas/GetPageLintByTitle200ResponseResponseJson"
                 }
               }
             }
@@ -393,7 +393,7 @@
           "400": {
             "description": "Invalid revision or tid",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -403,7 +403,7 @@
           "403": {
             "description": "Access to the specific revision is restricted",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -413,7 +413,7 @@
           "404": {
             "description": "Unknown page, revision or tid",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -423,7 +423,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -439,13 +439,13 @@
           "Page content"
         ],
         "summary": "Get the linter errors for a specific title/revision.",
-        "description": "\"Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n\"",
-        "operationId": "get_page_lint_title_revision",
+        "description": "\u0022Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n\u0022",
+        "operationId": "GetPageLintByTitleByRevision",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\"Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`.\"",
+            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
             "required": true,
             "schema": {
               "type": "string"
@@ -467,7 +467,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object"
+                  "$ref": "#/components/schemas/GetPageLintByTitleByRevision200ResponseResponseJson"
                 }
               }
             }
@@ -475,7 +475,7 @@
           "400": {
             "description": "Invalid revision or tid",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -485,7 +485,7 @@
           "403": {
             "description": "Access to the specific revision is restricted",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -495,7 +495,7 @@
           "404": {
             "description": "Unknown page, revision or tid",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -505,7 +505,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -521,13 +521,13 @@
           "Page content"
         ],
         "summary": "Get basic metadata and simplified article introduction.",
-        "description": "\"The summary response includes an extract of the first paragraph of the page in plain text\nand HTML as well as the type of page. This is useful for page previews (fka. Hovercards,\naka. Popups) on the web and link previews in the apps.\n\nStability: [stable](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Stable)\n\nPlease follow [wikitech-l](https://lists.wikimedia.org/mailman/listinfo/wikitech-l) or [mediawiki-api-announce](https://lists.wikimedia.org/mailman/listinfo/mediawiki-api-announce) for announcements of breaking changes.\n\"",
-        "operationId": "get_page_summary_title",
+        "description": "\u0022The summary response includes an extract of the first paragraph of the page in plain text\nand HTML as well as the type of page. This is useful for page previews (fka. Hovercards,\naka. Popups) on the web and link previews in the apps.\n\nStability: [stable](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Stable)\n\nPlease follow [wikitech-l](https://lists.wikimedia.org/mailman/listinfo/wikitech-l) or [mediawiki-api-announce](https://lists.wikimedia.org/mailman/listinfo/mediawiki-api-announce) for announcements of breaking changes.\n\u0022",
+        "operationId": "GetPageSummaryByTitle",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\"Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`.\"",
+            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
             "required": true,
             "schema": {
               "type": "string"
@@ -536,7 +536,7 @@
           {
             "name": "redirect",
             "in": "query",
-            "description": "Requests for [redirect pages](https://www.mediawiki.org/wiki/Help:Redirects) return HTTP 302 with a redirect target in `Location` header and content in the body.\nTo get a 200 response instead, supply `false` to the `redirect` parameter.\n",
+            "description": "Requests for [redirect pages](https://www.mediawiki.org/wiki/Help:Redirects) return HTTP 302 with a redirect target in \u0060Location\u0060 header and content in the body.\nTo get a 200 response instead, supply \u0060false\u0060 to the \u0060redirect\u0060 parameter.\n",
             "schema": {
               "type": "boolean"
             }
@@ -544,7 +544,7 @@
           {
             "name": "Accept-Language",
             "in": "header",
-            "description": "\"The desired language variant code for wikis where LanguageConverter is enabled. Example: `sr-el` for Latin transcription of the Serbian language.\n\"",
+            "description": "\u0022The desired language variant code for wikis where LanguageConverter is enabled. Example: \u0060sr-el\u0060 for Latin transcription of the Serbian language.\n\u0022",
             "schema": {
               "type": "string"
             }
@@ -564,7 +564,7 @@
           "404": {
             "description": "Unknown page title",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -574,7 +574,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -590,13 +590,13 @@
           "Page content"
         ],
         "summary": "Get list of media files used on a page.",
-        "description": "\"Gets the list of media items (images, audio, and video) in the order in which they appear on a\ngiven wiki page.\n\nStability: [unstable](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Unstable)\n\nPlease follow [wikitech-l](https://lists.wikimedia.org/mailman/listinfo/wikitech-l) or [mediawiki-api-announce](https://lists.wikimedia.org/mailman/listinfo/mediawiki-api-announce) for announcements of breaking changes.\n\"",
-        "operationId": "getContent-media-list",
+        "description": "\u0022Gets the list of media items (images, audio, and video) in the order in which they appear on a\ngiven wiki page.\n\nStability: [unstable](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Unstable)\n\nPlease follow [wikitech-l](https://lists.wikimedia.org/mailman/listinfo/wikitech-l) or [mediawiki-api-announce](https://lists.wikimedia.org/mailman/listinfo/mediawiki-api-announce) for announcements of breaking changes.\n\u0022",
+        "operationId": "GetContentMediaList",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\"Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`.\"",
+            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
             "required": true,
             "schema": {
               "type": "string"
@@ -605,7 +605,7 @@
           {
             "name": "redirect",
             "in": "query",
-            "description": "Requests for [redirect pages](https://www.mediawiki.org/wiki/Help:Redirects) return HTTP 302 with a redirect target in `Location` header and content in the body.\nTo get a 200 response instead, supply `false` to the `redirect` parameter.\n",
+            "description": "Requests for [redirect pages](https://www.mediawiki.org/wiki/Help:Redirects) return HTTP 302 with a redirect target in \u0060Location\u0060 header and content in the body.\nTo get a 200 response instead, supply \u0060false\u0060 to the \u0060redirect\u0060 parameter.\n",
             "schema": {
               "type": "boolean"
             }
@@ -625,7 +625,7 @@
           "404": {
             "description": "Unknown page title",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -635,7 +635,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -651,13 +651,13 @@
           "Page content"
         ],
         "summary": "Get list of media files used on a page.",
-        "description": "\"Gets the list of media items (images, audio, and video) in the order in which they appear on a\ngiven wiki page.\n\nStability: [unstable](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Unstable)\n\nPlease follow [wikitech-l](https://lists.wikimedia.org/mailman/listinfo/wikitech-l) or [mediawiki-api-announce](https://lists.wikimedia.org/mailman/listinfo/mediawiki-api-announce) for announcements of breaking changes.\n\"",
-        "operationId": "getContentWithRevision-media-list",
+        "description": "\u0022Gets the list of media items (images, audio, and video) in the order in which they appear on a\ngiven wiki page.\n\nStability: [unstable](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Unstable)\n\nPlease follow [wikitech-l](https://lists.wikimedia.org/mailman/listinfo/wikitech-l) or [mediawiki-api-announce](https://lists.wikimedia.org/mailman/listinfo/mediawiki-api-announce) for announcements of breaking changes.\n\u0022",
+        "operationId": "GetContentWithRevisionMediaList",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\"Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`.\"",
+            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
             "required": true,
             "schema": {
               "type": "string"
@@ -675,7 +675,7 @@
           {
             "name": "redirect",
             "in": "query",
-            "description": "Requests for [redirect pages](https://www.mediawiki.org/wiki/Help:Redirects) return HTTP 302 with a redirect target in `Location` header and content in the body.\nTo get a 200 response instead, supply `false` to the `redirect` parameter.\n",
+            "description": "Requests for [redirect pages](https://www.mediawiki.org/wiki/Help:Redirects) return HTTP 302 with a redirect target in \u0060Location\u0060 header and content in the body.\nTo get a 200 response instead, supply \u0060false\u0060 to the \u0060redirect\u0060 parameter.\n",
             "schema": {
               "type": "boolean"
             }
@@ -695,7 +695,7 @@
           "404": {
             "description": "Unknown page title",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -705,7 +705,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -721,13 +721,13 @@
           "Page content"
         ],
         "summary": "Get page content HTML optimized for mobile consumption.",
-        "description": "\"Gets the content HTML optimized for mobile consumption for the given page. This content\nis derived from Parsoid HTML (see `/page/html/{title}` endpoint).\nThe difference to Parsoid HTML is roughly:\n* Some elements and attributes not needed for the reading case are removed.\n* LeadIntroductionTransform: The introductory paragraph is moved before an infobox.\n* RedLinks: Red links are flattened (=turned into span elements).\n* WidenImage: images that should be displayed in gallery are widened.\n* Section headings are slightly changed by wrapping the headings inside a div and adding\n  a span element inside the new div for the edit buttons.\n* Additional classes are added to img elements to fix issues with non-white backgrounds.\n  See Theme support below for instructions on how to enable that.\n* Pagelib CSS files needed to display the content are referenced.\n* LazyLoadTransform: server-side portion/prep for lazy loading of images.\n* CollapseTable: server-side portion/prep for collapsing tables.\n\nWhat's not included? What parts of the PageLibrary does a client still have to do?\n* Theme support: Themes can be turned on by adding a theme class to the root <html> tag.\n  Possible class names are:\n  * `pagelib_theme_default`\n  * `pagelib_theme_dark`\n  * `pagelib_theme_black`\n  * `pagelib_theme_sepia`\n\n  The pagelib JS has functionality to do that: ThemeTransform.setTheme(document, theme).\n* Dim images: DimImagesTransform.dim(window, enable)\n* PlatformTransform.classify(window) to trigger Android and iOS app specific CSS rules\n* LazyLoadTransformer: client side companion of LazyLoadTransform (note the extra *er*\nhere)\n* FooterTransformer: seems to be more UI than content, requires I18N, too\n\nStability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n\"",
-        "operationId": "getContent-mobile-html",
+        "description": "\u0022Gets the content HTML optimized for mobile consumption for the given page. This content\nis derived from Parsoid HTML (see \u0060/page/html/{title}\u0060 endpoint).\nThe difference to Parsoid HTML is roughly:\n* Some elements and attributes not needed for the reading case are removed.\n* LeadIntroductionTransform: The introductory paragraph is moved before an infobox.\n* RedLinks: Red links are flattened (=turned into span elements).\n* WidenImage: images that should be displayed in gallery are widened.\n* Section headings are slightly changed by wrapping the headings inside a div and adding\n  a span element inside the new div for the edit buttons.\n* Additional classes are added to img elements to fix issues with non-white backgrounds.\n  See Theme support below for instructions on how to enable that.\n* Pagelib CSS files needed to display the content are referenced.\n* LazyLoadTransform: server-side portion/prep for lazy loading of images.\n* CollapseTable: server-side portion/prep for collapsing tables.\n\nWhat\u0027s not included? What parts of the PageLibrary does a client still have to do?\n* Theme support: Themes can be turned on by adding a theme class to the root \u003Chtml\u003E tag.\n  Possible class names are:\n  * \u0060pagelib_theme_default\u0060\n  * \u0060pagelib_theme_dark\u0060\n  * \u0060pagelib_theme_black\u0060\n  * \u0060pagelib_theme_sepia\u0060\n\n  The pagelib JS has functionality to do that: ThemeTransform.setTheme(document, theme).\n* Dim images: DimImagesTransform.dim(window, enable)\n* PlatformTransform.classify(window) to trigger Android and iOS app specific CSS rules\n* LazyLoadTransformer: client side companion of LazyLoadTransform (note the extra *er*\nhere)\n* FooterTransformer: seems to be more UI than content, requires I18N, too\n\nStability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n\u0022",
+        "operationId": "GetContentMobileHtml",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\"Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`.\"",
+            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
             "required": true,
             "schema": {
               "type": "string"
@@ -736,7 +736,7 @@
           {
             "name": "redirect",
             "in": "query",
-            "description": "Requests for [redirect pages](https://www.mediawiki.org/wiki/Help:Redirects) return HTTP 302 with a redirect target in `Location` header and content in the body.\nTo get a 200 response instead, supply `false` to the `redirect` parameter.\n",
+            "description": "Requests for [redirect pages](https://www.mediawiki.org/wiki/Help:Redirects) return HTTP 302 with a redirect target in \u0060Location\u0060 header and content in the body.\nTo get a 200 response instead, supply \u0060false\u0060 to the \u0060redirect\u0060 parameter.\n",
             "schema": {
               "type": "boolean"
             }
@@ -748,7 +748,7 @@
             "content": {
               "text/html": {
                 "schema": {
-                  "type": "string"
+                  "$ref": "#/components/schemas/GetContentMobileHtml200ResponseResponseHtml"
                 }
               }
             }
@@ -756,7 +756,7 @@
           "404": {
             "description": "Unknown page title",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -766,7 +766,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -782,13 +782,13 @@
           "Page content"
         ],
         "summary": "Get page content HTML optimized for mobile consumption.",
-        "description": "\"Gets the content HTML optimized for mobile consumption for the given page. This content\nis derived from Parsoid HTML (see `/page/html/{title}` endpoint).\nThe difference to Parsoid HTML is roughly:\n* Some elements and attributes not needed for the reading case are removed.\n* LeadIntroductionTransform: The introductory paragraph is moved before an infobox.\n* RedLinks: Red links are flattened (=turned into span elements).\n* WidenImage: images that should be displayed in gallery are widened.\n* Section headings are slightly changed by wrapping the headings inside a div and adding\n  a span element inside the new div for the edit buttons.\n* Additional classes are added to img elements to fix issues with non-white backgrounds.\n  See Theme support below for instructions on how to enable that.\n* Pagelib CSS files needed to display the content are referenced.\n* LazyLoadTransform: server-side portion/prep for lazy loading of images.\n* CollapseTable: server-side portion/prep for collapsing tables.\n\nWhat's not included? What parts of the PageLibrary does a client still have to do?\n* Theme support: Themes can be turned on by adding a theme class to the root <html> tag.\n  Possible class names are:\n  * `pagelib_theme_default`\n  * `pagelib_theme_dark`\n  * `pagelib_theme_black`\n  * `pagelib_theme_sepia`\n\n  The pagelib JS has functionality to do that: ThemeTransform.setTheme(document, theme).\n* Dim images: DimImagesTransform.dim(window, enable)\n* PlatformTransform.classify(window) to trigger Android and iOS app specific CSS rules\n* LazyLoadTransformer: client side companion of LazyLoadTransform (note the extra *er*\nhere)\n* FooterTransformer: seems to be more UI than content, requires I18N, too\n\nStability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n\"",
-        "operationId": "getContentWithRevision-mobile-html",
+        "description": "\u0022Gets the content HTML optimized for mobile consumption for the given page. This content\nis derived from Parsoid HTML (see \u0060/page/html/{title}\u0060 endpoint).\nThe difference to Parsoid HTML is roughly:\n* Some elements and attributes not needed for the reading case are removed.\n* LeadIntroductionTransform: The introductory paragraph is moved before an infobox.\n* RedLinks: Red links are flattened (=turned into span elements).\n* WidenImage: images that should be displayed in gallery are widened.\n* Section headings are slightly changed by wrapping the headings inside a div and adding\n  a span element inside the new div for the edit buttons.\n* Additional classes are added to img elements to fix issues with non-white backgrounds.\n  See Theme support below for instructions on how to enable that.\n* Pagelib CSS files needed to display the content are referenced.\n* LazyLoadTransform: server-side portion/prep for lazy loading of images.\n* CollapseTable: server-side portion/prep for collapsing tables.\n\nWhat\u0027s not included? What parts of the PageLibrary does a client still have to do?\n* Theme support: Themes can be turned on by adding a theme class to the root \u003Chtml\u003E tag.\n  Possible class names are:\n  * \u0060pagelib_theme_default\u0060\n  * \u0060pagelib_theme_dark\u0060\n  * \u0060pagelib_theme_black\u0060\n  * \u0060pagelib_theme_sepia\u0060\n\n  The pagelib JS has functionality to do that: ThemeTransform.setTheme(document, theme).\n* Dim images: DimImagesTransform.dim(window, enable)\n* PlatformTransform.classify(window) to trigger Android and iOS app specific CSS rules\n* LazyLoadTransformer: client side companion of LazyLoadTransform (note the extra *er*\nhere)\n* FooterTransformer: seems to be more UI than content, requires I18N, too\n\nStability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n\u0022",
+        "operationId": "GetContentWithRevisionMobileHtml",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\"Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`.\"",
+            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
             "required": true,
             "schema": {
               "type": "string"
@@ -806,7 +806,7 @@
           {
             "name": "redirect",
             "in": "query",
-            "description": "Requests for [redirect pages](https://www.mediawiki.org/wiki/Help:Redirects) return HTTP 302 with a redirect target in `Location` header and content in the body.\nTo get a 200 response instead, supply `false` to the `redirect` parameter.\n",
+            "description": "Requests for [redirect pages](https://www.mediawiki.org/wiki/Help:Redirects) return HTTP 302 with a redirect target in \u0060Location\u0060 header and content in the body.\nTo get a 200 response instead, supply \u0060false\u0060 to the \u0060redirect\u0060 parameter.\n",
             "schema": {
               "type": "boolean"
             }
@@ -818,7 +818,7 @@
             "content": {
               "text/html": {
                 "schema": {
-                  "type": "string"
+                  "$ref": "#/components/schemas/GetContentWithRevisionMobileHtml200ResponseResponseHtml"
                 }
               }
             }
@@ -826,7 +826,7 @@
           "404": {
             "description": "Unknown page title",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -836,7 +836,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -853,13 +853,13 @@
           "offline"
         ],
         "summary": "Get styles and scripts for offline consumption of mobile-html-formatted pages",
-        "description": "\"Provides links to scripts and styles needed for viewing mobile-html-formatted pages offline.\n\nStability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n\"",
-        "operationId": "get_page_mobile_html_offline_resources_title",
+        "description": "\u0022Provides links to scripts and styles needed for viewing mobile-html-formatted pages offline.\n\nStability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n\u0022",
+        "operationId": "GetPageMobileHtmlOfflineResourcesByTitle",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\"Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`.\"",
+            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
             "required": true,
             "schema": {
               "type": "string"
@@ -872,7 +872,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "string"
+                  "$ref": "#/components/schemas/GetPageMobileHtmlOfflineResourcesByTitle200ResponseResponseJson"
                 }
               }
             }
@@ -880,7 +880,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -897,13 +897,13 @@
           "offline"
         ],
         "summary": "Get styles and scripts for offline consumption of mobile-html-formatted pages",
-        "description": "\"Provides links to scripts and styles needed for viewing mobile-html-formatted pages offline.\n\nStability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n\"",
-        "operationId": "get_page_mobile_html_offline_resources_title_revision",
+        "description": "\u0022Provides links to scripts and styles needed for viewing mobile-html-formatted pages offline.\n\nStability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n\u0022",
+        "operationId": "GetPageMobileHtmlOfflineResourcesByTitleByRevision",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\"Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`.\"",
+            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
             "required": true,
             "schema": {
               "type": "string"
@@ -925,7 +925,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "string"
+                  "$ref": "#/components/schemas/GetPageMobileHtmlOfflineResourcesByTitleByRevision200ResponseResponseJson"
                 }
               }
             }
@@ -933,7 +933,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -949,13 +949,13 @@
           "Talk pages"
         ],
         "summary": "Get structured talk page contents",
-        "description": "\"Gets structured talk page contents for the provided title.\n\nStability: [experimental](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Experimental)\n\"",
-        "operationId": "get_page_talk_title",
+        "description": "\u0022Gets structured talk page contents for the provided title.\n\nStability: [experimental](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Experimental)\n\u0022",
+        "operationId": "GetPageTalkByTitle",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\"Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`.\"",
+            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
             "required": true,
             "schema": {
               "type": "string"
@@ -964,7 +964,7 @@
           {
             "name": "redirect",
             "in": "query",
-            "description": "Requests for [redirect pages](https://www.mediawiki.org/wiki/Help:Redirects) return HTTP 302 with a redirect target in `Location` header and content in the body.\nTo get a 200 response instead, supply `false` to the `redirect` parameter.\n",
+            "description": "Requests for [redirect pages](https://www.mediawiki.org/wiki/Help:Redirects) return HTTP 302 with a redirect target in \u0060Location\u0060 header and content in the body.\nTo get a 200 response instead, supply \u0060false\u0060 to the \u0060redirect\u0060 parameter.\n",
             "schema": {
               "type": "boolean"
             }
@@ -976,7 +976,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "string"
+                  "$ref": "#/components/schemas/GetPageTalkByTitle200ResponseResponseJson"
                 }
               }
             }
@@ -984,7 +984,7 @@
           "404": {
             "description": "Unknown page title",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -994,7 +994,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1010,13 +1010,13 @@
           "Talk pages"
         ],
         "summary": "Get structured talk page contents",
-        "description": "\"Gets structured talk page contents for the provided title.\n\nStability: [experimental](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Experimental)\n\"",
-        "operationId": "get_page_talk_title_revision",
+        "description": "\u0022Gets structured talk page contents for the provided title.\n\nStability: [experimental](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Experimental)\n\u0022",
+        "operationId": "GetPageTalkByTitleByRevision",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\"Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`.\"",
+            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
             "required": true,
             "schema": {
               "type": "string"
@@ -1034,7 +1034,7 @@
           {
             "name": "redirect",
             "in": "query",
-            "description": "Requests for [redirect pages](https://www.mediawiki.org/wiki/Help:Redirects) return HTTP 302 with a redirect target in `Location` header and content in the body.\nTo get a 200 response instead, supply `false` to the `redirect` parameter.\n",
+            "description": "Requests for [redirect pages](https://www.mediawiki.org/wiki/Help:Redirects) return HTTP 302 with a redirect target in \u0060Location\u0060 header and content in the body.\nTo get a 200 response instead, supply \u0060false\u0060 to the \u0060redirect\u0060 parameter.\n",
             "schema": {
               "type": "boolean"
             }
@@ -1046,7 +1046,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "string"
+                  "$ref": "#/components/schemas/GetPageTalkByTitleByRevision200ResponseResponseJson"
                 }
               }
             }
@@ -1054,7 +1054,7 @@
           "404": {
             "description": "Unknown page title",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1064,7 +1064,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1080,13 +1080,13 @@
           "Transforms"
         ],
         "summary": "Transform HTML to Wikitext",
-        "description": "\"Transform [Parsoid HTML](https://www.mediawiki.org/wiki/Parsoid/MediaWiki_DOM_spec)\nto Wikitext.\n\nWhen converting pre-existing (possibly modified) content, you should\npass in the `title`, `revision`, and `If-Match` header. This lets\n[Parsoid](https://www.mediawiki.org/wiki/Parsoid) preserve small\nsyntactic variations in wikitext, which ensures that diffs are\nreadable.\n\n- Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)\n- Rate limit: 25 req/s\n\"",
-        "operationId": "post_transform_html_to_wikitext",
+        "description": "\u0022Transform [Parsoid HTML](https://www.mediawiki.org/wiki/Parsoid/MediaWiki_DOM_spec)\nto Wikitext.\n\nWhen converting pre-existing (possibly modified) content, you should\npass in the \u0060title\u0060, \u0060revision\u0060, and \u0060If-Match\u0060 header. This lets\n[Parsoid](https://www.mediawiki.org/wiki/Parsoid) preserve small\nsyntactic variations in wikitext, which ensures that diffs are\nreadable.\n\n- Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)\n- Rate limit: 25 req/s\n\u0022",
+        "operationId": "PostTransformHtmlToWikitext",
         "parameters": [
           {
             "name": "if-match",
             "in": "header",
-            "description": "The `ETag` header of the original render indicating it's revision and timeuuid.\nRequired if both `title` and `revision` parameters are present.\n",
+            "description": "The \u0060ETag\u0060 header of the original render indicating it\u0027s revision and timeuuid.\nRequired if both \u0060title\u0060 and \u0060revision\u0060 parameters are present.\n",
             "schema": {
               "type": "string"
             }
@@ -1096,7 +1096,7 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/PostTransformHtmlToWikitext"
+                "$ref": "#/components/schemas/PostTransformHtmlToWikitextFormDataRequest"
               }
             }
           }
@@ -1107,7 +1107,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "type": "string"
+                  "$ref": "#/components/schemas/PostTransformHtmlToWikitext200ResponseResponsePlain"
                 }
               }
             }
@@ -1115,7 +1115,7 @@
           "403": {
             "description": "Access to the specific revision is restricted",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1125,7 +1125,7 @@
           "404": {
             "description": "Unknown page title or revision",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1135,7 +1135,7 @@
           "409": {
             "description": "Revision was restricted",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1145,7 +1145,7 @@
           "410": {
             "description": "Page was deleted",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1155,7 +1155,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1171,13 +1171,13 @@
           "Transforms"
         ],
         "summary": "Transform HTML to Wikitext",
-        "description": "\"Transform [Parsoid HTML](https://www.mediawiki.org/wiki/Parsoid/MediaWiki_DOM_spec)\nto Wikitext.\n\nWhen converting pre-existing (possibly modified) content, you should\npass in the `title`, `revision`, and `If-Match` header. This lets\n[Parsoid](https://www.mediawiki.org/wiki/Parsoid) preserve small\nsyntactic variations in wikitext, which ensures that diffs are\nreadable.\n\n- Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)\n- Rate limit: 25 req/s\n\"",
-        "operationId": "post_transform_html_to_wikitext_title",
+        "description": "\u0022Transform [Parsoid HTML](https://www.mediawiki.org/wiki/Parsoid/MediaWiki_DOM_spec)\nto Wikitext.\n\nWhen converting pre-existing (possibly modified) content, you should\npass in the \u0060title\u0060, \u0060revision\u0060, and \u0060If-Match\u0060 header. This lets\n[Parsoid](https://www.mediawiki.org/wiki/Parsoid) preserve small\nsyntactic variations in wikitext, which ensures that diffs are\nreadable.\n\n- Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)\n- Rate limit: 25 req/s\n\u0022",
+        "operationId": "PostTransformHtmlToWikitextByTitle",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\"Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`.\"",
+            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
             "required": true,
             "schema": {
               "type": "string"
@@ -1186,7 +1186,7 @@
           {
             "name": "if-match",
             "in": "header",
-            "description": "The `ETag` header of the original render indicating it's revision and timeuuid.\nRequired if both `title` and `revision` parameters are present.\n",
+            "description": "The \u0060ETag\u0060 header of the original render indicating it\u0027s revision and timeuuid.\nRequired if both \u0060title\u0060 and \u0060revision\u0060 parameters are present.\n",
             "schema": {
               "type": "string"
             }
@@ -1196,7 +1196,7 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/PostTransformHtmlToWikitextTitle"
+                "$ref": "#/components/schemas/PostTransformHtmlToWikitextByTitleFormDataRequest"
               }
             }
           }
@@ -1207,7 +1207,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "type": "string"
+                  "$ref": "#/components/schemas/PostTransformHtmlToWikitextByTitle200ResponseResponsePlain"
                 }
               }
             }
@@ -1215,7 +1215,7 @@
           "403": {
             "description": "Access to the specific revision is restricted",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1225,7 +1225,7 @@
           "404": {
             "description": "Unknown page title or revision",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1235,7 +1235,7 @@
           "409": {
             "description": "Revision was restricted",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1245,7 +1245,7 @@
           "410": {
             "description": "Page was deleted",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1255,7 +1255,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1271,13 +1271,13 @@
           "Transforms"
         ],
         "summary": "Transform HTML to Wikitext",
-        "description": "\"Transform [Parsoid HTML](https://www.mediawiki.org/wiki/Parsoid/MediaWiki_DOM_spec)\nto Wikitext.\n\nWhen converting pre-existing (possibly modified) content, you should\npass in the `title`, `revision`, and `If-Match` header. This lets\n[Parsoid](https://www.mediawiki.org/wiki/Parsoid) preserve small\nsyntactic variations in wikitext, which ensures that diffs are\nreadable.\n\n- Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)\n- Rate limit: 25 req/s\n\"",
-        "operationId": "post_transform_html_to_wikitext_title_revision",
+        "description": "\u0022Transform [Parsoid HTML](https://www.mediawiki.org/wiki/Parsoid/MediaWiki_DOM_spec)\nto Wikitext.\n\nWhen converting pre-existing (possibly modified) content, you should\npass in the \u0060title\u0060, \u0060revision\u0060, and \u0060If-Match\u0060 header. This lets\n[Parsoid](https://www.mediawiki.org/wiki/Parsoid) preserve small\nsyntactic variations in wikitext, which ensures that diffs are\nreadable.\n\n- Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)\n- Rate limit: 25 req/s\n\u0022",
+        "operationId": "PostTransformHtmlToWikitextByTitleByRevision",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\"Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`.\"",
+            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
             "required": true,
             "schema": {
               "type": "string"
@@ -1295,7 +1295,7 @@
           {
             "name": "if-match",
             "in": "header",
-            "description": "The `ETag` header of the original render indicating it's revision and timeuuid.\nRequired if both `title` and `revision` parameters are present.\n",
+            "description": "The \u0060ETag\u0060 header of the original render indicating it\u0027s revision and timeuuid.\nRequired if both \u0060title\u0060 and \u0060revision\u0060 parameters are present.\n",
             "schema": {
               "type": "string"
             }
@@ -1305,7 +1305,7 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/PostTransformHtmlToWikitextTitleRevision"
+                "$ref": "#/components/schemas/PostTransformHtmlToWikitextByTitleByRevisionFormDataRequest"
               }
             }
           }
@@ -1316,7 +1316,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "type": "string"
+                  "$ref": "#/components/schemas/PostTransformHtmlToWikitextByTitleByRevision200ResponseResponsePlain"
                 }
               }
             }
@@ -1324,7 +1324,7 @@
           "403": {
             "description": "Access to the specific revision is restricted",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1334,7 +1334,7 @@
           "404": {
             "description": "Unknown page title or revision",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1344,7 +1344,7 @@
           "409": {
             "description": "Revision was restricted",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1354,7 +1354,7 @@
           "410": {
             "description": "Page was deleted",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1364,7 +1364,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1380,13 +1380,13 @@
           "Transforms"
         ],
         "summary": "Transform Wikitext to HTML",
-        "description": "\"Transform wikitext to HTML. Note that if you set `stash: true`, you\nalso need to supply the title.\n\n- Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)\n- Rate limit: 25 req/s (5 req/s when `stash: true`)\n\"",
-        "operationId": "post_transform_wikitext_to_html",
+        "description": "\u0022Transform wikitext to HTML. Note that if you set \u0060stash: true\u0060, you\nalso need to supply the title.\n\n- Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)\n- Rate limit: 25 req/s (5 req/s when \u0060stash: true\u0060)\n\u0022",
+        "operationId": "PostTransformWikitextToHtml",
         "requestBody": {
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/PostTransformWikitextToHtml"
+                "$ref": "#/components/schemas/PostTransformWikitextToHtmlFormDataRequest"
               }
             }
           }
@@ -1397,7 +1397,7 @@
             "content": {
               "text/html": {
                 "schema": {
-                  "type": "string"
+                  "$ref": "#/components/schemas/PostTransformWikitextToHtml200ResponseResponseHtml"
                 }
               }
             }
@@ -1405,7 +1405,7 @@
           "403": {
             "description": "access to the specific revision is restricted",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1415,7 +1415,7 @@
           "404": {
             "description": "Unknown page title or revision",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1425,7 +1425,7 @@
           "409": {
             "description": "Revision was restricted",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1435,7 +1435,7 @@
           "410": {
             "description": "Page was deleted",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1445,7 +1445,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1461,13 +1461,13 @@
           "Transforms"
         ],
         "summary": "Transform Wikitext to HTML",
-        "description": "\"Transform wikitext to HTML. Note that if you set `stash: true`, you\nalso need to supply the title.\n\n- Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)\n- Rate limit: 25 req/s (5 req/s when `stash: true`)\n\"",
-        "operationId": "post_transform_wikitext_to_html_title",
+        "description": "\u0022Transform wikitext to HTML. Note that if you set \u0060stash: true\u0060, you\nalso need to supply the title.\n\n- Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)\n- Rate limit: 25 req/s (5 req/s when \u0060stash: true\u0060)\n\u0022",
+        "operationId": "PostTransformWikitextToHtmlByTitle",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\"Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`.\"",
+            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
             "required": true,
             "schema": {
               "type": "string"
@@ -1478,7 +1478,7 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/PostTransformWikitextToHtmlTitle"
+                "$ref": "#/components/schemas/PostTransformWikitextToHtmlByTitleFormDataRequest"
               }
             }
           }
@@ -1489,7 +1489,7 @@
             "content": {
               "text/html": {
                 "schema": {
-                  "type": "string"
+                  "$ref": "#/components/schemas/PostTransformWikitextToHtmlByTitle200ResponseResponseHtml"
                 }
               }
             }
@@ -1497,7 +1497,7 @@
           "403": {
             "description": "access to the specific revision is restricted",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1507,7 +1507,7 @@
           "404": {
             "description": "Unknown page title or revision",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1517,7 +1517,7 @@
           "409": {
             "description": "Revision was restricted",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1527,7 +1527,7 @@
           "410": {
             "description": "Page was deleted",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1537,7 +1537,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1553,13 +1553,13 @@
           "Transforms"
         ],
         "summary": "Transform Wikitext to HTML",
-        "description": "\"Transform wikitext to HTML. Note that if you set `stash: true`, you\nalso need to supply the title.\n\n- Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)\n- Rate limit: 25 req/s (5 req/s when `stash: true`)\n\"",
-        "operationId": "post_transform_wikitext_to_html_title_revision",
+        "description": "\u0022Transform wikitext to HTML. Note that if you set \u0060stash: true\u0060, you\nalso need to supply the title.\n\n- Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)\n- Rate limit: 25 req/s (5 req/s when \u0060stash: true\u0060)\n\u0022",
+        "operationId": "PostTransformWikitextToHtmlByTitleByRevision",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\"Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`.\"",
+            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
             "required": true,
             "schema": {
               "type": "string"
@@ -1579,7 +1579,7 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/PostTransformWikitextToHtmlTitleRevision"
+                "$ref": "#/components/schemas/PostTransformWikitextToHtmlByTitleByRevisionFormDataRequest"
               }
             }
           }
@@ -1590,7 +1590,7 @@
             "content": {
               "text/html": {
                 "schema": {
-                  "type": "string"
+                  "$ref": "#/components/schemas/PostTransformWikitextToHtmlByTitleByRevision200ResponseResponseHtml"
                 }
               }
             }
@@ -1598,7 +1598,7 @@
           "403": {
             "description": "access to the specific revision is restricted",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1608,7 +1608,7 @@
           "404": {
             "description": "Unknown page title or revision",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1618,7 +1618,7 @@
           "409": {
             "description": "Revision was restricted",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1628,7 +1628,7 @@
           "410": {
             "description": "Page was deleted",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1638,7 +1638,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1654,18 +1654,18 @@
           "Transforms"
         ],
         "summary": "Check Wikitext for lint errors",
-        "description": "\"Parse the supplied wikitext and check it for lint errors.\n\n- Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n- Rate limit: 25 req/s\n\"",
-        "operationId": "post_transform_wikitext_to_lint",
+        "description": "\u0022Parse the supplied wikitext and check it for lint errors.\n\n- Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n- Rate limit: 25 req/s\n\u0022",
+        "operationId": "PostTransformWikitextToLint",
         "requestBody": {
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/post_transform_wikitext_to_lintmultipart_form_data"
+                "$ref": "#/components/schemas/PostTransformWikitextToLintFormDataRequest"
               }
             },
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/post_transform_wikitext_to_lintapplication_json_Body"
+                "$ref": "#/components/schemas/PostTransformWikitextToLintJsonRequest"
               }
             }
           }
@@ -1676,7 +1676,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object"
+                  "$ref": "#/components/schemas/PostTransformWikitextToLint200ResponseResponseJson"
                 }
               }
             }
@@ -1684,7 +1684,7 @@
           "404": {
             "description": "Unknown page title",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1694,7 +1694,7 @@
           "409": {
             "description": "Latest revision was restricted",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1704,7 +1704,7 @@
           "410": {
             "description": "Page was deleted",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1714,7 +1714,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1730,13 +1730,13 @@
           "Transforms"
         ],
         "summary": "Check Wikitext for lint errors",
-        "description": "\"Parse the supplied wikitext and check it for lint errors.\n\n- Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n- Rate limit: 25 req/s\n\"",
-        "operationId": "post_transform_wikitext_to_lint_title",
+        "description": "\u0022Parse the supplied wikitext and check it for lint errors.\n\n- Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n- Rate limit: 25 req/s\n\u0022",
+        "operationId": "PostTransformWikitextToLintByTitle",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\"Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`.\"",
+            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
             "required": true,
             "schema": {
               "type": "string"
@@ -1747,7 +1747,7 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/PostTransformWikitextToLintTitle"
+                "$ref": "#/components/schemas/PostTransformWikitextToLintByTitleFormDataRequest"
               }
             }
           }
@@ -1758,7 +1758,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object"
+                  "$ref": "#/components/schemas/PostTransformWikitextToLintByTitle200ResponseResponseJson"
                 }
               }
             }
@@ -1766,7 +1766,7 @@
           "404": {
             "description": "Unknown page title",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1776,7 +1776,7 @@
           "409": {
             "description": "Latest revision was restricted",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1786,7 +1786,7 @@
           "410": {
             "description": "Page was deleted",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1796,7 +1796,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1812,13 +1812,13 @@
           "Transforms"
         ],
         "summary": "Check Wikitext for lint errors",
-        "description": "\"Parse the supplied wikitext and check it for lint errors.\n\n- Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n- Rate limit: 25 req/s\n\"",
-        "operationId": "post_transform_wikitext_to_lint_title_revision",
+        "description": "\u0022Parse the supplied wikitext and check it for lint errors.\n\n- Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n- Rate limit: 25 req/s\n\u0022",
+        "operationId": "PostTransformWikitextToLintByTitleByRevision",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\"Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`.\"",
+            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
             "required": true,
             "schema": {
               "type": "string"
@@ -1838,7 +1838,7 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/PostTransformWikitextToLintTitleRevision"
+                "$ref": "#/components/schemas/PostTransformWikitextToLintByTitleByRevisionFormDataRequest"
               }
             }
           }
@@ -1849,7 +1849,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object"
+                  "$ref": "#/components/schemas/PostTransformWikitextToLintByTitleByRevision200ResponseResponseJson"
                 }
               }
             }
@@ -1857,7 +1857,7 @@
           "404": {
             "description": "Unknown page title",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1867,7 +1867,7 @@
           "409": {
             "description": "Latest revision was restricted",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1877,7 +1877,7 @@
           "410": {
             "description": "Page was deleted",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1887,7 +1887,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1903,13 +1903,13 @@
           "Transforms"
         ],
         "summary": "Transform Wikitext to Mobile HTML",
-        "description": "\"Transform wikitext to Mobile HTML.\n\n- Stability: [stable](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Stable)\n- Rate limit: 25 req/s (5 req/s when `stash: true`)\n\nPlease follow [wikitech-l](https://lists.wikimedia.org/mailman/listinfo/wikitech-l) or [mediawiki-api-announce](https://lists.wikimedia.org/mailman/listinfo/mediawiki-api-announce) for announcements of breaking changes.\n\"",
-        "operationId": "transformWikitextToMobileHtml",
+        "description": "\u0022Transform wikitext to Mobile HTML.\n\n- Stability: [stable](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Stable)\n- Rate limit: 25 req/s (5 req/s when \u0060stash: true\u0060)\n\nPlease follow [wikitech-l](https://lists.wikimedia.org/mailman/listinfo/wikitech-l) or [mediawiki-api-announce](https://lists.wikimedia.org/mailman/listinfo/mediawiki-api-announce) for announcements of breaking changes.\n\u0022",
+        "operationId": "TransformWikitextToMobileHtml",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\"Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`.\"",
+            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
             "required": true,
             "schema": {
               "type": "string"
@@ -1918,7 +1918,7 @@
           {
             "name": "Accept-Language",
             "in": "header",
-            "description": "\"The desired language variant code for wikis where LanguageConverter is enabled. Example: `sr-el` for Latin transcription of the Serbian language.\n\"",
+            "description": "\u0022The desired language variant code for wikis where LanguageConverter is enabled. Example: \u0060sr-el\u0060 for Latin transcription of the Serbian language.\n\u0022",
             "schema": {
               "type": "string"
             }
@@ -1926,16 +1926,9 @@
           {
             "name": "output-mode",
             "in": "header",
-            "description": "Output mode for mobile-html. Default is `editPreview`.",
+            "description": "Output mode for mobile-html. Default is \u0060editPreview\u0060.",
             "schema": {
-              "enum": [
-                "editPreview",
-                "contentAndReferences",
-                "content",
-                "references"
-              ],
-              "type": "string",
-              "additionalProperties": false
+              "$ref": "#/components/schemas/TransformWikitextToMobileHtmlOutputModeParameter"
             }
           }
         ],
@@ -1943,7 +1936,7 @@
           "content": {
             "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/TransformWikitextToMobileHtml"
+                "$ref": "#/components/schemas/TransformWikitextToMobileHtmlFormDataRequest"
               }
             }
           }
@@ -1954,7 +1947,7 @@
             "content": {
               "text/html": {
                 "schema": {
-                  "type": "string"
+                  "$ref": "#/components/schemas/TransformWikitextToMobileHtml200ResponseResponseHtml"
                 }
               }
             }
@@ -1962,7 +1955,7 @@
           "404": {
             "description": "Unknown page title",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1972,7 +1965,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -1988,8 +1981,8 @@
           "Citation"
         ],
         "summary": "Get citation data given an article identifier.",
-        "description": "\"Generates citation data given a URL, DOI, PMID, or PMCID.\n\nAutomated requests can be made at a rate of 1 request per second (rps).\n\nSee more at [Citoid service documentation](https://www.mediawiki.org/wiki/Citoid)\n\nThe citation data can be requested in one of the following formats:\n  - `mediawiki`: format designed for MediaWiki to be used with `templateData`.\n    Uses [Zotero field names](https://aurimasv.github.io/z2csl/typeMap.xml).\n  - `mediawiki-basefields`: `mediawiki` format with Zotero `basefield` field names.\n  - `zotero`: format used by [Zotero](https://www.zotero.org/).\n  - `bibtex`: format used in conjunction with LaTeX documents.\n    See [bibtex.org](http://www.bibtex.org/).\n  - `wikibase`: format designed for [Wikibase](https://www.mediawiki.org/wiki/Extension:Wikibase_Repository).\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\"",
-        "operationId": "getCitation",
+        "description": "\u0022Generates citation data given a URL, DOI, PMID, or PMCID.\n\nAutomated requests can be made at a rate of 1 request per second (rps).\n\nSee more at [Citoid service documentation](https://www.mediawiki.org/wiki/Citoid)\n\nThe citation data can be requested in one of the following formats:\n  - \u0060mediawiki\u0060: format designed for MediaWiki to be used with \u0060templateData\u0060.\n    Uses [Zotero field names](https://aurimasv.github.io/z2csl/typeMap.xml).\n  - \u0060mediawiki-basefields\u0060: \u0060mediawiki\u0060 format with Zotero \u0060basefield\u0060 field names.\n  - \u0060zotero\u0060: format used by [Zotero](https://www.zotero.org/).\n  - \u0060bibtex\u0060: format used in conjunction with LaTeX documents.\n    See [bibtex.org](http://www.bibtex.org/).\n  - \u0060wikibase\u0060: format designed for [Wikibase](https://www.mediawiki.org/wiki/Extension:Wikibase_Repository).\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\u0022",
+        "operationId": "GetCitation",
         "parameters": [
           {
             "name": "format",
@@ -1997,21 +1990,13 @@
             "description": "The format to use for the resulting citation data",
             "required": true,
             "schema": {
-              "enum": [
-                "mediawiki",
-                "mediawiki-basefields",
-                "zotero",
-                "bibtex",
-                "wikibase"
-              ],
-              "type": "string",
-              "additionalProperties": false
+              "$ref": "#/components/schemas/GetCitationFormatParameter"
             }
           },
           {
             "name": "query",
             "in": "path",
-            "description": "URL of an article, DOI, PMCID or PMID in the URL-encoded format. Note that on the Swagger-UI doc page you don't need to URI-encode the parameter manually, it will be done by the docs engine.\n",
+            "description": "URL of an article, DOI, PMCID or PMID in the URL-encoded format. Note that on the Swagger-UI doc page you don\u0027t need to URI-encode the parameter manually, it will be done by the docs engine.\n",
             "required": true,
             "schema": {
               "type": "string"
@@ -2020,7 +2005,7 @@
           {
             "name": "Accept-Language",
             "in": "header",
-            "description": "For some articles the result depends on the `Accept-Language` header, so provide it if localized content is required.\n",
+            "description": "For some articles the result depends on the \u0060Accept-Language\u0060 header, so provide it if localized content is required.\n",
             "schema": {
               "type": "string"
             }
@@ -2032,12 +2017,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Result"
+                  "$ref": "#/components/schemas/ResultValue"
                 }
               },
               "application/x-bibtex": {
                 "schema": {
-                  "$ref": "#/components/schemas/Result"
+                  "$ref": "#/components/schemas/ResultValue"
                 }
               }
             }
@@ -2045,7 +2030,7 @@
           "404": {
             "description": "Citation data was not found.",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -2061,8 +2046,8 @@
           "Reading lists"
         ],
         "summary": "Opt in to use reading lists.",
-        "description": "\"Must precede other list operations.\n\nRequest must be authenticated with a MediaWiki session cookie.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\"",
-        "operationId": "post_data_lists_setup",
+        "description": "\u0022Must precede other list operations.\n\nRequest must be authenticated with a MediaWiki session cookie.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\u0022",
+        "operationId": "PostDataListsSetup",
         "parameters": [
           {
             "name": "csrf_token",
@@ -2071,7 +2056,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "f63c343876da566045e6b59c4532450559c828d3+\\"
+              "example": "f63c343876da566045e6b59c4532450559c828d3\u002B\\"
             }
           }
         ],
@@ -2081,7 +2066,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object"
+                  "$ref": "#/components/schemas/PostDataListsSetup200ResponseResponseJson"
                 }
               }
             }
@@ -2089,7 +2074,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -2105,8 +2090,8 @@
           "Reading lists"
         ],
         "summary": "Opt out from using reading lists.",
-        "description": "\"Deletes all data. User needs to opt in again before being able to do anything.\n\nRequest must be authenticated with a MediaWiki session cookie.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\"",
-        "operationId": "post_data_lists_teardown",
+        "description": "\u0022Deletes all data. User needs to opt in again before being able to do anything.\n\nRequest must be authenticated with a MediaWiki session cookie.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\u0022",
+        "operationId": "PostDataListsTeardown",
         "parameters": [
           {
             "name": "csrf_token",
@@ -2115,7 +2100,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "f63c343876da566045e6b59c4532450559c828d3+\\"
+              "example": "f63c343876da566045e6b59c4532450559c828d3\u002B\\"
             }
           }
         ],
@@ -2125,7 +2110,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object"
+                  "$ref": "#/components/schemas/PostDataListsTeardown200ResponseResponseJson"
                 }
               }
             }
@@ -2133,7 +2118,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -2149,8 +2134,8 @@
           "Reading lists"
         ],
         "summary": "Get all lists of the current user.",
-        "description": "\"Returns metadata describing the lists of the current user. Might be truncated and include\na continuation token.\n\nRequest must be authenticated with a MediaWiki session cookie.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\"",
-        "operationId": "get_data_lists",
+        "description": "\u0022Returns metadata describing the lists of the current user. Might be truncated and include\na continuation token.\n\nRequest must be authenticated with a MediaWiki session cookie.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\u0022",
+        "operationId": "GetDataLists",
         "parameters": [
           {
             "name": "next",
@@ -2163,15 +2148,9 @@
           {
             "name": "sort",
             "in": "query",
-            "description": "\"Sort order\n- `name`: by name, ascending;\n- `updated`: by last modification date, descending.\n\"",
+            "description": "\u0022Sort order\n- \u0060name\u0060: by name, ascending;\n- \u0060updated\u0060: by last modification date, descending.\n\u0022",
             "schema": {
-              "enum": [
-                "name",
-                "updated"
-              ],
-              "type": "string",
-              "additionalProperties": false,
-              "default": "updated"
+              "$ref": "#/components/schemas/GetDataListsSortParameter"
             }
           }
         ],
@@ -2181,24 +2160,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "lists": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/ListRead"
-                      }
-                    },
-                    "next": {
-                      "type": "string",
-                      "description": "Continuation token."
-                    },
-                    "continue-from": {
-                      "type": "string",
-                      "description": "Timestamp to sync from, to be used with the `GET /lists/changes/since/{date}`\nendpoint.\n",
-                      "format": "date-time"
-                    }
-                  }
+                  "$ref": "#/components/schemas/GetDataLists200Response"
                 }
               }
             }
@@ -2206,7 +2168,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -2220,8 +2182,8 @@
           "Reading lists"
         ],
         "summary": "Create a new list for the current user.",
-        "description": "\"Creates a new empty list. On name conflict, does nothing and returns the data of an\nexisting list.\n\nRequest must be authenticated with a MediaWiki session cookie.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\nThis endpoint is deprecated and might be removed without warning. Use the batch version\ninstead.\n\"",
-        "operationId": "post_data_lists",
+        "description": "\u0022Creates a new empty list. On name conflict, does nothing and returns the data of an\nexisting list.\n\nRequest must be authenticated with a MediaWiki session cookie.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\nThis endpoint is deprecated and might be removed without warning. Use the batch version\ninstead.\n\u0022",
+        "operationId": "PostDataLists",
         "parameters": [
           {
             "name": "csrf_token",
@@ -2230,7 +2192,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "f63c343876da566045e6b59c4532450559c828d3+\\"
+              "example": "f63c343876da566045e6b59c4532450559c828d3\u002B\\"
             }
           }
         ],
@@ -2249,21 +2211,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "required": [
-                    "id",
-                    "list"
-                  ],
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "integer",
-                      "description": "List ID.\n\nDeprecated, will be removed. Use the full list object.\n",
-                      "example": 7
-                    },
-                    "list": {
-                      "$ref": "#/components/schemas/ListRead"
-                    }
-                  }
+                  "$ref": "#/components/schemas/PostDataLists200Response"
                 }
               }
             }
@@ -2271,7 +2219,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -2287,8 +2235,8 @@
           "Reading lists"
         ],
         "summary": "Update a list.",
-        "description": "\"List must belong to current user and request must be authenticated with\na MediaWiki session cookie. If the name is changed, the new name must not be in use.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\"",
-        "operationId": "put_data_lists_id",
+        "description": "\u0022List must belong to current user and request must be authenticated with\na MediaWiki session cookie. If the name is changed, the new name must not be in use.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\u0022",
+        "operationId": "PutDataListsById",
         "parameters": [
           {
             "name": "id",
@@ -2306,7 +2254,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "f63c343876da566045e6b59c4532450559c828d3+\\"
+              "example": "f63c343876da566045e6b59c4532450559c828d3\u002B\\"
             }
           }
         ],
@@ -2325,21 +2273,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "required": [
-                    "id",
-                    "list"
-                  ],
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "integer",
-                      "description": "List ID.\n\nDeprecated, will be removed. Use the full list object.\n",
-                      "example": 7
-                    },
-                    "list": {
-                      "$ref": "#/components/schemas/ListRead"
-                    }
-                  }
+                  "$ref": "#/components/schemas/PutDataListsById200Response"
                 }
               }
             }
@@ -2347,7 +2281,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -2361,8 +2295,8 @@
           "Reading lists"
         ],
         "summary": "Delete a list.",
-        "description": "\"List must belong to current user and request must be authenticated with\na MediaWiki session cookie.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\"",
-        "operationId": "delete_data_lists_id",
+        "description": "\u0022List must belong to current user and request must be authenticated with\na MediaWiki session cookie.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\u0022",
+        "operationId": "DeleteDataListsById",
         "parameters": [
           {
             "name": "id",
@@ -2380,7 +2314,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object"
+                  "$ref": "#/components/schemas/DeleteDataListsById200ResponseResponseJson"
                 }
               }
             }
@@ -2388,7 +2322,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -2404,8 +2338,8 @@
           "Reading lists"
         ],
         "summary": "Create multiple new lists for the current user.",
-        "description": "\"See `POST /lists/`.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\"",
-        "operationId": "post_data_lists_batch",
+        "description": "\u0022See \u0060POST /lists/\u0060.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\u0022",
+        "operationId": "PostDataListsBatch",
         "parameters": [
           {
             "name": "csrf_token",
@@ -2414,7 +2348,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "f63c343876da566045e6b59c4532450559c828d3+\\"
+              "example": "f63c343876da566045e6b59c4532450559c828d3\u002B\\"
             }
           }
         ],
@@ -2422,7 +2356,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/PostDataListsBatch"
+                "$ref": "#/components/schemas/PostDataListsBatchMediaRequest"
               }
             }
           }
@@ -2433,38 +2367,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "title": "list_create_batch",
-                  "required": [
-                    "batch",
-                    "lists"
-                  ],
-                  "type": "object",
-                  "properties": {
-                    "batch": {
-                      "type": "array",
-                      "items": {
-                        "title": "list_id",
-                        "required": [
-                          "id"
-                        ],
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "integer",
-                            "description": "List ID",
-                            "example": 7
-                          }
-                        }
-                      },
-                      "description": "Deprecated, will be removed. Use the full list objects instead."
-                    },
-                    "lists": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/ListRead"
-                      }
-                    }
-                  }
+                  "$ref": "#/components/schemas/ListCreateBatch"
                 }
               }
             }
@@ -2472,7 +2375,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -2488,8 +2391,8 @@
           "Reading lists"
         ],
         "summary": "Get all entries of a given list.",
-        "description": "\"Returns pages contained by the given list. Might be truncated and include\na continuation token.\n\nList must belong to current user and request must be authenticated with\na MediaWiki session cookie.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\"",
-        "operationId": "getListEntries",
+        "description": "\u0022Returns pages contained by the given list. Might be truncated and include\na continuation token.\n\nList must belong to current user and request must be authenticated with\na MediaWiki session cookie.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\u0022",
+        "operationId": "GetListEntries",
         "parameters": [
           {
             "name": "id",
@@ -2511,15 +2414,9 @@
           {
             "name": "sort",
             "in": "query",
-            "description": "\"Sort order\n- `name`: by page title, ascending;\n- `updated`: by last modification date, descending.\n\"",
+            "description": "\u0022Sort order\n- \u0060name\u0060: by page title, ascending;\n- \u0060updated\u0060: by last modification date, descending.\n\u0022",
             "schema": {
-              "enum": [
-                "name",
-                "updated"
-              ],
-              "type": "string",
-              "additionalProperties": false,
-              "default": "updated"
+              "$ref": "#/components/schemas/GetListEntriesSortParameter"
             }
           }
         ],
@@ -2529,19 +2426,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "entries": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/ListEntryRead"
-                      }
-                    },
-                    "next": {
-                      "type": "string",
-                      "description": "Continuation token."
-                    }
-                  }
+                  "$ref": "#/components/schemas/GetListEntries200Response"
                 }
               }
             }
@@ -2549,7 +2434,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -2563,8 +2448,8 @@
           "Reading lists"
         ],
         "summary": "Create a new list entry.",
-        "description": "\"Creates a new list entry in the given list. On conflict, does nothing and returns the\ndata of an existing list.\n\nThe list must belong to the current user and the request must be\nauthenticated with a MediaWiki session cookie.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\nThis endpoint is deprecated and might be removed without warning. Use the batch version\ninstead.\n\"",
-        "operationId": "post_data_lists_id_entries",
+        "description": "\u0022Creates a new list entry in the given list. On conflict, does nothing and returns the\ndata of an existing list.\n\nThe list must belong to the current user and the request must be\nauthenticated with a MediaWiki session cookie.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\nThis endpoint is deprecated and might be removed without warning. Use the batch version\ninstead.\n\u0022",
+        "operationId": "PostDataListsByIdEntries",
         "parameters": [
           {
             "name": "id",
@@ -2582,7 +2467,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "f63c343876da566045e6b59c4532450559c828d3+\\"
+              "example": "f63c343876da566045e6b59c4532450559c828d3\u002B\\"
             }
           }
         ],
@@ -2601,21 +2486,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "required": [
-                    "id",
-                    "entry"
-                  ],
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "integer",
-                      "description": "List entry ID\n\nDeprecated, will be removed. Use the full entry object instead.\n",
-                      "example": 13
-                    },
-                    "entry": {
-                      "$ref": "#/components/schemas/ListEntryRead"
-                    }
-                  }
+                  "$ref": "#/components/schemas/PostDataListsByIdEntries200Response"
                 }
               }
             }
@@ -2623,7 +2494,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -2633,14 +2504,14 @@
         }
       }
     },
-    "/data/lists/{id}/entries/{entry_id}": {
+    "/data/lists/{id}/entries/{entryId}": {
       "delete": {
         "tags": [
           "Reading lists"
         ],
         "summary": "Delete a list entry.",
-        "description": "\"Deletes a given list entry.\n\nThe list must belong to the current user and the request must be\nauthenticated with a MediaWiki session cookie.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\"",
-        "operationId": "delete_data_lists_id_entries_entry_id",
+        "description": "\u0022Deletes a given list entry.\n\nThe list must belong to the current user and the request must be\nauthenticated with a MediaWiki session cookie.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\u0022",
+        "operationId": "DeleteDataListsByIdEntriesByEntryId",
         "parameters": [
           {
             "name": "id",
@@ -2652,7 +2523,7 @@
             }
           },
           {
-            "name": "entry_id",
+            "name": "entryId",
             "in": "path",
             "required": true,
             "schema": {
@@ -2667,7 +2538,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object"
+                  "$ref": "#/components/schemas/DeleteDataListsByIdEntriesByEntryId200ResponseResponseJson"
                 }
               }
             }
@@ -2675,7 +2546,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -2691,8 +2562,8 @@
           "Reading lists"
         ],
         "summary": "Create multiple new list entries.",
-        "description": "\"See `POST /lists/{id}/entries/`.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\"",
-        "operationId": "post_data_lists_id_entries_batch",
+        "description": "\u0022See \u0060POST /lists/{id}/entries/\u0060.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\u0022",
+        "operationId": "PostDataListsByIdEntriesBatch",
         "parameters": [
           {
             "name": "id",
@@ -2710,7 +2581,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "example": "f63c343876da566045e6b59c4532450559c828d3+\\"
+              "example": "f63c343876da566045e6b59c4532450559c828d3\u002B\\"
             }
           }
         ],
@@ -2718,7 +2589,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/PostDataListsIdEntriesBatch"
+                "$ref": "#/components/schemas/PostDataListsByIdEntriesBatchMediaRequest"
               }
             }
           }
@@ -2729,32 +2600,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "required": [
-                    "entries",
-                    "batch"
-                  ],
-                  "type": "object",
-                  "properties": {
-                    "batch": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "integer",
-                            "description": "List entry ID",
-                            "example": 13
-                          }
-                        }
-                      }
-                    },
-                    "entries": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/ListEntryRead"
-                      }
-                    }
-                  }
+                  "$ref": "#/components/schemas/PostDataListsByIdEntriesBatch200Response"
                 }
               }
             }
@@ -2762,7 +2608,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -2778,8 +2624,8 @@
           "Reading lists"
         ],
         "summary": "Get lists of the current user which contain a given page.",
-        "description": "\"Request must be authenticated with a MediaWiki session cookie.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\"",
-        "operationId": "get_data_lists_pages_project_title",
+        "description": "\u0022Request must be authenticated with a MediaWiki session cookie.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\u0022",
+        "operationId": "GetDataListsPagesByProjectByTitle",
         "parameters": [
           {
             "name": "project",
@@ -2816,19 +2662,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "lists": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/ListRead"
-                      }
-                    },
-                    "next": {
-                      "type": "string",
-                      "description": "Continuation token."
-                    }
-                  }
+                  "$ref": "#/components/schemas/GetDataListsPagesByProjectByTitle200Response"
                 }
               }
             }
@@ -2836,7 +2670,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -2852,8 +2686,8 @@
           "Reading lists"
         ],
         "summary": "Get recent changes to the lists",
-        "description": "\"Returns metadata describing lists and entries which have changed. Might be truncated\nand include a continuation token.\n\nRequest must be authenticated with a MediaWiki session cookie.\n\nFor safe synchronization, the date parameter should be taken from the `continue-from`\nfield of a previous `GET /lists/` or `GET /lists/changes/since/{date}` request. This will\nensure that no changes are skipped, at the cost of sometimes receiving the same change\nmultitple times. Clients should handle changes in an idempotent way.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\"",
-        "operationId": "get_data_lists_changes_since_date",
+        "description": "\u0022Returns metadata describing lists and entries which have changed. Might be truncated\nand include a continuation token.\n\nRequest must be authenticated with a MediaWiki session cookie.\n\nFor safe synchronization, the date parameter should be taken from the \u0060continue-from\u0060\nfield of a previous \u0060GET /lists/\u0060 or \u0060GET /lists/changes/since/{date}\u0060 request. This will\nensure that no changes are skipped, at the cost of sometimes receiving the same change\nmultitple times. Clients should handle changes in an idempotent way.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\u0022",
+        "operationId": "GetDataListsChangesSinceByDate",
         "parameters": [
           {
             "name": "date",
@@ -2880,24 +2714,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "lists": {
-                      "type": "array",
-                      "items": {
-                        "$ref": "#/components/schemas/ListRead"
-                      }
-                    },
-                    "next": {
-                      "type": "string",
-                      "description": "Continuation token."
-                    },
-                    "continue-from": {
-                      "type": "string",
-                      "description": "Timestamp to sync from, to be used with the `GET /lists/changes/since/{date}`\nendpoint.\n",
-                      "format": "date-time"
-                    }
-                  }
+                  "$ref": "#/components/schemas/GetDataListsChangesSinceByDate200Response"
                 }
               }
             }
@@ -2905,7 +2722,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -2915,17 +2732,17 @@
         }
       }
     },
-    "/data/recommendation/article/creation/translation/{from_lang}": {
+    "/data/recommendation/article/creation/translation/{fromLang}": {
       "get": {
         "tags": [
           "Recommendation"
         ],
         "summary": "Recommend articles for translation.",
-        "description": "\"Recommends articles to be translated from the source\nto the domain language.\n\nSee more at [Recommendation API documentation](https://meta.wikimedia.org/wiki/Recommendation_API)\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\"",
-        "operationId": "get_data_recommendation_article_creation_translation_from_lang",
+        "description": "\u0022Recommends articles to be translated from the source\nto the domain language.\n\nSee more at [Recommendation API documentation](https://meta.wikimedia.org/wiki/Recommendation_API)\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\u0022",
+        "operationId": "GetDataRecommendationArticleCreationTranslationByFromLang",
         "parameters": [
           {
-            "name": "from_lang",
+            "name": "fromLang",
             "in": "path",
             "description": "The source language code",
             "required": true,
@@ -2957,7 +2774,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -2967,17 +2784,17 @@
         }
       }
     },
-    "/data/recommendation/article/creation/translation/{from_lang}/{seed_article}": {
+    "/data/recommendation/article/creation/translation/{fromLang}/{seedArticle}": {
       "get": {
         "tags": [
           "Recommendation"
         ],
         "summary": "Recommend articles for translation.",
-        "description": "\"Recommends articles to be translated from the source\nto the domain language.\n\nSee more at [Recommendation API documentation](https://meta.wikimedia.org/wiki/Recommendation_API)\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\"",
-        "operationId": "get_data_recommendation_article_creation_translation_from_lang_seed_article",
+        "description": "\u0022Recommends articles to be translated from the source\nto the domain language.\n\nSee more at [Recommendation API documentation](https://meta.wikimedia.org/wiki/Recommendation_API)\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\u0022",
+        "operationId": "GetDataRecommendationArticleCreationTranslationByFromLangBySeedArticle",
         "parameters": [
           {
-            "name": "from_lang",
+            "name": "fromLang",
             "in": "path",
             "description": "The source language code",
             "required": true,
@@ -2986,7 +2803,7 @@
             }
           },
           {
-            "name": "seed_article",
+            "name": "seedArticle",
             "in": "path",
             "description": "The article to use as a search seed",
             "required": true,
@@ -3018,7 +2835,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -3028,17 +2845,17 @@
         }
       }
     },
-    "/data/recommendation/article/creation/morelike/{seed_article}": {
+    "/data/recommendation/article/creation/morelike/{seedArticle}": {
       "get": {
         "tags": [
           "Recommendation"
         ],
         "summary": "Recommend missing articles",
-        "description": "\"Recommends articles similar to the seed article but are missing\nfrom the domain language Wikipedia.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\"",
-        "operationId": "get_data_recommendation_article_creation_morelike_seed_article",
+        "description": "\u0022Recommends articles similar to the seed article but are missing\nfrom the domain language Wikipedia.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\u0022",
+        "operationId": "GetDataRecommendationArticleCreationMorelikeBySeedArticle",
         "parameters": [
           {
-            "name": "seed_article",
+            "name": "seedArticle",
             "in": "path",
             "description": "The article title used to search similar but missing articles",
             "required": true,
@@ -3053,11 +2870,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/MorelikeResultItem"
-                  },
-                  "description": "the prioritized list of Wikidata IDs recommended for creation as Wikipedia articles"
+                  "$ref": "#/components/schemas/GetDataRecommendationArticleCreationMorelikeBySeedArticle200Response"
                 }
               }
             }
@@ -3065,7 +2878,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -3081,8 +2894,8 @@
           "Mobile"
         ],
         "summary": "Get CSS for mobile apps.",
-        "description": "\"Gets common CSS mobile apps need to properly display pages using Page Content Service.\nIn most cases all of the types are needed (preferably in this order):\n* base (Common mobile CSS from ResourceLoader)\n* site (Site-specific, mobile CSS from ResourceLoader, as defined in MediaWiki\\:Mobile.css)\n* pcs (CSS for the Page Content Service)\n\nThe `base` and `pcs` responses are the same regardless of what domain is used.\nFor these we suggest meta.wikimedia.org.\n\nYou can still pass pagelib for type, but this is a legacy version of the CSS for\nexisting app clients.\n\nStability: [unstable](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Unstable)\n\nPlease follow [wikitech-l](https://lists.wikimedia.org/mailman/listinfo/wikitech-l) or [mediawiki-api-announce](https://lists.wikimedia.org/mailman/listinfo/mediawiki-api-announce) for announcements of breaking changes.\n\"",
-        "operationId": "get_data_css_mobile_type",
+        "description": "\u0022Gets common CSS mobile apps need to properly display pages using Page Content Service.\nIn most cases all of the types are needed (preferably in this order):\n* base (Common mobile CSS from ResourceLoader)\n* site (Site-specific, mobile CSS from ResourceLoader, as defined in MediaWiki\\:Mobile.css)\n* pcs (CSS for the Page Content Service)\n\nThe \u0060base\u0060 and \u0060pcs\u0060 responses are the same regardless of what domain is used.\nFor these we suggest meta.wikimedia.org.\n\nYou can still pass pagelib for type, but this is a legacy version of the CSS for\nexisting app clients.\n\nStability: [unstable](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Unstable)\n\nPlease follow [wikitech-l](https://lists.wikimedia.org/mailman/listinfo/wikitech-l) or [mediawiki-api-announce](https://lists.wikimedia.org/mailman/listinfo/mediawiki-api-announce) for announcements of breaking changes.\n\u0022",
+        "operationId": "GetDataCssMobileByType",
         "parameters": [
           {
             "name": "type",
@@ -3090,14 +2903,7 @@
             "description": "The desired CSS bundle",
             "required": true,
             "schema": {
-              "enum": [
-                "base",
-                "pagelib",
-                "pcs",
-                "site"
-              ],
-              "type": "string",
-              "additionalProperties": false
+              "$ref": "#/components/schemas/GetDataCssMobileByTypeTypeParameter"
             }
           }
         ],
@@ -3107,7 +2913,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object"
+                  "$ref": "#/components/schemas/GetDataCssMobileByType200ResponseResponseJson"
                 }
               }
             }
@@ -3115,7 +2921,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -3131,8 +2937,8 @@
           "Mobile"
         ],
         "summary": "Get JavaScript for mobileapps",
-        "description": "\"Gets the JavaScript bundle so that clients can have\nconvenient access to that for consuming the page HTML.\nAmongst other things,\n* it allows to detect the platform and through that enable platform specific CSS rules,\n* has code to lazy load images on the page,\n* code for collapsing and expanding tables.\n\nValid types are pagelib or pcs. Passing pcs will return the JavaScript for the\nPage Content Service. Passing pagelib will return a deprecated legacy version\nof the wikimedia-page-library JavaScript to support existing app clients.\n\nStability: [unstable](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Unstable)\n\nPlease follow [wikitech-l](https://lists.wikimedia.org/mailman/listinfo/wikitech-l) or [mediawiki-api-announce](https://lists.wikimedia.org/mailman/listinfo/mediawiki-api-announce) for announcements of breaking changes.\n\"",
-        "operationId": "get_data_javascript_mobile_type",
+        "description": "\u0022Gets the JavaScript bundle so that clients can have\nconvenient access to that for consuming the page HTML.\nAmongst other things,\n* it allows to detect the platform and through that enable platform specific CSS rules,\n* has code to lazy load images on the page,\n* code for collapsing and expanding tables.\n\nValid types are pagelib or pcs. Passing pcs will return the JavaScript for the\nPage Content Service. Passing pagelib will return a deprecated legacy version\nof the wikimedia-page-library JavaScript to support existing app clients.\n\nStability: [unstable](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Unstable)\n\nPlease follow [wikitech-l](https://lists.wikimedia.org/mailman/listinfo/wikitech-l) or [mediawiki-api-announce](https://lists.wikimedia.org/mailman/listinfo/mediawiki-api-announce) for announcements of breaking changes.\n\u0022",
+        "operationId": "GetDataJavascriptMobileByType",
         "parameters": [
           {
             "name": "type",
@@ -3140,12 +2946,7 @@
             "description": "The desired JavaScript bundle",
             "required": true,
             "schema": {
-              "enum": [
-                "pagelib",
-                "pcs"
-              ],
-              "type": "string",
-              "additionalProperties": false
+              "$ref": "#/components/schemas/GetDataJavascriptMobileByTypeTypeParameter"
             }
           }
         ],
@@ -3155,7 +2956,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object"
+                  "$ref": "#/components/schemas/GetDataJavascriptMobileByType200ResponseResponseJson"
                 }
               }
             }
@@ -3163,7 +2964,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -3179,8 +2980,8 @@
           "Mobile"
         ],
         "summary": "Get internationalization info",
-        "description": "\"Gets internationalization information for the given site. Currently the only\nsupported type is pcs for the Page Content Service.\n\nStability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n\"",
-        "operationId": "get_data_i18n_type",
+        "description": "\u0022Gets internationalization information for the given site. Currently the only\nsupported type is pcs for the Page Content Service.\n\nStability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n\u0022",
+        "operationId": "GetDataI18NByType",
         "parameters": [
           {
             "name": "type",
@@ -3188,11 +2989,7 @@
             "description": "The desired internationalization bundle",
             "required": true,
             "schema": {
-              "enum": [
-                "pcs"
-              ],
-              "type": "string",
-              "additionalProperties": false
+              "$ref": "#/components/schemas/GetDataI18NByTypeTypeParameter"
             }
           }
         ],
@@ -3202,7 +2999,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object"
+                  "$ref": "#/components/schemas/GetDataI18NByType200ResponseResponseJson"
                 }
               }
             }
@@ -3210,7 +3007,7 @@
           "default": {
             "description": "Error",
             "content": {
-              "application/problem+json": {
+              "application/problem\u002Bjson": {
                 "schema": {
                   "$ref": "#/components/schemas/Problem"
                 }
@@ -3396,13 +3193,7 @@
             "description": "The file page title"
           },
           "type": {
-            "enum": [
-              "image",
-              "video",
-              "audio"
-            ],
-            "type": "string",
-            "additionalProperties": false
+            "$ref": "#/components/schemas/MediaItemType"
           },
           "section_id": {
             "type": "integer",
@@ -3498,12 +3289,12 @@
           },
           "title": {
             "type": "string",
-            "description": "\"The page title.\nDeprecated: Use `titles.normalized` instead.\n\"",
+            "description": "\u0022The page title.\nDeprecated: Use \u0060titles.normalized\u0060 instead.\n\u0022",
             "deprecated": true
           },
           "displaytitle": {
             "type": "string",
-            "description": "\"The page title how it should be shown to the user.\nDeprecated: Use `titles.display` instead.\n\"",
+            "description": "\u0022The page title how it should be shown to the user.\nDeprecated: Use \u0060titles.display\u0060 instead.\n\u0022",
             "deprecated": true
           },
           "pageid": {
@@ -3567,27 +3358,13 @@
           "translations": {
             "type": "array",
             "items": {
-              "type": "object",
-              "properties": {
-                "phrase": {
-                  "type": "string",
-                  "description": "the translated phrase"
-                },
-                "info": {
-                  "type": "string",
-                  "description": "extra information about the phrase"
-                },
-                "sources": {
-                  "type": "string",
-                  "description": "the source dictionary used for the translation"
-                }
-              }
+              "$ref": "#/components/schemas/CxDictTranslationsItem"
             },
             "description": "the translations found"
           }
         }
       },
-      "Result": {
+      "ResultValue": {
         "required": [
           "title",
           "url",
@@ -3716,21 +3493,7 @@
           "items": {
             "type": "array",
             "items": {
-              "type": "object",
-              "properties": {
-                "wikidata_id": {
-                  "type": "string",
-                  "description": "wikidata id for the item"
-                },
-                "title": {
-                  "type": "string",
-                  "description": "title of the article in the source language"
-                },
-                "sitelink_count": {
-                  "type": "integer",
-                  "description": "count of sites the wikidata item is linked to"
-                }
-              }
+              "$ref": "#/components/schemas/RecommendationResultItemsItem"
             },
             "description": "the list of articles recommended for translation"
           }
@@ -3743,7 +3506,7 @@
         },
         "description": "the prioritized list of Wikidata IDs recommended for creation as Wikipedia articles"
       },
-      "post_transform_wikitext_to_lintmultipart_form_data": {
+      "PostTransformWikitextToLintFormDataRequest": {
         "required": [
           "wikitext"
         ],
@@ -3756,7 +3519,7 @@
           }
         }
       },
-      "post_transform_wikitext_to_lintapplication_json_Body": {
+      "PostTransformWikitextToLintJsonRequest": {
         "required": [
           "wikitext"
         ],
@@ -3839,6 +3602,40 @@
         },
         "description": "The coordinates of the item"
       },
+      "CxDictTranslationsItem": {
+        "type": "object",
+        "properties": {
+          "phrase": {
+            "type": "string",
+            "description": "the translated phrase"
+          },
+          "info": {
+            "type": "string",
+            "description": "extra information about the phrase"
+          },
+          "sources": {
+            "type": "string",
+            "description": "the source dictionary used for the translation"
+          }
+        }
+      },
+      "RecommendationResultItemsItem": {
+        "type": "object",
+        "properties": {
+          "wikidata_id": {
+            "type": "string",
+            "description": "wikidata id for the item"
+          },
+          "title": {
+            "type": "string",
+            "description": "title of the article in the source language"
+          },
+          "sitelink_count": {
+            "type": "integer",
+            "description": "count of sites the wikidata item is linked to"
+          }
+        }
+      },
       "ListingLinksNext": {
         "type": "object",
         "properties": {
@@ -3848,37 +3645,43 @@
           }
         }
       },
-      "GetPageHtmlTitle200": {
+      "GetPageHtmlByTitle200Response": {
         "type": "string"
       },
-      "GetFormatRevision200": {
-        "type": "string"
-      },
-      "GetPageLintTitle200": {
+      "GetPageHtmlByTitle200ResponseResponseJson": {
         "type": "object"
       },
-      "GetPageLintTitleRevision200": {
+      "GetFormatRevision200Response": {
+        "type": "string"
+      },
+      "GetFormatRevision200ResponseResponseJson": {
         "type": "object"
       },
-      "GetContentMobileHtml200": {
+      "GetPageLintByTitle200Response": {
+        "type": "object"
+      },
+      "GetPageLintByTitleByRevision200Response": {
+        "type": "object"
+      },
+      "GetContentMobileHtml200Response": {
         "type": "string"
       },
-      "GetContentWithRevisionMobileHtml200": {
+      "GetContentWithRevisionMobileHtml200Response": {
         "type": "string"
       },
-      "GetPageMobileHtmlOfflineResourcesTitle200": {
+      "GetPageMobileHtmlOfflineResourcesByTitle200Response": {
         "type": "string"
       },
-      "GetPageMobileHtmlOfflineResourcesTitleRevision200": {
+      "GetPageMobileHtmlOfflineResourcesByTitleByRevision200Response": {
         "type": "string"
       },
-      "GetPageTalkTitle200": {
+      "GetPageTalkByTitle200Response": {
         "type": "string"
       },
-      "GetPageTalkTitleRevision200": {
+      "GetPageTalkByTitleByRevision200Response": {
         "type": "string"
       },
-      "PostTransformHtmlToWikitext": {
+      "PostTransformHtmlToWikitextFormDataRequest": {
         "required": [
           "html"
         ],
@@ -3895,10 +3698,10 @@
           }
         }
       },
-      "PostTransformHtmlToWikitext200": {
+      "PostTransformHtmlToWikitext200Response": {
         "type": "string"
       },
-      "PostTransformHtmlToWikitextTitle": {
+      "PostTransformHtmlToWikitextByTitleFormDataRequest": {
         "required": [
           "html"
         ],
@@ -3915,10 +3718,10 @@
           }
         }
       },
-      "PostTransformHtmlToWikitextTitle200": {
+      "PostTransformHtmlToWikitextByTitle200Response": {
         "type": "string"
       },
-      "PostTransformHtmlToWikitextTitleRevision": {
+      "PostTransformHtmlToWikitextByTitleByRevisionFormDataRequest": {
         "required": [
           "html"
         ],
@@ -3935,10 +3738,10 @@
           }
         }
       },
-      "PostTransformHtmlToWikitextTitleRevision200": {
+      "PostTransformHtmlToWikitextByTitleByRevision200Response": {
         "type": "string"
       },
-      "PostTransformWikitextToHtml": {
+      "PostTransformWikitextToHtmlFormDataRequest": {
         "required": [
           "wikitext"
         ],
@@ -3951,7 +3754,7 @@
           },
           "body_only": {
             "type": "boolean",
-            "description": "Return only `body.innerHTML`"
+            "description": "Return only \u0060body.innerHTML\u0060"
           },
           "stash": {
             "type": "boolean",
@@ -3959,10 +3762,10 @@
           }
         }
       },
-      "PostTransformWikitextToHtml200": {
+      "PostTransformWikitextToHtml200Response": {
         "type": "string"
       },
-      "PostTransformWikitextToHtmlTitle": {
+      "PostTransformWikitextToHtmlByTitleFormDataRequest": {
         "required": [
           "wikitext"
         ],
@@ -3975,7 +3778,7 @@
           },
           "body_only": {
             "type": "boolean",
-            "description": "Return only `body.innerHTML`"
+            "description": "Return only \u0060body.innerHTML\u0060"
           },
           "stash": {
             "type": "boolean",
@@ -3983,10 +3786,10 @@
           }
         }
       },
-      "PostTransformWikitextToHtmlTitle200": {
+      "PostTransformWikitextToHtmlByTitle200Response": {
         "type": "string"
       },
-      "PostTransformWikitextToHtmlTitleRevision": {
+      "PostTransformWikitextToHtmlByTitleByRevisionFormDataRequest": {
         "required": [
           "wikitext"
         ],
@@ -3999,7 +3802,7 @@
           },
           "body_only": {
             "type": "boolean",
-            "description": "Return only `body.innerHTML`"
+            "description": "Return only \u0060body.innerHTML\u0060"
           },
           "stash": {
             "type": "boolean",
@@ -4007,13 +3810,13 @@
           }
         }
       },
-      "PostTransformWikitextToHtmlTitleRevision200": {
+      "PostTransformWikitextToHtmlByTitleByRevision200Response": {
         "type": "string"
       },
-      "PostTransformWikitextToLint200": {
+      "PostTransformWikitextToLint200Response": {
         "type": "object"
       },
-      "PostTransformWikitextToLintTitle": {
+      "PostTransformWikitextToLintByTitleFormDataRequest": {
         "required": [
           "wikitext"
         ],
@@ -4026,10 +3829,10 @@
           }
         }
       },
-      "PostTransformWikitextToLintTitle200": {
+      "PostTransformWikitextToLintByTitle200Response": {
         "type": "object"
       },
-      "PostTransformWikitextToLintTitleRevision": {
+      "PostTransformWikitextToLintByTitleByRevisionFormDataRequest": {
         "required": [
           "wikitext"
         ],
@@ -4042,10 +3845,10 @@
           }
         }
       },
-      "PostTransformWikitextToLintTitleRevision200": {
+      "PostTransformWikitextToLintByTitleByRevision200Response": {
         "type": "object"
       },
-      "TransformWikitextToMobileHtml": {
+      "TransformWikitextToMobileHtmlFormDataRequest": {
         "required": [
           "wikitext"
         ],
@@ -4058,19 +3861,19 @@
           }
         }
       },
-      "TransformWikitextToMobileHtml200": {
+      "TransformWikitextToMobileHtml200Response": {
         "type": "string"
       },
-      "PostDataListsSetup200": {
+      "PostDataListsSetup200Response": {
         "type": "object"
       },
-      "PostDataListsTeardown200": {
+      "PostDataListsTeardown200Response": {
         "type": "object"
       },
-      "DeleteDataListsId200": {
+      "DeleteDataListsById200Response": {
         "type": "object"
       },
-      "PostDataListsBatch": {
+      "PostDataListsBatchMediaRequest": {
         "title": "batch",
         "required": [
           "batch"
@@ -4086,10 +3889,10 @@
           }
         }
       },
-      "DeleteDataListsIdEntriesEntryId200": {
+      "DeleteDataListsByIdEntriesByEntryId200Response": {
         "type": "object"
       },
-      "PostDataListsIdEntriesBatch": {
+      "PostDataListsByIdEntriesBatchMediaRequest": {
         "required": [
           "batch"
         ],
@@ -4105,18 +3908,514 @@
           }
         }
       },
-      "GetDataCssMobileType200": {
+      "GetDataCssMobileByType200Response": {
         "type": "object"
       },
-      "GetDataJavascriptMobileType200": {
+      "GetDataJavascriptMobileByType200Response": {
         "type": "object"
       },
-      "GetDataI18nType200": {
+      "GetDataI18NByType200Response": {
         "type": "object"
       },
       "ExamplePayload": {
         "type": "object",
         "description": "Placeholder schema for path example refs"
+      },
+      "GetPageHtmlByTitle200ResponseResponseHtml": {
+        "type": "string"
+      },
+      "GetPageHtmlByTitle200ResponseResponseJson2": {
+        "type": "object"
+      },
+      "GetFormatRevision200ResponseResponseHtml": {
+        "type": "string"
+      },
+      "GetFormatRevision200ResponseResponseJson2": {
+        "type": "object"
+      },
+      "GetPageLintByTitle200ResponseResponseJson": {
+        "type": "object"
+      },
+      "GetPageLintByTitleByRevision200ResponseResponseJson": {
+        "type": "object"
+      },
+      "GetContentMobileHtml200ResponseResponseHtml": {
+        "type": "string"
+      },
+      "GetContentWithRevisionMobileHtml200ResponseResponseHtml": {
+        "type": "string"
+      },
+      "GetPageMobileHtmlOfflineResourcesByTitle200ResponseResponseJson": {
+        "type": "string"
+      },
+      "GetPageMobileHtmlOfflineResourcesByTitleByRevision200ResponseResponseJson": {
+        "type": "string"
+      },
+      "GetPageTalkByTitle200ResponseResponseJson": {
+        "type": "string"
+      },
+      "GetPageTalkByTitleByRevision200ResponseResponseJson": {
+        "type": "string"
+      },
+      "PostTransformHtmlToWikitext200ResponseResponsePlain": {
+        "type": "string"
+      },
+      "PostTransformHtmlToWikitextByTitle200ResponseResponsePlain": {
+        "type": "string"
+      },
+      "PostTransformHtmlToWikitextByTitleByRevision200ResponseResponsePlain": {
+        "type": "string"
+      },
+      "PostTransformWikitextToHtml200ResponseResponseHtml": {
+        "type": "string"
+      },
+      "PostTransformWikitextToHtmlByTitle200ResponseResponseHtml": {
+        "type": "string"
+      },
+      "PostTransformWikitextToHtmlByTitleByRevision200ResponseResponseHtml": {
+        "type": "string"
+      },
+      "PostTransformWikitextToLint200ResponseResponseJson": {
+        "type": "object"
+      },
+      "PostTransformWikitextToLintByTitle200ResponseResponseJson": {
+        "type": "object"
+      },
+      "PostTransformWikitextToLintByTitleByRevision200ResponseResponseJson": {
+        "type": "object"
+      },
+      "TransformWikitextToMobileHtml200ResponseResponseHtml": {
+        "type": "string"
+      },
+      "PostDataListsSetup200ResponseResponseJson": {
+        "type": "object"
+      },
+      "PostDataListsTeardown200ResponseResponseJson": {
+        "type": "object"
+      },
+      "GetDataLists200Response": {
+        "type": "object",
+        "properties": {
+          "lists": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ListRead"
+            }
+          },
+          "next": {
+            "type": "string",
+            "description": "Continuation token."
+          },
+          "continue-from": {
+            "type": "string",
+            "description": "Timestamp to sync from, to be used with the \u0060GET /lists/changes/since/{date}\u0060\nendpoint.\n",
+            "format": "date-time"
+          }
+        }
+      },
+      "PostDataLists200Response": {
+        "required": [
+          "id",
+          "list"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "List ID.\n\nDeprecated, will be removed. Use the full list object.\n",
+            "example": 7
+          },
+          "list": {
+            "$ref": "#/components/schemas/ListRead"
+          }
+        }
+      },
+      "PutDataListsById200Response": {
+        "required": [
+          "id",
+          "list"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "List ID.\n\nDeprecated, will be removed. Use the full list object.\n",
+            "example": 7
+          },
+          "list": {
+            "$ref": "#/components/schemas/ListRead"
+          }
+        }
+      },
+      "DeleteDataListsById200ResponseResponseJson": {
+        "type": "object"
+      },
+      "ListCreateBatch": {
+        "title": "list_create_batch",
+        "required": [
+          "batch",
+          "lists"
+        ],
+        "type": "object",
+        "properties": {
+          "batch": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ListCreateBatchBatchItem"
+            },
+            "description": "Deprecated, will be removed. Use the full list objects instead."
+          },
+          "lists": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ListRead"
+            }
+          }
+        }
+      },
+      "GetListEntries200Response": {
+        "type": "object",
+        "properties": {
+          "entries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ListEntryRead"
+            }
+          },
+          "next": {
+            "type": "string",
+            "description": "Continuation token."
+          }
+        }
+      },
+      "PostDataListsByIdEntries200Response": {
+        "required": [
+          "id",
+          "entry"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "List entry ID\n\nDeprecated, will be removed. Use the full entry object instead.\n",
+            "example": 13
+          },
+          "entry": {
+            "$ref": "#/components/schemas/ListEntryRead"
+          }
+        }
+      },
+      "DeleteDataListsByIdEntriesByEntryId200ResponseResponseJson": {
+        "type": "object"
+      },
+      "PostDataListsByIdEntriesBatch200Response": {
+        "required": [
+          "entries",
+          "batch"
+        ],
+        "type": "object",
+        "properties": {
+          "batch": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PostDataListsByIdEntriesBatch200ResponseBatchItem"
+            }
+          },
+          "entries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ListEntryRead"
+            }
+          }
+        }
+      },
+      "GetDataListsPagesByProjectByTitle200Response": {
+        "type": "object",
+        "properties": {
+          "lists": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ListRead"
+            }
+          },
+          "next": {
+            "type": "string",
+            "description": "Continuation token."
+          }
+        }
+      },
+      "GetDataListsChangesSinceByDate200Response": {
+        "type": "object",
+        "properties": {
+          "lists": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ListRead"
+            }
+          },
+          "next": {
+            "type": "string",
+            "description": "Continuation token."
+          },
+          "continue-from": {
+            "type": "string",
+            "description": "Timestamp to sync from, to be used with the \u0060GET /lists/changes/since/{date}\u0060\nendpoint.\n",
+            "format": "date-time"
+          }
+        }
+      },
+      "GetDataRecommendationArticleCreationMorelikeBySeedArticle200Response": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/MorelikeResultItem"
+        },
+        "description": "the prioritized list of Wikidata IDs recommended for creation as Wikipedia articles"
+      },
+      "GetDataCssMobileByType200ResponseResponseJson": {
+        "type": "object"
+      },
+      "GetDataJavascriptMobileByType200ResponseResponseJson": {
+        "type": "object"
+      },
+      "GetDataI18NByType200ResponseResponseJson": {
+        "type": "object"
+      },
+      "ListCreateBatchBatchItem": {
+        "title": "list_id",
+        "required": [
+          "id"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "List ID",
+            "example": 7
+          }
+        }
+      },
+      "PostDataListsByIdEntriesBatch200ResponseBatchItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "List entry ID",
+            "example": 13
+          }
+        }
+      },
+      "MediaItemType": {
+        "enum": [
+          "image",
+          "video",
+          "audio"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "MediaItemType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "image",
+              "name": "Image"
+            },
+            {
+              "value": "video",
+              "name": "Video"
+            },
+            {
+              "value": "audio",
+              "name": "Audio"
+            }
+          ]
+        }
+      },
+      "TransformWikitextToMobileHtmlOutputModeParameter": {
+        "enum": [
+          "editPreview",
+          "contentAndReferences",
+          "content",
+          "references"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "TransformWikitextToMobileHtmlOutputModeParameter",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "editPreview",
+              "name": "EditPreview"
+            },
+            {
+              "value": "contentAndReferences",
+              "name": "ContentAndReferences"
+            },
+            {
+              "value": "content",
+              "name": "Content"
+            },
+            {
+              "value": "references",
+              "name": "References"
+            }
+          ]
+        }
+      },
+      "GetCitationFormatParameter": {
+        "enum": [
+          "mediawiki",
+          "mediawiki-basefields",
+          "zotero",
+          "bibtex",
+          "wikibase"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "GetCitationFormatParameter",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "mediawiki",
+              "name": "Mediawiki"
+            },
+            {
+              "value": "mediawiki-basefields",
+              "name": "MediawikiBasefields"
+            },
+            {
+              "value": "zotero",
+              "name": "Zotero"
+            },
+            {
+              "value": "bibtex",
+              "name": "Bibtex"
+            },
+            {
+              "value": "wikibase",
+              "name": "Wikibase"
+            }
+          ]
+        }
+      },
+      "GetDataListsSortParameter": {
+        "enum": [
+          "name",
+          "updated"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "default": "updated",
+        "x-ms-enum": {
+          "name": "GetDataListsSortParameter",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "name",
+              "name": "Name"
+            },
+            {
+              "value": "updated",
+              "name": "Updated"
+            }
+          ]
+        }
+      },
+      "GetListEntriesSortParameter": {
+        "enum": [
+          "name",
+          "updated"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "default": "updated",
+        "x-ms-enum": {
+          "name": "GetListEntriesSortParameter",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "name",
+              "name": "Name"
+            },
+            {
+              "value": "updated",
+              "name": "Updated"
+            }
+          ]
+        }
+      },
+      "GetDataCssMobileByTypeTypeParameter": {
+        "enum": [
+          "base",
+          "pagelib",
+          "pcs",
+          "site"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "GetDataCssMobileByTypeTypeParameter",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "base",
+              "name": "BaseValue"
+            },
+            {
+              "value": "pagelib",
+              "name": "Pagelib"
+            },
+            {
+              "value": "pcs",
+              "name": "Pcs"
+            },
+            {
+              "value": "site",
+              "name": "Site"
+            }
+          ]
+        }
+      },
+      "GetDataJavascriptMobileByTypeTypeParameter": {
+        "enum": [
+          "pagelib",
+          "pcs"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "GetDataJavascriptMobileByTypeTypeParameter",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "pagelib",
+              "name": "Pagelib"
+            },
+            {
+              "value": "pcs",
+              "name": "Pcs"
+            }
+          ]
+        }
+      },
+      "GetDataI18NByTypeTypeParameter": {
+        "enum": [
+          "pcs"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "GetDataI18NByTypeTypeParameter",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "pcs",
+              "name": "Pcs"
+            }
+          ]
+        }
       }
     },
     "securitySchemes": {

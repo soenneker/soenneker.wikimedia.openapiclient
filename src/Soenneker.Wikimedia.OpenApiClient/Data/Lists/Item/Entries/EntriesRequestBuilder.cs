@@ -26,14 +26,14 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries
         }
         /// <summary>Gets an item from the Soenneker.Wikimedia.OpenApiClient.data.lists.item.entries.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.Item.WithEntry_ItemRequestBuilder"/></returns>
-        public global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.Item.WithEntry_ItemRequestBuilder this[int position]
+        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.Item.WithEntryItemRequestBuilder"/></returns>
+        public global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.Item.WithEntryItemRequestBuilder this[int position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("entry_id", position);
-                return new global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.Item.WithEntry_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("entryId", position);
+                return new global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.Item.WithEntryItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>
@@ -55,17 +55,17 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries
         /// <summary>
         /// &quot;Returns pages contained by the given list. Might be truncated and includea continuation token.List must belong to current user and request must be authenticated witha MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.EntriesGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.GetListEntries200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Problem">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.EntriesGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.EntriesRequestBuilder.EntriesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.GetListEntries200Response?> GetAsync(Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.EntriesRequestBuilder.EntriesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.EntriesGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.EntriesRequestBuilder.EntriesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.GetListEntries200Response> GetAsync(Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.EntriesRequestBuilder.EntriesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -73,23 +73,23 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries
             {
                 { "XXX", global::Soenneker.Wikimedia.OpenApiClient.Models.Problem.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.EntriesGetResponse>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.EntriesGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.GetListEntries200Response>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.GetListEntries200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &quot;Creates a new list entry in the given list. On conflict, does nothing and returns thedata of an existing list.The list must belong to the current user and the request must beauthenticated with a MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)This endpoint is deprecated and might be removed without warning. Use the batch versioninstead.&quot;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.EntriesPostResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsByIdEntries200Response"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Problem">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.EntriesPostResponse?> PostAsync(global::Soenneker.Wikimedia.OpenApiClient.Models.ListEntryWrite body, Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.EntriesRequestBuilder.EntriesRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsByIdEntries200Response?> PostAsync(global::Soenneker.Wikimedia.OpenApiClient.Models.ListEntryWrite body, Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.EntriesRequestBuilder.EntriesRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.EntriesPostResponse> PostAsync(global::Soenneker.Wikimedia.OpenApiClient.Models.ListEntryWrite body, Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.EntriesRequestBuilder.EntriesRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsByIdEntries200Response> PostAsync(global::Soenneker.Wikimedia.OpenApiClient.Models.ListEntryWrite body, Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.EntriesRequestBuilder.EntriesRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -98,7 +98,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries
             {
                 { "XXX", global::Soenneker.Wikimedia.OpenApiClient.Models.Problem.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.EntriesPostResponse>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.EntriesPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsByIdEntries200Response>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsByIdEntries200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &quot;Returns pages contained by the given list. Might be truncated and includea continuation token.List must belong to current user and request must be authenticated witha MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
@@ -168,7 +168,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries
 #endif
             /// <summary>&quot;Sort order- `name`: by page title, ascending;- `updated`: by last modification date, descending.&quot;</summary>
             [QueryParameter("sort")]
-            public global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.GetSortQueryParameterType? Sort { get; set; }
+            public global::Soenneker.Wikimedia.OpenApiClient.Models.GetListEntriesSortParameter? Sort { get; set; }
         }
         /// <summary>
         /// &quot;Creates a new list entry in the given list. On conflict, does nothing and returns thedata of an existing list.The list must belong to the current user and the request must beauthenticated with a MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)This endpoint is deprecated and might be removed without warning. Use the batch versioninstead.&quot;

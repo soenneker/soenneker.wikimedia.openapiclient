@@ -17,14 +17,14 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Recommendation.Article.Creation
     {
         /// <summary>Gets an item from the Soenneker.Wikimedia.OpenApiClient.data.recommendation.article.creation.morelike.item collection</summary>
         /// <param name="position">The article title used to search similar but missing articles</param>
-        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Data.Recommendation.Article.Creation.Morelike.Item.WithSeed_articleItemRequestBuilder"/></returns>
-        public global::Soenneker.Wikimedia.OpenApiClient.Data.Recommendation.Article.Creation.Morelike.Item.WithSeed_articleItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Data.Recommendation.Article.Creation.Morelike.Item.WithSeedArticleItemRequestBuilder"/></returns>
+        public global::Soenneker.Wikimedia.OpenApiClient.Data.Recommendation.Article.Creation.Morelike.Item.WithSeedArticleItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("seed_article", position);
-                return new global::Soenneker.Wikimedia.OpenApiClient.Data.Recommendation.Article.Creation.Morelike.Item.WithSeed_articleItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("seedArticle", position);
+                return new global::Soenneker.Wikimedia.OpenApiClient.Data.Recommendation.Article.Creation.Morelike.Item.WithSeedArticleItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

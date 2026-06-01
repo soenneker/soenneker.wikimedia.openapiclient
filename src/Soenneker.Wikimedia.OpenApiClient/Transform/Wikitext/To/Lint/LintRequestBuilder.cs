@@ -49,7 +49,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Transform.Wikitext.To.Lint
         /// <summary>
         /// &quot;Parse the supplied wikitext and check it for lint errors.- Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)- Rate limit: 25 req/s&quot;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Transform.Wikitext.To.Lint.LintPostResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.PostTransformWikitextToLint200ResponseResponseJson"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -59,11 +59,11 @@ namespace Soenneker.Wikimedia.OpenApiClient.Transform.Wikitext.To.Lint
         /// <exception cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Problem">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Transform.Wikitext.To.Lint.LintPostResponse?> PostAsync(global::Soenneker.Wikimedia.OpenApiClient.Models.Post_transform_wikitext_to_lintmultipart_form_data body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.PostTransformWikitextToLint200ResponseResponseJson?> PostAsync(global::Soenneker.Wikimedia.OpenApiClient.Models.PostTransformWikitextToLintFormDataRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Transform.Wikitext.To.Lint.LintPostResponse> PostAsync(global::Soenneker.Wikimedia.OpenApiClient.Models.Post_transform_wikitext_to_lintmultipart_form_data body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.PostTransformWikitextToLint200ResponseResponseJson> PostAsync(global::Soenneker.Wikimedia.OpenApiClient.Models.PostTransformWikitextToLintFormDataRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -75,7 +75,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Transform.Wikitext.To.Lint
                 { "410", global::Soenneker.Wikimedia.OpenApiClient.Models.Problem.CreateFromDiscriminatorValue },
                 { "XXX", global::Soenneker.Wikimedia.OpenApiClient.Models.Problem.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Transform.Wikitext.To.Lint.LintPostResponse>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Transform.Wikitext.To.Lint.LintPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.PostTransformWikitextToLint200ResponseResponseJson>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.PostTransformWikitextToLint200ResponseResponseJson.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &quot;Parse the supplied wikitext and check it for lint errors.- Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)- Rate limit: 25 req/s&quot;
@@ -85,11 +85,11 @@ namespace Soenneker.Wikimedia.OpenApiClient.Transform.Wikitext.To.Lint
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Wikimedia.OpenApiClient.Models.Post_transform_wikitext_to_lintmultipart_form_data body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Wikimedia.OpenApiClient.Models.PostTransformWikitextToLintFormDataRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Wikimedia.OpenApiClient.Models.Post_transform_wikitext_to_lintmultipart_form_data body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Wikimedia.OpenApiClient.Models.PostTransformWikitextToLintFormDataRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

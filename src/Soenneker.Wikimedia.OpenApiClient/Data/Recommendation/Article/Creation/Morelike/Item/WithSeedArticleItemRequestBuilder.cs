@@ -9,44 +9,44 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Threading;
 using System;
-namespace Soenneker.Wikimedia.OpenApiClient.Data.I18n.Item
+namespace Soenneker.Wikimedia.OpenApiClient.Data.Recommendation.Article.Creation.Morelike.Item
 {
     /// <summary>
-    /// Builds and executes requests for operations under \data\i18n\{type}
+    /// Builds and executes requests for operations under \data\recommendation\article\creation\morelike\{seedArticle}
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class WithTypeItemRequestBuilder : BaseRequestBuilder
+    public partial class WithSeedArticleItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Wikimedia.OpenApiClient.Data.I18n.Item.WithTypeItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Wikimedia.OpenApiClient.Data.Recommendation.Article.Creation.Morelike.Item.WithSeedArticleItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithTypeItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/data/i18n/{type}", pathParameters)
+        public WithSeedArticleItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/data/recommendation/article/creation/morelike/{seedArticle}", pathParameters)
         {
         }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Wikimedia.OpenApiClient.Data.I18n.Item.WithTypeItemRequestBuilder"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Wikimedia.OpenApiClient.Data.Recommendation.Article.Creation.Morelike.Item.WithSeedArticleItemRequestBuilder"/> and sets the default values.
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithTypeItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/data/i18n/{type}", rawUrl)
+        public WithSeedArticleItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/data/recommendation/article/creation/morelike/{seedArticle}", rawUrl)
         {
         }
         /// <summary>
-        /// &quot;Gets internationalization information for the given site. Currently the onlysupported type is pcs for the Page Content Service.Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)&quot;
+        /// &quot;Recommends articles similar to the seed article but are missingfrom the domain language Wikipedia.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataI18NByType200ResponseResponseJson"/></returns>
+        /// <returns>A List&lt;global::Soenneker.Wikimedia.OpenApiClient.Models.MorelikeResultItem&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Problem">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataI18NByType200ResponseResponseJson?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Wikimedia.OpenApiClient.Models.MorelikeResultItem>?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataI18NByType200ResponseResponseJson> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.Wikimedia.OpenApiClient.Models.MorelikeResultItem>> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -54,10 +54,11 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.I18n.Item
             {
                 { "XXX", global::Soenneker.Wikimedia.OpenApiClient.Models.Problem.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataI18NByType200ResponseResponseJson>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataI18NByType200ResponseResponseJson.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.MorelikeResultItem>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.MorelikeResultItem.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return collectionResult?.AsList();
         }
         /// <summary>
-        /// &quot;Gets internationalization information for the given site. Currently the onlysupported type is pcs for the Page Content Service.Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)&quot;
+        /// &quot;Recommends articles similar to the seed article but are missingfrom the domain language Wikipedia.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -78,11 +79,11 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.I18n.Item
         /// <summary>
         /// Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Data.I18n.Item.WithTypeItemRequestBuilder"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Data.Recommendation.Article.Creation.Morelike.Item.WithSeedArticleItemRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
-        public global::Soenneker.Wikimedia.OpenApiClient.Data.I18n.Item.WithTypeItemRequestBuilder WithUrl(string rawUrl)
+        public global::Soenneker.Wikimedia.OpenApiClient.Data.Recommendation.Article.Creation.Morelike.Item.WithSeedArticleItemRequestBuilder WithUrl(string rawUrl)
         {
-            return new global::Soenneker.Wikimedia.OpenApiClient.Data.I18n.Item.WithTypeItemRequestBuilder(rawUrl, RequestAdapter);
+            return new global::Soenneker.Wikimedia.OpenApiClient.Data.Recommendation.Article.Creation.Morelike.Item.WithSeedArticleItemRequestBuilder(rawUrl, RequestAdapter);
         }
     }
 }

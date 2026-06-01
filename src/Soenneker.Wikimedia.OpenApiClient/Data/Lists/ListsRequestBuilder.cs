@@ -79,17 +79,17 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists
         /// <summary>
         /// &quot;Returns metadata describing the lists of the current user. Might be truncated and includea continuation token.Request must be authenticated with a MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.ListsGetResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataLists200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Problem">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.ListsGetResponse?> GetAsync(Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.ListsRequestBuilder.ListsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataLists200Response?> GetAsync(Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.ListsRequestBuilder.ListsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.ListsGetResponse> GetAsync(Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.ListsRequestBuilder.ListsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataLists200Response> GetAsync(Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.ListsRequestBuilder.ListsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -97,23 +97,23 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists
             {
                 { "XXX", global::Soenneker.Wikimedia.OpenApiClient.Models.Problem.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.ListsGetResponse>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.ListsGetResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataLists200Response>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataLists200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &quot;Creates a new empty list. On name conflict, does nothing and returns the data of anexisting list.Request must be authenticated with a MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)This endpoint is deprecated and might be removed without warning. Use the batch versioninstead.&quot;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.ListsPostResponse"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataLists200Response"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Problem">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.ListsPostResponse?> PostAsync(global::Soenneker.Wikimedia.OpenApiClient.Models.ListWrite body, Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.ListsRequestBuilder.ListsRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataLists200Response?> PostAsync(global::Soenneker.Wikimedia.OpenApiClient.Models.ListWrite body, Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.ListsRequestBuilder.ListsRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.ListsPostResponse> PostAsync(global::Soenneker.Wikimedia.OpenApiClient.Models.ListWrite body, Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.ListsRequestBuilder.ListsRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataLists200Response> PostAsync(global::Soenneker.Wikimedia.OpenApiClient.Models.ListWrite body, Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.ListsRequestBuilder.ListsRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
@@ -122,7 +122,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists
             {
                 { "XXX", global::Soenneker.Wikimedia.OpenApiClient.Models.Problem.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.ListsPostResponse>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.ListsPostResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataLists200Response>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataLists200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &quot;Returns metadata describing the lists of the current user. Might be truncated and includea continuation token.Request must be authenticated with a MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
@@ -192,7 +192,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists
 #endif
             /// <summary>&quot;Sort order- `name`: by name, ascending;- `updated`: by last modification date, descending.&quot;</summary>
             [QueryParameter("sort")]
-            public global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.GetSortQueryParameterType? Sort { get; set; }
+            public global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataListsSortParameter? Sort { get; set; }
         }
         /// <summary>
         /// &quot;Creates a new empty list. On name conflict, does nothing and returns the data of anexisting list.Request must be authenticated with a MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)This endpoint is deprecated and might be removed without warning. Use the batch versioninstead.&quot;
