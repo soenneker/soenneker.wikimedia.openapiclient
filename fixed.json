@@ -4307,7 +4307,6 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "default": "updated",
         "x-ms-enum": {
           "name": "GetDataListsSortParameter",
           "modelAsString": false,
@@ -4330,7 +4329,6 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "default": "updated",
         "x-ms-enum": {
           "name": "GetListEntriesSortParameter",
           "modelAsString": false,
