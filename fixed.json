@@ -216,12 +216,12 @@
             "content": {
               "text/html": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetPageHtmlByTitle200ResponseResponseHtml"
+                  "$ref": "#/components/schemas/GetPageHtmlByTitle200HtmlResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetPageHtmlByTitle200ResponseResponseJson2"
+                  "$ref": "#/components/schemas/GetPageHtmlByTitle200ResponseSchema"
                 }
               }
             }
@@ -307,12 +307,12 @@
             "content": {
               "text/html": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetFormatRevision200ResponseResponseHtml"
+                  "$ref": "#/components/schemas/GetFormatRevision200HtmlResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetFormatRevision200ResponseResponseJson2"
+                  "$ref": "#/components/schemas/GetFormatRevision200ResponseSchema"
                 }
               }
             }
@@ -385,7 +385,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetPageLintByTitle200ResponseResponseJson"
+                  "$ref": "#/components/schemas/GetPageLintByTitle200ResponseSchema"
                 }
               }
             }
@@ -467,7 +467,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetPageLintByTitleByRevision200ResponseResponseJson"
+                  "$ref": "#/components/schemas/GetPageLintByTitleByRevision200ResponseSchema"
                 }
               }
             }
@@ -748,7 +748,7 @@
             "content": {
               "text/html": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetContentMobileHtml200ResponseResponseHtml"
+                  "$ref": "#/components/schemas/GetContentMobileHtml200HtmlResponseSchema"
                 }
               }
             }
@@ -818,7 +818,7 @@
             "content": {
               "text/html": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetContentWithRevisionMobileHtml200ResponseResponseHtml"
+                  "$ref": "#/components/schemas/GetContentWithRevisionMobileHtml200HtmlResponseSchema"
                 }
               }
             }
@@ -872,7 +872,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetPageMobileHtmlOfflineResourcesByTitle200ResponseResponseJson"
+                  "$ref": "#/components/schemas/GetPageMobileHtmlOfflineResourcesByTitle200ResponseSchema"
                 }
               }
             }
@@ -925,7 +925,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetPageMobileHtmlOfflineResourcesByTitleByRevision200ResponseResponseJson"
+                  "$ref": "#/components/schemas/GetPageMobileHtmlOfflineResourcesByTitleByRevision200ResponseSchema"
                 }
               }
             }
@@ -976,7 +976,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetPageTalkByTitle200ResponseResponseJson"
+                  "$ref": "#/components/schemas/GetPageTalkByTitle200ResponseSchema"
                 }
               }
             }
@@ -1046,7 +1046,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetPageTalkByTitleByRevision200ResponseResponseJson"
+                  "$ref": "#/components/schemas/GetPageTalkByTitleByRevision200ResponseSchema"
                 }
               }
             }
@@ -1107,7 +1107,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostTransformHtmlToWikitext200ResponseResponsePlain"
+                  "$ref": "#/components/schemas/PostTransformHtmlToWikitext200PlainResponseSchema"
                 }
               }
             }
@@ -1207,7 +1207,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostTransformHtmlToWikitextByTitle200ResponseResponsePlain"
+                  "$ref": "#/components/schemas/PostTransformHtmlToWikitextByTitle200PlainResponseSchema"
                 }
               }
             }
@@ -1316,7 +1316,7 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostTransformHtmlToWikitextByTitleByRevision200ResponseResponsePlain"
+                  "$ref": "#/components/schemas/PostTransformHtmlToWikitextByTitleByRevision200PlainResponseSchema"
                 }
               }
             }
@@ -1397,7 +1397,7 @@
             "content": {
               "text/html": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostTransformWikitextToHtml200ResponseResponseHtml"
+                  "$ref": "#/components/schemas/PostTransformWikitextToHtml200HtmlResponseSchema"
                 }
               }
             }
@@ -1489,7 +1489,7 @@
             "content": {
               "text/html": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostTransformWikitextToHtmlByTitle200ResponseResponseHtml"
+                  "$ref": "#/components/schemas/PostTransformWikitextToHtmlByTitle200HtmlResponseSchema"
                 }
               }
             }
@@ -1590,7 +1590,7 @@
             "content": {
               "text/html": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostTransformWikitextToHtmlByTitleByRevision200ResponseResponseHtml"
+                  "$ref": "#/components/schemas/PostTransformWikitextToHtmlByTitleByRevision200HtmlResponseSchema"
                 }
               }
             }
@@ -1676,7 +1676,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostTransformWikitextToLint200ResponseResponseJson"
+                  "$ref": "#/components/schemas/PostTransformWikitextToLint200ResponseSchema"
                 }
               }
             }
@@ -1758,7 +1758,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostTransformWikitextToLintByTitle200ResponseResponseJson"
+                  "$ref": "#/components/schemas/PostTransformWikitextToLintByTitle200ResponseSchema"
                 }
               }
             }
@@ -1849,7 +1849,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostTransformWikitextToLintByTitleByRevision200ResponseResponseJson"
+                  "$ref": "#/components/schemas/PostTransformWikitextToLintByTitleByRevision200ResponseSchema"
                 }
               }
             }
@@ -1947,7 +1947,7 @@
             "content": {
               "text/html": {
                 "schema": {
-                  "$ref": "#/components/schemas/TransformWikitextToMobileHtml200ResponseResponseHtml"
+                  "$ref": "#/components/schemas/TransformWikitextToMobileHtml200HtmlResponseSchema"
                 }
               }
             }
@@ -2066,7 +2066,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostDataListsSetup200ResponseResponseJson"
+                  "$ref": "#/components/schemas/PostDataListsSetup200ResponseSchema"
                 }
               }
             }
@@ -2110,7 +2110,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PostDataListsTeardown200ResponseResponseJson"
+                  "$ref": "#/components/schemas/PostDataListsTeardown200ResponseSchema"
                 }
               }
             }
@@ -2314,7 +2314,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DeleteDataListsById200ResponseResponseJson"
+                  "$ref": "#/components/schemas/DeleteDataListsById200ResponseSchema"
                 }
               }
             }
@@ -2538,7 +2538,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/DeleteDataListsByIdEntriesByEntryId200ResponseResponseJson"
+                  "$ref": "#/components/schemas/DeleteDataListsByIdEntriesByEntryId200ResponseSchema"
                 }
               }
             }
@@ -2913,7 +2913,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetDataCssMobileByType200ResponseResponseJson"
+                  "$ref": "#/components/schemas/GetDataCssMobileByType200ResponseSchema"
                 }
               }
             }
@@ -2956,7 +2956,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetDataJavascriptMobileByType200ResponseResponseJson"
+                  "$ref": "#/components/schemas/GetDataJavascriptMobileByType200ResponseSchema"
                 }
               }
             }
@@ -2999,7 +2999,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetDataI18NByType200ResponseResponseJson"
+                  "$ref": "#/components/schemas/GetDataI18NByType200ResponseSchema"
                 }
               }
             }
@@ -3645,16 +3645,16 @@
           }
         }
       },
-      "GetPageHtmlByTitle200Response": {
+      "GetPageHtmlByTitle200HtmlResponse": {
         "type": "string"
       },
-      "GetPageHtmlByTitle200ResponseResponseJson": {
+      "GetPageHtmlByTitle200Response": {
         "type": "object"
       },
-      "GetFormatRevision200Response": {
+      "GetFormatRevision200HtmlResponse": {
         "type": "string"
       },
-      "GetFormatRevision200ResponseResponseJson": {
+      "GetFormatRevision200Response": {
         "type": "object"
       },
       "GetPageLintByTitle200Response": {
@@ -3663,10 +3663,10 @@
       "GetPageLintByTitleByRevision200Response": {
         "type": "object"
       },
-      "GetContentMobileHtml200Response": {
+      "GetContentMobileHtml200HtmlResponse": {
         "type": "string"
       },
-      "GetContentWithRevisionMobileHtml200Response": {
+      "GetContentWithRevisionMobileHtml200HtmlResponse": {
         "type": "string"
       },
       "GetPageMobileHtmlOfflineResourcesByTitle200Response": {
@@ -3698,7 +3698,7 @@
           }
         }
       },
-      "PostTransformHtmlToWikitext200Response": {
+      "PostTransformHtmlToWikitext200PlainResponse": {
         "type": "string"
       },
       "PostTransformHtmlToWikitextByTitleFormDataRequest": {
@@ -3718,7 +3718,7 @@
           }
         }
       },
-      "PostTransformHtmlToWikitextByTitle200Response": {
+      "PostTransformHtmlToWikitextByTitle200PlainResponse": {
         "type": "string"
       },
       "PostTransformHtmlToWikitextByTitleByRevisionFormDataRequest": {
@@ -3738,7 +3738,7 @@
           }
         }
       },
-      "PostTransformHtmlToWikitextByTitleByRevision200Response": {
+      "PostTransformHtmlToWikitextByTitleByRevision200PlainResponse": {
         "type": "string"
       },
       "PostTransformWikitextToHtmlFormDataRequest": {
@@ -3762,7 +3762,7 @@
           }
         }
       },
-      "PostTransformWikitextToHtml200Response": {
+      "PostTransformWikitextToHtml200HtmlResponse": {
         "type": "string"
       },
       "PostTransformWikitextToHtmlByTitleFormDataRequest": {
@@ -3786,7 +3786,7 @@
           }
         }
       },
-      "PostTransformWikitextToHtmlByTitle200Response": {
+      "PostTransformWikitextToHtmlByTitle200HtmlResponse": {
         "type": "string"
       },
       "PostTransformWikitextToHtmlByTitleByRevisionFormDataRequest": {
@@ -3810,7 +3810,7 @@
           }
         }
       },
-      "PostTransformWikitextToHtmlByTitleByRevision200Response": {
+      "PostTransformWikitextToHtmlByTitleByRevision200HtmlResponse": {
         "type": "string"
       },
       "PostTransformWikitextToLint200Response": {
@@ -3861,7 +3861,7 @@
           }
         }
       },
-      "TransformWikitextToMobileHtml200Response": {
+      "TransformWikitextToMobileHtml200HtmlResponse": {
         "type": "string"
       },
       "PostDataListsSetup200Response": {
@@ -3921,76 +3921,76 @@
         "type": "object",
         "description": "Placeholder schema for path example refs"
       },
-      "GetPageHtmlByTitle200ResponseResponseHtml": {
+      "GetPageHtmlByTitle200HtmlResponseSchema": {
         "type": "string"
       },
-      "GetPageHtmlByTitle200ResponseResponseJson2": {
+      "GetPageHtmlByTitle200ResponseSchema": {
         "type": "object"
       },
-      "GetFormatRevision200ResponseResponseHtml": {
+      "GetFormatRevision200HtmlResponseSchema": {
         "type": "string"
       },
-      "GetFormatRevision200ResponseResponseJson2": {
+      "GetFormatRevision200ResponseSchema": {
         "type": "object"
       },
-      "GetPageLintByTitle200ResponseResponseJson": {
+      "GetPageLintByTitle200ResponseSchema": {
         "type": "object"
       },
-      "GetPageLintByTitleByRevision200ResponseResponseJson": {
+      "GetPageLintByTitleByRevision200ResponseSchema": {
         "type": "object"
       },
-      "GetContentMobileHtml200ResponseResponseHtml": {
+      "GetContentMobileHtml200HtmlResponseSchema": {
         "type": "string"
       },
-      "GetContentWithRevisionMobileHtml200ResponseResponseHtml": {
+      "GetContentWithRevisionMobileHtml200HtmlResponseSchema": {
         "type": "string"
       },
-      "GetPageMobileHtmlOfflineResourcesByTitle200ResponseResponseJson": {
+      "GetPageMobileHtmlOfflineResourcesByTitle200ResponseSchema": {
         "type": "string"
       },
-      "GetPageMobileHtmlOfflineResourcesByTitleByRevision200ResponseResponseJson": {
+      "GetPageMobileHtmlOfflineResourcesByTitleByRevision200ResponseSchema": {
         "type": "string"
       },
-      "GetPageTalkByTitle200ResponseResponseJson": {
+      "GetPageTalkByTitle200ResponseSchema": {
         "type": "string"
       },
-      "GetPageTalkByTitleByRevision200ResponseResponseJson": {
+      "GetPageTalkByTitleByRevision200ResponseSchema": {
         "type": "string"
       },
-      "PostTransformHtmlToWikitext200ResponseResponsePlain": {
+      "PostTransformHtmlToWikitext200PlainResponseSchema": {
         "type": "string"
       },
-      "PostTransformHtmlToWikitextByTitle200ResponseResponsePlain": {
+      "PostTransformHtmlToWikitextByTitle200PlainResponseSchema": {
         "type": "string"
       },
-      "PostTransformHtmlToWikitextByTitleByRevision200ResponseResponsePlain": {
+      "PostTransformHtmlToWikitextByTitleByRevision200PlainResponseSchema": {
         "type": "string"
       },
-      "PostTransformWikitextToHtml200ResponseResponseHtml": {
+      "PostTransformWikitextToHtml200HtmlResponseSchema": {
         "type": "string"
       },
-      "PostTransformWikitextToHtmlByTitle200ResponseResponseHtml": {
+      "PostTransformWikitextToHtmlByTitle200HtmlResponseSchema": {
         "type": "string"
       },
-      "PostTransformWikitextToHtmlByTitleByRevision200ResponseResponseHtml": {
+      "PostTransformWikitextToHtmlByTitleByRevision200HtmlResponseSchema": {
         "type": "string"
       },
-      "PostTransformWikitextToLint200ResponseResponseJson": {
+      "PostTransformWikitextToLint200ResponseSchema": {
         "type": "object"
       },
-      "PostTransformWikitextToLintByTitle200ResponseResponseJson": {
+      "PostTransformWikitextToLintByTitle200ResponseSchema": {
         "type": "object"
       },
-      "PostTransformWikitextToLintByTitleByRevision200ResponseResponseJson": {
+      "PostTransformWikitextToLintByTitleByRevision200ResponseSchema": {
         "type": "object"
       },
-      "TransformWikitextToMobileHtml200ResponseResponseHtml": {
+      "TransformWikitextToMobileHtml200HtmlResponseSchema": {
         "type": "string"
       },
-      "PostDataListsSetup200ResponseResponseJson": {
+      "PostDataListsSetup200ResponseSchema": {
         "type": "object"
       },
-      "PostDataListsTeardown200ResponseResponseJson": {
+      "PostDataListsTeardown200ResponseSchema": {
         "type": "object"
       },
       "GetDataLists200Response": {
@@ -4047,7 +4047,7 @@
           }
         }
       },
-      "DeleteDataListsById200ResponseResponseJson": {
+      "DeleteDataListsById200ResponseSchema": {
         "type": "object"
       },
       "ListCreateBatch": {
@@ -4105,7 +4105,7 @@
           }
         }
       },
-      "DeleteDataListsByIdEntriesByEntryId200ResponseResponseJson": {
+      "DeleteDataListsByIdEntriesByEntryId200ResponseSchema": {
         "type": "object"
       },
       "PostDataListsByIdEntriesBatch200Response": {
@@ -4171,13 +4171,13 @@
         },
         "description": "the prioritized list of Wikidata IDs recommended for creation as Wikipedia articles"
       },
-      "GetDataCssMobileByType200ResponseResponseJson": {
+      "GetDataCssMobileByType200ResponseSchema": {
         "type": "object"
       },
-      "GetDataJavascriptMobileByType200ResponseResponseJson": {
+      "GetDataJavascriptMobileByType200ResponseSchema": {
         "type": "object"
       },
-      "GetDataI18NByType200ResponseResponseJson": {
+      "GetDataI18NByType200ResponseSchema": {
         "type": "object"
       },
       "ListCreateBatchBatchItem": {

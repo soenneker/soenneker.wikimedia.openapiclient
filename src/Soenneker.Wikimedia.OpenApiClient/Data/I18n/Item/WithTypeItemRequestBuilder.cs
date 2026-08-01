@@ -36,17 +36,17 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.I18n.Item
         /// <summary>
         /// &quot;Gets internationalization information for the given site. Currently the onlysupported type is pcs for the Page Content Service.Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)&quot;
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataI18NByType200ResponseResponseJson"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataI18NByType200ResponseSchema"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Problem">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataI18NByType200ResponseResponseJson?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataI18NByType200ResponseSchema?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataI18NByType200ResponseResponseJson> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataI18NByType200ResponseSchema> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
@@ -54,7 +54,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.I18n.Item
             {
                 { "XXX", global::Soenneker.Wikimedia.OpenApiClient.Models.Problem.CreateFromDiscriminatorValue },
             };
-            return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataI18NByType200ResponseResponseJson>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataI18NByType200ResponseResponseJson.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataI18NByType200ResponseSchema>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataI18NByType200ResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// &quot;Gets internationalization information for the given site. Currently the onlysupported type is pcs for the Page Content Service.Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)&quot;

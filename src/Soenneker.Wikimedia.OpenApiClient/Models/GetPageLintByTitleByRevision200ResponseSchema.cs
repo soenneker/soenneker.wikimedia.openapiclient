@@ -9,27 +9,27 @@ namespace Soenneker.Wikimedia.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class PostDataListsTeardown200ResponseResponseJson : IAdditionalDataHolder, IParsable
+    public partial class GetPageLintByTitleByRevision200ResponseSchema : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsTeardown200ResponseResponseJson"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.GetPageLintByTitleByRevision200ResponseSchema"/> and sets the default values.
         /// </summary>
-        public PostDataListsTeardown200ResponseResponseJson()
+        public GetPageLintByTitleByRevision200ResponseSchema()
         {
             AdditionalData = new Dictionary<string, object>();
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsTeardown200ResponseResponseJson"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.GetPageLintByTitleByRevision200ResponseSchema"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsTeardown200ResponseResponseJson CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Wikimedia.OpenApiClient.Models.GetPageLintByTitleByRevision200ResponseSchema CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsTeardown200ResponseResponseJson();
+            return new global::Soenneker.Wikimedia.OpenApiClient.Models.GetPageLintByTitleByRevision200ResponseSchema();
         }
         /// <summary>
         /// The deserialization information for the current model
