@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "Wikimedia REST API",
-    "description": "This API provides cacheable and straightforward access to Wikimedia content and data, in machine-readable formats.\n### Global Rules\n- Limit your clients to no more than 200 requests/s to this API.\n  Each API endpoint\u0027s documentation may detail more specific usage limits.\n- Set a unique \u0060User-Agent\u0060 or \u0060Api-User-Agent\u0060 header that\n  allows us to contact you quickly. Email addresses or URLs\n  of contact pages work well.\n\nBy using this API, you agree to Wikimedia\u0027s [Terms of Use](https://wikimediafoundation.org/wiki/Terms_of_Use) and [Privacy Policy](https://wikimediafoundation.org/wiki/Privacy_policy). Unless otherwise specified in the endpoint documentation below, content accessed via this API is licensed under the [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) and [GFDL](https://www.gnu.org/copyleft/fdl.html) licenses, and you irrevocably agree to release modifications or additions made through this API under these licenses. Check the [Wikimedia REST API documentation](https://www.mediawiki.org/wiki/Wikimedia_REST_API) for background and details.\n### Endpoint documentation\nPlease consult each endpoint\u0027s documentation for details on:\n- Licensing information for the specific type of content\n  and data served via the endpoint.\n- Stability markers to inform you about development status and\n  change policy, according to\n  [our API version policy](https://www.mediawiki.org/wiki/API_versioning).\n- Endpoint specific usage limits.\n",
+    "description": "\u0022This API provides cacheable and straightforward access to Wikimedia content and data, in machine-readable formats.\n\nCaution: The REST Sandbox executes calls against the production database by default. To avoid unintended edits to live content, select the sandbox server (test.wikimedia.org) from the server dropdown before making POST, PUT, PATCH, or DELETE requests.\n### Global Rules\n- Limit your clients to no more than 200 requests/s to this API.\n  Each API endpoint\u0027s documentation may detail more specific usage limits.\n- Set a unique \u0060User-Agent\u0060 or \u0060Api-User-Agent\u0060 header that\n  allows us to contact you quickly. Email addresses or URLs\n  of contact pages work well.\n\nBy using this API, you agree to Wikimedia\u0027s [Terms of Use](https://wikimediafoundation.org/wiki/Terms_of_Use) and [Privacy Policy](https://wikimediafoundation.org/wiki/Privacy_policy). Unless otherwise specified in the endpoint documentation below, content accessed via this API is licensed under the [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) and [GFDL](https://www.gnu.org/copyleft/fdl.html) licenses, and you irrevocably agree to release modifications or additions made through this API under these licenses. Check the [Wikimedia REST API documentation](https://www.mediawiki.org/wiki/Wikimedia_REST_API) for background and details.\n### Endpoint documentation\nPlease consult each endpoint\u0027s documentation for details on:\n- Licensing information for the specific type of content\n  and data served via the endpoint.\n- Stability markers to inform you about development status and\n  change policy, according to\n  [our API version policy](https://www.mediawiki.org/wiki/API_versioning).\n- Endpoint specific usage limits.\n\u0022",
     "termsOfService": "https://wikimediafoundation.org/wiki/Terms_of_Use",
     "contact": {
       "name": "the Wikimedia Services team",
@@ -16,7 +16,12 @@
   },
   "servers": [
     {
-      "url": "/api/rest_v1"
+      "url": "/api/rest_v1",
+      "description": "(Production)"
+    },
+    {
+      "url": "https://test.wikimedia.org/api/rest_v1",
+      "description": "(Sandbox)"
     }
   ],
   "paths": {
@@ -3327,7 +3332,8 @@
           },
           "timestamp": {
             "type": "string",
-            "description": "The time when the page was last edited in the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format"
+            "description": "The time when the page was last edited in the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format",
+            "example": []
           },
           "description": {
             "type": "string",
