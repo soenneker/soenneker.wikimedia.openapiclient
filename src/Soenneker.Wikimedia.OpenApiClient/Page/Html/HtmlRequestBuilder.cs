@@ -16,7 +16,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Page.Html
     public partial class HtmlRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Wikimedia.OpenApiClient.page.html.item collection</summary>
-        /// <param name="position">&quot;Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`.&quot;</param>
+        /// <param name="position">Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`.</param>
         /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Page.Html.Item.WithTitleItemRequestBuilder"/></returns>
         public global::Soenneker.Wikimedia.OpenApiClient.Page.Html.Item.WithTitleItemRequestBuilder this[string position]
         {

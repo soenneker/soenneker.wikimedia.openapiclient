@@ -34,7 +34,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Page.Lint.Item.Item
         {
         }
         /// <summary>
-        /// &quot;Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)&quot;
+        /// Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.GetPageLintByTitleByRevision200ResponseSchema"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -63,7 +63,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Page.Lint.Item.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.GetPageLintByTitleByRevision200ResponseSchema>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.GetPageLintByTitleByRevision200ResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)&quot;
+        /// Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

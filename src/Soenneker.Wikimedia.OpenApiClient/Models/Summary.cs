@@ -38,7 +38,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Models
 #else
         public string Dir { get; set; }
 #endif
-        /// <summary>&quot;The page title how it should be shown to the user.Deprecated: Use `titles.display` instead.&quot;</summary>
+        /// <summary>The page title how it should be shown to the user.Deprecated: Use `titles.display` instead.</summary>
         [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -97,7 +97,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Models
 #else
         public string Timestamp { get; set; }
 #endif
-        /// <summary>&quot;The page title.Deprecated: Use `titles.normalized` instead.&quot;</summary>
+        /// <summary>The page title.Deprecated: Use `titles.normalized` instead.</summary>
         [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

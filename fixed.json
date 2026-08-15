@@ -2,7 +2,7 @@
   "openapi": "3.0.4",
   "info": {
     "title": "Wikimedia REST API",
-    "description": "\u0022This API provides cacheable and straightforward access to Wikimedia content and data, in machine-readable formats.\n\nCaution: The REST Sandbox executes calls against the production database by default. To avoid unintended edits to live content, select the sandbox server (test.wikimedia.org) from the server dropdown before making POST, PUT, PATCH, or DELETE requests.\n### Global Rules\n- Limit your clients to no more than 200 requests/s to this API.\n  Each API endpoint\u0027s documentation may detail more specific usage limits.\n- Set a unique \u0060User-Agent\u0060 or \u0060Api-User-Agent\u0060 header that\n  allows us to contact you quickly. Email addresses or URLs\n  of contact pages work well.\n\nBy using this API, you agree to Wikimedia\u0027s [Terms of Use](https://wikimediafoundation.org/wiki/Terms_of_Use) and [Privacy Policy](https://wikimediafoundation.org/wiki/Privacy_policy). Unless otherwise specified in the endpoint documentation below, content accessed via this API is licensed under the [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) and [GFDL](https://www.gnu.org/copyleft/fdl.html) licenses, and you irrevocably agree to release modifications or additions made through this API under these licenses. Check the [Wikimedia REST API documentation](https://www.mediawiki.org/wiki/Wikimedia_REST_API) for background and details.\n### Endpoint documentation\nPlease consult each endpoint\u0027s documentation for details on:\n- Licensing information for the specific type of content\n  and data served via the endpoint.\n- Stability markers to inform you about development status and\n  change policy, according to\n  [our API version policy](https://www.mediawiki.org/wiki/API_versioning).\n- Endpoint specific usage limits.\n\u0022",
+    "description": "This API provides cacheable and straightforward access to Wikimedia content and data, in machine-readable formats.\n\nCaution: The REST Sandbox executes calls against the production database by default. To avoid unintended edits to live content, select the sandbox server (test.wikimedia.org) from the server dropdown before making POST, PUT, PATCH, or DELETE requests.\n### Global Rules\n- Limit your clients to no more than 200 requests/s to this API.\n  Each API endpoint\u0027s documentation may detail more specific usage limits.\n- Set a unique \u0060User-Agent\u0060 or \u0060Api-User-Agent\u0060 header that\n  allows us to contact you quickly. Email addresses or URLs\n  of contact pages work well.\n\nBy using this API, you agree to Wikimedia\u0027s [Terms of Use](https://wikimediafoundation.org/wiki/Terms_of_Use) and [Privacy Policy](https://wikimediafoundation.org/wiki/Privacy_policy). Unless otherwise specified in the endpoint documentation below, content accessed via this API is licensed under the [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) and [GFDL](https://www.gnu.org/copyleft/fdl.html) licenses, and you irrevocably agree to release modifications or additions made through this API under these licenses. Check the [Wikimedia REST API documentation](https://www.mediawiki.org/wiki/Wikimedia_REST_API) for background and details.\n### Endpoint documentation\nPlease consult each endpoint\u0027s documentation for details on:\n- Licensing information for the specific type of content\n  and data served via the endpoint.\n- Stability markers to inform you about development status and\n  change policy, according to\n  [our API version policy](https://www.mediawiki.org/wiki/API_versioning).\n- Endpoint specific usage limits.\n",
     "termsOfService": "https://wikimediafoundation.org/wiki/Terms_of_Use",
     "contact": {
       "name": "the Wikimedia Services team",
@@ -31,7 +31,7 @@
           "Page content"
         ],
         "summary": "List page-related API entry points.",
-        "description": "\u0022Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)\n\u0022",
+        "description": "Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)\n",
         "operationId": "GetPage",
         "responses": {
           "200": {
@@ -63,13 +63,13 @@
           "Page content"
         ],
         "summary": "Get revision metadata for a title.",
-        "description": "\u0022Returns the revision metadata for the given title. If a revision ID is provided,\nmetadata for that revision is returned, otherwise the latest revision ID is assumed.\n\nStability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable).\n\u0022",
+        "description": "Returns the revision metadata for the given title. If a revision ID is provided,\nmetadata for that revision is returned, otherwise the latest revision ID is assumed.\n\nStability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable).\n",
         "operationId": "GetPageTitleByTitle",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
+            "description": "Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.",
             "required": true,
             "schema": {
               "type": "string"
@@ -86,6 +86,12 @@
                 }
               }
             }
+          },
+          "301": {
+            "description": "A permanent redirect is returned if the supplied article title was not in the normalized form.\nTo avoid these redirects, you can use the [mediawiki-title](https://github.com/wikimedia/mediawiki-title) library to perform\ntitle normalization client side.\n\nBeware that redirected pre-flighted cross-origin requests (such as those sending custom request headers like \u0060Api-User-Agent\u0060)\nwill fail in most current browsers [due to a spec bug](https://github.com/whatwg/fetch/issues/204).\n"
+          },
+          "302": {
+            "description": "The page is a [redirect page](https://www.mediawiki.org/wiki/Help:Redirects).\nThe \u0060location\u0060 header points to the redirect target.\nIf you would like to avoid automatically following redirect pages, set the \u0060redirect=false\u0060 query parameter.\n\nBeware that redirected pre-flighted cross-origin requests (such as those sending custom request headers like \u0060Api-User-Agent\u0060)\nwill fail in most current browsers [due to a spec bug](https://github.com/whatwg/fetch/issues/204).\n"
           },
           "404": {
             "description": "Unknown page title or no revisions found.",
@@ -116,13 +122,13 @@
           "Page content"
         ],
         "summary": "Get revision metadata for a title.",
-        "description": "\u0022Returns the revision metadata for the given title. If a revision ID is provided,\nmetadata for that revision is returned, otherwise the latest revision ID is assumed.\n\nStability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable).\n\u0022",
+        "description": "Returns the revision metadata for the given title. If a revision ID is provided,\nmetadata for that revision is returned, otherwise the latest revision ID is assumed.\n\nStability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable).\n",
         "operationId": "GetPageTitleByTitleByRevision",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
+            "description": "Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.",
             "required": true,
             "schema": {
               "type": "string"
@@ -148,6 +154,12 @@
                 }
               }
             }
+          },
+          "301": {
+            "description": "A permanent redirect is returned if the supplied article title was not in the normalized form.\nTo avoid these redirects, you can use the [mediawiki-title](https://github.com/wikimedia/mediawiki-title) library to perform\ntitle normalization client side.\n\nBeware that redirected pre-flighted cross-origin requests (such as those sending custom request headers like \u0060Api-User-Agent\u0060)\nwill fail in most current browsers [due to a spec bug](https://github.com/whatwg/fetch/issues/204).\n"
+          },
+          "302": {
+            "description": "The page is a [redirect page](https://www.mediawiki.org/wiki/Help:Redirects).\nThe \u0060location\u0060 header points to the redirect target.\nIf you would like to avoid automatically following redirect pages, set the \u0060redirect=false\u0060 query parameter.\n\nBeware that redirected pre-flighted cross-origin requests (such as those sending custom request headers like \u0060Api-User-Agent\u0060)\nwill fail in most current browsers [due to a spec bug](https://github.com/whatwg/fetch/issues/204).\n"
           },
           "404": {
             "description": "Unknown page title or no revisions found.",
@@ -178,13 +190,13 @@
           "Page content"
         ],
         "summary": "Get latest HTML for a title.",
-        "description": "\u0022Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)\n\u0022",
+        "description": "Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)\n",
         "operationId": "GetPageHtmlByTitle",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
+            "description": "Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.",
             "required": true,
             "schema": {
               "type": "string"
@@ -209,7 +221,7 @@
           {
             "name": "Accept-Language",
             "in": "header",
-            "description": "\u0022The desired language variant code for wikis where LanguageConverter is enabled. Example: \u0060sr-el\u0060 for Latin transcription of the Serbian language.\n\u0022",
+            "description": "The desired language variant code for wikis where LanguageConverter is enabled. Example: \u0060sr-el\u0060 for Latin transcription of the Serbian language.\n",
             "schema": {
               "type": "string"
             }
@@ -218,6 +230,14 @@
         "responses": {
           "200": {
             "description": "The latest HTML for the given page title.\n\nSee [the MediaWiki DOM\nspec](https://www.mediawiki.org/wiki/Parsoid/MediaWiki_DOM_spec) for a\ndescription of the MediaWiki-specific semantic markup in this HTML.\nNote that additional metadata is available in the HTML head.\n",
+            "headers": {
+              "ETag": {
+                "description": "ETag header indicating the revision and render timeuuid\nseparated by a slash:\n\u0022701384379/154d7bca-c264-11e5-8c2f-1b51b33b59fc\u0022\nThis ETag can be passed to the HTML save end point (as\n\u0060base_etag\u0060 POST parameter), and can also be used to retrieve\nthe exact corresponding data-parsoid metadata, by requesting\nthe specific \u0060revision\u0060 and \u0060tid\u0060 indicated by the \u0060ETag\u0060.\n",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "text/html": {
                 "schema": {
@@ -230,6 +250,12 @@
                 }
               }
             }
+          },
+          "301": {
+            "description": "A permanent redirect is returned if the supplied article title was not in the normalized form.\nTo avoid this kind of redirect, you can use the [mediawiki-title](https://github.com/wikimedia/mediawiki-title) library to perform\ntitle normalization client-side.\n\nBeware that redirected pre-flighted cross-origin requests (such as those sending custom request headers like \u0060Api-User-Agent\u0060)\nwill fail in most current browsers [due to a spec bug](https://github.com/whatwg/fetch/issues/204).\n"
+          },
+          "302": {
+            "description": "The page is a [redirect page](https://www.mediawiki.org/wiki/Help:Redirects).\nThe \u0060location\u0060 header points to the redirect target, and the body contains the actual page contents as HTML.\nIf you would like to avoid automatically following redirect pages, set the \u0060redirect=false\u0060 query parameter.\n\nBeware that redirected pre-flighted cross-origin requests (such as those sending custom request headers like \u0060Api-User-Agent\u0060)\nwill fail in most current browsers [due to a spec bug](https://github.com/whatwg/fetch/issues/204).\n"
           },
           "404": {
             "description": "Unknown page title",
@@ -260,13 +286,13 @@
           "Page content"
         ],
         "summary": "Get HTML for a specific title/revision \u0026 optionally timeuuid.",
-        "description": "\u0022Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)\n\u0022",
+        "description": "Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)\n",
         "operationId": "GetFormatRevision",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
+            "description": "Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.",
             "required": true,
             "schema": {
               "type": "string"
@@ -300,7 +326,7 @@
           {
             "name": "Accept-Language",
             "in": "header",
-            "description": "\u0022The desired language variant code for wikis where LanguageConverter is enabled. Example: \u0060sr-el\u0060 for Latin transcription of the Serbian language.\n\u0022",
+            "description": "The desired language variant code for wikis where LanguageConverter is enabled. Example: \u0060sr-el\u0060 for Latin transcription of the Serbian language.\n",
             "schema": {
               "type": "string"
             }
@@ -309,6 +335,14 @@
         "responses": {
           "200": {
             "description": "The html for the given page, revision and tid.\n\nSee [the MediaWiki DOM\nspec](https://www.mediawiki.org/wiki/Parsoid/MediaWiki_DOM_spec) for a\ndescription of the MediaWiki-specific semantic markup in this HTML.\nNote that additional metadata is available in the HTML head.\n\nThis HTML can be edited using arbitrary HTML tools. The modified HTML\ncan be converted back to wikitext using the\n[/transform/html/to/wikitext{/title}{/revision}](#!/Transforms/transform_html_to_wikitext__title___revision__post)\nentry point.\n",
+            "headers": {
+              "ETag": {
+                "description": "ETag header indicating the revision and render timeuuid\nseparated by a slash:\n\u0022701384379/154d7bca-c264-11e5-8c2f-1b51b33b59fc\u0022\nThis ETag can be passed to the HTML save end point (as\n\u0060base_etag\u0060 POST parameter), and can also be used to retrieve\nthe exact corresponding data-parsoid metadata, by requesting\nthe specific \u0060revision\u0060 and \u0060tid\u0060 indicated by the \u0060ETag\u0060.\n",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "text/html": {
                 "schema": {
@@ -321,6 +355,12 @@
                 }
               }
             }
+          },
+          "301": {
+            "description": "A permanent redirect is returned if the supplied article title was not in the normalized form.\nTo avoid this kind of redirect, you can use the [mediawiki-title](https://github.com/wikimedia/mediawiki-title) library to perform\ntitle normalization client-side.\n\nBeware that redirected pre-flighted cross-origin requests (such as those sending custom request headers like \u0060Api-User-Agent\u0060)\nwill fail in most current browsers [due to a spec bug](https://github.com/whatwg/fetch/issues/204).\n"
+          },
+          "302": {
+            "description": "The page is a [redirect page](https://www.mediawiki.org/wiki/Help:Redirects).\nThe \u0060location\u0060 header points to the redirect target, and the body contains the actual page revision contents as HTML.\nIf you would like to avoid automatically following redirect pages, set the \u0060redirect=false\u0060 query parameter.\n\nBeware that redirected pre-flighted cross-origin requests (such as those sending custom request headers like \u0060Api-User-Agent\u0060)\nwill fail in most current browsers [due to a spec bug](https://github.com/whatwg/fetch/issues/204).\n"
           },
           "400": {
             "description": "Invalid revision or tid",
@@ -371,13 +411,13 @@
           "Page content"
         ],
         "summary": "Get the linter errors for a specific title/revision.",
-        "description": "\u0022Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n\u0022",
+        "description": "Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n",
         "operationId": "GetPageLintByTitle",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
+            "description": "Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.",
             "required": true,
             "schema": {
               "type": "string"
@@ -394,6 +434,12 @@
                 }
               }
             }
+          },
+          "301": {
+            "description": "A permanent redirect is returned if the supplied article title was not in the normalized form.\nTo avoid this kind of redirect, you can use the [mediawiki-title](https://github.com/wikimedia/mediawiki-title) library to perform\ntitle normalization client-side.\n\nBeware that redirected pre-flighted cross-origin requests (such as those sending custom request headers like \u0060Api-User-Agent\u0060)\nwill fail in most current browsers [due to a spec bug](https://github.com/whatwg/fetch/issues/204).\n"
+          },
+          "302": {
+            "description": "The page is a [redirect page](https://www.mediawiki.org/wiki/Help:Redirects).\nThe \u0060location\u0060 header points to the redirect target, and the body contains the actual page revision contents as HTML.\nIf you would like to avoid automatically following redirect pages, set the \u0060redirect=false\u0060 query parameter.\n\nBeware that redirected pre-flighted cross-origin requests (such as those sending custom request headers like \u0060Api-User-Agent\u0060)\nwill fail in most current browsers [due to a spec bug](https://github.com/whatwg/fetch/issues/204).\n"
           },
           "400": {
             "description": "Invalid revision or tid",
@@ -444,13 +490,13 @@
           "Page content"
         ],
         "summary": "Get the linter errors for a specific title/revision.",
-        "description": "\u0022Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n\u0022",
+        "description": "Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n",
         "operationId": "GetPageLintByTitleByRevision",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
+            "description": "Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.",
             "required": true,
             "schema": {
               "type": "string"
@@ -476,6 +522,12 @@
                 }
               }
             }
+          },
+          "301": {
+            "description": "A permanent redirect is returned if the supplied article title was not in the normalized form.\nTo avoid this kind of redirect, you can use the [mediawiki-title](https://github.com/wikimedia/mediawiki-title) library to perform\ntitle normalization client-side.\n\nBeware that redirected pre-flighted cross-origin requests (such as those sending custom request headers like \u0060Api-User-Agent\u0060)\nwill fail in most current browsers [due to a spec bug](https://github.com/whatwg/fetch/issues/204).\n"
+          },
+          "302": {
+            "description": "The page is a [redirect page](https://www.mediawiki.org/wiki/Help:Redirects).\nThe \u0060location\u0060 header points to the redirect target, and the body contains the actual page revision contents as HTML.\nIf you would like to avoid automatically following redirect pages, set the \u0060redirect=false\u0060 query parameter.\n\nBeware that redirected pre-flighted cross-origin requests (such as those sending custom request headers like \u0060Api-User-Agent\u0060)\nwill fail in most current browsers [due to a spec bug](https://github.com/whatwg/fetch/issues/204).\n"
           },
           "400": {
             "description": "Invalid revision or tid",
@@ -526,13 +578,13 @@
           "Page content"
         ],
         "summary": "Get basic metadata and simplified article introduction.",
-        "description": "\u0022The summary response includes an extract of the first paragraph of the page in plain text\nand HTML as well as the type of page. This is useful for page previews (fka. Hovercards,\naka. Popups) on the web and link previews in the apps.\n\nStability: [stable](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Stable)\n\nPlease follow [wikitech-l](https://lists.wikimedia.org/mailman/listinfo/wikitech-l) or [mediawiki-api-announce](https://lists.wikimedia.org/mailman/listinfo/mediawiki-api-announce) for announcements of breaking changes.\n\u0022",
+        "description": "The summary response includes an extract of the first paragraph of the page in plain text\nand HTML as well as the type of page. This is useful for page previews (fka. Hovercards,\naka. Popups) on the web and link previews in the apps.\n\nStability: [stable](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Stable)\n\nPlease follow [wikitech-l](https://lists.wikimedia.org/mailman/listinfo/wikitech-l) or [mediawiki-api-announce](https://lists.wikimedia.org/mailman/listinfo/mediawiki-api-announce) for announcements of breaking changes.\n",
         "operationId": "GetPageSummaryByTitle",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
+            "description": "Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.",
             "required": true,
             "schema": {
               "type": "string"
@@ -549,7 +601,7 @@
           {
             "name": "Accept-Language",
             "in": "header",
-            "description": "\u0022The desired language variant code for wikis where LanguageConverter is enabled. Example: \u0060sr-el\u0060 for Latin transcription of the Serbian language.\n\u0022",
+            "description": "The desired language variant code for wikis where LanguageConverter is enabled. Example: \u0060sr-el\u0060 for Latin transcription of the Serbian language.\n",
             "schema": {
               "type": "string"
             }
@@ -558,6 +610,14 @@
         "responses": {
           "200": {
             "description": "The summary for the given page",
+            "headers": {
+              "ETag": {
+                "description": "Syntax: \u0022{revision}/{tid}\u0022. Example: \u0022701384379/154d7bca-c264-11e5-8c2f-1b51b33b59fc\u0022\n",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -565,6 +625,12 @@
                 }
               }
             }
+          },
+          "301": {
+            "description": "A permanent redirect is returned if the supplied article title was not in the normalized form.\nTo avoid this kind of redirect, you can use the [mediawiki-title](https://github.com/wikimedia/mediawiki-title) library to perform\ntitle normalization client-side.\n\nBeware that redirected pre-flighted cross-origin requests (such as those sending custom request headers like \u0060Api-User-Agent\u0060)\nwill fail in most current browsers [due to a spec bug](https://github.com/whatwg/fetch/issues/204).\n"
+          },
+          "302": {
+            "description": "The page is a [redirect page](https://www.mediawiki.org/wiki/Help:Redirects).\nThe \u0060location\u0060 header points to the redirect target.\nIf you would like to avoid automatically following redirect pages, set the \u0060redirect=false\u0060 query parameter.\n\nBeware that redirected pre-flighted cross-origin requests (such as those sending custom request headers like \u0060Api-User-Agent\u0060)\nwill fail in most current browsers [due to a spec bug](https://github.com/whatwg/fetch/issues/204).\n"
           },
           "404": {
             "description": "Unknown page title",
@@ -595,13 +661,13 @@
           "Page content"
         ],
         "summary": "Get list of media files used on a page.",
-        "description": "\u0022Gets the list of media items (images, audio, and video) in the order in which they appear on a\ngiven wiki page.\n\nStability: [unstable](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Unstable)\n\nPlease follow [wikitech-l](https://lists.wikimedia.org/mailman/listinfo/wikitech-l) or [mediawiki-api-announce](https://lists.wikimedia.org/mailman/listinfo/mediawiki-api-announce) for announcements of breaking changes.\n\u0022",
+        "description": "Gets the list of media items (images, audio, and video) in the order in which they appear on a\ngiven wiki page.\n\nStability: [unstable](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Unstable)\n\nPlease follow [wikitech-l](https://lists.wikimedia.org/mailman/listinfo/wikitech-l) or [mediawiki-api-announce](https://lists.wikimedia.org/mailman/listinfo/mediawiki-api-announce) for announcements of breaking changes.\n",
         "operationId": "GetContentMediaList",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
+            "description": "Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.",
             "required": true,
             "schema": {
               "type": "string"
@@ -619,6 +685,14 @@
         "responses": {
           "200": {
             "description": "JSON containing metadata of media items appearing on the given page.",
+            "headers": {
+              "ETag": {
+                "description": "Syntax: \u0022{revision}/{tid}\u0022. Example: \u0022701384379/154d7bca-c264-11e5-8c2f-1b51b33b59fc\u0022\n",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -626,6 +700,12 @@
                 }
               }
             }
+          },
+          "301": {
+            "description": "A permanent redirect is returned if the supplied article title was not in the normalized form.\nTo avoid this kind of redirect, you can use the [mediawiki-title](https://github.com/wikimedia/mediawiki-title) library to perform\ntitle normalization client-side.\n\nBeware that redirected pre-flighted cross-origin requests (such as those sending custom request headers like \u0060Api-User-Agent\u0060)\nwill fail in most current browsers [due to a spec bug](https://github.com/whatwg/fetch/issues/204).\n"
+          },
+          "302": {
+            "description": "The page is a [redirect page](https://www.mediawiki.org/wiki/Help:Redirects).\nThe \u0060location\u0060 header points to the redirect target.\nIf you would like to avoid automatically following redirect pages, set the \u0060redirect=false\u0060 query parameter.\n\nBeware that redirected pre-flighted cross-origin requests (such as those sending custom request headers like \u0060Api-User-Agent\u0060)\nwill fail in most current browsers [due to a spec bug](https://github.com/whatwg/fetch/issues/204).\n"
           },
           "404": {
             "description": "Unknown page title",
@@ -656,13 +736,13 @@
           "Page content"
         ],
         "summary": "Get list of media files used on a page.",
-        "description": "\u0022Gets the list of media items (images, audio, and video) in the order in which they appear on a\ngiven wiki page.\n\nStability: [unstable](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Unstable)\n\nPlease follow [wikitech-l](https://lists.wikimedia.org/mailman/listinfo/wikitech-l) or [mediawiki-api-announce](https://lists.wikimedia.org/mailman/listinfo/mediawiki-api-announce) for announcements of breaking changes.\n\u0022",
+        "description": "Gets the list of media items (images, audio, and video) in the order in which they appear on a\ngiven wiki page.\n\nStability: [unstable](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Unstable)\n\nPlease follow [wikitech-l](https://lists.wikimedia.org/mailman/listinfo/wikitech-l) or [mediawiki-api-announce](https://lists.wikimedia.org/mailman/listinfo/mediawiki-api-announce) for announcements of breaking changes.\n",
         "operationId": "GetContentWithRevisionMediaList",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
+            "description": "Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.",
             "required": true,
             "schema": {
               "type": "string"
@@ -689,6 +769,14 @@
         "responses": {
           "200": {
             "description": "JSON containing metadata of media items appearing on the given page.",
+            "headers": {
+              "ETag": {
+                "description": "Syntax: \u0022{revision}/{tid}\u0022. Example: \u0022701384379/154d7bca-c264-11e5-8c2f-1b51b33b59fc\u0022\n",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -696,6 +784,12 @@
                 }
               }
             }
+          },
+          "301": {
+            "description": "A permanent redirect is returned if the supplied article title was not in the normalized form.\nTo avoid this kind of redirect, you can use the [mediawiki-title](https://github.com/wikimedia/mediawiki-title) library to perform\ntitle normalization client-side.\n\nBeware that redirected pre-flighted cross-origin requests (such as those sending custom request headers like \u0060Api-User-Agent\u0060)\nwill fail in most current browsers [due to a spec bug](https://github.com/whatwg/fetch/issues/204).\n"
+          },
+          "302": {
+            "description": "The page is a [redirect page](https://www.mediawiki.org/wiki/Help:Redirects).\nThe \u0060location\u0060 header points to the redirect target.\nIf you would like to avoid automatically following redirect pages, set the \u0060redirect=false\u0060 query parameter.\n\nBeware that redirected pre-flighted cross-origin requests (such as those sending custom request headers like \u0060Api-User-Agent\u0060)\nwill fail in most current browsers [due to a spec bug](https://github.com/whatwg/fetch/issues/204).\n"
           },
           "404": {
             "description": "Unknown page title",
@@ -726,13 +820,13 @@
           "Page content"
         ],
         "summary": "Get page content HTML optimized for mobile consumption.",
-        "description": "\u0022Gets the content HTML optimized for mobile consumption for the given page. This content\nis derived from Parsoid HTML (see \u0060/page/html/{title}\u0060 endpoint).\nThe difference to Parsoid HTML is roughly:\n* Some elements and attributes not needed for the reading case are removed.\n* LeadIntroductionTransform: The introductory paragraph is moved before an infobox.\n* RedLinks: Red links are flattened (=turned into span elements).\n* WidenImage: images that should be displayed in gallery are widened.\n* Section headings are slightly changed by wrapping the headings inside a div and adding\n  a span element inside the new div for the edit buttons.\n* Additional classes are added to img elements to fix issues with non-white backgrounds.\n  See Theme support below for instructions on how to enable that.\n* Pagelib CSS files needed to display the content are referenced.\n* LazyLoadTransform: server-side portion/prep for lazy loading of images.\n* CollapseTable: server-side portion/prep for collapsing tables.\n\nWhat\u0027s not included? What parts of the PageLibrary does a client still have to do?\n* Theme support: Themes can be turned on by adding a theme class to the root \u003Chtml\u003E tag.\n  Possible class names are:\n  * \u0060pagelib_theme_default\u0060\n  * \u0060pagelib_theme_dark\u0060\n  * \u0060pagelib_theme_black\u0060\n  * \u0060pagelib_theme_sepia\u0060\n\n  The pagelib JS has functionality to do that: ThemeTransform.setTheme(document, theme).\n* Dim images: DimImagesTransform.dim(window, enable)\n* PlatformTransform.classify(window) to trigger Android and iOS app specific CSS rules\n* LazyLoadTransformer: client side companion of LazyLoadTransform (note the extra *er*\nhere)\n* FooterTransformer: seems to be more UI than content, requires I18N, too\n\nStability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n\u0022",
+        "description": "Gets the content HTML optimized for mobile consumption for the given page. This content\nis derived from Parsoid HTML (see \u0060/page/html/{title}\u0060 endpoint).\nThe difference to Parsoid HTML is roughly:\n* Some elements and attributes not needed for the reading case are removed.\n* LeadIntroductionTransform: The introductory paragraph is moved before an infobox.\n* RedLinks: Red links are flattened (=turned into span elements).\n* WidenImage: images that should be displayed in gallery are widened.\n* Section headings are slightly changed by wrapping the headings inside a div and adding\n  a span element inside the new div for the edit buttons.\n* Additional classes are added to img elements to fix issues with non-white backgrounds.\n  See Theme support below for instructions on how to enable that.\n* Pagelib CSS files needed to display the content are referenced.\n* LazyLoadTransform: server-side portion/prep for lazy loading of images.\n* CollapseTable: server-side portion/prep for collapsing tables.\n\nWhat\u0027s not included? What parts of the PageLibrary does a client still have to do?\n* Theme support: Themes can be turned on by adding a theme class to the root \u003Chtml\u003E tag.\n  Possible class names are:\n  * \u0060pagelib_theme_default\u0060\n  * \u0060pagelib_theme_dark\u0060\n  * \u0060pagelib_theme_black\u0060\n  * \u0060pagelib_theme_sepia\u0060\n\n  The pagelib JS has functionality to do that: ThemeTransform.setTheme(document, theme).\n* Dim images: DimImagesTransform.dim(window, enable)\n* PlatformTransform.classify(window) to trigger Android and iOS app specific CSS rules\n* LazyLoadTransformer: client side companion of LazyLoadTransform (note the extra *er*\nhere)\n* FooterTransformer: seems to be more UI than content, requires I18N, too\n\nStability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n",
         "operationId": "GetContentMobileHtml",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
+            "description": "Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.",
             "required": true,
             "schema": {
               "type": "string"
@@ -750,6 +844,14 @@
         "responses": {
           "200": {
             "description": "mobile-optimized HTML of the given page.",
+            "headers": {
+              "ETag": {
+                "description": "Syntax: \u0022{revision}/{tid}\u0022. Example: \u0022701384379/154d7bca-c264-11e5-8c2f-1b51b33b59fc\u0022\n",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "text/html": {
                 "schema": {
@@ -757,6 +859,12 @@
                 }
               }
             }
+          },
+          "301": {
+            "description": "A permanent redirect is returned if the supplied article title was not in the normalized form.\nTo avoid this kind of redirect, you can use the [mediawiki-title](https://github.com/wikimedia/mediawiki-title) library to perform\ntitle normalization client-side.\n\nBeware that redirected pre-flighted cross-origin requests (such as those sending custom request headers like \u0060Api-User-Agent\u0060)\nwill fail in most current browsers [due to a spec bug](https://github.com/whatwg/fetch/issues/204).\n"
+          },
+          "302": {
+            "description": "The page is a [redirect page](https://www.mediawiki.org/wiki/Help:Redirects).\nThe \u0060location\u0060 header points to the redirect target.\nIf you would like to avoid automatically following redirect pages, set the \u0060redirect=false\u0060 query parameter.\n\nBeware that redirected pre-flighted cross-origin requests (such as those sending custom request headers like \u0060Api-User-Agent\u0060)\nwill fail in most current browsers [due to a spec bug](https://github.com/whatwg/fetch/issues/204).\n"
           },
           "404": {
             "description": "Unknown page title",
@@ -787,13 +895,13 @@
           "Page content"
         ],
         "summary": "Get page content HTML optimized for mobile consumption.",
-        "description": "\u0022Gets the content HTML optimized for mobile consumption for the given page. This content\nis derived from Parsoid HTML (see \u0060/page/html/{title}\u0060 endpoint).\nThe difference to Parsoid HTML is roughly:\n* Some elements and attributes not needed for the reading case are removed.\n* LeadIntroductionTransform: The introductory paragraph is moved before an infobox.\n* RedLinks: Red links are flattened (=turned into span elements).\n* WidenImage: images that should be displayed in gallery are widened.\n* Section headings are slightly changed by wrapping the headings inside a div and adding\n  a span element inside the new div for the edit buttons.\n* Additional classes are added to img elements to fix issues with non-white backgrounds.\n  See Theme support below for instructions on how to enable that.\n* Pagelib CSS files needed to display the content are referenced.\n* LazyLoadTransform: server-side portion/prep for lazy loading of images.\n* CollapseTable: server-side portion/prep for collapsing tables.\n\nWhat\u0027s not included? What parts of the PageLibrary does a client still have to do?\n* Theme support: Themes can be turned on by adding a theme class to the root \u003Chtml\u003E tag.\n  Possible class names are:\n  * \u0060pagelib_theme_default\u0060\n  * \u0060pagelib_theme_dark\u0060\n  * \u0060pagelib_theme_black\u0060\n  * \u0060pagelib_theme_sepia\u0060\n\n  The pagelib JS has functionality to do that: ThemeTransform.setTheme(document, theme).\n* Dim images: DimImagesTransform.dim(window, enable)\n* PlatformTransform.classify(window) to trigger Android and iOS app specific CSS rules\n* LazyLoadTransformer: client side companion of LazyLoadTransform (note the extra *er*\nhere)\n* FooterTransformer: seems to be more UI than content, requires I18N, too\n\nStability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n\u0022",
+        "description": "Gets the content HTML optimized for mobile consumption for the given page. This content\nis derived from Parsoid HTML (see \u0060/page/html/{title}\u0060 endpoint).\nThe difference to Parsoid HTML is roughly:\n* Some elements and attributes not needed for the reading case are removed.\n* LeadIntroductionTransform: The introductory paragraph is moved before an infobox.\n* RedLinks: Red links are flattened (=turned into span elements).\n* WidenImage: images that should be displayed in gallery are widened.\n* Section headings are slightly changed by wrapping the headings inside a div and adding\n  a span element inside the new div for the edit buttons.\n* Additional classes are added to img elements to fix issues with non-white backgrounds.\n  See Theme support below for instructions on how to enable that.\n* Pagelib CSS files needed to display the content are referenced.\n* LazyLoadTransform: server-side portion/prep for lazy loading of images.\n* CollapseTable: server-side portion/prep for collapsing tables.\n\nWhat\u0027s not included? What parts of the PageLibrary does a client still have to do?\n* Theme support: Themes can be turned on by adding a theme class to the root \u003Chtml\u003E tag.\n  Possible class names are:\n  * \u0060pagelib_theme_default\u0060\n  * \u0060pagelib_theme_dark\u0060\n  * \u0060pagelib_theme_black\u0060\n  * \u0060pagelib_theme_sepia\u0060\n\n  The pagelib JS has functionality to do that: ThemeTransform.setTheme(document, theme).\n* Dim images: DimImagesTransform.dim(window, enable)\n* PlatformTransform.classify(window) to trigger Android and iOS app specific CSS rules\n* LazyLoadTransformer: client side companion of LazyLoadTransform (note the extra *er*\nhere)\n* FooterTransformer: seems to be more UI than content, requires I18N, too\n\nStability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n",
         "operationId": "GetContentWithRevisionMobileHtml",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
+            "description": "Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.",
             "required": true,
             "schema": {
               "type": "string"
@@ -820,6 +928,14 @@
         "responses": {
           "200": {
             "description": "mobile-optimized HTML of the given page.",
+            "headers": {
+              "ETag": {
+                "description": "Syntax: \u0022{revision}/{tid}\u0022. Example: \u0022701384379/154d7bca-c264-11e5-8c2f-1b51b33b59fc\u0022\n",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "text/html": {
                 "schema": {
@@ -827,6 +943,12 @@
                 }
               }
             }
+          },
+          "301": {
+            "description": "A permanent redirect is returned if the supplied article title was not in the normalized form.\nTo avoid this kind of redirect, you can use the [mediawiki-title](https://github.com/wikimedia/mediawiki-title) library to perform\ntitle normalization client-side.\n\nBeware that redirected pre-flighted cross-origin requests (such as those sending custom request headers like \u0060Api-User-Agent\u0060)\nwill fail in most current browsers [due to a spec bug](https://github.com/whatwg/fetch/issues/204).\n"
+          },
+          "302": {
+            "description": "The page is a [redirect page](https://www.mediawiki.org/wiki/Help:Redirects).\nThe \u0060location\u0060 header points to the redirect target.\nIf you would like to avoid automatically following redirect pages, set the \u0060redirect=false\u0060 query parameter.\n\nBeware that redirected pre-flighted cross-origin requests (such as those sending custom request headers like \u0060Api-User-Agent\u0060)\nwill fail in most current browsers [due to a spec bug](https://github.com/whatwg/fetch/issues/204).\n"
           },
           "404": {
             "description": "Unknown page title",
@@ -858,13 +980,13 @@
           "offline"
         ],
         "summary": "Get styles and scripts for offline consumption of mobile-html-formatted pages",
-        "description": "\u0022Provides links to scripts and styles needed for viewing mobile-html-formatted pages offline.\n\nStability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n\u0022",
+        "description": "Provides links to scripts and styles needed for viewing mobile-html-formatted pages offline.\n\nStability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n",
         "operationId": "GetPageMobileHtmlOfflineResourcesByTitle",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
+            "description": "Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.",
             "required": true,
             "schema": {
               "type": "string"
@@ -902,13 +1024,13 @@
           "offline"
         ],
         "summary": "Get styles and scripts for offline consumption of mobile-html-formatted pages",
-        "description": "\u0022Provides links to scripts and styles needed for viewing mobile-html-formatted pages offline.\n\nStability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n\u0022",
+        "description": "Provides links to scripts and styles needed for viewing mobile-html-formatted pages offline.\n\nStability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n",
         "operationId": "GetPageMobileHtmlOfflineResourcesByTitleByRevision",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
+            "description": "Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.",
             "required": true,
             "schema": {
               "type": "string"
@@ -954,13 +1076,13 @@
           "Talk pages"
         ],
         "summary": "Get structured talk page contents",
-        "description": "\u0022Gets structured talk page contents for the provided title.\n\nStability: [experimental](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Experimental)\n\u0022",
+        "description": "Gets structured talk page contents for the provided title.\n\nStability: [experimental](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Experimental)\n",
         "operationId": "GetPageTalkByTitle",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
+            "description": "Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.",
             "required": true,
             "schema": {
               "type": "string"
@@ -978,6 +1100,14 @@
         "responses": {
           "200": {
             "description": "structured talk page JSON.",
+            "headers": {
+              "ETag": {
+                "description": "Syntax: \u0022{revision}/{tid}\u0022. Example: \u0022701384379/154d7bca-c264-11e5-8c2f-1b51b33b59fc\u0022\n",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -985,6 +1115,12 @@
                 }
               }
             }
+          },
+          "301": {
+            "description": "A permanent redirect is returned if the supplied article title was not in the normalized form.\nTo avoid this kind of redirect, you can use the [mediawiki-title](https://github.com/wikimedia/mediawiki-title) library to perform\ntitle normalization client-side.\n\nBeware that redirected pre-flighted cross-origin requests (such as those sending custom request headers like \u0060Api-User-Agent\u0060)\nwill fail in most current browsers [due to a spec bug](https://github.com/whatwg/fetch/issues/204).\n"
+          },
+          "302": {
+            "description": "The page is a [redirect page](https://www.mediawiki.org/wiki/Help:Redirects).\nThe \u0060location\u0060 header points to the redirect target.\nIf you would like to avoid automatically following redirect pages, set the \u0060redirect=false\u0060 query parameter.\n\nBeware that redirected pre-flighted cross-origin requests (such as those sending custom request headers like \u0060Api-User-Agent\u0060)\nwill fail in most current browsers [due to a spec bug](https://github.com/whatwg/fetch/issues/204).\n"
           },
           "404": {
             "description": "Unknown page title",
@@ -1015,13 +1151,13 @@
           "Talk pages"
         ],
         "summary": "Get structured talk page contents",
-        "description": "\u0022Gets structured talk page contents for the provided title.\n\nStability: [experimental](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Experimental)\n\u0022",
+        "description": "Gets structured talk page contents for the provided title.\n\nStability: [experimental](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Experimental)\n",
         "operationId": "GetPageTalkByTitleByRevision",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
+            "description": "Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.",
             "required": true,
             "schema": {
               "type": "string"
@@ -1048,6 +1184,14 @@
         "responses": {
           "200": {
             "description": "structured talk page JSON.",
+            "headers": {
+              "ETag": {
+                "description": "Syntax: \u0022{revision}/{tid}\u0022. Example: \u0022701384379/154d7bca-c264-11e5-8c2f-1b51b33b59fc\u0022\n",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -1055,6 +1199,12 @@
                 }
               }
             }
+          },
+          "301": {
+            "description": "A permanent redirect is returned if the supplied article title was not in the normalized form.\nTo avoid this kind of redirect, you can use the [mediawiki-title](https://github.com/wikimedia/mediawiki-title) library to perform\ntitle normalization client-side.\n\nBeware that redirected pre-flighted cross-origin requests (such as those sending custom request headers like \u0060Api-User-Agent\u0060)\nwill fail in most current browsers [due to a spec bug](https://github.com/whatwg/fetch/issues/204).\n"
+          },
+          "302": {
+            "description": "The page is a [redirect page](https://www.mediawiki.org/wiki/Help:Redirects).\nThe \u0060location\u0060 header points to the redirect target.\nIf you would like to avoid automatically following redirect pages, set the \u0060redirect=false\u0060 query parameter.\n\nBeware that redirected pre-flighted cross-origin requests (such as those sending custom request headers like \u0060Api-User-Agent\u0060)\nwill fail in most current browsers [due to a spec bug](https://github.com/whatwg/fetch/issues/204).\n"
           },
           "404": {
             "description": "Unknown page title",
@@ -1085,7 +1235,7 @@
           "Transforms"
         ],
         "summary": "Transform HTML to Wikitext",
-        "description": "\u0022Transform [Parsoid HTML](https://www.mediawiki.org/wiki/Parsoid/MediaWiki_DOM_spec)\nto Wikitext.\n\nWhen converting pre-existing (possibly modified) content, you should\npass in the \u0060title\u0060, \u0060revision\u0060, and \u0060If-Match\u0060 header. This lets\n[Parsoid](https://www.mediawiki.org/wiki/Parsoid) preserve small\nsyntactic variations in wikitext, which ensures that diffs are\nreadable.\n\n- Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)\n- Rate limit: 25 req/s\n\u0022",
+        "description": "Transform [Parsoid HTML](https://www.mediawiki.org/wiki/Parsoid/MediaWiki_DOM_spec)\nto Wikitext.\n\nWhen converting pre-existing (possibly modified) content, you should\npass in the \u0060title\u0060, \u0060revision\u0060, and \u0060If-Match\u0060 header. This lets\n[Parsoid](https://www.mediawiki.org/wiki/Parsoid) preserve small\nsyntactic variations in wikitext, which ensures that diffs are\nreadable.\n\n- Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)\n- Rate limit: 25 req/s\n",
         "operationId": "PostTransformHtmlToWikitext",
         "parameters": [
           {
@@ -1104,7 +1254,8 @@
                 "$ref": "#/components/schemas/PostTransformHtmlToWikitextFormDataRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -1176,13 +1327,13 @@
           "Transforms"
         ],
         "summary": "Transform HTML to Wikitext",
-        "description": "\u0022Transform [Parsoid HTML](https://www.mediawiki.org/wiki/Parsoid/MediaWiki_DOM_spec)\nto Wikitext.\n\nWhen converting pre-existing (possibly modified) content, you should\npass in the \u0060title\u0060, \u0060revision\u0060, and \u0060If-Match\u0060 header. This lets\n[Parsoid](https://www.mediawiki.org/wiki/Parsoid) preserve small\nsyntactic variations in wikitext, which ensures that diffs are\nreadable.\n\n- Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)\n- Rate limit: 25 req/s\n\u0022",
+        "description": "Transform [Parsoid HTML](https://www.mediawiki.org/wiki/Parsoid/MediaWiki_DOM_spec)\nto Wikitext.\n\nWhen converting pre-existing (possibly modified) content, you should\npass in the \u0060title\u0060, \u0060revision\u0060, and \u0060If-Match\u0060 header. This lets\n[Parsoid](https://www.mediawiki.org/wiki/Parsoid) preserve small\nsyntactic variations in wikitext, which ensures that diffs are\nreadable.\n\n- Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)\n- Rate limit: 25 req/s\n",
         "operationId": "PostTransformHtmlToWikitextByTitle",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
+            "description": "Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.",
             "required": true,
             "schema": {
               "type": "string"
@@ -1204,7 +1355,8 @@
                 "$ref": "#/components/schemas/PostTransformHtmlToWikitextByTitleFormDataRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -1276,13 +1428,13 @@
           "Transforms"
         ],
         "summary": "Transform HTML to Wikitext",
-        "description": "\u0022Transform [Parsoid HTML](https://www.mediawiki.org/wiki/Parsoid/MediaWiki_DOM_spec)\nto Wikitext.\n\nWhen converting pre-existing (possibly modified) content, you should\npass in the \u0060title\u0060, \u0060revision\u0060, and \u0060If-Match\u0060 header. This lets\n[Parsoid](https://www.mediawiki.org/wiki/Parsoid) preserve small\nsyntactic variations in wikitext, which ensures that diffs are\nreadable.\n\n- Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)\n- Rate limit: 25 req/s\n\u0022",
+        "description": "Transform [Parsoid HTML](https://www.mediawiki.org/wiki/Parsoid/MediaWiki_DOM_spec)\nto Wikitext.\n\nWhen converting pre-existing (possibly modified) content, you should\npass in the \u0060title\u0060, \u0060revision\u0060, and \u0060If-Match\u0060 header. This lets\n[Parsoid](https://www.mediawiki.org/wiki/Parsoid) preserve small\nsyntactic variations in wikitext, which ensures that diffs are\nreadable.\n\n- Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)\n- Rate limit: 25 req/s\n",
         "operationId": "PostTransformHtmlToWikitextByTitleByRevision",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
+            "description": "Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.",
             "required": true,
             "schema": {
               "type": "string"
@@ -1313,7 +1465,8 @@
                 "$ref": "#/components/schemas/PostTransformHtmlToWikitextByTitleByRevisionFormDataRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -1385,7 +1538,7 @@
           "Transforms"
         ],
         "summary": "Transform Wikitext to HTML",
-        "description": "\u0022Transform wikitext to HTML. Note that if you set \u0060stash: true\u0060, you\nalso need to supply the title.\n\n- Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)\n- Rate limit: 25 req/s (5 req/s when \u0060stash: true\u0060)\n\u0022",
+        "description": "Transform wikitext to HTML. Note that if you set \u0060stash: true\u0060, you\nalso need to supply the title.\n\n- Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)\n- Rate limit: 25 req/s (5 req/s when \u0060stash: true\u0060)\n",
         "operationId": "PostTransformWikitextToHtml",
         "requestBody": {
           "content": {
@@ -1394,7 +1547,8 @@
                 "$ref": "#/components/schemas/PostTransformWikitextToHtmlFormDataRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -1466,13 +1620,13 @@
           "Transforms"
         ],
         "summary": "Transform Wikitext to HTML",
-        "description": "\u0022Transform wikitext to HTML. Note that if you set \u0060stash: true\u0060, you\nalso need to supply the title.\n\n- Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)\n- Rate limit: 25 req/s (5 req/s when \u0060stash: true\u0060)\n\u0022",
+        "description": "Transform wikitext to HTML. Note that if you set \u0060stash: true\u0060, you\nalso need to supply the title.\n\n- Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)\n- Rate limit: 25 req/s (5 req/s when \u0060stash: true\u0060)\n",
         "operationId": "PostTransformWikitextToHtmlByTitle",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
+            "description": "Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.",
             "required": true,
             "schema": {
               "type": "string"
@@ -1486,7 +1640,8 @@
                 "$ref": "#/components/schemas/PostTransformWikitextToHtmlByTitleFormDataRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -1558,13 +1713,13 @@
           "Transforms"
         ],
         "summary": "Transform Wikitext to HTML",
-        "description": "\u0022Transform wikitext to HTML. Note that if you set \u0060stash: true\u0060, you\nalso need to supply the title.\n\n- Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)\n- Rate limit: 25 req/s (5 req/s when \u0060stash: true\u0060)\n\u0022",
+        "description": "Transform wikitext to HTML. Note that if you set \u0060stash: true\u0060, you\nalso need to supply the title.\n\n- Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)\n- Rate limit: 25 req/s (5 req/s when \u0060stash: true\u0060)\n",
         "operationId": "PostTransformWikitextToHtmlByTitleByRevision",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
+            "description": "Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.",
             "required": true,
             "schema": {
               "type": "string"
@@ -1587,7 +1742,8 @@
                 "$ref": "#/components/schemas/PostTransformWikitextToHtmlByTitleByRevisionFormDataRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -1659,7 +1815,7 @@
           "Transforms"
         ],
         "summary": "Check Wikitext for lint errors",
-        "description": "\u0022Parse the supplied wikitext and check it for lint errors.\n\n- Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n- Rate limit: 25 req/s\n\u0022",
+        "description": "Parse the supplied wikitext and check it for lint errors.\n\n- Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n- Rate limit: 25 req/s\n",
         "operationId": "PostTransformWikitextToLint",
         "requestBody": {
           "content": {
@@ -1673,7 +1829,8 @@
                 "$ref": "#/components/schemas/PostTransformWikitextToLintJsonRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -1735,13 +1892,13 @@
           "Transforms"
         ],
         "summary": "Check Wikitext for lint errors",
-        "description": "\u0022Parse the supplied wikitext and check it for lint errors.\n\n- Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n- Rate limit: 25 req/s\n\u0022",
+        "description": "Parse the supplied wikitext and check it for lint errors.\n\n- Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n- Rate limit: 25 req/s\n",
         "operationId": "PostTransformWikitextToLintByTitle",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
+            "description": "Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.",
             "required": true,
             "schema": {
               "type": "string"
@@ -1755,7 +1912,8 @@
                 "$ref": "#/components/schemas/PostTransformWikitextToLintByTitleFormDataRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -1817,13 +1975,13 @@
           "Transforms"
         ],
         "summary": "Check Wikitext for lint errors",
-        "description": "\u0022Parse the supplied wikitext and check it for lint errors.\n\n- Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n- Rate limit: 25 req/s\n\u0022",
+        "description": "Parse the supplied wikitext and check it for lint errors.\n\n- Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n- Rate limit: 25 req/s\n",
         "operationId": "PostTransformWikitextToLintByTitleByRevision",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
+            "description": "Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.",
             "required": true,
             "schema": {
               "type": "string"
@@ -1846,7 +2004,8 @@
                 "$ref": "#/components/schemas/PostTransformWikitextToLintByTitleByRevisionFormDataRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -1908,13 +2067,13 @@
           "Transforms"
         ],
         "summary": "Transform Wikitext to Mobile HTML",
-        "description": "\u0022Transform wikitext to Mobile HTML.\n\n- Stability: [stable](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Stable)\n- Rate limit: 25 req/s (5 req/s when \u0060stash: true\u0060)\n\nPlease follow [wikitech-l](https://lists.wikimedia.org/mailman/listinfo/wikitech-l) or [mediawiki-api-announce](https://lists.wikimedia.org/mailman/listinfo/mediawiki-api-announce) for announcements of breaking changes.\n\u0022",
+        "description": "Transform wikitext to Mobile HTML.\n\n- Stability: [stable](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Stable)\n- Rate limit: 25 req/s (5 req/s when \u0060stash: true\u0060)\n\nPlease follow [wikitech-l](https://lists.wikimedia.org/mailman/listinfo/wikitech-l) or [mediawiki-api-announce](https://lists.wikimedia.org/mailman/listinfo/mediawiki-api-announce) for announcements of breaking changes.\n",
         "operationId": "TransformWikitextToMobileHtml",
         "parameters": [
           {
             "name": "title",
             "in": "path",
-            "description": "\u0022Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.\u0022",
+            "description": "Page title. Use underscores instead of spaces. Use percent-encoding. Example: \u0060Main_Page\u0060.",
             "required": true,
             "schema": {
               "type": "string"
@@ -1923,7 +2082,7 @@
           {
             "name": "Accept-Language",
             "in": "header",
-            "description": "\u0022The desired language variant code for wikis where LanguageConverter is enabled. Example: \u0060sr-el\u0060 for Latin transcription of the Serbian language.\n\u0022",
+            "description": "The desired language variant code for wikis where LanguageConverter is enabled. Example: \u0060sr-el\u0060 for Latin transcription of the Serbian language.\n",
             "schema": {
               "type": "string"
             }
@@ -1944,7 +2103,8 @@
                 "$ref": "#/components/schemas/TransformWikitextToMobileHtmlFormDataRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -1980,13 +2140,201 @@
         }
       }
     },
+    "/media/math/check/{type}": {
+      "post": {
+        "tags": [
+          "Math"
+        ],
+        "summary": "Check and normalize a TeX formula.",
+        "description": "Checks the supplied TeX formula for correctness and returns the\nnormalised formula representation as well as information about\nidentifiers. Available types are tex and inline-tex. The response\ncontains the \u0060x-resource-location\u0060 header which can be used to retrieve\nthe render of the checked formula in one of the supported rendering\nformats. Just append the value of the header to \u0060/media/math/{format}/\u0060\nand perform a GET request against that URL.\n\n**NOTE**: the use of this endpoint is *strongly discouraged*. Instead, use the identical endpoint of the (canonical) Math API on the \u0060wikimedia.org\u0060 domain.\n\nStability: [deprecated](https://www.mediawiki.org/wiki/API_versioning#Deprecated).\n",
+        "operationId": "PostMediaMathCheckByType",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "path",
+            "description": "The input type of the given formula; can be tex or inline-tex",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/PostMediaMathCheckByTypeTypeParameter"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/PostMediaMathCheckByTypeFormDataRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Information about the checked formula",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostMediaMathCheckByType200ResponseSchema"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid type",
+            "content": {
+              "application/problem\u002Bjson": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error",
+            "content": {
+              "application/problem\u002Bjson": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true
+      }
+    },
+    "/media/math/formula/{hash}": {
+      "get": {
+        "tags": [
+          "Math"
+        ],
+        "summary": "Get a previously-stored formula",
+        "description": "Returns the previously-stored formula via \u0060/media/math/check/{type}\u0060 for\nthe given hash.\n\n**NOTE**: the use of this endpoint is *strongly discouraged*. Instead, use the identical endpoint of the (canonical) Math API on the \u0060wikimedia.org\u0060 domain.\n\nStability: [deprecated](https://www.mediawiki.org/wiki/API_versioning#Deprecated).\n",
+        "operationId": "GetMediaMathFormulaByHash",
+        "parameters": [
+          {
+            "name": "hash",
+            "in": "path",
+            "description": "The hash string of the previous POST data",
+            "required": true,
+            "schema": {
+              "minLength": 1,
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Information about the checked formula",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetMediaMathFormulaByHash200ResponseSchema"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Data for the given hash cannot be found",
+            "content": {
+              "application/problem\u002Bjson": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error",
+            "content": {
+              "application/problem\u002Bjson": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true
+      }
+    },
+    "/media/math/render/{format}/{hash}": {
+      "get": {
+        "tags": [
+          "Math"
+        ],
+        "summary": "Get rendered formula in the given format.",
+        "description": "Given a request hash, renders a TeX formula into its mathematic\nrepresentation in the given format. When a request is issued to the\n\u0060/media/math/check/{format}\u0060 POST endpoint, the response contains the\n\u0060x-resource-location\u0060 header denoting the hash ID of the POST data. Once\nobtained, this endpoint has to be used to obtain the actual render.\n\n**NOTE**: the use of this endpoint is *strongly discouraged*. Instead, use the identical endpoint of the (canonical) Math API on the \u0060wikimedia.org\u0060 domain.\n\nStability: [deprecated](https://www.mediawiki.org/wiki/API_versioning#Deprecated).\n",
+        "operationId": "GetMediaMathRenderByFormatByHash",
+        "parameters": [
+          {
+            "name": "format",
+            "in": "path",
+            "description": "The output format; can be svg or mml",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/GetMediaMathRenderByFormatByHashFormatParameter"
+            }
+          },
+          {
+            "name": "hash",
+            "in": "path",
+            "description": "The hash string of the previous POST data",
+            "required": true,
+            "schema": {
+              "minLength": 1,
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The rendered formula",
+            "content": {
+              "image/svg\u002Bxml": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetMediaMathRenderByFormatByHash200SvgXmlResponseSchema"
+                }
+              },
+              "application/mathml\u002Bxml": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetMediaMathRenderByFormatByHash200MathmlXmlResponseSchema"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Unknown format or hash ID",
+            "content": {
+              "application/problem\u002Bjson": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Error",
+            "content": {
+              "application/problem\u002Bjson": {
+                "schema": {
+                  "$ref": "#/components/schemas/Problem"
+                }
+              }
+            }
+          }
+        },
+        "deprecated": true
+      }
+    },
     "/data/citation/{format}/{query}": {
       "get": {
         "tags": [
           "Citation"
         ],
         "summary": "Get citation data given an article identifier.",
-        "description": "\u0022Generates citation data given a URL, DOI, PMID, or PMCID.\n\nAutomated requests can be made at a rate of 1 request per second (rps).\n\nSee more at [Citoid service documentation](https://www.mediawiki.org/wiki/Citoid)\n\nThe citation data can be requested in one of the following formats:\n  - \u0060mediawiki\u0060: format designed for MediaWiki to be used with \u0060templateData\u0060.\n    Uses [Zotero field names](https://aurimasv.github.io/z2csl/typeMap.xml).\n  - \u0060mediawiki-basefields\u0060: \u0060mediawiki\u0060 format with Zotero \u0060basefield\u0060 field names.\n  - \u0060zotero\u0060: format used by [Zotero](https://www.zotero.org/).\n  - \u0060bibtex\u0060: format used in conjunction with LaTeX documents.\n    See [bibtex.org](http://www.bibtex.org/).\n  - \u0060wikibase\u0060: format designed for [Wikibase](https://www.mediawiki.org/wiki/Extension:Wikibase_Repository).\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\u0022",
+        "description": "Generates citation data given a URL, DOI, PMID, or PMCID.\n\nAutomated requests can be made at a rate of 1 request per second (rps).\n\nSee more at [Citoid service documentation](https://www.mediawiki.org/wiki/Citoid)\n\nThe citation data can be requested in one of the following formats:\n  - \u0060mediawiki\u0060: format designed for MediaWiki to be used with \u0060templateData\u0060.\n    Uses [Zotero field names](https://aurimasv.github.io/z2csl/typeMap.xml).\n  - \u0060mediawiki-basefields\u0060: \u0060mediawiki\u0060 format with Zotero \u0060basefield\u0060 field names.\n  - \u0060zotero\u0060: format used by [Zotero](https://www.zotero.org/).\n  - \u0060bibtex\u0060: format used in conjunction with LaTeX documents.\n    See [bibtex.org](http://www.bibtex.org/).\n  - \u0060wikibase\u0060: format designed for [Wikibase](https://www.mediawiki.org/wiki/Extension:Wikibase_Repository).\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n",
         "operationId": "GetCitation",
         "parameters": [
           {
@@ -2051,7 +2399,7 @@
           "Reading lists"
         ],
         "summary": "Opt in to use reading lists.",
-        "description": "\u0022Must precede other list operations.\n\nRequest must be authenticated with a MediaWiki session cookie.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\u0022",
+        "description": "Must precede other list operations.\n\nRequest must be authenticated with a MediaWiki session cookie.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n",
         "operationId": "PostDataListsSetup",
         "parameters": [
           {
@@ -2095,7 +2443,7 @@
           "Reading lists"
         ],
         "summary": "Opt out from using reading lists.",
-        "description": "\u0022Deletes all data. User needs to opt in again before being able to do anything.\n\nRequest must be authenticated with a MediaWiki session cookie.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\u0022",
+        "description": "Deletes all data. User needs to opt in again before being able to do anything.\n\nRequest must be authenticated with a MediaWiki session cookie.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n",
         "operationId": "PostDataListsTeardown",
         "parameters": [
           {
@@ -2139,7 +2487,7 @@
           "Reading lists"
         ],
         "summary": "Get all lists of the current user.",
-        "description": "\u0022Returns metadata describing the lists of the current user. Might be truncated and include\na continuation token.\n\nRequest must be authenticated with a MediaWiki session cookie.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\u0022",
+        "description": "Returns metadata describing the lists of the current user. Might be truncated and include\na continuation token.\n\nRequest must be authenticated with a MediaWiki session cookie.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n",
         "operationId": "GetDataLists",
         "parameters": [
           {
@@ -2153,7 +2501,7 @@
           {
             "name": "sort",
             "in": "query",
-            "description": "\u0022Sort order\n- \u0060name\u0060: by name, ascending;\n- \u0060updated\u0060: by last modification date, descending.\n\u0022",
+            "description": "Sort order\n- \u0060name\u0060: by name, ascending;\n- \u0060updated\u0060: by last modification date, descending.\n",
             "schema": {
               "$ref": "#/components/schemas/GetDataListsSortParameter"
             }
@@ -2187,7 +2535,7 @@
           "Reading lists"
         ],
         "summary": "Create a new list for the current user.",
-        "description": "\u0022Creates a new empty list. On name conflict, does nothing and returns the data of an\nexisting list.\n\nRequest must be authenticated with a MediaWiki session cookie.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\nThis endpoint is deprecated and might be removed without warning. Use the batch version\ninstead.\n\u0022",
+        "description": "Creates a new empty list. On name conflict, does nothing and returns the data of an\nexisting list.\n\nRequest must be authenticated with a MediaWiki session cookie.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\nThis endpoint is deprecated and might be removed without warning. Use the batch version\ninstead.\n",
         "operationId": "PostDataLists",
         "parameters": [
           {
@@ -2208,7 +2556,8 @@
                 "$ref": "#/components/schemas/ListWrite"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -2240,7 +2589,7 @@
           "Reading lists"
         ],
         "summary": "Update a list.",
-        "description": "\u0022List must belong to current user and request must be authenticated with\na MediaWiki session cookie. If the name is changed, the new name must not be in use.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\u0022",
+        "description": "List must belong to current user and request must be authenticated with\na MediaWiki session cookie. If the name is changed, the new name must not be in use.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n",
         "operationId": "PutDataListsById",
         "parameters": [
           {
@@ -2300,7 +2649,7 @@
           "Reading lists"
         ],
         "summary": "Delete a list.",
-        "description": "\u0022List must belong to current user and request must be authenticated with\na MediaWiki session cookie.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\u0022",
+        "description": "List must belong to current user and request must be authenticated with\na MediaWiki session cookie.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n",
         "operationId": "DeleteDataListsById",
         "parameters": [
           {
@@ -2343,7 +2692,7 @@
           "Reading lists"
         ],
         "summary": "Create multiple new lists for the current user.",
-        "description": "\u0022See \u0060POST /lists/\u0060.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\u0022",
+        "description": "See \u0060POST /lists/\u0060.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n",
         "operationId": "PostDataListsBatch",
         "parameters": [
           {
@@ -2364,7 +2713,8 @@
                 "$ref": "#/components/schemas/PostDataListsBatchMediaRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -2396,7 +2746,7 @@
           "Reading lists"
         ],
         "summary": "Get all entries of a given list.",
-        "description": "\u0022Returns pages contained by the given list. Might be truncated and include\na continuation token.\n\nList must belong to current user and request must be authenticated with\na MediaWiki session cookie.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\u0022",
+        "description": "Returns pages contained by the given list. Might be truncated and include\na continuation token.\n\nList must belong to current user and request must be authenticated with\na MediaWiki session cookie.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n",
         "operationId": "GetListEntries",
         "parameters": [
           {
@@ -2419,7 +2769,7 @@
           {
             "name": "sort",
             "in": "query",
-            "description": "\u0022Sort order\n- \u0060name\u0060: by page title, ascending;\n- \u0060updated\u0060: by last modification date, descending.\n\u0022",
+            "description": "Sort order\n- \u0060name\u0060: by page title, ascending;\n- \u0060updated\u0060: by last modification date, descending.\n",
             "schema": {
               "$ref": "#/components/schemas/GetListEntriesSortParameter"
             }
@@ -2453,7 +2803,7 @@
           "Reading lists"
         ],
         "summary": "Create a new list entry.",
-        "description": "\u0022Creates a new list entry in the given list. On conflict, does nothing and returns the\ndata of an existing list.\n\nThe list must belong to the current user and the request must be\nauthenticated with a MediaWiki session cookie.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\nThis endpoint is deprecated and might be removed without warning. Use the batch version\ninstead.\n\u0022",
+        "description": "Creates a new list entry in the given list. On conflict, does nothing and returns the\ndata of an existing list.\n\nThe list must belong to the current user and the request must be\nauthenticated with a MediaWiki session cookie.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\nThis endpoint is deprecated and might be removed without warning. Use the batch version\ninstead.\n",
         "operationId": "PostDataListsByIdEntries",
         "parameters": [
           {
@@ -2483,7 +2833,8 @@
                 "$ref": "#/components/schemas/ListEntryWrite"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -2515,7 +2866,7 @@
           "Reading lists"
         ],
         "summary": "Delete a list entry.",
-        "description": "\u0022Deletes a given list entry.\n\nThe list must belong to the current user and the request must be\nauthenticated with a MediaWiki session cookie.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\u0022",
+        "description": "Deletes a given list entry.\n\nThe list must belong to the current user and the request must be\nauthenticated with a MediaWiki session cookie.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n",
         "operationId": "DeleteDataListsByIdEntriesByEntryId",
         "parameters": [
           {
@@ -2567,7 +2918,7 @@
           "Reading lists"
         ],
         "summary": "Create multiple new list entries.",
-        "description": "\u0022See \u0060POST /lists/{id}/entries/\u0060.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\u0022",
+        "description": "See \u0060POST /lists/{id}/entries/\u0060.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n",
         "operationId": "PostDataListsByIdEntriesBatch",
         "parameters": [
           {
@@ -2597,7 +2948,8 @@
                 "$ref": "#/components/schemas/PostDataListsByIdEntriesBatchMediaRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
@@ -2629,7 +2981,7 @@
           "Reading lists"
         ],
         "summary": "Get lists of the current user which contain a given page.",
-        "description": "\u0022Request must be authenticated with a MediaWiki session cookie.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\u0022",
+        "description": "Request must be authenticated with a MediaWiki session cookie.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n",
         "operationId": "GetDataListsPagesByProjectByTitle",
         "parameters": [
           {
@@ -2691,7 +3043,7 @@
           "Reading lists"
         ],
         "summary": "Get recent changes to the lists",
-        "description": "\u0022Returns metadata describing lists and entries which have changed. Might be truncated\nand include a continuation token.\n\nRequest must be authenticated with a MediaWiki session cookie.\n\nFor safe synchronization, the date parameter should be taken from the \u0060continue-from\u0060\nfield of a previous \u0060GET /lists/\u0060 or \u0060GET /lists/changes/since/{date}\u0060 request. This will\nensure that no changes are skipped, at the cost of sometimes receiving the same change\nmultitple times. Clients should handle changes in an idempotent way.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\u0022",
+        "description": "Returns metadata describing lists and entries which have changed. Might be truncated\nand include a continuation token.\n\nRequest must be authenticated with a MediaWiki session cookie.\n\nFor safe synchronization, the date parameter should be taken from the \u0060continue-from\u0060\nfield of a previous \u0060GET /lists/\u0060 or \u0060GET /lists/changes/since/{date}\u0060 request. This will\nensure that no changes are skipped, at the cost of sometimes receiving the same change\nmultitple times. Clients should handle changes in an idempotent way.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n",
         "operationId": "GetDataListsChangesSinceByDate",
         "parameters": [
           {
@@ -2743,7 +3095,7 @@
           "Recommendation"
         ],
         "summary": "Recommend articles for translation.",
-        "description": "\u0022Recommends articles to be translated from the source\nto the domain language.\n\nSee more at [Recommendation API documentation](https://meta.wikimedia.org/wiki/Recommendation_API)\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\u0022",
+        "description": "Recommends articles to be translated from the source\nto the domain language.\n\nSee more at [Recommendation API documentation](https://meta.wikimedia.org/wiki/Recommendation_API)\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n",
         "operationId": "GetDataRecommendationArticleCreationTranslationByFromLang",
         "parameters": [
           {
@@ -2795,7 +3147,7 @@
           "Recommendation"
         ],
         "summary": "Recommend articles for translation.",
-        "description": "\u0022Recommends articles to be translated from the source\nto the domain language.\n\nSee more at [Recommendation API documentation](https://meta.wikimedia.org/wiki/Recommendation_API)\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\u0022",
+        "description": "Recommends articles to be translated from the source\nto the domain language.\n\nSee more at [Recommendation API documentation](https://meta.wikimedia.org/wiki/Recommendation_API)\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n",
         "operationId": "GetDataRecommendationArticleCreationTranslationByFromLangBySeedArticle",
         "parameters": [
           {
@@ -2856,7 +3208,7 @@
           "Recommendation"
         ],
         "summary": "Recommend missing articles",
-        "description": "\u0022Recommends articles similar to the seed article but are missing\nfrom the domain language Wikipedia.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n\u0022",
+        "description": "Recommends articles similar to the seed article but are missing\nfrom the domain language Wikipedia.\n\nStability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)\n",
         "operationId": "GetDataRecommendationArticleCreationMorelikeBySeedArticle",
         "parameters": [
           {
@@ -2899,7 +3251,7 @@
           "Mobile"
         ],
         "summary": "Get CSS for mobile apps.",
-        "description": "\u0022Gets common CSS mobile apps need to properly display pages using Page Content Service.\nIn most cases all of the types are needed (preferably in this order):\n* base (Common mobile CSS from ResourceLoader)\n* site (Site-specific, mobile CSS from ResourceLoader, as defined in MediaWiki\\:Mobile.css)\n* pcs (CSS for the Page Content Service)\n\nThe \u0060base\u0060 and \u0060pcs\u0060 responses are the same regardless of what domain is used.\nFor these we suggest meta.wikimedia.org.\n\nYou can still pass pagelib for type, but this is a legacy version of the CSS for\nexisting app clients.\n\nStability: [unstable](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Unstable)\n\nPlease follow [wikitech-l](https://lists.wikimedia.org/mailman/listinfo/wikitech-l) or [mediawiki-api-announce](https://lists.wikimedia.org/mailman/listinfo/mediawiki-api-announce) for announcements of breaking changes.\n\u0022",
+        "description": "Gets common CSS mobile apps need to properly display pages using Page Content Service.\nIn most cases all of the types are needed (preferably in this order):\n* base (Common mobile CSS from ResourceLoader)\n* site (Site-specific, mobile CSS from ResourceLoader, as defined in MediaWiki\\:Mobile.css)\n* pcs (CSS for the Page Content Service)\n\nThe \u0060base\u0060 and \u0060pcs\u0060 responses are the same regardless of what domain is used.\nFor these we suggest meta.wikimedia.org.\n\nYou can still pass pagelib for type, but this is a legacy version of the CSS for\nexisting app clients.\n\nStability: [unstable](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Unstable)\n\nPlease follow [wikitech-l](https://lists.wikimedia.org/mailman/listinfo/wikitech-l) or [mediawiki-api-announce](https://lists.wikimedia.org/mailman/listinfo/mediawiki-api-announce) for announcements of breaking changes.\n",
         "operationId": "GetDataCssMobileByType",
         "parameters": [
           {
@@ -2915,6 +3267,14 @@
         "responses": {
           "200": {
             "description": "Success",
+            "headers": {
+              "ETag": {
+                "description": "Different values indicate that the content has changed",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -2942,7 +3302,7 @@
           "Mobile"
         ],
         "summary": "Get JavaScript for mobileapps",
-        "description": "\u0022Gets the JavaScript bundle so that clients can have\nconvenient access to that for consuming the page HTML.\nAmongst other things,\n* it allows to detect the platform and through that enable platform specific CSS rules,\n* has code to lazy load images on the page,\n* code for collapsing and expanding tables.\n\nValid types are pagelib or pcs. Passing pcs will return the JavaScript for the\nPage Content Service. Passing pagelib will return a deprecated legacy version\nof the wikimedia-page-library JavaScript to support existing app clients.\n\nStability: [unstable](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Unstable)\n\nPlease follow [wikitech-l](https://lists.wikimedia.org/mailman/listinfo/wikitech-l) or [mediawiki-api-announce](https://lists.wikimedia.org/mailman/listinfo/mediawiki-api-announce) for announcements of breaking changes.\n\u0022",
+        "description": "Gets the JavaScript bundle so that clients can have\nconvenient access to that for consuming the page HTML.\nAmongst other things,\n* it allows to detect the platform and through that enable platform specific CSS rules,\n* has code to lazy load images on the page,\n* code for collapsing and expanding tables.\n\nValid types are pagelib or pcs. Passing pcs will return the JavaScript for the\nPage Content Service. Passing pagelib will return a deprecated legacy version\nof the wikimedia-page-library JavaScript to support existing app clients.\n\nStability: [unstable](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Unstable)\n\nPlease follow [wikitech-l](https://lists.wikimedia.org/mailman/listinfo/wikitech-l) or [mediawiki-api-announce](https://lists.wikimedia.org/mailman/listinfo/mediawiki-api-announce) for announcements of breaking changes.\n",
         "operationId": "GetDataJavascriptMobileByType",
         "parameters": [
           {
@@ -2958,6 +3318,14 @@
         "responses": {
           "200": {
             "description": "Success",
+            "headers": {
+              "ETag": {
+                "description": "Different values indicate that the content has changed",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -2985,7 +3353,7 @@
           "Mobile"
         ],
         "summary": "Get internationalization info",
-        "description": "\u0022Gets internationalization information for the given site. Currently the only\nsupported type is pcs for the Page Content Service.\n\nStability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n\u0022",
+        "description": "Gets internationalization information for the given site. Currently the only\nsupported type is pcs for the Page Content Service.\n\nStability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)\n",
         "operationId": "GetDataI18NByType",
         "parameters": [
           {
@@ -2994,13 +3362,21 @@
             "description": "The desired internationalization bundle",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/GetDataI18NByTypeTypeParameter"
+              "$ref": "#/components/schemas/PcsType"
             }
           }
         ],
         "responses": {
           "200": {
             "description": "Success",
+            "headers": {
+              "ETag": {
+                "description": "Different values indicate that the content has changed",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -3294,12 +3670,12 @@
           },
           "title": {
             "type": "string",
-            "description": "\u0022The page title.\nDeprecated: Use \u0060titles.normalized\u0060 instead.\n\u0022",
+            "description": "The page title.\nDeprecated: Use \u0060titles.normalized\u0060 instead.\n",
             "deprecated": true
           },
           "displaytitle": {
             "type": "string",
-            "description": "\u0022The page title how it should be shown to the user.\nDeprecated: Use \u0060titles.display\u0060 instead.\n\u0022",
+            "description": "The page title how it should be shown to the user.\nDeprecated: Use \u0060titles.display\u0060 instead.\n",
             "deprecated": true
           },
           "pageid": {
@@ -3870,6 +4246,30 @@
       "TransformWikitextToMobileHtml200HtmlResponse": {
         "type": "string"
       },
+      "PostMediaMathCheckByTypeFormDataRequest": {
+        "required": [
+          "q"
+        ],
+        "type": "object",
+        "properties": {
+          "q": {
+            "type": "string",
+            "description": "The formula to check"
+          }
+        }
+      },
+      "PostMediaMathCheckByType200Response": {
+        "type": "object"
+      },
+      "GetMediaMathFormulaByHash200Response": {
+        "type": "object"
+      },
+      "GetMediaMathRenderByFormatByHash200SvgXmlResponse": {
+        "type": "string"
+      },
+      "GetMediaMathRenderByFormatByHash200MathmlXmlResponse": {
+        "type": "string"
+      },
       "PostDataListsSetup200Response": {
         "type": "object"
       },
@@ -3991,6 +4391,18 @@
         "type": "object"
       },
       "TransformWikitextToMobileHtml200HtmlResponseSchema": {
+        "type": "string"
+      },
+      "PostMediaMathCheckByType200ResponseSchema": {
+        "type": "object"
+      },
+      "GetMediaMathFormulaByHash200ResponseSchema": {
+        "type": "object"
+      },
+      "GetMediaMathRenderByFormatByHash200SvgXmlResponseSchema": {
+        "type": "string"
+      },
+      "GetMediaMathRenderByFormatByHash200MathmlXmlResponseSchema": {
         "type": "string"
       },
       "PostDataListsSetup200ResponseSchema": {
@@ -4269,6 +4681,60 @@
           ]
         }
       },
+      "PostMediaMathCheckByTypeTypeParameter": {
+        "enum": [
+          "tex",
+          "inline-tex",
+          "chem"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "PostMediaMathCheckByTypeTypeParameter",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "tex",
+              "name": "Tex"
+            },
+            {
+              "value": "inline-tex",
+              "name": "InlineTex"
+            },
+            {
+              "value": "chem",
+              "name": "Chem"
+            }
+          ]
+        }
+      },
+      "GetMediaMathRenderByFormatByHashFormatParameter": {
+        "enum": [
+          "svg",
+          "mml",
+          "png"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "GetMediaMathRenderByFormatByHashFormatParameter",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "svg",
+              "name": "Svg"
+            },
+            {
+              "value": "mml",
+              "name": "Mml"
+            },
+            {
+              "value": "png",
+              "name": "Png"
+            }
+          ]
+        }
+      },
       "GetCitationFormatParameter": {
         "enum": [
           "mediawiki",
@@ -4404,14 +4870,14 @@
           ]
         }
       },
-      "GetDataI18NByTypeTypeParameter": {
+      "PcsType": {
         "enum": [
           "pcs"
         ],
         "type": "string",
         "additionalProperties": false,
         "x-ms-enum": {
-          "name": "GetDataI18NByTypeTypeParameter",
+          "name": "PcsType",
           "modelAsString": false,
           "values": [
             {
@@ -4420,14 +4886,6 @@
             }
           ]
         }
-      }
-    },
-    "securitySchemes": {
-      "assets_jwt": {
-        "type": "http",
-        "description": "JWT used for assets upload",
-        "scheme": "bearer",
-        "bearerFormat": "JWT"
       }
     }
   },

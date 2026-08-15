@@ -34,7 +34,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Transform.Wikitext.To.Html.Item.Item
         {
         }
         /// <summary>
-        /// &quot;Transform wikitext to HTML. Note that if you set `stash: true`, youalso need to supply the title.- Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)- Rate limit: 25 req/s (5 req/s when `stash: true`)&quot;
+        /// Transform wikitext to HTML. Note that if you set `stash: true`, youalso need to supply the title.- Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)- Rate limit: 25 req/s (5 req/s when `stash: true`)
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="body">The request body</param>
@@ -67,7 +67,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Transform.Wikitext.To.Html.Item.Item
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Transform wikitext to HTML. Note that if you set `stash: true`, youalso need to supply the title.- Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)- Rate limit: 25 req/s (5 req/s when `stash: true`)&quot;
+        /// Transform wikitext to HTML. Note that if you set `stash: true`, youalso need to supply the title.- Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)- Rate limit: 25 req/s (5 req/s when `stash: true`)
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

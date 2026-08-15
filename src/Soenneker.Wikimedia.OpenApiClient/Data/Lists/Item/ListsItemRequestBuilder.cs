@@ -40,7 +40,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item
         {
         }
         /// <summary>
-        /// &quot;List must belong to current user and request must be authenticated witha MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
+        /// List must belong to current user and request must be authenticated witha MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.DeleteDataListsById200ResponseSchema"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -63,7 +63,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.DeleteDataListsById200ResponseSchema>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.DeleteDataListsById200ResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;List must belong to current user and request must be authenticated witha MediaWiki session cookie. If the name is changed, the new name must not be in use.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
+        /// List must belong to current user and request must be authenticated witha MediaWiki session cookie. If the name is changed, the new name must not be in use.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.PutDataListsById200Response"/></returns>
         /// <param name="body">The request body</param>
@@ -88,7 +88,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.PutDataListsById200Response>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.PutDataListsById200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;List must belong to current user and request must be authenticated witha MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
+        /// List must belong to current user and request must be authenticated witha MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -107,7 +107,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item
             return requestInfo;
         }
         /// <summary>
-        /// &quot;List must belong to current user and request must be authenticated witha MediaWiki session cookie. If the name is changed, the new name must not be in use.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
+        /// List must belong to current user and request must be authenticated witha MediaWiki session cookie. If the name is changed, the new name must not be in use.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -138,7 +138,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item
             return new global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.ListsItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &quot;List must belong to current user and request must be authenticated witha MediaWiki session cookie. If the name is changed, the new name must not be in use.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
+        /// List must belong to current user and request must be authenticated witha MediaWiki session cookie. If the name is changed, the new name must not be in use.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ListsItemRequestBuilderPutQueryParameters 

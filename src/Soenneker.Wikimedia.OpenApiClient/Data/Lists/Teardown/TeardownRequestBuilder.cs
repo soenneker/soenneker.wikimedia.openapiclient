@@ -34,7 +34,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Teardown
         {
         }
         /// <summary>
-        /// &quot;Deletes all data. User needs to opt in again before being able to do anything.Request must be authenticated with a MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
+        /// Deletes all data. User needs to opt in again before being able to do anything.Request must be authenticated with a MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsTeardown200ResponseSchema"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -57,7 +57,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Teardown
             return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsTeardown200ResponseSchema>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsTeardown200ResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Deletes all data. User needs to opt in again before being able to do anything.Request must be authenticated with a MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
+        /// Deletes all data. User needs to opt in again before being able to do anything.Request must be authenticated with a MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -85,7 +85,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Teardown
             return new global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Teardown.TeardownRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &quot;Deletes all data. User needs to opt in again before being able to do anything.Request must be authenticated with a MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
+        /// Deletes all data. User needs to opt in again before being able to do anything.Request must be authenticated with a MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class TeardownRequestBuilderPostQueryParameters 

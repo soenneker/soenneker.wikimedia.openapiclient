@@ -34,7 +34,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Changes.Since.Item
         {
         }
         /// <summary>
-        /// &quot;Returns metadata describing lists and entries which have changed. Might be truncatedand include a continuation token.Request must be authenticated with a MediaWiki session cookie.For safe synchronization, the date parameter should be taken from the `continue-from`field of a previous `GET /lists/` or `GET /lists/changes/since/{date}` request. This willensure that no changes are skipped, at the cost of sometimes receiving the same changemultitple times. Clients should handle changes in an idempotent way.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
+        /// Returns metadata describing lists and entries which have changed. Might be truncatedand include a continuation token.Request must be authenticated with a MediaWiki session cookie.For safe synchronization, the date parameter should be taken from the `continue-from`field of a previous `GET /lists/` or `GET /lists/changes/since/{date}` request. This willensure that no changes are skipped, at the cost of sometimes receiving the same changemultitple times. Clients should handle changes in an idempotent way.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataListsChangesSinceByDate200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -57,7 +57,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Changes.Since.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataListsChangesSinceByDate200Response>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataListsChangesSinceByDate200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Returns metadata describing lists and entries which have changed. Might be truncatedand include a continuation token.Request must be authenticated with a MediaWiki session cookie.For safe synchronization, the date parameter should be taken from the `continue-from`field of a previous `GET /lists/` or `GET /lists/changes/since/{date}` request. This willensure that no changes are skipped, at the cost of sometimes receiving the same changemultitple times. Clients should handle changes in an idempotent way.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
+        /// Returns metadata describing lists and entries which have changed. Might be truncatedand include a continuation token.Request must be authenticated with a MediaWiki session cookie.For safe synchronization, the date parameter should be taken from the `continue-from`field of a previous `GET /lists/` or `GET /lists/changes/since/{date}` request. This willensure that no changes are skipped, at the cost of sometimes receiving the same changemultitple times. Clients should handle changes in an idempotent way.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -85,7 +85,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Changes.Since.Item
             return new global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Changes.Since.Item.WithDateItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &quot;Returns metadata describing lists and entries which have changed. Might be truncatedand include a continuation token.Request must be authenticated with a MediaWiki session cookie.For safe synchronization, the date parameter should be taken from the `continue-from`field of a previous `GET /lists/` or `GET /lists/changes/since/{date}` request. This willensure that no changes are skipped, at the cost of sometimes receiving the same changemultitple times. Clients should handle changes in an idempotent way.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
+        /// Returns metadata describing lists and entries which have changed. Might be truncatedand include a continuation token.Request must be authenticated with a MediaWiki session cookie.For safe synchronization, the date parameter should be taken from the `continue-from`field of a previous `GET /lists/` or `GET /lists/changes/since/{date}` request. This willensure that no changes are skipped, at the cost of sometimes receiving the same changemultitple times. Clients should handle changes in an idempotent way.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithDateItemRequestBuilderGetQueryParameters 

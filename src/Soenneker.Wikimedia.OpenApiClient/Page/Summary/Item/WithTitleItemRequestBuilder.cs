@@ -34,7 +34,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Page.Summary.Item
         {
         }
         /// <summary>
-        /// &quot;The summary response includes an extract of the first paragraph of the page in plain textand HTML as well as the type of page. This is useful for page previews (fka. Hovercards,aka. Popups) on the web and link previews in the apps.Stability: [stable](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Stable)Please follow [wikitech-l](https://lists.wikimedia.org/mailman/listinfo/wikitech-l) or [mediawiki-api-announce](https://lists.wikimedia.org/mailman/listinfo/mediawiki-api-announce) for announcements of breaking changes.&quot;
+        /// The summary response includes an extract of the first paragraph of the page in plain textand HTML as well as the type of page. This is useful for page previews (fka. Hovercards,aka. Popups) on the web and link previews in the apps.Stability: [stable](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Stable)Please follow [wikitech-l](https://lists.wikimedia.org/mailman/listinfo/wikitech-l) or [mediawiki-api-announce](https://lists.wikimedia.org/mailman/listinfo/mediawiki-api-announce) for announcements of breaking changes.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Summary"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -59,7 +59,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Page.Summary.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.Summary>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.Summary.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;The summary response includes an extract of the first paragraph of the page in plain textand HTML as well as the type of page. This is useful for page previews (fka. Hovercards,aka. Popups) on the web and link previews in the apps.Stability: [stable](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Stable)Please follow [wikitech-l](https://lists.wikimedia.org/mailman/listinfo/wikitech-l) or [mediawiki-api-announce](https://lists.wikimedia.org/mailman/listinfo/mediawiki-api-announce) for announcements of breaking changes.&quot;
+        /// The summary response includes an extract of the first paragraph of the page in plain textand HTML as well as the type of page. This is useful for page previews (fka. Hovercards,aka. Popups) on the web and link previews in the apps.Stability: [stable](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Stable)Please follow [wikitech-l](https://lists.wikimedia.org/mailman/listinfo/wikitech-l) or [mediawiki-api-announce](https://lists.wikimedia.org/mailman/listinfo/mediawiki-api-announce) for announcements of breaking changes.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -87,7 +87,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Page.Summary.Item
             return new global::Soenneker.Wikimedia.OpenApiClient.Page.Summary.Item.WithTitleItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &quot;The summary response includes an extract of the first paragraph of the page in plain textand HTML as well as the type of page. This is useful for page previews (fka. Hovercards,aka. Popups) on the web and link previews in the apps.Stability: [stable](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Stable)Please follow [wikitech-l](https://lists.wikimedia.org/mailman/listinfo/wikitech-l) or [mediawiki-api-announce](https://lists.wikimedia.org/mailman/listinfo/mediawiki-api-announce) for announcements of breaking changes.&quot;
+        /// The summary response includes an extract of the first paragraph of the page in plain textand HTML as well as the type of page. This is useful for page previews (fka. Hovercards,aka. Popups) on the web and link previews in the apps.Stability: [stable](https://www.mediawiki.org/wiki/Wikimedia_Product/Wikimedia_Product_Infrastructure_team/API_endpoint_stability_policy#Stable)Please follow [wikitech-l](https://lists.wikimedia.org/mailman/listinfo/wikitech-l) or [mediawiki-api-announce](https://lists.wikimedia.org/mailman/listinfo/mediawiki-api-announce) for announcements of breaking changes.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithTitleItemRequestBuilderGetQueryParameters 

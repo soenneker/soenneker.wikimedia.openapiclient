@@ -34,7 +34,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Setup
         {
         }
         /// <summary>
-        /// &quot;Must precede other list operations.Request must be authenticated with a MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
+        /// Must precede other list operations.Request must be authenticated with a MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsSetup200ResponseSchema"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -57,7 +57,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Setup
             return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsSetup200ResponseSchema>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsSetup200ResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Must precede other list operations.Request must be authenticated with a MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
+        /// Must precede other list operations.Request must be authenticated with a MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -85,7 +85,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Setup
             return new global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Setup.SetupRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &quot;Must precede other list operations.Request must be authenticated with a MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
+        /// Must precede other list operations.Request must be authenticated with a MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class SetupRequestBuilderPostQueryParameters 

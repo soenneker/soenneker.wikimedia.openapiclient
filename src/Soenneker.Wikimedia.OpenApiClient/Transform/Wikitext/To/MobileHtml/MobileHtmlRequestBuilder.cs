@@ -16,7 +16,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Transform.Wikitext.To.MobileHtml
     public partial class MobileHtmlRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Wikimedia.OpenApiClient.transform.wikitext.to.mobileHtml.item collection</summary>
-        /// <param name="position">&quot;Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`.&quot;</param>
+        /// <param name="position">Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`.</param>
         /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Transform.Wikitext.To.MobileHtml.Item.WithTitleItemRequestBuilder"/></returns>
         public global::Soenneker.Wikimedia.OpenApiClient.Transform.Wikitext.To.MobileHtml.Item.WithTitleItemRequestBuilder this[string position]
         {

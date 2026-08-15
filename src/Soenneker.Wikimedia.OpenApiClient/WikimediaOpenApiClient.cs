@@ -7,6 +7,7 @@ using Microsoft.Kiota.Serialization.Json;
 using Microsoft.Kiota.Serialization.Multipart;
 using Microsoft.Kiota.Serialization.Text;
 using Soenneker.Wikimedia.OpenApiClient.Data;
+using Soenneker.Wikimedia.OpenApiClient.Media;
 using Soenneker.Wikimedia.OpenApiClient.Page;
 using Soenneker.Wikimedia.OpenApiClient.Transform;
 using System.Collections.Generic;
@@ -25,6 +26,11 @@ namespace Soenneker.Wikimedia.OpenApiClient
         public global::Soenneker.Wikimedia.OpenApiClient.Data.DataRequestBuilder Data
         {
             get => new global::Soenneker.Wikimedia.OpenApiClient.Data.DataRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The media property</summary>
+        public global::Soenneker.Wikimedia.OpenApiClient.Media.MediaRequestBuilder Media
+        {
+            get => new global::Soenneker.Wikimedia.OpenApiClient.Media.MediaRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The page property</summary>
         public global::Soenneker.Wikimedia.OpenApiClient.Page.PageRequestBuilder Page

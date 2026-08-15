@@ -16,7 +16,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Page.Lint
     public partial class LintRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Wikimedia.OpenApiClient.page.lint.item collection</summary>
-        /// <param name="position">&quot;Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`.&quot;</param>
+        /// <param name="position">Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`.</param>
         /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Page.Lint.Item.WithTitleItemRequestBuilder"/></returns>
         public global::Soenneker.Wikimedia.OpenApiClient.Page.Lint.Item.WithTitleItemRequestBuilder this[string position]
         {

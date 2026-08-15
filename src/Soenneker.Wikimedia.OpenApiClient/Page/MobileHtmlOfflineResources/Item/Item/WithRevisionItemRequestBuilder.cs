@@ -34,7 +34,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Page.MobileHtmlOfflineResources.Item
         {
         }
         /// <summary>
-        /// &quot;Provides links to scripts and styles needed for viewing mobile-html-formatted pages offline.Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)&quot;
+        /// Provides links to scripts and styles needed for viewing mobile-html-formatted pages offline.Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)
         /// </summary>
         /// <returns>A <see cref="string"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -57,7 +57,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Page.MobileHtmlOfflineResources.Item
             return await RequestAdapter.SendPrimitiveAsync<string>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Provides links to scripts and styles needed for viewing mobile-html-formatted pages offline.Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)&quot;
+        /// Provides links to scripts and styles needed for viewing mobile-html-formatted pages offline.Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

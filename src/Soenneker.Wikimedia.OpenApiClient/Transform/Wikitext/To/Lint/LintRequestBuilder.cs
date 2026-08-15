@@ -19,7 +19,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Transform.Wikitext.To.Lint
     public partial class LintRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Wikimedia.OpenApiClient.transform.wikitext.to.lint.item collection</summary>
-        /// <param name="position">&quot;Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`.&quot;</param>
+        /// <param name="position">Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`.</param>
         /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Transform.Wikitext.To.Lint.Item.WithTitleItemRequestBuilder"/></returns>
         public global::Soenneker.Wikimedia.OpenApiClient.Transform.Wikitext.To.Lint.Item.WithTitleItemRequestBuilder this[string position]
         {
@@ -47,7 +47,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Transform.Wikitext.To.Lint
         {
         }
         /// <summary>
-        /// &quot;Parse the supplied wikitext and check it for lint errors.- Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)- Rate limit: 25 req/s&quot;
+        /// Parse the supplied wikitext and check it for lint errors.- Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)- Rate limit: 25 req/s
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.PostTransformWikitextToLint200ResponseSchema"/></returns>
         /// <param name="body">The request body</param>
@@ -78,7 +78,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Transform.Wikitext.To.Lint
             return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.PostTransformWikitextToLint200ResponseSchema>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.PostTransformWikitextToLint200ResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Parse the supplied wikitext and check it for lint errors.- Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)- Rate limit: 25 req/s&quot;
+        /// Parse the supplied wikitext and check it for lint errors.- Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)- Rate limit: 25 req/s
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

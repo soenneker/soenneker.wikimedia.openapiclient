@@ -19,7 +19,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Transform.Html.To.Wikitext
     public partial class WikitextRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Wikimedia.OpenApiClient.transform.html.to.wikitext.item collection</summary>
-        /// <param name="position">&quot;Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`.&quot;</param>
+        /// <param name="position">Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`.</param>
         /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Transform.Html.To.Wikitext.Item.WithTitleItemRequestBuilder"/></returns>
         public global::Soenneker.Wikimedia.OpenApiClient.Transform.Html.To.Wikitext.Item.WithTitleItemRequestBuilder this[string position]
         {
@@ -47,7 +47,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Transform.Html.To.Wikitext
         {
         }
         /// <summary>
-        /// &quot;Transform [Parsoid HTML](https://www.mediawiki.org/wiki/Parsoid/MediaWiki_DOM_spec)to Wikitext.When converting pre-existing (possibly modified) content, you shouldpass in the `title`, `revision`, and `If-Match` header. This lets[Parsoid](https://www.mediawiki.org/wiki/Parsoid) preserve smallsyntactic variations in wikitext, which ensures that diffs arereadable.- Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)- Rate limit: 25 req/s&quot;
+        /// Transform [Parsoid HTML](https://www.mediawiki.org/wiki/Parsoid/MediaWiki_DOM_spec)to Wikitext.When converting pre-existing (possibly modified) content, you shouldpass in the `title`, `revision`, and `If-Match` header. This lets[Parsoid](https://www.mediawiki.org/wiki/Parsoid) preserve smallsyntactic variations in wikitext, which ensures that diffs arereadable.- Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)- Rate limit: 25 req/s
         /// </summary>
         /// <returns>A <see cref="string"/></returns>
         /// <param name="body">The request body</param>
@@ -80,7 +80,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Transform.Html.To.Wikitext
             return await RequestAdapter.SendPrimitiveAsync<string>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Transform [Parsoid HTML](https://www.mediawiki.org/wiki/Parsoid/MediaWiki_DOM_spec)to Wikitext.When converting pre-existing (possibly modified) content, you shouldpass in the `title`, `revision`, and `If-Match` header. This lets[Parsoid](https://www.mediawiki.org/wiki/Parsoid) preserve smallsyntactic variations in wikitext, which ensures that diffs arereadable.- Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)- Rate limit: 25 req/s&quot;
+        /// Transform [Parsoid HTML](https://www.mediawiki.org/wiki/Parsoid/MediaWiki_DOM_spec)to Wikitext.When converting pre-existing (possibly modified) content, you shouldpass in the `title`, `revision`, and `If-Match` header. This lets[Parsoid](https://www.mediawiki.org/wiki/Parsoid) preserve smallsyntactic variations in wikitext, which ensures that diffs arereadable.- Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)- Rate limit: 25 req/s
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

@@ -19,7 +19,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Transform.Wikitext.To.Html
     public partial class HtmlRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.Wikimedia.OpenApiClient.transform.wikitext.to.html.item collection</summary>
-        /// <param name="position">&quot;Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`.&quot;</param>
+        /// <param name="position">Page title. Use underscores instead of spaces. Use percent-encoding. Example: `Main_Page`.</param>
         /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Transform.Wikitext.To.Html.Item.WithTitleItemRequestBuilder"/></returns>
         public global::Soenneker.Wikimedia.OpenApiClient.Transform.Wikitext.To.Html.Item.WithTitleItemRequestBuilder this[string position]
         {
@@ -47,7 +47,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Transform.Wikitext.To.Html
         {
         }
         /// <summary>
-        /// &quot;Transform wikitext to HTML. Note that if you set `stash: true`, youalso need to supply the title.- Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)- Rate limit: 25 req/s (5 req/s when `stash: true`)&quot;
+        /// Transform wikitext to HTML. Note that if you set `stash: true`, youalso need to supply the title.- Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)- Rate limit: 25 req/s (5 req/s when `stash: true`)
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="body">The request body</param>
@@ -80,7 +80,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Transform.Wikitext.To.Html
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Transform wikitext to HTML. Note that if you set `stash: true`, youalso need to supply the title.- Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)- Rate limit: 25 req/s (5 req/s when `stash: true`)&quot;
+        /// Transform wikitext to HTML. Note that if you set `stash: true`, youalso need to supply the title.- Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)- Rate limit: 25 req/s (5 req/s when `stash: true`)
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

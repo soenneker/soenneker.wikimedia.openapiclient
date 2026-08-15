@@ -34,7 +34,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.Batch
         {
         }
         /// <summary>
-        /// &quot;See `POST /lists/{id}/entries/`.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
+        /// See `POST /lists/{id}/entries/`.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsByIdEntriesBatch200Response"/></returns>
         /// <param name="body">The request body</param>
@@ -59,7 +59,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.Batch
             return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsByIdEntriesBatch200Response>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsByIdEntriesBatch200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;See `POST /lists/{id}/entries/`.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
+        /// See `POST /lists/{id}/entries/`.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -90,7 +90,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.Batch
             return new global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.Batch.BatchRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &quot;See `POST /lists/{id}/entries/`.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
+        /// See `POST /lists/{id}/entries/`.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class BatchRequestBuilderPostQueryParameters 

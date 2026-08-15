@@ -34,7 +34,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.I18n.Item
         {
         }
         /// <summary>
-        /// &quot;Gets internationalization information for the given site. Currently the onlysupported type is pcs for the Page Content Service.Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)&quot;
+        /// Gets internationalization information for the given site. Currently the onlysupported type is pcs for the Page Content Service.Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataI18NByType200ResponseSchema"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -57,7 +57,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.I18n.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataI18NByType200ResponseSchema>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataI18NByType200ResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Gets internationalization information for the given site. Currently the onlysupported type is pcs for the Page Content Service.Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)&quot;
+        /// Gets internationalization information for the given site. Currently the onlysupported type is pcs for the Page Content Service.Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

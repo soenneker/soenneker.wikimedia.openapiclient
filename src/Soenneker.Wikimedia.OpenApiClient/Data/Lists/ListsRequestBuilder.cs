@@ -77,7 +77,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists
         {
         }
         /// <summary>
-        /// &quot;Returns metadata describing the lists of the current user. Might be truncated and includea continuation token.Request must be authenticated with a MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
+        /// Returns metadata describing the lists of the current user. Might be truncated and includea continuation token.Request must be authenticated with a MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataLists200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -100,7 +100,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists
             return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataLists200Response>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataLists200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Creates a new empty list. On name conflict, does nothing and returns the data of anexisting list.Request must be authenticated with a MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)This endpoint is deprecated and might be removed without warning. Use the batch versioninstead.&quot;
+        /// Creates a new empty list. On name conflict, does nothing and returns the data of anexisting list.Request must be authenticated with a MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)This endpoint is deprecated and might be removed without warning. Use the batch versioninstead.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataLists200Response"/></returns>
         /// <param name="body">The request body</param>
@@ -125,7 +125,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists
             return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataLists200Response>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataLists200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Returns metadata describing the lists of the current user. Might be truncated and includea continuation token.Request must be authenticated with a MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
+        /// Returns metadata describing the lists of the current user. Might be truncated and includea continuation token.Request must be authenticated with a MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -144,7 +144,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists
             return requestInfo;
         }
         /// <summary>
-        /// &quot;Creates a new empty list. On name conflict, does nothing and returns the data of anexisting list.Request must be authenticated with a MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)This endpoint is deprecated and might be removed without warning. Use the batch versioninstead.&quot;
+        /// Creates a new empty list. On name conflict, does nothing and returns the data of anexisting list.Request must be authenticated with a MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)This endpoint is deprecated and might be removed without warning. Use the batch versioninstead.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -175,7 +175,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists
             return new global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.ListsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &quot;Returns metadata describing the lists of the current user. Might be truncated and includea continuation token.Request must be authenticated with a MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
+        /// Returns metadata describing the lists of the current user. Might be truncated and includea continuation token.Request must be authenticated with a MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ListsRequestBuilderGetQueryParameters 
@@ -190,12 +190,12 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists
             [QueryParameter("next")]
             public string Next { get; set; }
 #endif
-            /// <summary>&quot;Sort order- `name`: by name, ascending;- `updated`: by last modification date, descending.&quot;</summary>
+            /// <summary>Sort order- `name`: by name, ascending;- `updated`: by last modification date, descending.</summary>
             [QueryParameter("sort")]
             public global::Soenneker.Wikimedia.OpenApiClient.Models.GetDataListsSortParameter? Sort { get; set; }
         }
         /// <summary>
-        /// &quot;Creates a new empty list. On name conflict, does nothing and returns the data of anexisting list.Request must be authenticated with a MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)This endpoint is deprecated and might be removed without warning. Use the batch versioninstead.&quot;
+        /// Creates a new empty list. On name conflict, does nothing and returns the data of anexisting list.Request must be authenticated with a MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)This endpoint is deprecated and might be removed without warning. Use the batch versioninstead.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ListsRequestBuilderPostQueryParameters 

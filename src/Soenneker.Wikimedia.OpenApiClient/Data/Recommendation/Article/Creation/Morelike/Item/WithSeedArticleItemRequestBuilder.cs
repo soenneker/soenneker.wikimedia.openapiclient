@@ -34,7 +34,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Recommendation.Article.Creation
         {
         }
         /// <summary>
-        /// &quot;Recommends articles similar to the seed article but are missingfrom the domain language Wikipedia.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
+        /// Recommends articles similar to the seed article but are missingfrom the domain language Wikipedia.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.Wikimedia.OpenApiClient.Models.MorelikeResultItem&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -58,7 +58,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Recommendation.Article.Creation
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// &quot;Recommends articles similar to the seed article but are missingfrom the domain language Wikipedia.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
+        /// Recommends articles similar to the seed article but are missingfrom the domain language Wikipedia.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

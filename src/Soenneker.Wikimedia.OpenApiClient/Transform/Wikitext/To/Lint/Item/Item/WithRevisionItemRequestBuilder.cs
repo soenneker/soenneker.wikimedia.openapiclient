@@ -34,7 +34,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Transform.Wikitext.To.Lint.Item.Item
         {
         }
         /// <summary>
-        /// &quot;Parse the supplied wikitext and check it for lint errors.- Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)- Rate limit: 25 req/s&quot;
+        /// Parse the supplied wikitext and check it for lint errors.- Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)- Rate limit: 25 req/s
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.PostTransformWikitextToLintByTitleByRevision200ResponseSchema"/></returns>
         /// <param name="body">The request body</param>
@@ -65,7 +65,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Transform.Wikitext.To.Lint.Item.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.PostTransformWikitextToLintByTitleByRevision200ResponseSchema>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.PostTransformWikitextToLintByTitleByRevision200ResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Parse the supplied wikitext and check it for lint errors.- Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)- Rate limit: 25 req/s&quot;
+        /// Parse the supplied wikitext and check it for lint errors.- Stability: [experimental](https://www.mediawiki.org/wiki/API_versioning#Experimental)- Rate limit: 25 req/s
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

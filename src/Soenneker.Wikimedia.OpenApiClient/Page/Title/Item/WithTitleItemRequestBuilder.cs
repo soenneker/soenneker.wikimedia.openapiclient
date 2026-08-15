@@ -47,7 +47,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Page.Title.Item
         {
         }
         /// <summary>
-        /// &quot;Returns the revision metadata for the given title. If a revision ID is provided,metadata for that revision is returned, otherwise the latest revision ID is assumed.Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable).&quot;
+        /// Returns the revision metadata for the given title. If a revision ID is provided,metadata for that revision is returned, otherwise the latest revision ID is assumed.Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable).
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Revision"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -72,7 +72,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Page.Title.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.Revision>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.Revision.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Returns the revision metadata for the given title. If a revision ID is provided,metadata for that revision is returned, otherwise the latest revision ID is assumed.Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable).&quot;
+        /// Returns the revision metadata for the given title. If a revision ID is provided,metadata for that revision is returned, otherwise the latest revision ID is assumed.Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable).
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

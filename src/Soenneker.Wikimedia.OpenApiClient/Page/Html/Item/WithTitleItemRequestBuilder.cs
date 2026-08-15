@@ -47,7 +47,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Page.Html.Item
         {
         }
         /// <summary>
-        /// &quot;Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)&quot;
+        /// Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.GetPageHtmlByTitle200ResponseSchema"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -72,7 +72,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Page.Html.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.GetPageHtmlByTitle200ResponseSchema>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.GetPageHtmlByTitle200ResponseSchema.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)&quot;
+        /// Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -100,7 +100,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Page.Html.Item
             return new global::Soenneker.Wikimedia.OpenApiClient.Page.Html.Item.WithTitleItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &quot;Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)&quot;
+        /// Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithTitleItemRequestBuilderGetQueryParameters 

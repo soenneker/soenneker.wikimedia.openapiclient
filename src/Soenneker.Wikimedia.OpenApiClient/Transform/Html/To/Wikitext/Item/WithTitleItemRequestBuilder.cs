@@ -47,7 +47,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Transform.Html.To.Wikitext.Item
         {
         }
         /// <summary>
-        /// &quot;Transform [Parsoid HTML](https://www.mediawiki.org/wiki/Parsoid/MediaWiki_DOM_spec)to Wikitext.When converting pre-existing (possibly modified) content, you shouldpass in the `title`, `revision`, and `If-Match` header. This lets[Parsoid](https://www.mediawiki.org/wiki/Parsoid) preserve smallsyntactic variations in wikitext, which ensures that diffs arereadable.- Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)- Rate limit: 25 req/s&quot;
+        /// Transform [Parsoid HTML](https://www.mediawiki.org/wiki/Parsoid/MediaWiki_DOM_spec)to Wikitext.When converting pre-existing (possibly modified) content, you shouldpass in the `title`, `revision`, and `If-Match` header. This lets[Parsoid](https://www.mediawiki.org/wiki/Parsoid) preserve smallsyntactic variations in wikitext, which ensures that diffs arereadable.- Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)- Rate limit: 25 req/s
         /// </summary>
         /// <returns>A <see cref="string"/></returns>
         /// <param name="body">The request body</param>
@@ -80,7 +80,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Transform.Html.To.Wikitext.Item
             return await RequestAdapter.SendPrimitiveAsync<string>(requestInfo, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Transform [Parsoid HTML](https://www.mediawiki.org/wiki/Parsoid/MediaWiki_DOM_spec)to Wikitext.When converting pre-existing (possibly modified) content, you shouldpass in the `title`, `revision`, and `If-Match` header. This lets[Parsoid](https://www.mediawiki.org/wiki/Parsoid) preserve smallsyntactic variations in wikitext, which ensures that diffs arereadable.- Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)- Rate limit: 25 req/s&quot;
+        /// Transform [Parsoid HTML](https://www.mediawiki.org/wiki/Parsoid/MediaWiki_DOM_spec)to Wikitext.When converting pre-existing (possibly modified) content, you shouldpass in the `title`, `revision`, and `If-Match` header. This lets[Parsoid](https://www.mediawiki.org/wiki/Parsoid) preserve smallsyntactic variations in wikitext, which ensures that diffs arereadable.- Stability: [stable](https://www.mediawiki.org/wiki/API_versioning#Stable)- Rate limit: 25 req/s
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

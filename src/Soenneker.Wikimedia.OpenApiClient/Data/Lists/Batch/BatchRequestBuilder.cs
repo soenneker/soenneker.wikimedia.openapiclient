@@ -34,7 +34,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Batch
         {
         }
         /// <summary>
-        /// &quot;See `POST /lists/`.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
+        /// See `POST /lists/`.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.ListCreateBatch"/></returns>
         /// <param name="body">The request body</param>
@@ -59,7 +59,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Batch
             return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.ListCreateBatch>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.ListCreateBatch.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;See `POST /lists/`.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
+        /// See `POST /lists/`.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -90,7 +90,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Batch
             return new global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Batch.BatchRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &quot;See `POST /lists/`.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
+        /// See `POST /lists/`.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class BatchRequestBuilderPostQueryParameters 

@@ -34,7 +34,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Recommendation.Article.Creation
         {
         }
         /// <summary>
-        /// &quot;Recommends articles to be translated from the sourceto the domain language.See more at [Recommendation API documentation](https://meta.wikimedia.org/wiki/Recommendation_API)Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
+        /// Recommends articles to be translated from the sourceto the domain language.See more at [Recommendation API documentation](https://meta.wikimedia.org/wiki/Recommendation_API)Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.RecommendationResult"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -57,7 +57,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Recommendation.Article.Creation
             return await RequestAdapter.SendAsync<global::Soenneker.Wikimedia.OpenApiClient.Models.RecommendationResult>(requestInfo, global::Soenneker.Wikimedia.OpenApiClient.Models.RecommendationResult.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// &quot;Recommends articles to be translated from the sourceto the domain language.See more at [Recommendation API documentation](https://meta.wikimedia.org/wiki/Recommendation_API)Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
+        /// Recommends articles to be translated from the sourceto the domain language.See more at [Recommendation API documentation](https://meta.wikimedia.org/wiki/Recommendation_API)Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -85,7 +85,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Recommendation.Article.Creation
             return new global::Soenneker.Wikimedia.OpenApiClient.Data.Recommendation.Article.Creation.Translation.Item.Item.WithSeedArticleItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// &quot;Recommends articles to be translated from the sourceto the domain language.See more at [Recommendation API documentation](https://meta.wikimedia.org/wiki/Recommendation_API)Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)&quot;
+        /// Recommends articles to be translated from the sourceto the domain language.See more at [Recommendation API documentation](https://meta.wikimedia.org/wiki/Recommendation_API)Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithSeedArticleItemRequestBuilderGetQueryParameters 
