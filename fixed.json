@@ -239,7 +239,7 @@
               }
             },
             "content": {
-              "text/html": {
+              "text/html; charset=utf-8; profile=\u0022https://www.mediawiki.org/wiki/Specs/HTML/2.1.0\u0022": {
                 "schema": {
                   "$ref": "#/components/schemas/GetPageHtmlByTitle200HtmlResponseSchema"
                 }
@@ -344,7 +344,7 @@
               }
             },
             "content": {
-              "text/html": {
+              "text/html; charset=utf-8; profile=\u0022https://www.mediawiki.org/wiki/Specs/HTML/2.1.0\u0022": {
                 "schema": {
                   "$ref": "#/components/schemas/GetFormatRevision200HtmlResponseSchema"
                 }
@@ -619,7 +619,7 @@
               }
             },
             "content": {
-              "application/json": {
+              "application/json; charset=utf-8; profile=\u0022https://www.mediawiki.org/wiki/Specs/Summary/1.4.2\u0022": {
                 "schema": {
                   "$ref": "#/components/schemas/Summary"
                 }
@@ -694,7 +694,7 @@
               }
             },
             "content": {
-              "application/json": {
+              "application/json; charset=utf-8; profile=\u0022https://www.mediawiki.org/wiki/Specs/Media/1.3.1\u0022": {
                 "schema": {
                   "$ref": "#/components/schemas/MediaList"
                 }
@@ -778,7 +778,7 @@
               }
             },
             "content": {
-              "application/json": {
+              "application/json; charset=utf-8; profile=\u0022https://www.mediawiki.org/wiki/Specs/Media/1.3.1\u0022": {
                 "schema": {
                   "$ref": "#/components/schemas/MediaList"
                 }
@@ -853,7 +853,7 @@
               }
             },
             "content": {
-              "text/html": {
+              "text/html; charset=utf-8; profile=\u0022https://www.mediawiki.org/wiki/Specs/Mobile-HTML/1.2.2\u0022": {
                 "schema": {
                   "$ref": "#/components/schemas/GetContentMobileHtml200HtmlResponseSchema"
                 }
@@ -937,7 +937,7 @@
               }
             },
             "content": {
-              "text/html": {
+              "text/html; charset=utf-8; profile=\u0022https://www.mediawiki.org/wiki/Specs/Mobile-HTML/1.2.2\u0022": {
                 "schema": {
                   "$ref": "#/components/schemas/GetContentWithRevisionMobileHtml200HtmlResponseSchema"
                 }
@@ -997,7 +997,7 @@
           "200": {
             "description": "links to scripts and styles to accompany the mobile-html of the page for offline consumption",
             "content": {
-              "application/json": {
+              "application/json; charset=utf-8; profile=\u0022https://www.mediawiki.org/wiki/Specs/Mobile-HTML-Offline-Resources/1.2.1\u0022": {
                 "schema": {
                   "$ref": "#/components/schemas/GetPageMobileHtmlOfflineResourcesByTitle200ResponseSchema"
                 }
@@ -1050,7 +1050,7 @@
           "200": {
             "description": "links to scripts and styles to accompany the mobile-html of the page for offline consumption",
             "content": {
-              "application/json": {
+              "application/json; charset=utf-8; profile=\u0022https://www.mediawiki.org/wiki/Specs/Mobile-HTML-Offline-Resources/1.2.1\u0022": {
                 "schema": {
                   "$ref": "#/components/schemas/GetPageMobileHtmlOfflineResourcesByTitleByRevision200ResponseSchema"
                 }
@@ -1109,7 +1109,7 @@
               }
             },
             "content": {
-              "application/json": {
+              "application/json; charset=utf-8; profile=\u0022https://www.mediawiki.org/wiki/Specs/Talk/0.1.0\u0022": {
                 "schema": {
                   "$ref": "#/components/schemas/GetPageTalkByTitle200ResponseSchema"
                 }
@@ -1193,7 +1193,7 @@
               }
             },
             "content": {
-              "application/json": {
+              "application/json; charset=utf-8; profile=\u0022https://www.mediawiki.org/wiki/Specs/Talk/0.1.0\u0022": {
                 "schema": {
                   "$ref": "#/components/schemas/GetPageTalkByTitleByRevision200ResponseSchema"
                 }
@@ -1261,7 +1261,7 @@
           "200": {
             "description": "MediaWiki Wikitext.",
             "content": {
-              "text/plain": {
+              "text/plain; charset=utf-8; profile=\u0022https://www.mediawiki.org/wiki/Specs/wikitext/1.0.0\u0022": {
                 "schema": {
                   "$ref": "#/components/schemas/PostTransformHtmlToWikitext200PlainResponseSchema"
                 }
@@ -1362,7 +1362,7 @@
           "200": {
             "description": "MediaWiki Wikitext.",
             "content": {
-              "text/plain": {
+              "text/plain; charset=utf-8; profile=\u0022https://www.mediawiki.org/wiki/Specs/wikitext/1.0.0\u0022": {
                 "schema": {
                   "$ref": "#/components/schemas/PostTransformHtmlToWikitextByTitle200PlainResponseSchema"
                 }
@@ -1472,7 +1472,7 @@
           "200": {
             "description": "MediaWiki Wikitext.",
             "content": {
-              "text/plain": {
+              "text/plain; charset=utf-8; profile=\u0022https://www.mediawiki.org/wiki/Specs/wikitext/1.0.0\u0022": {
                 "schema": {
                   "$ref": "#/components/schemas/PostTransformHtmlToWikitextByTitleByRevision200PlainResponseSchema"
                 }
@@ -1554,7 +1554,7 @@
           "200": {
             "description": "See wikipage https://www.mediawiki.org/wiki/Parsoid/MediaWiki_DOM_spec",
             "content": {
-              "text/html": {
+              "text/html; charset=utf-8; profile=\u0022https://www.mediawiki.org/wiki/Specs/HTML/2.1.0\u0022": {
                 "schema": {
                   "$ref": "#/components/schemas/PostTransformWikitextToHtml200HtmlResponseSchema"
                 }
@@ -1647,7 +1647,7 @@
           "200": {
             "description": "See wikipage https://www.mediawiki.org/wiki/Parsoid/MediaWiki_DOM_spec",
             "content": {
-              "text/html": {
+              "text/html; charset=utf-8; profile=\u0022https://www.mediawiki.org/wiki/Specs/HTML/2.1.0\u0022": {
                 "schema": {
                   "$ref": "#/components/schemas/PostTransformWikitextToHtmlByTitle200HtmlResponseSchema"
                 }
@@ -1749,7 +1749,7 @@
           "200": {
             "description": "See wikipage https://www.mediawiki.org/wiki/Parsoid/MediaWiki_DOM_spec",
             "content": {
-              "text/html": {
+              "text/html; charset=utf-8; profile=\u0022https://www.mediawiki.org/wiki/Specs/HTML/2.1.0\u0022": {
                 "schema": {
                   "$ref": "#/components/schemas/PostTransformWikitextToHtmlByTitleByRevision200HtmlResponseSchema"
                 }
@@ -2110,7 +2110,7 @@
           "200": {
             "description": "See wikipage https://www.mediawiki.org/wiki/Parsoid/MediaWiki_DOM_spec",
             "content": {
-              "text/html": {
+              "text/html; charset=utf-8; profile=\u0022https://www.mediawiki.org/wiki/Specs/Mobile-HTML/1.0.0\u0022": {
                 "schema": {
                   "$ref": "#/components/schemas/TransformWikitextToMobileHtml200HtmlResponseSchema"
                 }
@@ -2368,12 +2368,12 @@
           "200": {
             "description": "The citation data in the requested format",
             "content": {
-              "application/json": {
+              "application/x-bibtex; charset=utf-8": {
                 "schema": {
                   "$ref": "#/components/schemas/ResultValue"
                 }
               },
-              "application/x-bibtex": {
+              "application/json; charset=utf-8": {
                 "schema": {
                   "$ref": "#/components/schemas/ResultValue"
                 }
@@ -2417,7 +2417,7 @@
           "200": {
             "description": "Success.",
             "content": {
-              "application/json": {
+              "application/json; charset=utf-8": {
                 "schema": {
                   "$ref": "#/components/schemas/PostDataListsSetup200ResponseSchema"
                 }
@@ -2461,7 +2461,7 @@
           "200": {
             "description": "Success.",
             "content": {
-              "application/json": {
+              "application/json; charset=utf-8": {
                 "schema": {
                   "$ref": "#/components/schemas/PostDataListsTeardown200ResponseSchema"
                 }
@@ -2511,7 +2511,7 @@
           "200": {
             "description": "An array of list metadata.",
             "content": {
-              "application/json": {
+              "application/json; charset=utf-8; profile=\u0022https://www.mediawiki.org/wiki/Specs/Lists/0.1\u0022": {
                 "schema": {
                   "$ref": "#/components/schemas/GetDataLists200Response"
                 }
@@ -2551,7 +2551,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/ListWrite"
               }
@@ -2563,7 +2563,7 @@
           "200": {
             "description": "The data for the new list.",
             "content": {
-              "application/json": {
+              "application/json; charset=utf-8": {
                 "schema": {
                   "$ref": "#/components/schemas/PostDataLists200Response"
                 }
@@ -2614,7 +2614,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/ListWrite"
               }
@@ -2625,7 +2625,7 @@
           "200": {
             "description": "The updated data for the list.",
             "content": {
-              "application/json": {
+              "application/json; charset=utf-8": {
                 "schema": {
                   "$ref": "#/components/schemas/PutDataListsById200Response"
                 }
@@ -2666,7 +2666,7 @@
           "200": {
             "description": "Success.",
             "content": {
-              "application/json": {
+              "application/json; charset=utf-8": {
                 "schema": {
                   "$ref": "#/components/schemas/DeleteDataListsById200ResponseSchema"
                 }
@@ -2708,7 +2708,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/PostDataListsBatchMediaRequest"
               }
@@ -2720,7 +2720,7 @@
           "200": {
             "description": "The data for the new lists (in the same order as the inputs).",
             "content": {
-              "application/json": {
+              "application/json; charset=utf-8": {
                 "schema": {
                   "$ref": "#/components/schemas/ListCreateBatch"
                 }
@@ -2779,7 +2779,7 @@
           "200": {
             "description": "An array of list entries.",
             "content": {
-              "application/json": {
+              "application/json; charset=utf-8; profile=\u0022https://www.mediawiki.org/wiki/Specs/Lists/0.1\u0022": {
                 "schema": {
                   "$ref": "#/components/schemas/GetListEntries200Response"
                 }
@@ -2828,7 +2828,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/ListEntryWrite"
               }
@@ -2840,7 +2840,7 @@
           "200": {
             "description": "The data for the new list entry.",
             "content": {
-              "application/json": {
+              "application/json; charset=utf-8": {
                 "schema": {
                   "$ref": "#/components/schemas/PostDataListsByIdEntries200Response"
                 }
@@ -2892,7 +2892,7 @@
           "200": {
             "description": "Success.",
             "content": {
-              "application/json": {
+              "application/json; charset=utf-8": {
                 "schema": {
                   "$ref": "#/components/schemas/DeleteDataListsByIdEntriesByEntryId200ResponseSchema"
                 }
@@ -2943,7 +2943,7 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "*/*": {
               "schema": {
                 "$ref": "#/components/schemas/PostDataListsByIdEntriesBatchMediaRequest"
               }
@@ -2955,7 +2955,7 @@
           "200": {
             "description": "The data for the new list entries (in the same order as the inputs).",
             "content": {
-              "application/json": {
+              "application/json; charset=utf-8": {
                 "schema": {
                   "$ref": "#/components/schemas/PostDataListsByIdEntriesBatch200Response"
                 }
@@ -3017,7 +3017,7 @@
           "200": {
             "description": "An array of list metadata.",
             "content": {
-              "application/json": {
+              "application/json; charset=utf-8; profile=\u0022https://www.mediawiki.org/wiki/Specs/Lists/0.1\u0022": {
                 "schema": {
                   "$ref": "#/components/schemas/GetDataListsPagesByProjectByTitle200Response"
                 }
@@ -3069,7 +3069,7 @@
           "200": {
             "description": "An array of list and entry metadata.",
             "content": {
-              "application/json": {
+              "application/json; charset=utf-8; profile=\u0022https://www.mediawiki.org/wiki/Specs/Lists/0.1\u0022": {
                 "schema": {
                   "$ref": "#/components/schemas/GetDataListsChangesSinceByDate200Response"
                 }
@@ -3276,7 +3276,7 @@
               }
             },
             "content": {
-              "application/json": {
+              "application/json; charset=utf-8; profile=\u0022https://www.mediawiki.org/wiki/Specs/CSS/1.0.0\u0022": {
                 "schema": {
                   "$ref": "#/components/schemas/GetDataCssMobileByType200ResponseSchema"
                 }
@@ -3327,7 +3327,7 @@
               }
             },
             "content": {
-              "application/json": {
+              "application/json; charset=utf-8; profile=\u0022https://www.mediawiki.org/wiki/Specs/JavaScript/1.0.0\u0022": {
                 "schema": {
                   "$ref": "#/components/schemas/GetDataJavascriptMobileByType200ResponseSchema"
                 }
@@ -3378,7 +3378,7 @@
               }
             },
             "content": {
-              "application/json": {
+              "application/json; charset=utf-8; profile=\u0022https://www.mediawiki.org/wiki/Specs/i18n/0.0.1\u0022": {
                 "schema": {
                   "$ref": "#/components/schemas/GetDataI18NByType200ResponseSchema"
                 }

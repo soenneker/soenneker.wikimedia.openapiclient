@@ -74,7 +74,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Page.Summary.Item
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/json");
+            requestInfo.Headers.TryAdd("Accept", "application/json;charset=utf-8;profile=\"https://www.mediawiki.org/wiki/Specs/Summary/1.4.2\"");
             return requestInfo;
         }
         /// <summary>

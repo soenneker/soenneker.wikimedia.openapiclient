@@ -79,21 +79,23 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries
         /// Creates a new list entry in the given list. On conflict, does nothing and returns thedata of an existing list.The list must belong to the current user and the request must beauthenticated with a MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)This endpoint is deprecated and might be removed without warning. Use the batch versioninstead.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsByIdEntries200Response"/></returns>
-        /// <param name="body">The request body</param>
+        /// <param name="body">Binary request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
+        /// <param name="contentType">The request body content type.</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Wikimedia.OpenApiClient.Models.Problem">When receiving a 4XX or 5XX status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsByIdEntries200Response?> PostAsync(global::Soenneker.Wikimedia.OpenApiClient.Models.ListEntryWrite body, Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.EntriesRequestBuilder.EntriesRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsByIdEntries200Response?> PostAsync(Stream body, string contentType, Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.EntriesRequestBuilder.EntriesRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsByIdEntries200Response> PostAsync(global::Soenneker.Wikimedia.OpenApiClient.Models.ListEntryWrite body, Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.EntriesRequestBuilder.EntriesRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsByIdEntries200Response> PostAsync(Stream body, string contentType, Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.EntriesRequestBuilder.EntriesRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = ToPostRequestInformation(body, requestConfiguration);
+            if(string.IsNullOrEmpty(contentType)) throw new ArgumentNullException(nameof(contentType));
+            var requestInfo = ToPostRequestInformation(body, contentType, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "XXX", global::Soenneker.Wikimedia.OpenApiClient.Models.Problem.CreateFromDiscriminatorValue },
@@ -116,29 +118,31 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/json");
+            requestInfo.Headers.TryAdd("Accept", "application/json;charset=utf-8;profile=\"https://www.mediawiki.org/wiki/Specs/Lists/0.1\"");
             return requestInfo;
         }
         /// <summary>
         /// Creates a new list entry in the given list. On conflict, does nothing and returns thedata of an existing list.The list must belong to the current user and the request must beauthenticated with a MediaWiki session cookie.Stability: [unstable](https://www.mediawiki.org/wiki/API_versioning#Unstable)This endpoint is deprecated and might be removed without warning. Use the batch versioninstead.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
-        /// <param name="body">The request body</param>
+        /// <param name="body">Binary request body</param>
+        /// <param name="contentType">The request body content type.</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Wikimedia.OpenApiClient.Models.ListEntryWrite body, Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.EntriesRequestBuilder.EntriesRequestBuilderPostQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(Stream body, string contentType, Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.EntriesRequestBuilder.EntriesRequestBuilderPostQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.Wikimedia.OpenApiClient.Models.ListEntryWrite body, Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.EntriesRequestBuilder.EntriesRequestBuilderPostQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(Stream body, string contentType, Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.EntriesRequestBuilder.EntriesRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
+            if(string.IsNullOrEmpty(contentType)) throw new ArgumentNullException(nameof(contentType));
             var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/data/lists/{id}/entries?csrf_token={csrf_token}", PathParameters);
             requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/json");
-            requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
+            requestInfo.Headers.TryAdd("Accept", "application/json;charset=utf-8");
+            requestInfo.SetStreamContent(body, contentType);
             return requestInfo;
         }
         /// <summary>

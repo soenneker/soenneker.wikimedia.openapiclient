@@ -85,7 +85,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Page.MobileHtmlOfflineResources.Item
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/json");
+            requestInfo.Headers.TryAdd("Accept", "application/json;charset=utf-8;profile=\"https://www.mediawiki.org/wiki/Specs/Mobile-HTML-Offline-Resources/1.2.1\"");
             return requestInfo;
         }
         /// <summary>
