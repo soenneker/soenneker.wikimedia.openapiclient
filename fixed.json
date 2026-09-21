@@ -54,7 +54,8 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": false
       }
     },
     "/page/title/{title}": {
@@ -113,7 +114,37 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": true,
+        "x-amples": [
+          {
+            "title": "Get rev by title from storage",
+            "request": {
+              "params": {
+                "domain": "en.wikipedia.org",
+                "title": "User:BSitzmann_(WMF)/MCS/Test/Frankenstein"
+              }
+            },
+            "response": {
+              "status": 200,
+              "headers": {
+                "etag": "/.\u002B/",
+                "content-type": "application/json"
+              },
+              "body": {
+                "items": [
+                  {
+                    "title": "User:BSitzmann_(WMF)/MCS/Test/Frankenstein",
+                    "rev": "/\\d\u002B/",
+                    "tid": "/^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/",
+                    "comment": "/.*/",
+                    "page_language": "en"
+                  }
+                ]
+              }
+            }
+          }
+        ]
       }
     },
     "/page/title/{title}/{revision}": {
@@ -181,7 +212,37 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": false,
+        "x-amples": [
+          {
+            "title": "Get rev by title from storage",
+            "request": {
+              "params": {
+                "domain": "en.wikipedia.org",
+                "title": "User:BSitzmann_(WMF)/MCS/Test/Frankenstein"
+              }
+            },
+            "response": {
+              "status": 200,
+              "headers": {
+                "etag": "/.\u002B/",
+                "content-type": "application/json"
+              },
+              "body": {
+                "items": [
+                  {
+                    "title": "User:BSitzmann_(WMF)/MCS/Test/Frankenstein",
+                    "rev": "/\\d\u002B/",
+                    "tid": "/^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/",
+                    "comment": "/.*/",
+                    "page_language": "en"
+                  }
+                ]
+              }
+            }
+          }
+        ]
       }
     },
     "/page/html/{title}": {
@@ -277,7 +338,27 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": true,
+        "x-amples": [
+          {
+            "title": "Get html by title from storage",
+            "request": {
+              "params": {
+                "domain": "en.wikipedia.org",
+                "title": "User:BSitzmann_(WMF)/MCS/Test/Frankenstein"
+              }
+            },
+            "response": {
+              "status": 200,
+              "headers": {
+                "etag": "/.\u002B/",
+                "content-type": "/^text\\/html.\u002B/"
+              },
+              "body": "/^\u003C!DOCTYPE html\u003E.*/"
+            }
+          }
+        ]
       }
     },
     "/page/html/{title}/{revision}": {
@@ -402,7 +483,8 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": false
       }
     },
     "/page/lint/{title}": {
@@ -481,7 +563,8 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": false
       }
     },
     "/page/lint/{title}/{revision}": {
@@ -569,7 +652,8 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": false
       }
     },
     "/page/summary/{title}": {
@@ -652,7 +736,39 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": true,
+        "x-amples": [
+          {
+            "title": "Get summary from storage",
+            "request": {
+              "params": {
+                "domain": "en.wikipedia.org",
+                "title": "San_Francisco"
+              }
+            },
+            "response": {
+              "status": 200,
+              "headers": {
+                "etag": "/.\u002B/",
+                "content-type": "/^application\\/json/"
+              },
+              "body": {
+                "extract": "/.\u002B/",
+                "extract_html": "/.\u002B/",
+                "thumbnail": {
+                  "source": "/^https:/"
+                },
+                "originalimage": {
+                  "source": "/^https:/"
+                },
+                "lang": "en",
+                "dir": "ltr",
+                "description": "/.\u002B/"
+              }
+            }
+          }
+        ]
       }
     },
     "/page/media-list/{title}": {
@@ -727,7 +843,37 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": true,
+        "x-amples": [
+          {
+            "title": "Get media-list from storage",
+            "request": {
+              "params": {
+                "domain": "en.wikipedia.org",
+                "title": "User:BSitzmann_(WMF)/MCS/Test/Frankenstein"
+              }
+            },
+            "response": {
+              "status": 200,
+              "headers": {
+                "etag": "/.\u002B/",
+                "content-type": "/^application\\/json/"
+              },
+              "body": {
+                "revision": "/\\d\u002B/",
+                "tid": "/.\u002B/",
+                "items": [
+                  {
+                    "type": "/.\u002B/",
+                    "section_id": "/\\d\u002B/",
+                    "showInGallery": "/.\u002B/"
+                  }
+                ]
+              }
+            }
+          }
+        ]
       }
     },
     "/page/media-list/{title}/{revision}": {
@@ -811,7 +957,37 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": false,
+        "x-amples": [
+          {
+            "title": "Get media-list from storage",
+            "request": {
+              "params": {
+                "domain": "en.wikipedia.org",
+                "title": "User:BSitzmann_(WMF)/MCS/Test/Frankenstein"
+              }
+            },
+            "response": {
+              "status": 200,
+              "headers": {
+                "etag": "/.\u002B/",
+                "content-type": "/^application\\/json/"
+              },
+              "body": {
+                "revision": "/\\d\u002B/",
+                "tid": "/.\u002B/",
+                "items": [
+                  {
+                    "type": "/.\u002B/",
+                    "section_id": "/\\d\u002B/",
+                    "showInGallery": "/.\u002B/"
+                  }
+                ]
+              }
+            }
+          }
+        ]
       }
     },
     "/page/mobile-html/{title}": {
@@ -886,7 +1062,27 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": true,
+        "x-amples": [
+          {
+            "title": "Get mobile-html from storage",
+            "request": {
+              "params": {
+                "domain": "en.wikipedia.org",
+                "title": "User:BSitzmann_(WMF)/MCS/Test/Frankenstein"
+              }
+            },
+            "response": {
+              "status": 200,
+              "headers": {
+                "etag": "/.\u002B/",
+                "content-type": "/^text\\/html.\u002B/"
+              },
+              "body": "/^\u003C!DOCTYPE html\u003E.*/"
+            }
+          }
+        ]
       }
     },
     "/page/mobile-html/{title}/{revision}": {
@@ -970,7 +1166,27 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": false,
+        "x-amples": [
+          {
+            "title": "Get mobile-html from storage",
+            "request": {
+              "params": {
+                "domain": "en.wikipedia.org",
+                "title": "User:BSitzmann_(WMF)/MCS/Test/Frankenstein"
+              }
+            },
+            "response": {
+              "status": 200,
+              "headers": {
+                "etag": "/.\u002B/",
+                "content-type": "/^text\\/html.\u002B/"
+              },
+              "body": "/^\u003C!DOCTYPE html\u003E.*/"
+            }
+          }
+        ]
       }
     },
     "/page/mobile-html-offline-resources/{title}": {
@@ -1014,7 +1230,24 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": true,
+        "x-amples": [
+          {
+            "title": "Get offline resource links to accompany page content HTML for test page",
+            "request": {
+              "params": {
+                "title": "User:BSitzmann_(WMF)/MCS/Test/Frankenstein"
+              }
+            },
+            "response": {
+              "status": 200,
+              "headers": {
+                "content-type": "/^application\\/json.\u002B/"
+              }
+            }
+          }
+        ]
       }
     },
     "/page/mobile-html-offline-resources/{title}/{revision}": {
@@ -1067,7 +1300,24 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": false,
+        "x-amples": [
+          {
+            "title": "Get offline resource links to accompany page content HTML for test page",
+            "request": {
+              "params": {
+                "title": "User:BSitzmann_(WMF)/MCS/Test/Frankenstein"
+              }
+            },
+            "response": {
+              "status": 200,
+              "headers": {
+                "content-type": "/^application\\/json.\u002B/"
+              }
+            }
+          }
+        ]
       }
     },
     "/page/talk/{title}": {
@@ -1142,7 +1392,46 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": true,
+        "x-amples": [
+          {
+            "title": "Get structured talk page for enwiki Salt article",
+            "request": {
+              "params": {
+                "domain": "en.wikipedia.org",
+                "title": "Salt"
+              }
+            },
+            "response": {
+              "status": 200,
+              "headers": {
+                "content-type": "/application\\/json; charset=utf-8; profile=\u0022.\u002BTalk.\u002B\u0022/",
+                "etag": "/.\u002B/"
+              },
+              "body": {
+                "topics": [
+                  {
+                    "id": "/.\u002B/",
+                    "replies": [
+                      {
+                        "sha": "/.\u002B/",
+                        "depth": "/.\u002B/",
+                        "html": "/.*/"
+                      }
+                    ],
+                    "depth": "/.\u002B/",
+                    "html": "/.*/",
+                    "shas": {
+                      "html": "/.\u002B/",
+                      "indicator": "/.\u002B/"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
       }
     },
     "/page/talk/{title}/{revision}": {
@@ -1226,7 +1515,46 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": false,
+        "x-amples": [
+          {
+            "title": "Get structured talk page for enwiki Salt article",
+            "request": {
+              "params": {
+                "domain": "en.wikipedia.org",
+                "title": "Salt"
+              }
+            },
+            "response": {
+              "status": 200,
+              "headers": {
+                "content-type": "/application\\/json; charset=utf-8; profile=\u0022.\u002BTalk.\u002B\u0022/",
+                "etag": "/.\u002B/"
+              },
+              "body": {
+                "topics": [
+                  {
+                    "id": "/.\u002B/",
+                    "replies": [
+                      {
+                        "sha": "/.\u002B/",
+                        "depth": "/.\u002B/",
+                        "html": "/.*/"
+                      }
+                    ],
+                    "depth": "/.\u002B/",
+                    "html": "/.*/",
+                    "shas": {
+                      "html": "/.\u002B/",
+                      "indicator": "/.\u002B/"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
       }
     },
     "/transform/html/to/wikitext": {
@@ -1318,7 +1646,8 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": false
       }
     },
     "/transform/html/to/wikitext/{title}": {
@@ -1419,7 +1748,8 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": false
       }
     },
     "/transform/html/to/wikitext/{title}/{revision}": {
@@ -1529,7 +1859,8 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": false
       }
     },
     "/transform/wikitext/to/html": {
@@ -1611,7 +1942,8 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": false
       }
     },
     "/transform/wikitext/to/html/{title}": {
@@ -1704,7 +2036,30 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": true,
+        "x-amples": [
+          {
+            "title": "Transform wikitext to html",
+            "request": {
+              "params": {
+                "domain": "en.wikipedia.org",
+                "title": "User:BSitzmann_(WMF)/MCS/Test/Frankenstein"
+              },
+              "body": {
+                "wikitext": "== Heading ==",
+                "body_only": true
+              }
+            },
+            "response": {
+              "status": 200,
+              "headers": {
+                "content-type": "/^text\\/html.\u002B/"
+              },
+              "body": "/^\u003Ch2.*\u003EHeading\u003C\\/h2\u003E$/"
+            }
+          }
+        ]
       }
     },
     "/transform/wikitext/to/html/{title}/{revision}": {
@@ -1806,7 +2161,8 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": false
       }
     },
     "/transform/wikitext/to/lint": {
@@ -1883,7 +2239,8 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": false
       }
     },
     "/transform/wikitext/to/lint/{title}": {
@@ -1966,7 +2323,8 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": false
       }
     },
     "/transform/wikitext/to/lint/{title}/{revision}": {
@@ -2058,7 +2416,8 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": false
       }
     },
     "/transform/wikitext/to/mobile-html/{title}": {
@@ -2137,7 +2496,8 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": false
       }
     },
     "/media/math/check/{type}": {
@@ -2201,7 +2561,34 @@
             }
           }
         },
-        "deprecated": true
+        "deprecated": true,
+        "x-monitor": true,
+        "x-amples": [
+          {
+            "title": "Mathoid - check test formula",
+            "request": {
+              "params": {
+                "domain": "wikimedia.org",
+                "type": "tex"
+              },
+              "body": {
+                "q": "E=mc^{2}"
+              }
+            },
+            "response": {
+              "status": 200,
+              "headers": {
+                "content-type": "/^application\\/json/",
+                "x-resource-location": "/.\u002B/",
+                "cache-control": "no-cache"
+              },
+              "body": {
+                "success": true,
+                "checked": "/.\u002B/"
+              }
+            }
+          }
+        ]
       }
     },
     "/media/math/formula/{hash}": {
@@ -2256,7 +2643,8 @@
             }
           }
         },
-        "deprecated": true
+        "deprecated": true,
+        "x-monitor": false
       }
     },
     "/media/math/render/{format}/{hash}": {
@@ -2325,7 +2713,8 @@
             }
           }
         },
-        "deprecated": true
+        "deprecated": true,
+        "x-monitor": false
       }
     },
     "/data/citation/{format}/{query}": {
@@ -2390,7 +2779,8 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": false
       }
     },
     "/data/lists/setup": {
@@ -2434,7 +2824,8 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": false
       }
     },
     "/data/lists/teardown": {
@@ -2478,7 +2869,8 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": false
       }
     },
     "/data/lists": {
@@ -2528,7 +2920,8 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": false
       },
       "post": {
         "tags": [
@@ -2580,7 +2973,9 @@
               }
             }
           }
-        }
+        },
+        "x-maxsize": 5000,
+        "x-monitor": false
       }
     },
     "/data/lists/{id}": {
@@ -2642,7 +3037,8 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": false
       },
       "delete": {
         "tags": [
@@ -2683,7 +3079,8 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": false
       }
     },
     "/data/lists/batch": {
@@ -2737,7 +3134,9 @@
               }
             }
           }
-        }
+        },
+        "x-maxsize": 5000,
+        "x-monitor": false
       }
     },
     "/data/lists/{id}/entries": {
@@ -2796,7 +3195,8 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": false
       },
       "post": {
         "tags": [
@@ -2857,7 +3257,9 @@
               }
             }
           }
-        }
+        },
+        "x-maxsize": 100,
+        "x-monitor": false
       }
     },
     "/data/lists/{id}/entries/{entryId}": {
@@ -2909,7 +3311,8 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": false
       }
     },
     "/data/lists/{id}/entries/batch": {
@@ -2972,7 +3375,9 @@
               }
             }
           }
-        }
+        },
+        "x-maxsize": 100,
+        "x-monitor": false
       }
     },
     "/data/lists/pages/{project}/{title}": {
@@ -3034,7 +3439,8 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": false
       }
     },
     "/data/lists/changes/since/{date}": {
@@ -3086,7 +3492,8 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": false
       }
     },
     "/data/recommendation/article/creation/translation/{fromLang}": {
@@ -3138,7 +3545,8 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": false
       }
     },
     "/data/recommendation/article/creation/translation/{fromLang}/{seedArticle}": {
@@ -3199,7 +3607,8 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": false
       }
     },
     "/data/recommendation/article/creation/morelike/{seedArticle}": {
@@ -3242,7 +3651,8 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": false
       }
     },
     "/data/css/mobile/{type}": {
@@ -3293,7 +3703,8 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": false
       }
     },
     "/data/javascript/mobile/{type}": {
@@ -3344,7 +3755,8 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": false
       }
     },
     "/data/i18n/{type}": {
@@ -3395,7 +3807,8 @@
               }
             }
           }
-        }
+        },
+        "x-monitor": false
       }
     }
   },
@@ -4918,5 +5331,7 @@
       "name": "Recommendation",
       "description": "contribution recommendations"
     }
-  ]
+  ],
+  "x-host-basePath": "/api/rest_v1",
+  "x-default-params": {}
 }
