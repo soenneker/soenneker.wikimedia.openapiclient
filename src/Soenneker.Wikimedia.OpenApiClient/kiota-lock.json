@@ -2,7 +2,7 @@
   "descriptionHash": "5354BB4E71FD5EC3169A308B82DB3BFF0AC869A5BD87E7B53D7438EE0BCE80E290626E70F283396A4F03471D93566857BA1DE8B0DD52F1E3FB01F0938F910CE4",
   "descriptionLocation": "../../fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.35.0",
+  "kiotaVersion": "1.36.0",
   "clientClassName": "WikimediaOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.Wikimedia.OpenApiClient",
