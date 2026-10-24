@@ -25,7 +25,7 @@
     }
   ],
   "paths": {
-    "/page": {
+    "/page/": {
       "get": {
         "tags": [
           "Page content"
@@ -2873,7 +2873,7 @@
         "x-monitor": false
       }
     },
-    "/data/lists": {
+    "/data/lists/": {
       "get": {
         "tags": [
           "Reading lists"
@@ -3139,7 +3139,7 @@
         "x-monitor": false
       }
     },
-    "/data/lists/{id}/entries": {
+    "/data/lists/{id}/entries/": {
       "get": {
         "tags": [
           "Reading lists"
@@ -5042,7 +5042,6 @@
           "audio"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "MediaItemType",
           "modelAsString": false,
@@ -5070,7 +5069,6 @@
           "references"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "TransformWikitextToMobileHtmlOutputModeParameter",
           "modelAsString": false,
@@ -5101,7 +5099,6 @@
           "chem"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "PostMediaMathCheckByTypeTypeParameter",
           "modelAsString": false,
@@ -5128,7 +5125,6 @@
           "png"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetMediaMathRenderByFormatByHashFormatParameter",
           "modelAsString": false,
@@ -5157,7 +5153,6 @@
           "wikibase"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetCitationFormatParameter",
           "modelAsString": false,
@@ -5191,7 +5186,6 @@
           "updated"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetDataListsSortParameter",
           "modelAsString": false,
@@ -5213,7 +5207,6 @@
           "updated"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetListEntriesSortParameter",
           "modelAsString": false,
@@ -5237,7 +5230,6 @@
           "site"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetDataCssMobileByTypeTypeParameter",
           "modelAsString": false,
@@ -5267,7 +5259,6 @@
           "pcs"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "GetDataJavascriptMobileByTypeTypeParameter",
           "modelAsString": false,
@@ -5288,7 +5279,6 @@
           "pcs"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "PcsType",
           "modelAsString": false,
