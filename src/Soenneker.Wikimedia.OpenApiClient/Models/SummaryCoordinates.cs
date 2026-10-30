@@ -12,13 +12,24 @@ namespace Soenneker.Wikimedia.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SummaryCoordinates : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("lat") is { } nullNodeLat && nullNodeLat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Lat = null;
+            if (parseNode.GetChildNode("lon") is { } nullNodeLon && nullNodeLon.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Lon = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The latitude</summary>
-        public double? Lat { get; set; }
+        public double? Lat { get => _explicitNullValueLat; set { _explicitNullValueLat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lat"); else _explicitNullProperties?.Remove("lat"); } }
+        private double? _explicitNullValueLat = default!;
         /// <summary>The longitude</summary>
-        public double? Lon { get; set; }
+        public double? Lon { get => _explicitNullValueLon; set { _explicitNullValueLon = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lon"); else _explicitNullProperties?.Remove("lon"); } }
+        private double? _explicitNullValueLon = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.SummaryCoordinates"/> and sets the default values.
         /// </summary>
@@ -34,7 +45,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Models
         public static global::Soenneker.Wikimedia.OpenApiClient.Models.SummaryCoordinates CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Wikimedia.OpenApiClient.Models.SummaryCoordinates();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Wikimedia.OpenApiClient.Models.SummaryCoordinates(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -57,6 +68,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("lat", Lat);
             writer.WriteDoubleValue("lon", Lon);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,19 +11,31 @@ namespace Soenneker.Wikimedia.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostDataListsByIdEntries200Response : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("entry") is { } nullNodeEntry && nullNodeEntry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Entry = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The entry property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Wikimedia.OpenApiClient.Models.ListEntryRead? Entry { get; set; }
+        public global::Soenneker.Wikimedia.OpenApiClient.Models.ListEntryRead? Entry { get => _explicitNullValueEntry; set { _explicitNullValueEntry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entry"); else _explicitNullProperties?.Remove("entry"); } }
+        private global::Soenneker.Wikimedia.OpenApiClient.Models.ListEntryRead? _explicitNullValueEntry = default!;
 #nullable restore
 #else
-        public global::Soenneker.Wikimedia.OpenApiClient.Models.ListEntryRead Entry { get; set; }
+        public global::Soenneker.Wikimedia.OpenApiClient.Models.ListEntryRead Entry { get => _explicitNullValueEntry; set { _explicitNullValueEntry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entry"); else _explicitNullProperties?.Remove("entry"); } }
+        private global::Soenneker.Wikimedia.OpenApiClient.Models.ListEntryRead _explicitNullValueEntry = default!;
 #endif
         /// <summary>List entry IDDeprecated, will be removed. Use the full entry object instead.</summary>
-        public int? Id { get; set; }
+        public int? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private int? _explicitNullValueId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsByIdEntries200Response"/> and sets the default values.
         /// </summary>
@@ -39,7 +51,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Models
         public static global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsByIdEntries200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsByIdEntries200Response();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsByIdEntries200Response(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -62,6 +74,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Wikimedia.OpenApiClient.Models.ListEntryRead>("entry", Entry);
             writer.WriteIntValue("id", Id);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

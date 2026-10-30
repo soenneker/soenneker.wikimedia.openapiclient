@@ -302,11 +302,19 @@
             "content": {
               "text/html; charset=utf-8; profile=\u0022https://www.mediawiki.org/wiki/Specs/HTML/2.1.0\u0022": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetPageHtmlByTitle200HtmlResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetPageHtmlByTitle200ResponseSchema"
                 }
               }
@@ -427,11 +435,19 @@
             "content": {
               "text/html; charset=utf-8; profile=\u0022https://www.mediawiki.org/wiki/Specs/HTML/2.1.0\u0022": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetFormatRevision200HtmlResponseSchema"
                 }
               },
               "application/json": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetFormatRevision200ResponseSchema"
                 }
               }
@@ -2682,11 +2698,19 @@
             "content": {
               "image/svg\u002Bxml": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetMediaMathRenderByFormatByHash200SvgXmlResponseSchema"
                 }
               },
               "application/mathml\u002Bxml": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetMediaMathRenderByFormatByHash200MathmlXmlResponseSchema"
                 }
               }

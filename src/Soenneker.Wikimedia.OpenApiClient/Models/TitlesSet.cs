@@ -12,32 +12,48 @@ namespace Soenneker.Wikimedia.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TitlesSet : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("canonical") is { } nullNodeCanonical && nullNodeCanonical.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Canonical = null;
+            if (parseNode.GetChildNode("display") is { } nullNodeDisplay && nullNodeDisplay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Display = null;
+            if (parseNode.GetChildNode("normalized") is { } nullNodeNormalized && nullNodeNormalized.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Normalized = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>the DB key (non-prefixed), e.g. may have _ instead of spaces, best for making request URIs, still requires Percent-encoding</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Canonical { get; set; }
+        public string? Canonical { get => _explicitNullValueCanonical; set { _explicitNullValueCanonical = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canonical"); else _explicitNullProperties?.Remove("canonical"); } }
+        private string? _explicitNullValueCanonical = default!;
 #nullable restore
 #else
-        public string Canonical { get; set; }
+        public string Canonical { get => _explicitNullValueCanonical; set { _explicitNullValueCanonical = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canonical"); else _explicitNullProperties?.Remove("canonical"); } }
+        private string _explicitNullValueCanonical = default!;
 #endif
         /// <summary>the title as it should be displayed to the user</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Display { get; set; }
+        public string? Display { get => _explicitNullValueDisplay; set { _explicitNullValueDisplay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display"); else _explicitNullProperties?.Remove("display"); } }
+        private string? _explicitNullValueDisplay = default!;
 #nullable restore
 #else
-        public string Display { get; set; }
+        public string Display { get => _explicitNullValueDisplay; set { _explicitNullValueDisplay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display"); else _explicitNullProperties?.Remove("display"); } }
+        private string _explicitNullValueDisplay = default!;
 #endif
         /// <summary>the normalized title (https://www.mediawiki.org/wiki/API:Query#Example_2:_Title_normalization), e.g. may have spaces instead of _</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Normalized { get; set; }
+        public string? Normalized { get => _explicitNullValueNormalized; set { _explicitNullValueNormalized = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("normalized"); else _explicitNullProperties?.Remove("normalized"); } }
+        private string? _explicitNullValueNormalized = default!;
 #nullable restore
 #else
-        public string Normalized { get; set; }
+        public string Normalized { get => _explicitNullValueNormalized; set { _explicitNullValueNormalized = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("normalized"); else _explicitNullProperties?.Remove("normalized"); } }
+        private string _explicitNullValueNormalized = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Wikimedia.OpenApiClient.Models.TitlesSet"/> and sets the default values.
@@ -54,7 +70,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Models
         public static global::Soenneker.Wikimedia.OpenApiClient.Models.TitlesSet CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Wikimedia.OpenApiClient.Models.TitlesSet();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.Wikimedia.OpenApiClient.Models.TitlesSet(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -79,6 +95,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Models
             writer.WriteStringValue("canonical", Canonical);
             writer.WriteStringValue("display", Display);
             writer.WriteStringValue("normalized", Normalized);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
