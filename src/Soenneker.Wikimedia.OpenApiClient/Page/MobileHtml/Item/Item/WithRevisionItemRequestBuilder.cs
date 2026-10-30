@@ -71,7 +71,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Page.MobileHtml.Item.Item
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Page.MobileHtml.Item.Item.WithRevisionItemRequestBuilder.WithRevisionItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://test.wikimedia.org/api/rest_v1", "/page/mobile-html/{title}/{revision}", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "text/html, application/problem+json");
             return requestInfo;

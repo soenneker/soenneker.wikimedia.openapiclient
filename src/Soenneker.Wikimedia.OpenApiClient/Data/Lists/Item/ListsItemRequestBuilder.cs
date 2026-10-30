@@ -103,7 +103,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item
         public RequestInformation ToDeleteRequestInformation(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.DELETE, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://test.wikimedia.org/api/rest_v1", "/data/lists/{id}", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json;charset=utf-8");
             return requestInfo;
@@ -126,7 +126,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             if(string.IsNullOrEmpty(contentType)) throw new ArgumentNullException(nameof(contentType));
-            var requestInfo = new RequestInformation(Method.PUT, "{+baseurl}/data/lists/{id}?csrf_token={csrf_token}", PathParameters);
+            var requestInfo = new RequestInformation(Method.PUT, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve("{+baseurl}/data/lists/{id}?csrf_token={csrf_token}", RequestAdapter.BaseUrl, "https://test.wikimedia.org/api/rest_v1", "/data/lists/{id}", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json;charset=utf-8");
             requestInfo.SetStreamContent(body, contentType);

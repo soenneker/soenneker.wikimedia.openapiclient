@@ -17,34 +17,37 @@ namespace Soenneker.Wikimedia.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("sitelink_count") is { } nullNodeSitelinkCount && nullNodeSitelinkCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SitelinkCount = null;
-            if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
-            if (parseNode.GetChildNode("wikidata_id") is { } nullNodeWikidataId && nullNodeWikidataId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WikidataId = null;
+            if (parseNode.GetChildNode("sitelink_count") is null) { _explicitNullValueSitelinkCount = default!; _explicitNullProperties?.Remove("sitelink_count"); }
+            else if (parseNode.GetChildNode("sitelink_count") is { } nullNodeSitelinkCount && nullNodeSitelinkCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SitelinkCount = null;
+            if (parseNode.GetChildNode("title") is null) { _explicitNullValueTitle = default!; _explicitNullProperties?.Remove("title"); }
+            else if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
+            if (parseNode.GetChildNode("wikidata_id") is null) { _explicitNullValueWikidataId = default!; _explicitNullProperties?.Remove("wikidata_id"); }
+            else if (parseNode.GetChildNode("wikidata_id") is { } nullNodeWikidataId && nullNodeWikidataId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WikidataId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>count of sites the wikidata item is linked to</summary>
-        public int? SitelinkCount { get => _explicitNullValueSitelinkCount; set { _explicitNullValueSitelinkCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sitelink_count"); else _explicitNullProperties?.Remove("sitelink_count"); } }
+        public int? SitelinkCount { get => _explicitNullValueSitelinkCount; set { _explicitNullValueSitelinkCount = value; AdditionalData?.Remove("sitelink_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sitelink_count"); else _explicitNullProperties?.Remove("sitelink_count"); } }
         private int? _explicitNullValueSitelinkCount = default!;
         /// <summary>title of the article in the source language</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; AdditionalData?.Remove("title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
         private string? _explicitNullValueTitle = default!;
 #nullable restore
 #else
-        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; AdditionalData?.Remove("title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
         private string _explicitNullValueTitle = default!;
 #endif
         /// <summary>wikidata id for the item</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WikidataId { get => _explicitNullValueWikidataId; set { _explicitNullValueWikidataId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wikidata_id"); else _explicitNullProperties?.Remove("wikidata_id"); } }
+        public string? WikidataId { get => _explicitNullValueWikidataId; set { _explicitNullValueWikidataId = value; AdditionalData?.Remove("wikidata_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wikidata_id"); else _explicitNullProperties?.Remove("wikidata_id"); } }
         private string? _explicitNullValueWikidataId = default!;
 #nullable restore
 #else
-        public string WikidataId { get => _explicitNullValueWikidataId; set { _explicitNullValueWikidataId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wikidata_id"); else _explicitNullProperties?.Remove("wikidata_id"); } }
+        public string WikidataId { get => _explicitNullValueWikidataId; set { _explicitNullValueWikidataId = value; AdditionalData?.Remove("wikidata_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wikidata_id"); else _explicitNullProperties?.Remove("wikidata_id"); } }
         private string _explicitNullValueWikidataId = default!;
 #endif
         /// <summary>

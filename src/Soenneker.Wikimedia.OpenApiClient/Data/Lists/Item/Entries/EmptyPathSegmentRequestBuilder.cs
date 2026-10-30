@@ -97,7 +97,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.EmptyPathSegmentRequestBuilder.EmptyPathSegmentRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://test.wikimedia.org/api/rest_v1", "/data/lists/{id}/entries/", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json;charset=utf-8;profile=\"https://www.mediawiki.org/wiki/Specs/Lists/0.1\"");
             return requestInfo;
@@ -120,7 +120,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             if(string.IsNullOrEmpty(contentType)) throw new ArgumentNullException(nameof(contentType));
-            var requestInfo = new RequestInformation(Method.POST, "{+baseurl}/data/lists/{id}/entries/?csrf_token={csrf_token}", PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve("{+baseurl}/data/lists/{id}/entries/?csrf_token={csrf_token}", RequestAdapter.BaseUrl, "https://test.wikimedia.org/api/rest_v1", "/data/lists/{id}/entries/", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json;charset=utf-8");
             requestInfo.SetStreamContent(body, contentType);

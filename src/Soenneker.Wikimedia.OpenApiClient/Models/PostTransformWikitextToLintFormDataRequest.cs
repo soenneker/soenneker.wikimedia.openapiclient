@@ -17,7 +17,8 @@ namespace Soenneker.Wikimedia.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("wikitext") is { } nullNodeWikitext && nullNodeWikitext.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Wikitext = null;
+            if (parseNode.GetChildNode("wikitext") is null) { _explicitNullValueWikitext = default!; _explicitNullProperties?.Remove("wikitext"); }
+            else if (parseNode.GetChildNode("wikitext") is { } nullNodeWikitext && nullNodeWikitext.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Wikitext = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.Wikimedia.OpenApiClient.Models
         /// <summary>The Wikitext to check</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Wikitext { get => _explicitNullValueWikitext; set { _explicitNullValueWikitext = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wikitext"); else _explicitNullProperties?.Remove("wikitext"); } }
+        public string? Wikitext { get => _explicitNullValueWikitext; set { _explicitNullValueWikitext = value; AdditionalData?.Remove("wikitext"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wikitext"); else _explicitNullProperties?.Remove("wikitext"); } }
         private string? _explicitNullValueWikitext = default!;
 #nullable restore
 #else
-        public string Wikitext { get => _explicitNullValueWikitext; set { _explicitNullValueWikitext = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wikitext"); else _explicitNullProperties?.Remove("wikitext"); } }
+        public string Wikitext { get => _explicitNullValueWikitext; set { _explicitNullValueWikitext = value; AdditionalData?.Remove("wikitext"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wikitext"); else _explicitNullProperties?.Remove("wikitext"); } }
         private string _explicitNullValueWikitext = default!;
 #endif
         /// <summary>

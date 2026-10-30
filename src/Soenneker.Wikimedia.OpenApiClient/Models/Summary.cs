@@ -17,19 +17,32 @@ namespace Soenneker.Wikimedia.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("coordinates") is { } nullNodeCoordinates && nullNodeCoordinates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Coordinates = null;
-            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
-            if (parseNode.GetChildNode("dir") is { } nullNodeDir && nullNodeDir.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Dir = null;
-            if (parseNode.GetChildNode("displaytitle") is { } nullNodeDisplaytitle && nullNodeDisplaytitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Displaytitle = null;
-            if (parseNode.GetChildNode("extract") is { } nullNodeExtract && nullNodeExtract.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Extract = null;
-            if (parseNode.GetChildNode("extract_html") is { } nullNodeExtractHtml && nullNodeExtractHtml.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExtractHtml = null;
-            if (parseNode.GetChildNode("lang") is { } nullNodeLang && nullNodeLang.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Lang = null;
-            if (parseNode.GetChildNode("originalimage") is { } nullNodeOriginalimage && nullNodeOriginalimage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Originalimage = null;
-            if (parseNode.GetChildNode("pageid") is { } nullNodePageid && nullNodePageid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pageid = null;
-            if (parseNode.GetChildNode("thumbnail") is { } nullNodeThumbnail && nullNodeThumbnail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Thumbnail = null;
-            if (parseNode.GetChildNode("timestamp") is { } nullNodeTimestamp && nullNodeTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Timestamp = null;
-            if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
-            if (parseNode.GetChildNode("titles") is { } nullNodeTitles && nullNodeTitles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Titles = null;
+            if (parseNode.GetChildNode("coordinates") is null) { _explicitNullValueCoordinates = default!; _explicitNullProperties?.Remove("coordinates"); }
+            else if (parseNode.GetChildNode("coordinates") is { } nullNodeCoordinates && nullNodeCoordinates.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Coordinates = null;
+            if (parseNode.GetChildNode("description") is null) { _explicitNullValueDescription = default!; _explicitNullProperties?.Remove("description"); }
+            else if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("dir") is null) { _explicitNullValueDir = default!; _explicitNullProperties?.Remove("dir"); }
+            else if (parseNode.GetChildNode("dir") is { } nullNodeDir && nullNodeDir.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Dir = null;
+            if (parseNode.GetChildNode("displaytitle") is null) { _explicitNullValueDisplaytitle = default!; _explicitNullProperties?.Remove("displaytitle"); }
+            else if (parseNode.GetChildNode("displaytitle") is { } nullNodeDisplaytitle && nullNodeDisplaytitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Displaytitle = null;
+            if (parseNode.GetChildNode("extract") is null) { _explicitNullValueExtract = default!; _explicitNullProperties?.Remove("extract"); }
+            else if (parseNode.GetChildNode("extract") is { } nullNodeExtract && nullNodeExtract.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Extract = null;
+            if (parseNode.GetChildNode("extract_html") is null) { _explicitNullValueExtractHtml = default!; _explicitNullProperties?.Remove("extract_html"); }
+            else if (parseNode.GetChildNode("extract_html") is { } nullNodeExtractHtml && nullNodeExtractHtml.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExtractHtml = null;
+            if (parseNode.GetChildNode("lang") is null) { _explicitNullValueLang = default!; _explicitNullProperties?.Remove("lang"); }
+            else if (parseNode.GetChildNode("lang") is { } nullNodeLang && nullNodeLang.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Lang = null;
+            if (parseNode.GetChildNode("originalimage") is null) { _explicitNullValueOriginalimage = default!; _explicitNullProperties?.Remove("originalimage"); }
+            else if (parseNode.GetChildNode("originalimage") is { } nullNodeOriginalimage && nullNodeOriginalimage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Originalimage = null;
+            if (parseNode.GetChildNode("pageid") is null) { _explicitNullValuePageid = default!; _explicitNullProperties?.Remove("pageid"); }
+            else if (parseNode.GetChildNode("pageid") is { } nullNodePageid && nullNodePageid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pageid = null;
+            if (parseNode.GetChildNode("thumbnail") is null) { _explicitNullValueThumbnail = default!; _explicitNullProperties?.Remove("thumbnail"); }
+            else if (parseNode.GetChildNode("thumbnail") is { } nullNodeThumbnail && nullNodeThumbnail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Thumbnail = null;
+            if (parseNode.GetChildNode("timestamp") is null) { _explicitNullValueTimestamp = default!; _explicitNullProperties?.Remove("timestamp"); }
+            else if (parseNode.GetChildNode("timestamp") is { } nullNodeTimestamp && nullNodeTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Timestamp = null;
+            if (parseNode.GetChildNode("title") is null) { _explicitNullValueTitle = default!; _explicitNullProperties?.Remove("title"); }
+            else if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
+            if (parseNode.GetChildNode("titles") is null) { _explicitNullValueTitles = default!; _explicitNullProperties?.Remove("titles"); }
+            else if (parseNode.GetChildNode("titles") is { } nullNodeTitles && nullNodeTitles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Titles = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -37,126 +50,126 @@ namespace Soenneker.Wikimedia.OpenApiClient.Models
         /// <summary>The coordinates of the item</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Wikimedia.OpenApiClient.Models.SummaryCoordinates? Coordinates { get => _explicitNullValueCoordinates; set { _explicitNullValueCoordinates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coordinates"); else _explicitNullProperties?.Remove("coordinates"); } }
+        public global::Soenneker.Wikimedia.OpenApiClient.Models.SummaryCoordinates? Coordinates { get => _explicitNullValueCoordinates; set { _explicitNullValueCoordinates = value; AdditionalData?.Remove("coordinates"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coordinates"); else _explicitNullProperties?.Remove("coordinates"); } }
         private global::Soenneker.Wikimedia.OpenApiClient.Models.SummaryCoordinates? _explicitNullValueCoordinates = default!;
 #nullable restore
 #else
-        public global::Soenneker.Wikimedia.OpenApiClient.Models.SummaryCoordinates Coordinates { get => _explicitNullValueCoordinates; set { _explicitNullValueCoordinates = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coordinates"); else _explicitNullProperties?.Remove("coordinates"); } }
+        public global::Soenneker.Wikimedia.OpenApiClient.Models.SummaryCoordinates Coordinates { get => _explicitNullValueCoordinates; set { _explicitNullValueCoordinates = value; AdditionalData?.Remove("coordinates"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("coordinates"); else _explicitNullProperties?.Remove("coordinates"); } }
         private global::Soenneker.Wikimedia.OpenApiClient.Models.SummaryCoordinates _explicitNullValueCoordinates = default!;
 #endif
         /// <summary>Wikidata description for the page</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The page language direction code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Dir { get => _explicitNullValueDir; set { _explicitNullValueDir = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dir"); else _explicitNullProperties?.Remove("dir"); } }
+        public string? Dir { get => _explicitNullValueDir; set { _explicitNullValueDir = value; AdditionalData?.Remove("dir"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dir"); else _explicitNullProperties?.Remove("dir"); } }
         private string? _explicitNullValueDir = default!;
 #nullable restore
 #else
-        public string Dir { get => _explicitNullValueDir; set { _explicitNullValueDir = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dir"); else _explicitNullProperties?.Remove("dir"); } }
+        public string Dir { get => _explicitNullValueDir; set { _explicitNullValueDir = value; AdditionalData?.Remove("dir"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dir"); else _explicitNullProperties?.Remove("dir"); } }
         private string _explicitNullValueDir = default!;
 #endif
         /// <summary>The page title how it should be shown to the user.Deprecated: Use `titles.display` instead.</summary>
         [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Displaytitle { get => _explicitNullValueDisplaytitle; set { _explicitNullValueDisplaytitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displaytitle"); else _explicitNullProperties?.Remove("displaytitle"); } }
+        public string? Displaytitle { get => _explicitNullValueDisplaytitle; set { _explicitNullValueDisplaytitle = value; AdditionalData?.Remove("displaytitle"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displaytitle"); else _explicitNullProperties?.Remove("displaytitle"); } }
         private string? _explicitNullValueDisplaytitle = default!;
 #nullable restore
 #else
-        public string Displaytitle { get => _explicitNullValueDisplaytitle; set { _explicitNullValueDisplaytitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displaytitle"); else _explicitNullProperties?.Remove("displaytitle"); } }
+        public string Displaytitle { get => _explicitNullValueDisplaytitle; set { _explicitNullValueDisplaytitle = value; AdditionalData?.Remove("displaytitle"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displaytitle"); else _explicitNullProperties?.Remove("displaytitle"); } }
         private string _explicitNullValueDisplaytitle = default!;
 #endif
         /// <summary>First several sentences of an article in plain text</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Extract { get => _explicitNullValueExtract; set { _explicitNullValueExtract = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extract"); else _explicitNullProperties?.Remove("extract"); } }
+        public string? Extract { get => _explicitNullValueExtract; set { _explicitNullValueExtract = value; AdditionalData?.Remove("extract"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extract"); else _explicitNullProperties?.Remove("extract"); } }
         private string? _explicitNullValueExtract = default!;
 #nullable restore
 #else
-        public string Extract { get => _explicitNullValueExtract; set { _explicitNullValueExtract = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extract"); else _explicitNullProperties?.Remove("extract"); } }
+        public string Extract { get => _explicitNullValueExtract; set { _explicitNullValueExtract = value; AdditionalData?.Remove("extract"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extract"); else _explicitNullProperties?.Remove("extract"); } }
         private string _explicitNullValueExtract = default!;
 #endif
         /// <summary>First several sentences of an article in simple HTML format</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExtractHtml { get => _explicitNullValueExtractHtml; set { _explicitNullValueExtractHtml = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extract_html"); else _explicitNullProperties?.Remove("extract_html"); } }
+        public string? ExtractHtml { get => _explicitNullValueExtractHtml; set { _explicitNullValueExtractHtml = value; AdditionalData?.Remove("extract_html"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extract_html"); else _explicitNullProperties?.Remove("extract_html"); } }
         private string? _explicitNullValueExtractHtml = default!;
 #nullable restore
 #else
-        public string ExtractHtml { get => _explicitNullValueExtractHtml; set { _explicitNullValueExtractHtml = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extract_html"); else _explicitNullProperties?.Remove("extract_html"); } }
+        public string ExtractHtml { get => _explicitNullValueExtractHtml; set { _explicitNullValueExtractHtml = value; AdditionalData?.Remove("extract_html"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extract_html"); else _explicitNullProperties?.Remove("extract_html"); } }
         private string _explicitNullValueExtractHtml = default!;
 #endif
         /// <summary>The page language code</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Lang { get => _explicitNullValueLang; set { _explicitNullValueLang = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lang"); else _explicitNullProperties?.Remove("lang"); } }
+        public string? Lang { get => _explicitNullValueLang; set { _explicitNullValueLang = value; AdditionalData?.Remove("lang"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lang"); else _explicitNullProperties?.Remove("lang"); } }
         private string? _explicitNullValueLang = default!;
 #nullable restore
 #else
-        public string Lang { get => _explicitNullValueLang; set { _explicitNullValueLang = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lang"); else _explicitNullProperties?.Remove("lang"); } }
+        public string Lang { get => _explicitNullValueLang; set { _explicitNullValueLang = value; AdditionalData?.Remove("lang"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lang"); else _explicitNullProperties?.Remove("lang"); } }
         private string _explicitNullValueLang = default!;
 #endif
         /// <summary>The originalimage property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Wikimedia.OpenApiClient.Models.Originalimage? Originalimage { get => _explicitNullValueOriginalimage; set { _explicitNullValueOriginalimage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originalimage"); else _explicitNullProperties?.Remove("originalimage"); } }
+        public global::Soenneker.Wikimedia.OpenApiClient.Models.Originalimage? Originalimage { get => _explicitNullValueOriginalimage; set { _explicitNullValueOriginalimage = value; AdditionalData?.Remove("originalimage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originalimage"); else _explicitNullProperties?.Remove("originalimage"); } }
         private global::Soenneker.Wikimedia.OpenApiClient.Models.Originalimage? _explicitNullValueOriginalimage = default!;
 #nullable restore
 #else
-        public global::Soenneker.Wikimedia.OpenApiClient.Models.Originalimage Originalimage { get => _explicitNullValueOriginalimage; set { _explicitNullValueOriginalimage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originalimage"); else _explicitNullProperties?.Remove("originalimage"); } }
+        public global::Soenneker.Wikimedia.OpenApiClient.Models.Originalimage Originalimage { get => _explicitNullValueOriginalimage; set { _explicitNullValueOriginalimage = value; AdditionalData?.Remove("originalimage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originalimage"); else _explicitNullProperties?.Remove("originalimage"); } }
         private global::Soenneker.Wikimedia.OpenApiClient.Models.Originalimage _explicitNullValueOriginalimage = default!;
 #endif
         /// <summary>The page ID</summary>
-        public int? Pageid { get => _explicitNullValuePageid; set { _explicitNullValuePageid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pageid"); else _explicitNullProperties?.Remove("pageid"); } }
+        public int? Pageid { get => _explicitNullValuePageid; set { _explicitNullValuePageid = value; AdditionalData?.Remove("pageid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pageid"); else _explicitNullProperties?.Remove("pageid"); } }
         private int? _explicitNullValuePageid = default!;
         /// <summary>The thumbnail property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Wikimedia.OpenApiClient.Models.Thumbnail? Thumbnail { get => _explicitNullValueThumbnail; set { _explicitNullValueThumbnail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumbnail"); else _explicitNullProperties?.Remove("thumbnail"); } }
+        public global::Soenneker.Wikimedia.OpenApiClient.Models.Thumbnail? Thumbnail { get => _explicitNullValueThumbnail; set { _explicitNullValueThumbnail = value; AdditionalData?.Remove("thumbnail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumbnail"); else _explicitNullProperties?.Remove("thumbnail"); } }
         private global::Soenneker.Wikimedia.OpenApiClient.Models.Thumbnail? _explicitNullValueThumbnail = default!;
 #nullable restore
 #else
-        public global::Soenneker.Wikimedia.OpenApiClient.Models.Thumbnail Thumbnail { get => _explicitNullValueThumbnail; set { _explicitNullValueThumbnail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumbnail"); else _explicitNullProperties?.Remove("thumbnail"); } }
+        public global::Soenneker.Wikimedia.OpenApiClient.Models.Thumbnail Thumbnail { get => _explicitNullValueThumbnail; set { _explicitNullValueThumbnail = value; AdditionalData?.Remove("thumbnail"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thumbnail"); else _explicitNullProperties?.Remove("thumbnail"); } }
         private global::Soenneker.Wikimedia.OpenApiClient.Models.Thumbnail _explicitNullValueThumbnail = default!;
 #endif
         /// <summary>The time when the page was last edited in the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Timestamp { get => _explicitNullValueTimestamp; set { _explicitNullValueTimestamp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timestamp"); else _explicitNullProperties?.Remove("timestamp"); } }
+        public string? Timestamp { get => _explicitNullValueTimestamp; set { _explicitNullValueTimestamp = value; AdditionalData?.Remove("timestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timestamp"); else _explicitNullProperties?.Remove("timestamp"); } }
         private string? _explicitNullValueTimestamp = default!;
 #nullable restore
 #else
-        public string Timestamp { get => _explicitNullValueTimestamp; set { _explicitNullValueTimestamp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timestamp"); else _explicitNullProperties?.Remove("timestamp"); } }
+        public string Timestamp { get => _explicitNullValueTimestamp; set { _explicitNullValueTimestamp = value; AdditionalData?.Remove("timestamp"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timestamp"); else _explicitNullProperties?.Remove("timestamp"); } }
         private string _explicitNullValueTimestamp = default!;
 #endif
         /// <summary>The page title.Deprecated: Use `titles.normalized` instead.</summary>
         [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; AdditionalData?.Remove("title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
         private string? _explicitNullValueTitle = default!;
 #nullable restore
 #else
-        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; AdditionalData?.Remove("title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
         private string _explicitNullValueTitle = default!;
 #endif
         /// <summary>a good example of the differences can be seen in https://en.wikipedia.org/api/rest_v1/page/summary/IOS_13</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Wikimedia.OpenApiClient.Models.TitlesSet? Titles { get => _explicitNullValueTitles; set { _explicitNullValueTitles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("titles"); else _explicitNullProperties?.Remove("titles"); } }
+        public global::Soenneker.Wikimedia.OpenApiClient.Models.TitlesSet? Titles { get => _explicitNullValueTitles; set { _explicitNullValueTitles = value; AdditionalData?.Remove("titles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("titles"); else _explicitNullProperties?.Remove("titles"); } }
         private global::Soenneker.Wikimedia.OpenApiClient.Models.TitlesSet? _explicitNullValueTitles = default!;
 #nullable restore
 #else
-        public global::Soenneker.Wikimedia.OpenApiClient.Models.TitlesSet Titles { get => _explicitNullValueTitles; set { _explicitNullValueTitles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("titles"); else _explicitNullProperties?.Remove("titles"); } }
+        public global::Soenneker.Wikimedia.OpenApiClient.Models.TitlesSet Titles { get => _explicitNullValueTitles; set { _explicitNullValueTitles = value; AdditionalData?.Remove("titles"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("titles"); else _explicitNullProperties?.Remove("titles"); } }
         private global::Soenneker.Wikimedia.OpenApiClient.Models.TitlesSet _explicitNullValueTitles = default!;
 #endif
         /// <summary>

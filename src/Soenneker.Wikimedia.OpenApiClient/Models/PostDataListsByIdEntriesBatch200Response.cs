@@ -17,8 +17,10 @@ namespace Soenneker.Wikimedia.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("batch") is { } nullNodeBatch && nullNodeBatch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Batch = null;
-            if (parseNode.GetChildNode("entries") is { } nullNodeEntries && nullNodeEntries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Entries = null;
+            if (parseNode.GetChildNode("batch") is null) { _explicitNullValueBatch = default!; _explicitNullProperties?.Remove("batch"); }
+            else if (parseNode.GetChildNode("batch") is { } nullNodeBatch && nullNodeBatch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Batch = null;
+            if (parseNode.GetChildNode("entries") is null) { _explicitNullValueEntries = default!; _explicitNullProperties?.Remove("entries"); }
+            else if (parseNode.GetChildNode("entries") is { } nullNodeEntries && nullNodeEntries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Entries = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.Wikimedia.OpenApiClient.Models
         /// <summary>The batch property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsByIdEntriesBatch200ResponseBatchItem>? Batch { get => _explicitNullValueBatch; set { _explicitNullValueBatch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("batch"); else _explicitNullProperties?.Remove("batch"); } }
+        public List<global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsByIdEntriesBatch200ResponseBatchItem>? Batch { get => _explicitNullValueBatch; set { _explicitNullValueBatch = value; AdditionalData?.Remove("batch"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("batch"); else _explicitNullProperties?.Remove("batch"); } }
         private List<global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsByIdEntriesBatch200ResponseBatchItem>? _explicitNullValueBatch = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsByIdEntriesBatch200ResponseBatchItem> Batch { get => _explicitNullValueBatch; set { _explicitNullValueBatch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("batch"); else _explicitNullProperties?.Remove("batch"); } }
+        public List<global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsByIdEntriesBatch200ResponseBatchItem> Batch { get => _explicitNullValueBatch; set { _explicitNullValueBatch = value; AdditionalData?.Remove("batch"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("batch"); else _explicitNullProperties?.Remove("batch"); } }
         private List<global::Soenneker.Wikimedia.OpenApiClient.Models.PostDataListsByIdEntriesBatch200ResponseBatchItem> _explicitNullValueBatch = default!;
 #endif
         /// <summary>The entries property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.Wikimedia.OpenApiClient.Models.ListEntryRead>? Entries { get => _explicitNullValueEntries; set { _explicitNullValueEntries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entries"); else _explicitNullProperties?.Remove("entries"); } }
+        public List<global::Soenneker.Wikimedia.OpenApiClient.Models.ListEntryRead>? Entries { get => _explicitNullValueEntries; set { _explicitNullValueEntries = value; AdditionalData?.Remove("entries"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entries"); else _explicitNullProperties?.Remove("entries"); } }
         private List<global::Soenneker.Wikimedia.OpenApiClient.Models.ListEntryRead>? _explicitNullValueEntries = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.Wikimedia.OpenApiClient.Models.ListEntryRead> Entries { get => _explicitNullValueEntries; set { _explicitNullValueEntries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entries"); else _explicitNullProperties?.Remove("entries"); } }
+        public List<global::Soenneker.Wikimedia.OpenApiClient.Models.ListEntryRead> Entries { get => _explicitNullValueEntries; set { _explicitNullValueEntries = value; AdditionalData?.Remove("entries"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("entries"); else _explicitNullProperties?.Remove("entries"); } }
         private List<global::Soenneker.Wikimedia.OpenApiClient.Models.ListEntryRead> _explicitNullValueEntries = default!;
 #endif
         /// <summary>

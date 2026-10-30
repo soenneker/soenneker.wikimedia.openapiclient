@@ -95,7 +95,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Transform.Html.To.Wikitext
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://test.wikimedia.org/api/rest_v1", "/transform/html/to/wikitext", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "text/plain;charset=utf-8;profile=\"https://www.mediawiki.org/wiki/Specs/wikitext/1.0.0\";q=0.9");
             requestInfo.SetContentFromParsable(RequestAdapter, "multipart/form-data", body);

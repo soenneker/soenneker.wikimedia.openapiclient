@@ -70,7 +70,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Setup
         public RequestInformation ToPostRequestInformation(Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Lists.Setup.SetupRequestBuilder.SetupRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://test.wikimedia.org/api/rest_v1", "/data/lists/setup", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json;charset=utf-8");
             return requestInfo;

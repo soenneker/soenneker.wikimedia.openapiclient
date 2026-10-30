@@ -18,9 +18,12 @@ namespace Soenneker.Wikimedia.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("canonical") is { } nullNodeCanonical && nullNodeCanonical.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Canonical = null;
-            if (parseNode.GetChildNode("display") is { } nullNodeDisplay && nullNodeDisplay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Display = null;
-            if (parseNode.GetChildNode("normalized") is { } nullNodeNormalized && nullNodeNormalized.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Normalized = null;
+            if (parseNode.GetChildNode("canonical") is null) { _explicitNullValueCanonical = default!; _explicitNullProperties?.Remove("canonical"); }
+            else if (parseNode.GetChildNode("canonical") is { } nullNodeCanonical && nullNodeCanonical.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Canonical = null;
+            if (parseNode.GetChildNode("display") is null) { _explicitNullValueDisplay = default!; _explicitNullProperties?.Remove("display"); }
+            else if (parseNode.GetChildNode("display") is { } nullNodeDisplay && nullNodeDisplay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Display = null;
+            if (parseNode.GetChildNode("normalized") is null) { _explicitNullValueNormalized = default!; _explicitNullProperties?.Remove("normalized"); }
+            else if (parseNode.GetChildNode("normalized") is { } nullNodeNormalized && nullNodeNormalized.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Normalized = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.Wikimedia.OpenApiClient.Models
         /// <summary>the DB key (non-prefixed), e.g. may have _ instead of spaces, best for making request URIs, still requires Percent-encoding</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Canonical { get => _explicitNullValueCanonical; set { _explicitNullValueCanonical = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canonical"); else _explicitNullProperties?.Remove("canonical"); } }
+        public string? Canonical { get => _explicitNullValueCanonical; set { _explicitNullValueCanonical = value; AdditionalData?.Remove("canonical"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canonical"); else _explicitNullProperties?.Remove("canonical"); } }
         private string? _explicitNullValueCanonical = default!;
 #nullable restore
 #else
-        public string Canonical { get => _explicitNullValueCanonical; set { _explicitNullValueCanonical = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canonical"); else _explicitNullProperties?.Remove("canonical"); } }
+        public string Canonical { get => _explicitNullValueCanonical; set { _explicitNullValueCanonical = value; AdditionalData?.Remove("canonical"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canonical"); else _explicitNullProperties?.Remove("canonical"); } }
         private string _explicitNullValueCanonical = default!;
 #endif
         /// <summary>the title as it should be displayed to the user</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Display { get => _explicitNullValueDisplay; set { _explicitNullValueDisplay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display"); else _explicitNullProperties?.Remove("display"); } }
+        public string? Display { get => _explicitNullValueDisplay; set { _explicitNullValueDisplay = value; AdditionalData?.Remove("display"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display"); else _explicitNullProperties?.Remove("display"); } }
         private string? _explicitNullValueDisplay = default!;
 #nullable restore
 #else
-        public string Display { get => _explicitNullValueDisplay; set { _explicitNullValueDisplay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display"); else _explicitNullProperties?.Remove("display"); } }
+        public string Display { get => _explicitNullValueDisplay; set { _explicitNullValueDisplay = value; AdditionalData?.Remove("display"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("display"); else _explicitNullProperties?.Remove("display"); } }
         private string _explicitNullValueDisplay = default!;
 #endif
         /// <summary>the normalized title (https://www.mediawiki.org/wiki/API:Query#Example_2:_Title_normalization), e.g. may have spaces instead of _</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Normalized { get => _explicitNullValueNormalized; set { _explicitNullValueNormalized = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("normalized"); else _explicitNullProperties?.Remove("normalized"); } }
+        public string? Normalized { get => _explicitNullValueNormalized; set { _explicitNullValueNormalized = value; AdditionalData?.Remove("normalized"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("normalized"); else _explicitNullProperties?.Remove("normalized"); } }
         private string? _explicitNullValueNormalized = default!;
 #nullable restore
 #else
-        public string Normalized { get => _explicitNullValueNormalized; set { _explicitNullValueNormalized = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("normalized"); else _explicitNullProperties?.Remove("normalized"); } }
+        public string Normalized { get => _explicitNullValueNormalized; set { _explicitNullValueNormalized = value; AdditionalData?.Remove("normalized"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("normalized"); else _explicitNullProperties?.Remove("normalized"); } }
         private string _explicitNullValueNormalized = default!;
 #endif
         /// <summary>
