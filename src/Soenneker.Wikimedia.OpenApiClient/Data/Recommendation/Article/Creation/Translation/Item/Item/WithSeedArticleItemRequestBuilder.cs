@@ -70,7 +70,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Recommendation.Article.Creation
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.Wikimedia.OpenApiClient.Data.Recommendation.Article.Creation.Translation.Item.Item.WithSeedArticleItemRequestBuilder.WithSeedArticleItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://test.wikimedia.org/api/rest_v1", "/data/recommendation/article/creation/translation/{fromLang}/{seedArticle}", PathParameters.ContainsKey("request-raw-url")), PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

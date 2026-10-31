@@ -76,7 +76,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Transform.Wikitext.To.MobileHtml.Ite
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://test.wikimedia.org/api/rest_v1", "/transform/wikitext/to/mobile-html/{title}", PathParameters.ContainsKey("request-raw-url")), PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "text/html, application/problem+json");
             requestInfo.SetContentFromParsable(RequestAdapter, "multipart/form-data", body);

@@ -78,7 +78,7 @@ namespace Soenneker.Wikimedia.OpenApiClient.Data.Lists.Item.Entries.Batch
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             if(string.IsNullOrEmpty(contentType)) throw new ArgumentNullException(nameof(contentType));
-            var requestInfo = new RequestInformation(Method.POST, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://test.wikimedia.org/api/rest_v1", "/data/lists/{id}/entries/batch", PathParameters.ContainsKey("request-raw-url")), PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json;charset=utf-8");
             requestInfo.SetStreamContent(body, contentType);
