@@ -300,22 +300,16 @@
               }
             },
             "content": {
-              "text/html; charset=utf-8; profile=\u0022https://www.mediawiki.org/wiki/Specs/HTML/2.1.0\u0022": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/GetPageHtmlByTitle200HtmlResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetPageHtmlByTitle200ResponseSchema"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/html; charset=utf-8; profile=\u0022https://www.mediawiki.org/wiki/Specs/HTML/2.1.0\u0022": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetPageHtmlByTitle200HtmlResponseSchema"
                 }
               }
             }
@@ -433,22 +427,16 @@
               }
             },
             "content": {
-              "text/html; charset=utf-8; profile=\u0022https://www.mediawiki.org/wiki/Specs/HTML/2.1.0\u0022": {
-                "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
-                  "$ref": "#/components/schemas/GetFormatRevision200HtmlResponseSchema"
-                }
-              },
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "binary"
-                },
-                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetFormatRevision200ResponseSchema"
+                }
+              }
+            },
+            "x-client-original-non-json-content": {
+              "text/html; charset=utf-8; profile=\u0022https://www.mediawiki.org/wiki/Specs/HTML/2.1.0\u0022": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetFormatRevision200HtmlResponseSchema"
                 }
               }
             }
@@ -2781,12 +2769,14 @@
           "200": {
             "description": "The citation data in the requested format",
             "content": {
-              "application/x-bibtex; charset=utf-8": {
+              "application/json; charset=utf-8": {
                 "schema": {
                   "$ref": "#/components/schemas/ResultValue"
                 }
-              },
-              "application/json; charset=utf-8": {
+              }
+            },
+            "x-client-original-non-json-content": {
+              "application/x-bibtex; charset=utf-8": {
                 "schema": {
                   "$ref": "#/components/schemas/ResultValue"
                 }
