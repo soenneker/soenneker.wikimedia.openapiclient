@@ -18,10 +18,6 @@
     {
       "url": "/api/rest_v1",
       "description": "(Production)"
-    },
-    {
-      "url": "https://test.wikimedia.org/api/rest_v1",
-      "description": "(Sandbox)"
     }
   ],
   "paths": {
@@ -3828,18 +3824,6 @@
   },
   "components": {
     "schemas": {
-      "Revisions": {
-        "required": [
-          "items"
-        ],
-        "type": "object",
-        "properties": {
-          "items": {
-            "$ref": "#/components/schemas/RevisionIdentifier"
-          }
-        },
-        "description": "The result format for revision listing"
-      },
       "Listing": {
         "required": [
           "items"
@@ -3926,19 +3910,6 @@
           }
         },
         "description": "Complete information about the revision"
-      },
-      "RevisionIdentifier": {
-        "type": "object",
-        "properties": {
-          "revision": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "tid": {
-            "type": "string"
-          }
-        },
-        "description": "Unique revision identifier"
       },
       "TitlesSet": {
         "required": [
@@ -4148,31 +4119,6 @@
           }
         }
       },
-      "CxMt": {
-        "type": "object",
-        "properties": {
-          "contents": {
-            "type": "string",
-            "description": "the translated content"
-          }
-        }
-      },
-      "CxDict": {
-        "type": "object",
-        "properties": {
-          "source": {
-            "type": "string",
-            "description": "the original word to look up"
-          },
-          "translations": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/CxDictTranslationsItem"
-            },
-            "description": "the translations found"
-          }
-        }
-      },
       "ResultValue": {
         "required": [
           "title",
@@ -4308,13 +4254,6 @@
           }
         }
       },
-      "MorelikeResult": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/MorelikeResultItem"
-        },
-        "description": "the prioritized list of Wikidata IDs recommended for creation as Wikipedia articles"
-      },
       "PostTransformWikitextToLintFormDataRequest": {
         "required": [
           "wikitext"
@@ -4411,23 +4350,6 @@
         },
         "description": "The coordinates of the item"
       },
-      "CxDictTranslationsItem": {
-        "type": "object",
-        "properties": {
-          "phrase": {
-            "type": "string",
-            "description": "the translated phrase"
-          },
-          "info": {
-            "type": "string",
-            "description": "extra information about the phrase"
-          },
-          "sources": {
-            "type": "string",
-            "description": "the source dictionary used for the translation"
-          }
-        }
-      },
       "RecommendationResultItemsItem": {
         "type": "object",
         "properties": {
@@ -4454,42 +4376,6 @@
           }
         }
       },
-      "GetPageHtmlByTitle200HtmlResponse": {
-        "type": "string"
-      },
-      "GetPageHtmlByTitle200Response": {
-        "type": "object"
-      },
-      "GetFormatRevision200HtmlResponse": {
-        "type": "string"
-      },
-      "GetFormatRevision200Response": {
-        "type": "object"
-      },
-      "GetPageLintByTitle200Response": {
-        "type": "object"
-      },
-      "GetPageLintByTitleByRevision200Response": {
-        "type": "object"
-      },
-      "GetContentMobileHtml200HtmlResponse": {
-        "type": "string"
-      },
-      "GetContentWithRevisionMobileHtml200HtmlResponse": {
-        "type": "string"
-      },
-      "GetPageMobileHtmlOfflineResourcesByTitle200Response": {
-        "type": "string"
-      },
-      "GetPageMobileHtmlOfflineResourcesByTitleByRevision200Response": {
-        "type": "string"
-      },
-      "GetPageTalkByTitle200Response": {
-        "type": "string"
-      },
-      "GetPageTalkByTitleByRevision200Response": {
-        "type": "string"
-      },
       "PostTransformHtmlToWikitextFormDataRequest": {
         "required": [
           "html"
@@ -4506,9 +4392,6 @@
             "description": "Normalise the DOM to yield cleaner wikitext?"
           }
         }
-      },
-      "PostTransformHtmlToWikitext200PlainResponse": {
-        "type": "string"
       },
       "PostTransformHtmlToWikitextByTitleFormDataRequest": {
         "required": [
@@ -4527,9 +4410,6 @@
           }
         }
       },
-      "PostTransformHtmlToWikitextByTitle200PlainResponse": {
-        "type": "string"
-      },
       "PostTransformHtmlToWikitextByTitleByRevisionFormDataRequest": {
         "required": [
           "html"
@@ -4546,9 +4426,6 @@
             "description": "Normalise the DOM to yield cleaner wikitext?"
           }
         }
-      },
-      "PostTransformHtmlToWikitextByTitleByRevision200PlainResponse": {
-        "type": "string"
       },
       "PostTransformWikitextToHtmlFormDataRequest": {
         "required": [
@@ -4571,9 +4448,6 @@
           }
         }
       },
-      "PostTransformWikitextToHtml200HtmlResponse": {
-        "type": "string"
-      },
       "PostTransformWikitextToHtmlByTitleFormDataRequest": {
         "required": [
           "wikitext"
@@ -4594,9 +4468,6 @@
             "description": "Whether to temporarily stash the result of the transformation"
           }
         }
-      },
-      "PostTransformWikitextToHtmlByTitle200HtmlResponse": {
-        "type": "string"
       },
       "PostTransformWikitextToHtmlByTitleByRevisionFormDataRequest": {
         "required": [
@@ -4619,12 +4490,6 @@
           }
         }
       },
-      "PostTransformWikitextToHtmlByTitleByRevision200HtmlResponse": {
-        "type": "string"
-      },
-      "PostTransformWikitextToLint200Response": {
-        "type": "object"
-      },
       "PostTransformWikitextToLintByTitleFormDataRequest": {
         "required": [
           "wikitext"
@@ -4637,9 +4502,6 @@
             "x-textarea": true
           }
         }
-      },
-      "PostTransformWikitextToLintByTitle200Response": {
-        "type": "object"
       },
       "PostTransformWikitextToLintByTitleByRevisionFormDataRequest": {
         "required": [
@@ -4654,9 +4516,6 @@
           }
         }
       },
-      "PostTransformWikitextToLintByTitleByRevision200Response": {
-        "type": "object"
-      },
       "TransformWikitextToMobileHtmlFormDataRequest": {
         "required": [
           "wikitext"
@@ -4670,9 +4529,6 @@
           }
         }
       },
-      "TransformWikitextToMobileHtml200HtmlResponse": {
-        "type": "string"
-      },
       "PostMediaMathCheckByTypeFormDataRequest": {
         "required": [
           "q"
@@ -4684,27 +4540,6 @@
             "description": "The formula to check"
           }
         }
-      },
-      "PostMediaMathCheckByType200Response": {
-        "type": "object"
-      },
-      "GetMediaMathFormulaByHash200Response": {
-        "type": "object"
-      },
-      "GetMediaMathRenderByFormatByHash200SvgXmlResponse": {
-        "type": "string"
-      },
-      "GetMediaMathRenderByFormatByHash200MathmlXmlResponse": {
-        "type": "string"
-      },
-      "PostDataListsSetup200Response": {
-        "type": "object"
-      },
-      "PostDataListsTeardown200Response": {
-        "type": "object"
-      },
-      "DeleteDataListsById200Response": {
-        "type": "object"
       },
       "PostDataListsBatchMediaRequest": {
         "title": "batch",
@@ -4722,9 +4557,6 @@
           }
         }
       },
-      "DeleteDataListsByIdEntriesByEntryId200Response": {
-        "type": "object"
-      },
       "PostDataListsByIdEntriesBatchMediaRequest": {
         "required": [
           "batch"
@@ -4741,27 +4573,8 @@
           }
         }
       },
-      "GetDataCssMobileByType200Response": {
-        "type": "object"
-      },
-      "GetDataJavascriptMobileByType200Response": {
-        "type": "object"
-      },
-      "GetDataI18NByType200Response": {
-        "type": "object"
-      },
-      "ExamplePayload": {
-        "type": "object",
-        "description": "Placeholder schema for path example refs"
-      },
-      "GetPageHtmlByTitle200HtmlResponseSchema": {
-        "type": "string"
-      },
       "GetPageHtmlByTitle200ResponseSchema": {
         "type": "object"
-      },
-      "GetFormatRevision200HtmlResponseSchema": {
-        "type": "string"
       },
       "GetFormatRevision200ResponseSchema": {
         "type": "object"
@@ -4825,12 +4638,6 @@
       },
       "GetMediaMathFormulaByHash200ResponseSchema": {
         "type": "object"
-      },
-      "GetMediaMathRenderByFormatByHash200SvgXmlResponseSchema": {
-        "type": "string"
-      },
-      "GetMediaMathRenderByFormatByHash200MathmlXmlResponseSchema": {
-        "type": "string"
       },
       "PostDataListsSetup200ResponseSchema": {
         "type": "object"
@@ -5337,5 +5144,206 @@
     }
   ],
   "x-host-basePath": "/api/rest_v1",
-  "x-default-params": {}
+  "x-default-params": {},
+  "x-client-original-servers": [
+    {
+      "url": "/api/rest_v1",
+      "description": "(Production)"
+    },
+    {
+      "url": "https://test.wikimedia.org/api/rest_v1",
+      "description": "(Sandbox)"
+    }
+  ],
+  "x-client-unused-schemas": {
+    "Revisions": {
+      "required": [
+        "items"
+      ],
+      "type": "object",
+      "properties": {
+        "items": {
+          "$ref": "#/components/schemas/RevisionIdentifier"
+        }
+      },
+      "description": "The result format for revision listing"
+    },
+    "RevisionIdentifier": {
+      "type": "object",
+      "properties": {
+        "revision": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "tid": {
+          "type": "string"
+        }
+      },
+      "description": "Unique revision identifier"
+    },
+    "CxMt": {
+      "type": "object",
+      "properties": {
+        "contents": {
+          "type": "string",
+          "description": "the translated content"
+        }
+      }
+    },
+    "CxDict": {
+      "type": "object",
+      "properties": {
+        "source": {
+          "type": "string",
+          "description": "the original word to look up"
+        },
+        "translations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/CxDictTranslationsItem"
+          },
+          "description": "the translations found"
+        }
+      }
+    },
+    "MorelikeResult": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/MorelikeResultItem"
+      },
+      "description": "the prioritized list of Wikidata IDs recommended for creation as Wikipedia articles"
+    },
+    "CxDictTranslationsItem": {
+      "type": "object",
+      "properties": {
+        "phrase": {
+          "type": "string",
+          "description": "the translated phrase"
+        },
+        "info": {
+          "type": "string",
+          "description": "extra information about the phrase"
+        },
+        "sources": {
+          "type": "string",
+          "description": "the source dictionary used for the translation"
+        }
+      }
+    },
+    "GetPageHtmlByTitle200HtmlResponse": {
+      "type": "string"
+    },
+    "GetPageHtmlByTitle200Response": {
+      "type": "object"
+    },
+    "GetFormatRevision200HtmlResponse": {
+      "type": "string"
+    },
+    "GetFormatRevision200Response": {
+      "type": "object"
+    },
+    "GetPageLintByTitle200Response": {
+      "type": "object"
+    },
+    "GetPageLintByTitleByRevision200Response": {
+      "type": "object"
+    },
+    "GetContentMobileHtml200HtmlResponse": {
+      "type": "string"
+    },
+    "GetContentWithRevisionMobileHtml200HtmlResponse": {
+      "type": "string"
+    },
+    "GetPageMobileHtmlOfflineResourcesByTitle200Response": {
+      "type": "string"
+    },
+    "GetPageMobileHtmlOfflineResourcesByTitleByRevision200Response": {
+      "type": "string"
+    },
+    "GetPageTalkByTitle200Response": {
+      "type": "string"
+    },
+    "GetPageTalkByTitleByRevision200Response": {
+      "type": "string"
+    },
+    "PostTransformHtmlToWikitext200PlainResponse": {
+      "type": "string"
+    },
+    "PostTransformHtmlToWikitextByTitle200PlainResponse": {
+      "type": "string"
+    },
+    "PostTransformHtmlToWikitextByTitleByRevision200PlainResponse": {
+      "type": "string"
+    },
+    "PostTransformWikitextToHtml200HtmlResponse": {
+      "type": "string"
+    },
+    "PostTransformWikitextToHtmlByTitle200HtmlResponse": {
+      "type": "string"
+    },
+    "PostTransformWikitextToHtmlByTitleByRevision200HtmlResponse": {
+      "type": "string"
+    },
+    "PostTransformWikitextToLint200Response": {
+      "type": "object"
+    },
+    "PostTransformWikitextToLintByTitle200Response": {
+      "type": "object"
+    },
+    "PostTransformWikitextToLintByTitleByRevision200Response": {
+      "type": "object"
+    },
+    "TransformWikitextToMobileHtml200HtmlResponse": {
+      "type": "string"
+    },
+    "PostMediaMathCheckByType200Response": {
+      "type": "object"
+    },
+    "GetMediaMathFormulaByHash200Response": {
+      "type": "object"
+    },
+    "GetMediaMathRenderByFormatByHash200SvgXmlResponse": {
+      "type": "string"
+    },
+    "GetMediaMathRenderByFormatByHash200MathmlXmlResponse": {
+      "type": "string"
+    },
+    "PostDataListsSetup200Response": {
+      "type": "object"
+    },
+    "PostDataListsTeardown200Response": {
+      "type": "object"
+    },
+    "DeleteDataListsById200Response": {
+      "type": "object"
+    },
+    "DeleteDataListsByIdEntriesByEntryId200Response": {
+      "type": "object"
+    },
+    "GetDataCssMobileByType200Response": {
+      "type": "object"
+    },
+    "GetDataJavascriptMobileByType200Response": {
+      "type": "object"
+    },
+    "GetDataI18NByType200Response": {
+      "type": "object"
+    },
+    "ExamplePayload": {
+      "type": "object",
+      "description": "Placeholder schema for path example refs"
+    },
+    "GetPageHtmlByTitle200HtmlResponseSchema": {
+      "type": "string"
+    },
+    "GetFormatRevision200HtmlResponseSchema": {
+      "type": "string"
+    },
+    "GetMediaMathRenderByFormatByHash200SvgXmlResponseSchema": {
+      "type": "string"
+    },
+    "GetMediaMathRenderByFormatByHash200MathmlXmlResponseSchema": {
+      "type": "string"
+    }
+  }
 }
